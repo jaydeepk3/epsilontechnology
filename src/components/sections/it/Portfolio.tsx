@@ -50,6 +50,34 @@ const portfolioItems = [
         link: "https://yogawellnessbyaditi.com/"
     },
     {
+        title: "Soni Book",
+        category: "Community & Social • React Native",
+        image: "/portfolio/soni-book-app.webp",
+        description: "All-in-one community app featuring family tree builder, live chat, groups, and business directory.",
+        link: "https://play.google.com/store/apps/details?id=com.sonibook"
+    },
+    {
+        title: "W3LP",
+        category: "Web3 & Blockchain • Web App",
+        image: "/portfolio/w3lp-app.webp",
+        description: "Zero-code NFT creation, smart contract minting, and decentralized IPFS storage platform.",
+        link: "https://w3lp.io"
+    },
+    {
+        title: "Enicet Bathware",
+        category: "eCommerce • Luxury Bathware",
+        image: "/portfolio/enicet-app.webp",
+        description: "Premium sanitaryware and luxury bathroom fittings eCommerce platform with ₹4,000+ daily sales.",
+        link: "https://enicet.com/"
+    },
+    {
+        title: "Ira Organic Shop",
+        category: "eCommerce • D2C Organic Food",
+        image: "/portfolio/ira-organic-app.webp",
+        description: "100% natural wood-pressed cooking oils and organic wellness products D2C eCommerce store.",
+        link: "https://www.iraorganicshop.com/"
+    },
+    {
         title: "Junagadh Police App",
         category: "Public Sector • Mobile App",
         image: "/portfolio/junagadhpolice.webp",

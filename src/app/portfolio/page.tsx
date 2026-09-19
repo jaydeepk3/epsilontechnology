@@ -50,12 +50,56 @@ export default function PortfolioPage() {
       headlineResult: "10,000+ active profiles · Highly engaged user base",
       slug: "prabhav-lagnam",
       imageUrl: "/portfolio/prabhav-lagnam.webp"
+    },
+    {
+      title: "Soni Book",
+      description: "Dedicated social media & genealogy mobile platform for the Soni community with interactive family trees and live chat.",
+      country: "🇮🇳 India",
+      industry: "Social",
+      type: "Mobile App",
+      headlineResult: "5,000+ active members · 10,000+ family tree connections",
+      slug: "soni-book",
+      imageUrl: "/portfolio/soni-book.webp"
+    },
+    {
+      title: "W3LP.io",
+      description: "Next-generation zero-code Web3 NFT creation, multi-chain smart contract minting, and decentralized IPFS storage platform.",
+      country: "🌐 Global",
+      industry: "Web3 & Blockchain",
+      type: "Web App",
+      headlineResult: "50,000+ NFTs Minted · 8+ Blockchains Supported · 45% Gas Savings",
+      slug: "w3lp",
+      imageUrl: "/portfolio/w3lp.webp"
+    },
+    {
+      title: "Enicet Bathware",
+      description: "High-conversion D2C & B2B luxury bathware and sanitaryware eCommerce platform with dynamic catalog filtering.",
+      country: "🇮🇳 India",
+      industry: "Retail",
+      type: "eCommerce",
+      headlineResult: "₹4,000+ Daily Sales · 35% Conversion Boost · Sub-second Filtering",
+      slug: "enicet",
+      imageUrl: "/portfolio/enicet.webp"
+    },
+    {
+      title: "Ira Organic Shop",
+      description: "D2C organic eCommerce store for traditional wood-pressed oils and wellness products with subscription & express checkout.",
+      country: "🇮🇳 India",
+      industry: "Retail",
+      type: "eCommerce",
+      headlineResult: "100% Pure Wood-Pressed Oils · 3x Repeat Orders · Express UPI Checkout",
+      slug: "ira-organic",
+      imageUrl: "/portfolio/ira-organic.webp"
     }
   ];
 
   // Hardcoded Projects for demonstration
   const projects = [
-    { title: "Feilder Cricket App", description: "Comprehensive cricket scoring and management app.", country: "🇮🇳", industry: "Sports", techStack: ["Flutter", "Firebase", "Node.js"], result: "1M+ matches scored globally", status: "live" as const, liveUrl: "https://play.google.com/store/apps/details?id=com.jnd.police.bandobast", type: "Mobile Apps", imageUrl: "/portfolio/feilder-app.webp" },
+    { title: "Enicet Bathware", description: "Premium sanitaryware and luxury bathroom accessories eCommerce store with sub-second catalog filtering.", country: "🇮🇳", industry: "Retail", techStack: ["Next.js", "Tailwind CSS", "Node.js", "Razorpay", "PostgreSQL"], result: "₹4,000+ daily online sales · 35% higher checkout conversions", status: "live" as const, liveUrl: "https://enicet.com", type: "eCommerce", imageUrl: "/portfolio/enicet.webp" },
+    { title: "Ira Organic Shop", description: "100% natural wood-pressed cooking oils and organic wellness products D2C eCommerce store.", country: "🇮🇳", industry: "Retail", techStack: ["Next.js", "Tailwind CSS", "Node.js", "Razorpay", "Shiprocket"], result: "3x repeat customer rate · Automated pan-India shipping", status: "live" as const, liveUrl: "https://www.iraorganicshop.com", type: "eCommerce", imageUrl: "/portfolio/ira-organic.webp" },
+    { title: "W3LP", description: "Zero-code NFT creation, multi-chain smart contract minting, and decentralized IPFS storage platform.", country: "🌐", industry: "Web3 & Blockchain", techStack: ["React", "TypeScript", "Solidity", "IPFS", "Ethers.js"], result: "50,000+ NFTs minted · 8+ Blockchains supported", status: "live" as const, liveUrl: "https://w3lp.io", type: "Web Apps", imageUrl: "/portfolio/w3lp.webp" },
+    { title: "Soni Book", description: "Social network and interactive family tree app for the Soni community with live chat & group channels.", country: "🇮🇳", industry: "Social & Community", techStack: ["React Native", "Firebase", "Node.js", "WebSockets"], result: "5,000+ active members · Verified KYC profiles", status: "live" as const, liveUrl: "https://play.google.com/store/apps/details?id=com.sonibook", playStoreUrl: "https://play.google.com/store/apps/details?id=com.sonibook", appStoreUrl: "https://apps.apple.com/in/iphone/search?term=soni%20book", type: "Mobile Apps", imageUrl: "/portfolio/soni-book.webp" },
+    { title: "Feilder Cricket App", description: "Comprehensive cricket scoring and management app.", country: "🇮🇳", industry: "Sports", techStack: ["Flutter", "Firebase", "Node.js"], delivered: "4 weeks · iOS & Android", status: "concept" as const, type: "Mobile Apps", imageUrl: "/portfolio/feilder-app.webp" },
     { title: "eBike Rental App", description: "Seamless urban mobility booking experience.", country: "🇺🇸", industry: "Mobility", techStack: ["React Native", "Tailwind", "Stripe"], delivered: "3 weeks · iOS & Android", status: "concept" as const, type: "Mobile Apps", imageUrl: "/portfolio/ebike-app.webp" },
     { title: "Travel Planning App", description: "AI-assisted itinerary builder for global travelers.", country: "🇬🇧", industry: "Travel", techStack: ["React Native", "OpenAI", "Maps API"], delivered: "4 weeks · UI/UX", status: "concept" as const, type: "Mobile Apps", imageUrl: "/portfolio/travel-app.webp" },
     { title: "Jewellery eCommerce", description: "High-end luxury jewelry shopping experience.", country: "🇦🇪", industry: "Retail", techStack: ["Next.js", "Shopify", "Framer Motion"], result: "Premium aesthetic achieved with sub-second page loads", status: "concept" as const, type: "eCommerce", imageUrl: "/portfolio/jewellery-website.webp" },
@@ -71,6 +115,8 @@ export default function PortfolioPage() {
     if (activeTab === 'All') return true;
     if (activeTab === 'Live Projects') return true; // Assuming all case studies are live
     if (activeTab === 'Concepts') return false;
+    if (activeTab === 'Mobile Apps' && cs.type === 'Mobile App') return true;
+    if (activeTab === 'Web Apps' && cs.type === 'Web App') return true;
     return cs.type === activeTab || cs.industry === activeTab;
   });
 
@@ -94,37 +140,7 @@ export default function PortfolioPage() {
         </p>
       </section>
 
-      {/* 2. Honest 100+ Projects Block */}
-      <section className="px-6 mb-20">
-        <div className="max-w-4xl mx-auto bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-10 backdrop-blur-sm relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-emerald-500"></div>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
-            <span className="text-blue-400">Real Work.</span> Honest Results. 100+ Projects Delivered.
-          </h2>
-          <ul className="space-y-4 text-gray-300 mb-8">
-            <li className="flex gap-3">
-              <span className="text-blue-500 mt-1">✓</span>
-              <span>We've successfully delivered over 100 projects since 2019—the portfolio below highlights select work where clients have explicitly given us permission to share their stories publicly.</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-blue-500 mt-1">✓</span>
-              <span>A significant portion of our most complex engineering is protected by strict NDAs, or built as white-label solutions that power other leading digital agencies.</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-blue-500 mt-1">✓</span>
-              <span>We maintain a deep, private archive of past projects across diverse sectors. We’re always happy to showcase highly relevant work tailored to your exact industry during our initial consultation.</span>
-            </li>
-          </ul>
-          <div className="flex flex-col sm:flex-row items-center justify-between bg-black/40 p-5 rounded-2xl border border-white/5">
-            <p className="font-medium text-gray-200 mb-4 sm:mb-0">Want to see work relevant to your industry?</p>
-            <Link href="/custom-quote" className="px-6 py-2.5 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">
-              Ask us on the discovery call
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Filter Tabs */}
+      {/* 2. Filter Tabs */}
       <section className="max-w-7xl mx-auto px-6 mb-12">
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 p-2 bg-white/5 rounded-full border border-white/10 w-fit mx-auto">
           {TABS.map(tab => (
@@ -139,7 +155,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 4. Full Case Studies Grid */}
+      {/* 3. Full Case Studies Grid */}
       {filteredCaseStudies.length > 0 && (
         <section className="max-w-7xl mx-auto px-6 mb-24">
           <h2 className="text-2xl font-bold mb-8 text-white flex items-center gap-3">
@@ -153,7 +169,7 @@ export default function PortfolioPage() {
         </section>
       )}
 
-      {/* 5. More Projects Grid */}
+      {/* 4. More Projects Grid */}
       {filteredProjects.length > 0 && (
         <section className="max-w-7xl mx-auto px-6 mb-24">
           <h2 className="text-2xl font-bold mb-8 text-white flex items-center gap-3">
@@ -167,7 +183,7 @@ export default function PortfolioPage() {
         </section>
       )}
 
-      {/* 6. Final CTA */}
+      {/* 5. Final CTA */}
       <section className="max-w-5xl mx-auto px-6 pb-32 text-center">
         <div className="bg-gradient-to-br from-blue-900/40 to-emerald-900/40 border border-white/10 p-12 md:p-20 rounded-[3rem] relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/30 rounded-full blur-[100px]"></div>

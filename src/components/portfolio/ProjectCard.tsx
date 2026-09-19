@@ -11,6 +11,8 @@ interface ProjectCardProps {
   delivered?: string;
   status: 'live' | 'concept';
   liveUrl?: string;
+  playStoreUrl?: string;
+  appStoreUrl?: string;
   imageUrl?: string;
 }
 
@@ -24,6 +26,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   delivered,
   status,
   liveUrl,
+  playStoreUrl,
+  appStoreUrl,
   imageUrl = '/placeholder-project.jpg', // Replace with real image paths
 }) => {
   const isLive = status === 'live';
@@ -92,15 +96,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
           </p>
           
-          {isLive && liveUrl ? (
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors">
-              View Live <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          ) : (
-            <Link href="/custom-quote" className="inline-flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors">
-              Start a Similar Project <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
-          )}
+          <div className="flex items-center gap-3 flex-wrap">
+            {isLive && playStoreUrl && (
+              <a href={playStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition-colors bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                Play Store <span className="ml-1">↗</span>
+              </a>
+            )}
+            {isLive && appStoreUrl && (
+              <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20">
+                App Store <span className="ml-1">↗</span>
+              </a>
+            )}
+            {isLive && liveUrl && !playStoreUrl && !appStoreUrl && (
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors">
+                View Live <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            )}
+            {!isLive && (
+              <Link href="/custom-quote" className="inline-flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors">
+                Start a Similar Project <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>
