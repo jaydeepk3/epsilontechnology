@@ -78,6 +78,13 @@ const portfolioItems = [
         link: "https://www.iraorganicshop.com/"
     },
     {
+        title: "Orza Cooktops",
+        category: "eCommerce • Home Appliances",
+        image: "/portfolio/orza-app.webp",
+        description: "Flame-free, smoke-free radiant infrared cooktop D2C eCommerce store compatible with all cookware.",
+        link: "https://www.orzacooktops.in/"
+    },
+    {
         title: "Junagadh Police App",
         category: "Public Sector • Mobile App",
         image: "/portfolio/junagadhpolice.webp",

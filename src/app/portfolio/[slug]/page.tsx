@@ -275,6 +275,41 @@ const CASE_STUDIES: Record<string, CaseStudyPageProps> = {
     clientCompany: "Ira Organic",
     liveUrl: "https://www.iraorganicshop.com",
     heroImage: "/portfolio/ira-organic.webp"
+  },
+  'orza': {
+    title: "Orza Cooktops",
+    description: "Modern direct-to-consumer (D2C) eCommerce storefront for flame-free, smoke-free radiant infrared cooktops designed for Indian kitchens.",
+    country: "🇮🇳 India",
+    industry: "eCommerce & Home Appliances",
+    type: "eCommerce",
+    timeline: "4 weeks",
+    challenge: (
+      <>
+        <p>Conventional induction cooktops only work with magnetic flat-bottom cookware (cast iron/stainless steel), forcing households to replace beloved cookware like rounded kadais, tawas, aluminum, brass, or copper vessels.</p>
+        <p>Orza developed an innovative radiant infrared cooktop that works seamlessly with all flat and shaped cookware materials—steel, iron, aluminum, ceramic, glass, and copper—while featuring preset modes tuned for Indian cooking (Fry, Tadka, Pressure Cook, Roast).</p>
+        <p>They needed a modern, high-converting D2C eCommerce platform to educate shoppers on the benefits of radiant infrared cooking, clearly communicate utensil versatility, and deliver a frictionless 1-click mobile checkout experience across India.</p>
+      </>
+    ),
+    solution: (
+      <>
+        <p>We designed and engineered a clean, high-performance D2C eCommerce storefront emphasizing key brand pillars: flame-free kitchen safety, zero smoke, universal cookware compatibility, and energy efficiency.</p>
+        <p>We integrated interactive cookware compatibility guides, rich product media galleries, verified buyer reviews, automated pan-India shipping calculation, and an optimized 1-click UPI and card checkout flow powered by Razorpay.</p>
+      </>
+    ),
+    technicalDecision: "Optimized storefront performance, critical CSS, and CDN caching to achieve lightning-fast sub-second page loads on 4G mobile networks, paired with friction-free UPI intent checkout.",
+    results: [
+      { metric: "100%", explanation: "Universal compatibility across steel, aluminum, iron, ceramic, glass & copper" },
+      { metric: "40%", explanation: "Increase in direct-to-consumer website checkout conversions" },
+      { metric: "<1s", explanation: "Average mobile page load time across pan-India visitors" },
+      { metric: "4.9★", explanation: "Customer satisfaction rating on product versatility and build quality" }
+    ],
+    techStack: ["Shopify", "Liquid", "Tailwind CSS", "JavaScript", "Razorpay", "Shiprocket"],
+    quote: "Epsilon built an outstanding storefront that communicates our radiant infrared technology effortlessly. The seamless mobile checkout and clean presentation have elevated our brand and boosted direct sales.",
+    clientName: "Orza Team",
+    clientRole: "Founding Team",
+    clientCompany: "Orza Cooktops",
+    liveUrl: "https://www.orzacooktops.in",
+    heroImage: "/portfolio/orza.webp"
   }
 };
 

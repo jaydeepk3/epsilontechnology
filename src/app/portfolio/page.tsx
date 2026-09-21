@@ -90,11 +90,22 @@ export default function PortfolioPage() {
       headlineResult: "100% Pure Wood-Pressed Oils · 3x Repeat Orders · Express UPI Checkout",
       slug: "ira-organic",
       imageUrl: "/portfolio/ira-organic.webp"
+    },
+    {
+      title: "Orza Cooktops",
+      description: "Modern D2C eCommerce store for revolutionary flame-free, smoke-free radiant infrared cooktops compatible with all cookware materials.",
+      country: "🇮🇳 India",
+      industry: "Retail",
+      type: "eCommerce",
+      headlineResult: "Flame-Free & Smoke-Free Cooking · All Cookware Compatible · 40% Conversion Boost",
+      slug: "orza",
+      imageUrl: "/portfolio/orza.webp"
     }
   ];
 
   // Hardcoded Projects for demonstration
   const projects = [
+    { title: "Orza Cooktops", description: "Flame-free, smoke-free radiant infrared cooktop D2C eCommerce store designed for all flat and rounded cookware.", country: "🇮🇳", industry: "Retail", techStack: ["Shopify", "Tailwind CSS", "JavaScript", "Razorpay"], result: "Universal cookware compatibility · 40% higher direct checkout conversion", status: "live" as const, liveUrl: "https://www.orzacooktops.in", type: "eCommerce", imageUrl: "/portfolio/orza.webp" },
     { title: "Enicet Bathware", description: "Premium sanitaryware and luxury bathroom accessories eCommerce store with sub-second catalog filtering.", country: "🇮🇳", industry: "Retail", techStack: ["Next.js", "Tailwind CSS", "Node.js", "Razorpay", "PostgreSQL"], result: "₹4,000+ daily online sales · 35% higher checkout conversions", status: "live" as const, liveUrl: "https://enicet.com", type: "eCommerce", imageUrl: "/portfolio/enicet.webp" },
     { title: "Ira Organic Shop", description: "100% natural wood-pressed cooking oils and organic wellness products D2C eCommerce store.", country: "🇮🇳", industry: "Retail", techStack: ["Next.js", "Tailwind CSS", "Node.js", "Razorpay", "Shiprocket"], result: "3x repeat customer rate · Automated pan-India shipping", status: "live" as const, liveUrl: "https://www.iraorganicshop.com", type: "eCommerce", imageUrl: "/portfolio/ira-organic.webp" },
     { title: "W3LP", description: "Zero-code NFT creation, multi-chain smart contract minting, and decentralized IPFS storage platform.", country: "🌐", industry: "Web3 & Blockchain", techStack: ["React", "TypeScript", "Solidity", "IPFS", "Ethers.js"], result: "50,000+ NFTs minted · 8+ Blockchains supported", status: "live" as const, liveUrl: "https://w3lp.io", type: "Web Apps", imageUrl: "/portfolio/w3lp.webp" },
