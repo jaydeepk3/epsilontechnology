@@ -57,7 +57,7 @@ export default function PortfolioPage() {
       country: "🇮🇳 India",
       industry: "Social",
       type: "Mobile App",
-      headlineResult: "5,000+ active members · 10,000+ family tree connections",
+      headlineResult: "500+ active members · 1000+ family tree connections",
       slug: "soni-book",
       imageUrl: "/portfolio/soni-book.webp"
     },

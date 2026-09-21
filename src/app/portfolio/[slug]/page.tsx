@@ -160,8 +160,8 @@ const CASE_STUDIES: Record<string, CaseStudyPageProps> = {
     ),
     technicalDecision: "Engineered a custom hierarchical graph tree visualization algorithm in React Native paired with WebSocket-powered low-latency messaging and Cloud Firestore for instant synchronization.",
     results: [
-      { metric: "5,000+", explanation: "Active community members onboarded" },
-      { metric: "10,000+", explanation: "Family tree relations & nodes mapped" },
+      { metric: "500+", explanation: "Active community members onboarded" },
+      { metric: "1000+", explanation: "Family tree relations & nodes mapped" },
       { metric: "<50ms", explanation: "Live chat messaging latency" },
       { metric: "100%", explanation: "KYC-verified secure community profiles" }
     ],
@@ -330,7 +330,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function CaseStudyDetail({ params }: PageProps) {
   const { slug } = await params;
   const data = CASE_STUDIES[slug];
-  
+
   if (!data) {
     notFound();
   }
