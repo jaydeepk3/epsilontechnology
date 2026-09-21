@@ -136,7 +136,7 @@ const CASE_STUDIES: Record<string, CaseStudyPageProps> = {
     clientRole: "Community Head",
     clientCompany: "Prabhav Lagnam",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.prabhavlagnam",
-    appStoreUrl: "https://apps.apple.com/in/iphone/search?term=prabhav%20lagnam",
+    appStoreUrl: "https://apps.apple.com/in/app/prabhav-lagnam/id6757189385",
     heroImage: "/portfolio/prabhav-lagnam.webp"
   },
   'soni-book': {
@@ -171,7 +171,7 @@ const CASE_STUDIES: Record<string, CaseStudyPageProps> = {
     clientRole: "Community Lead",
     clientCompany: "Soni Book",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.sonibook",
-    appStoreUrl: "https://apps.apple.com/in/iphone/search?term=soni%20book",
+    appStoreUrl: "https://apps.apple.com/in/app/sonibook/id6788312276",
     heroImage: "/portfolio/soni-book.webp"
   },
   'w3lp': {
