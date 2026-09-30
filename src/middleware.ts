@@ -9,9 +9,7 @@ export async function middleware(request: NextRequest) {
 
     // 1. Enforce non-www redirect for main domain
     if (host.startsWith('www.')) {
-        const url = request.nextUrl.clone();
-        url.host = host.replace('www.', '');
-        return NextResponse.redirect(url, 301);
+        return NextResponse.redirect(new URL(pathname + request.nextUrl.search, 'https://epsilon-technology.com'), 301);
     }
 
     // 4. Protect all /admin routes except /admin/login
