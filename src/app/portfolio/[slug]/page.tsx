@@ -317,13 +317,24 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const data = CASE_STUDIES[slug];
   if (!data) return { title: 'Case Study | Epsilon Technology' };
   return {
+    metadataBase: new URL('https://epsilon-technology.com'),
     title: `${data.title} Case Study | Epsilon Technology`,
     description: data.description,
+    openGraph: {
+      title: `${data.title} Case Study | Epsilon Technology`,
+      description: data.description,
+      url: `https://epsilon-technology.com/portfolio/${slug}/`,
+      images: data.heroImage ? [data.heroImage] : ['/logo.webp'],
+      type: 'article',
+    },
+    alternates: {
+      canonical: `https://epsilon-technology.com/portfolio/${slug}/`,
+    },
   };
 }
 

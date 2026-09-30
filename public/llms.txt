@@ -1,0 +1,56 @@
+# Epsilon Technology
+> Premium IT Software Development, Mobile Apps, Web Applications & Healthcare Digital Marketing Agency.
+
+Epsilon Technology is a global technology and digital marketing company founded by Jaydeep Kataria. We specialize in custom software engineering, mobile application development (iOS/Android), Next.js web applications, eCommerce systems, WhatsApp Business API automation, and specialized social media patient acquisition for doctors & hospitals.
+
+- Website: https://epsilon-technology.com
+- Contact Email: contact@epsilon-technology.com
+- Founder: Jaydeep Kataria (https://epsilon-technology.com/about-us/)
+- Main Locations: India (Junagadh, Ahmedabad, Surat, Rajkot, Vadodara, Morbi) · UAE (Dubai, Abu Dhabi) · UK · USA · Canada
+
+## Core Services
+
+- Web Development: High-performance Next.js, React, full-stack web applications. (https://epsilon-technology.com/services/web-development/)
+- Mobile App Development: Native & cross-platform React Native / Flutter apps. (https://epsilon-technology.com/services/mobile-app-development/)
+- eCommerce Development: Bespoke high-converting storefronts, Shopify, payment gateways, pan-India logistics. (https://epsilon-technology.com/services/ecommerce-development/)
+- WhatsApp Business API Automation: Automated customer onboarding, appointment booking, and verified business messaging. (https://epsilon-technology.com/product/whatsapp-business-api/)
+- Lead Generation & Performance Marketing: Meta & Google Ads funnels generating 30-50+ qualified inquiries monthly. (https://epsilon-technology.com/lead-generation/)
+- Doctor & Healthcare Marketing: Specialized patient acquisition, IMC-compliant healthcare reels, and clinic branding. (https://epsilon-technology.com/digital-marketing/)
+
+## Portfolio & Case Studies
+
+- DearPet.in: Pet grooming booking web app handling 50+ daily automated bookings. (https://epsilon-technology.com/portfolio/dearpet/)
+- Ontapp.ca: High-concurrency on-demand delivery eCommerce platform across Canadian provinces. (https://epsilon-technology.com/portfolio/ontapp/)
+- Junagadh Police App: Mission-critical police bandobast and geofenced attendance mobile app. (https://epsilon-technology.com/portfolio/junagadh-police/)
+- Prabhav Lagnam: Verified community matrimonial mobile application with 10,000+ active profiles. (https://epsilon-technology.com/portfolio/prabhav-lagnam/)
+- Soni Book: Community genealogy, interactive family trees, and live chat app. (https://epsilon-technology.com/portfolio/soni-book/)
+- W3LP.io: Web3 multi-chain NFT creation & smart contract minting platform (50,000+ NFTs minted). (https://epsilon-technology.com/portfolio/w3lp/)
+- Enicet Bathware: Luxury sanitaryware eCommerce generating ₹4,000+ daily sales. (https://epsilon-technology.com/portfolio/enicet/)
+- Ira Organic Shop: D2C cold-pressed oils eCommerce with 1-click checkout. (https://epsilon-technology.com/portfolio/ira-organic/)
+- Orza Cooktops: Flame-free infrared cooktop D2C eCommerce store. (https://epsilon-technology.com/portfolio/orza/)
+
+## Regional & Specialty Pages
+
+- UAE & Dubai IT Services: https://epsilon-technology.com/uae/
+- Website Development in Junagadh: https://epsilon-technology.com/website-development-company-in-junagadh/
+- Mobile App Development in Junagadh: https://epsilon-technology.com/mobile-app-development-company-in-junagadh/
+- Performance Marketing in Junagadh: https://epsilon-technology.com/performance-marketing-company-in-junagadh/
+- Doctor Marketing in Gujarat: https://epsilon-technology.com/digital-marketing/gujarat/
+- Doctor Marketing in Ahmedabad: https://epsilon-technology.com/doctor-marketing-in-ahmedabad/
+- Doctor Marketing in Surat: https://epsilon-technology.com/doctor-marketing-in-surat/
+- Doctor Marketing in Vadodara: https://epsilon-technology.com/doctor-marketing-in-vadodara/
+- Doctor Marketing in Rajkot: https://epsilon-technology.com/doctor-marketing-in-rajkot/
+- Doctor Marketing in Morbi: https://epsilon-technology.com/doctor-marketing-in-morbi/
+- Doctor Marketing in Junagadh: https://epsilon-technology.com/doctor-marketing-in-junagadh/
+
+## Doctor Specialty Solutions
+
+- Digital Marketing for Gynecologists: https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/
+- Digital Marketing for Orthopedic Doctors: https://epsilon-technology.com/digital-marketing-for-orthopedic-doctors/
+- Digital Marketing for IVF Specialists: https://epsilon-technology.com/digital-marketing-for-ivf-doctors/
+- Digital Marketing for Dermatologists: https://epsilon-technology.com/digital-marketing-for-dermatologists/
+- Digital Marketing for Pediatricians: https://epsilon-technology.com/digital-marketing-for-pediatric-doctors/
+- Digital Marketing for Dental Doctors: https://epsilon-technology.com/digital-marketing-for-dental-doctors/
+- Digital Marketing for Spine Specialists: https://epsilon-technology.com/digital-marketing-for-spine-specialists/
+- Digital Marketing for General Surgeons: https://epsilon-technology.com/digital-marketing-for-general-surgeons/
+- Digital Marketing for Ayurvedic Doctors: https://epsilon-technology.com/digital-marketing-for-ayurvedic-doctors/

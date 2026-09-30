@@ -1,3 +1,8 @@
-epsilon-technology.com, www.epsilon-technology.com {
+www.epsilon-technology.com {
+    redir https://epsilon-technology.com{uri} permanent
+}
+
+epsilon-technology.com {
     reverse_proxy app:3000
 }
+

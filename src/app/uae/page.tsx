@@ -6,13 +6,18 @@ import { CheckCircle2, MessageSquare, Star, Globe, Zap, Clock, Shield, Award, Us
 import Image from "next/image";
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://epsilon-technology.com'),
     title: { absolute: "Web & App Development Agency for UAE Businesses | Epsilon Technology" },
     description: "Epsilon Technology builds websites, mobile apps, eCommerce stores and WhatsApp Business solutions for businesses in Dubai, Abu Dhabi, Sharjah and across UAE. 7 years experience. 100+ projects. Free consultation.",
     keywords: "web development agency Dubai, mobile app development UAE, eCommerce development Dubai, WhatsApp Business API UAE, website design Abu Dhabi, app development agency UAE",
     openGraph: {
         title: "Web & App Development for UAE Businesses | Epsilon Technology",
         description: "Trusted by businesses across Dubai, Abu Dhabi and UAE. Websites, apps, eCommerce and WhatsApp automation. 4.9★ rated. Free consultation.",
-    }
+        url: "https://epsilon-technology.com/uae/",
+    },
+    alternates: {
+        canonical: 'https://epsilon-technology.com/uae/',
+    },
 };
 
 const faqs = [

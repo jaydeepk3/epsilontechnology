@@ -7,17 +7,12 @@ export const revalidate = 3600; // Revalidate every hour
 const STABLE_DATE = new Date('2026-03-01');
 
 const STATIC_ROUTES: MetadataRoute.Sitemap = [
+    // Core Pages
     {
         url: 'https://epsilon-technology.com/',
         lastModified: STABLE_DATE,
         changeFrequency: 'weekly',
-        priority: 1,
-    },
-    {
-        url: 'https://epsilon-technology.com/it-services/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
+        priority: 1.0,
     },
     {
         url: 'https://epsilon-technology.com/about-us/',
@@ -26,10 +21,16 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.8,
     },
     {
-        url: 'https://epsilon-technology.com/portfolio/',
+        url: 'https://epsilon-technology.com/contacts/',
         lastModified: STABLE_DATE,
         changeFrequency: 'monthly',
-        priority: 0.9,
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/faqs/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
     },
     {
         url: 'https://epsilon-technology.com/meta-certified-partner/',
@@ -38,7 +39,15 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.8,
     },
     {
-        url: 'https://epsilon-technology.com/services/mobile-app-development/',
+        url: 'https://epsilon-technology.com/uae/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+
+    // Services & IT Solutions
+    {
+        url: 'https://epsilon-technology.com/it-services/',
         lastModified: STABLE_DATE,
         changeFrequency: 'weekly',
         priority: 0.9,
@@ -50,11 +59,125 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.9,
     },
     {
+        url: 'https://epsilon-technology.com/services/mobile-app-development/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
         url: 'https://epsilon-technology.com/services/ecommerce-development/',
         lastModified: STABLE_DATE,
         changeFrequency: 'weekly',
         priority: 0.9,
     },
+    {
+        url: 'https://epsilon-technology.com/product/whatsapp-business-api/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+
+    // Regional IT & Marketing Services (Junagadh & Gujarat)
+    {
+        url: 'https://epsilon-technology.com/website-development-company-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/mobile-app-development-company-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/performance-marketing-company-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/digital-marketing-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+
+    // Doctor Marketing & Lead Generation
+    {
+        url: 'https://epsilon-technology.com/digital-marketing/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/digital-marketing/gujarat/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/lead-generation/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/digital-marketing-for-doctors/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/digital-marketing-for-doctors-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/doctor-marketing-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/doctor-marketing-in-ahmedabad/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/doctor-marketing-in-surat/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/doctor-marketing-in-vadodara/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/doctor-marketing-in-rajkot/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/doctor-marketing-in-morbi/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/',
+        lastModified: new Date('2026-04-10'),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+
+    // Doctor Specialties
     {
         url: 'https://epsilon-technology.com/digital-marketing-for-general-surgeons/',
         lastModified: STABLE_DATE,
@@ -115,100 +238,74 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         changeFrequency: 'monthly',
         priority: 0.8,
     },
+
+    // Portfolio & Case Studies
     {
-        url: 'https://epsilon-technology.com/digital-marketing-for-doctors-in-junagadh/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/digital-marketing-for-doctors/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/doctor-marketing-in-junagadh/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/doctor-marketing-in-rajkot/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/doctor-marketing-in-morbi/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/digital-marketing-in-junagadh/',
+        url: 'https://epsilon-technology.com/portfolio/',
         lastModified: STABLE_DATE,
         changeFrequency: 'weekly',
         priority: 0.9,
     },
     {
-        url: 'https://epsilon-technology.com/uae/',
+        url: 'https://epsilon-technology.com/portfolio/dearpet/',
         lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
+        changeFrequency: 'monthly',
         priority: 0.8,
     },
+    {
+        url: 'https://epsilon-technology.com/portfolio/ontapp/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/junagadh-police/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/prabhav-lagnam/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/soni-book/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/w3lp/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/enicet/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/ira-organic/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/portfolio/orza/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+
+    // Blog Hub & Static Blogs
     {
         url: 'https://epsilon-technology.com/blog/',
         lastModified: STABLE_DATE,
         changeFrequency: 'weekly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/contacts/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/digital-marketing/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-    },
-    {
-        url: 'https://epsilon-technology.com/lead-generation/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-    },
-    {
-        url: 'https://epsilon-technology.com/faqs/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    },
-    {
-        url: 'https://epsilon-technology.com/product/whatsapp-business-api/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-    },
-    {
-        url: 'https://epsilon-technology.com/website-development-company-in-junagadh/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-    },
-    {
-        url: 'https://epsilon-technology.com/mobile-app-development-company-in-junagadh/',
-        lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-    },
-    {
-        url: 'https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/',
-        lastModified: new Date('2026-04-10'),
-        changeFrequency: 'monthly',
         priority: 0.8,
     },
     {
@@ -218,10 +315,16 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.9,
     },
     {
-        url: 'https://epsilon-technology.com/performance-marketing-company-in-junagadh/',
+        url: 'https://epsilon-technology.com/blog/doctor-marketing-ideas-junagadh/',
         lastModified: STABLE_DATE,
-        changeFrequency: 'weekly',
-        priority: 0.9,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/best-digital-marketing-agency-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.8,
     },
 ];
 
@@ -246,4 +349,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         return STATIC_ROUTES;
     }
 }
+
 

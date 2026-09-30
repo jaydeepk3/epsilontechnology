@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import { Newspaper, LogOut } from 'lucide-react'
@@ -5,6 +6,13 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+    robots: {
+        index: false,
+        follow: false,
+    },
+}
 
 export default async function AdminLayout({
     children,

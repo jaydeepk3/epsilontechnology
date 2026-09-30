@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             authors: [blog.author || 'Epsilon Team'],
         },
         alternates: {
-            canonical: `https://epsilon-technology.com/blog/${slug}`,
+            canonical: `https://epsilon-technology.com/blog/${slug}/`,
         }
     }
 }
