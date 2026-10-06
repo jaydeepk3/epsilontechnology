@@ -327,6 +327,11 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                                     </div>
                                 </Link>
                             ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Structured Schema */}
             <script
                 type="application/ld+json"

@@ -289,10 +289,82 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.8,
     },
 
-    // Blog Hub & Static Blogs
+    // Blog Hub & Cornerstone Guides
     {
         url: 'https://epsilon-technology.com/blog/',
         lastModified: STABLE_DATE,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/digital-marketing-for-doctors-india/',
+        lastModified: new Date('2026-10-01'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/digital-marketing-for-doctors-gujarat/',
+        lastModified: new Date('2026-10-02'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/digital-marketing-for-doctors-ahmedabad/',
+        lastModified: new Date('2026-10-03'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/doctor-seo/',
+        lastModified: new Date('2026-10-03'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/google-business-profile-for-doctors/',
+        lastModified: new Date('2026-10-03'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/patient-acquisition-for-doctors/',
+        lastModified: new Date('2026-10-04'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/ai-visibility-for-doctors/',
+        lastModified: new Date('2026-10-04'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/how-patients-find-doctors-online/',
+        lastModified: new Date('2026-10-04'),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/doctor-website-seo-checklist/',
+        lastModified: new Date('2026-10-04'),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/why-doctors-get-leads-not-patients/',
+        lastModified: new Date('2026-10-05'),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/whatsapp-automation-for-clinics/',
+        lastModified: new Date('2026-10-05'),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    },
+    {
+        url: 'https://epsilon-technology.com/blog/doctor-personal-branding-ai-era/',
+        lastModified: new Date('2026-10-05'),
         changeFrequency: 'weekly',
         priority: 0.8,
     },
@@ -300,7 +372,7 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         url: 'https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/',
         lastModified: new Date('2026-04-30'),
         changeFrequency: 'weekly',
-        priority: 0.9,
+        priority: 0.8,
     },
     {
         url: 'https://epsilon-technology.com/blog/doctor-marketing-ideas-junagadh/',
