@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import DoctorCityLanding from '@/components/landing/DoctorCityLanding';
 
 export const metadata: Metadata = {
-    title: "Digital Marketing for Doctors in Surat | Epsilon Technology",
+    title: "Digital Marketing for Doctors in Surat",
     description: "Specialized doctor marketing in Surat. Grow your clinic with viral reels and targeted ads. Get 30-50 patient inquiries monthly. Epsilon Technology.",
     keywords: ["doctor marketing Surat", "digital marketing for doctors Surat", "social media for doctors Surat", "healthcare marketing Surat", "clinic marketing Surat"],
     openGraph: {

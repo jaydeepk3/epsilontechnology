@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         "epsilon technology junagadh"
     ],
     openGraph: {
-        title: "Best Website Development Company in Junagadh | Epsilon Technology",
+        title: "Best Website Development Company in Junagadh",
         description: "Looking for the best website development company in Junagadh? Epsilon Technology is a top-rated web design agency building fast Next.js & WordPress websites.",
         url: "https://epsilon-technology.com/website-development-company-in-junagadh/",
         images: ["/logo.webp"]

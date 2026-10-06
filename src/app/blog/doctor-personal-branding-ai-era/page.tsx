@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Doctor Personal Branding in the AI Era (2026 Authority Manual) | Epsilon Technology",
+    title: "Doctor Personal Branding in the AI Era (2026 Authority Manual)",
     description: "How medical specialists, surgeons, and consultants build an enduring personal brand that thrives as AI commoditizes generic healthcare information.",
     keywords: [
         "doctor personal branding in the AI era",

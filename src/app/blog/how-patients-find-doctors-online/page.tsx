@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "How Patients Find Doctors Online (2026 Patient Journey Study) | Epsilon Technology",
+    title: "How Patients Find Doctors Online (2026 Patient Journey Study)",
     description: "Discover the 6-stage psychological and digital journey patients take from initial symptom panic to confirmed OPD booking. A comprehensive guide for clinic growth.",
     keywords: [
         "how patients find doctors online",

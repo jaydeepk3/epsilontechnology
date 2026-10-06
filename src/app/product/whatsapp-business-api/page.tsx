@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: 'Turn WhatsApp into your smart sales & support engine. Automate conversations, manage leads, and scale your business with official Meta Tech Provider solutions.',
     keywords: ["WhatsApp Business API", "WhatsApp automation", "official WhatsApp API provider", "WhatsApp sales automation", "WhatsApp support solutions"],
     openGraph: {
-        title: 'Official WhatsApp Business API Solutions | Epsilon Technology',
+        title: 'Official WhatsApp Business API Solutions',
         description: 'Automate conversations and scale your business with official Meta Tech Provider solutions.',
         url: 'https://epsilon-technology.com/product/whatsapp-business-api/',
         images: ['/logo.webp'],

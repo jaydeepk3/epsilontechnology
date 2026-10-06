@@ -5,11 +5,11 @@ import { MessageSquare, Mail, Phone, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://epsilon-technology.com'),
-    title: "Contact Us | Epsilon Technology",
+    title: "Contact Us",
     description: "Get in touch with Epsilon Technology. Contact our headquarters in Junagadh, Gujarat for web development, app development, and digital marketing services.",
     keywords: ["Contact Epsilon Technology", "IT company contact Junagadh", "hire web developer India", "digital marketing agency contact"],
     openGraph: {
-        title: "Contact Us | Epsilon Technology",
+        title: "Contact Us",
         description: "Get in touch with our expert team for web development, mobile apps, and digital marketing.",
         url: "https://epsilon-technology.com/contacts/",
     },

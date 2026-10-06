@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Patient Acquisition Strategy for Doctors (2026 Practical Guide) | Epsilon Technology",
+    title: "Patient Acquisition Strategy for Doctors (2026 Practical Guide)",
     description: "Build a predictable, ethical patient acquisition engine for your private practice or hospital. Master healthcare unit economics, high-intent search, and OPD conversion funnels.",
     keywords: [
         "patient acquisition strategy for doctors",

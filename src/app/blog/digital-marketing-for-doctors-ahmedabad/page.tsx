@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Digital Marketing for Doctors in Ahmedabad (2026 Growth Blueprint) | Epsilon Technology",
+    title: "Digital Marketing for Doctors in Ahmedabad (2026 Growth Blueprint)",
     description: "The complete healthcare marketing and local SEO guide for doctors, surgical centers, and clinics in Ahmedabad. Compete effectively on SG Highway, Bodakdev, Satellite & Maninagar.",
     keywords: [
         "digital marketing for doctors in Ahmedabad",

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
     metadataBase: new URL('https://epsilon-technology.com'),
-    title: "Get 30–50 New Patient Inquiries/Month | Doctor Marketing | Epsilon Technology",
+    title: "Get 30–50 New Patient Inquiries/Month | Doctor Marketing",
     description: "Done-for-you Instagram & Facebook marketing for doctors — wherever your clinic is. 50+ doctors served. No contracts. Real patient inquiries in 30 days. Book your free strategy call.",
     keywords: ["Doctor Marketing", "Medical Social Media", "Clinic Growth", "Patient Acquisition", "Healthcare Marketing Agency India"],
     openGraph: {
-        title: "Get 30–50 New Patient Inquiries/Month | Epsilon Technology",
+        title: "Get 30–50 New Patient Inquiries/Month",
         description: "Done-for-you social media marketing for doctors. Results in 30 days. No contracts.",
         url: "https://epsilon-technology.com/digital-marketing/",
     },

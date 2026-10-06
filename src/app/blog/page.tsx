@@ -21,7 +21,7 @@ import prisma from '@/lib/prisma';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-    title: "Healthcare Digital Marketing & Doctor Growth Blog | Epsilon Technology",
+    title: "Healthcare Digital Marketing & Doctor Growth Blog",
     description: "Authority guides on Doctor SEO, Google Business Profile, AI Visibility (GEO), Patient Acquisition, WhatsApp Automation, and Healthcare Marketing in India & Gujarat.",
     keywords: [
         "digital marketing for doctors in India",

@@ -33,7 +33,7 @@ import { DoctorMarketingCalculator } from '@/components/interactive/DoctorMarket
 import { FAQ } from '@/components/sections/FAQ';
 
 export const metadata: Metadata = {
-    title: "7 Proven Marketing Ideas for Doctors in Junagadh (2026 Guide) | Epsilon Technology",
+    title: "7 Proven Marketing Ideas for Doctors in Junagadh (2026 Guide)",
     description: "Are you a doctor in Junagadh looking to increase OPD footfall? Learn 7 actionable digital marketing strategies — Local SEO, Gujarati Reels, WhatsApp OPD automation & GMB optimization.",
     keywords: [
         "Doctor Marketing Ideas Junagadh",

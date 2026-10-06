@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Digital Marketing Agency in Junagadh | Epsilon Technology",
+    title: "Digital Marketing Agency in Junagadh",
     description: "Epsilon Technology is Junagadh's results-driven digital marketing agency. SEO, Google Ads, social media & web development. Free consultation — based in Junagadh.",
     alternates: {
         canonical: 'https://epsilon-technology.com/digital-marketing-in-junagadh/',
     },
     openGraph: {
-        title: "Digital Marketing Agency in Junagadh | Epsilon Technology",
+        title: "Digital Marketing Agency in Junagadh",
         description: "Epsilon Technology is Junagadh's results-driven digital marketing agency. SEO, Google Ads, social media & web development. Free consultation — based in Junagadh.",
         url: 'https://epsilon-technology.com/digital-marketing-in-junagadh/',
         siteName: 'Epsilon Technology',

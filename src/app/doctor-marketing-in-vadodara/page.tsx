@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import DoctorCityLanding from '@/components/landing/DoctorCityLanding';
 
 export const metadata: Metadata = {
-    title: "Digital Marketing for Doctors in Vadodara | Epsilon Technology",
+    title: "Digital Marketing for Doctors in Vadodara",
     description: "Trusted digital marketing for doctors in Vadodara. Build your brand with Instagram Reels and Facebook ads. Patient growth by Epsilon Technology.",
     keywords: ["doctor marketing Vadodara", "digital marketing for doctors Vadodara", "social media for doctors Vadodara", "healthcare marketing Vadodara", "clinic marketing Vadodara"],
     openGraph: {

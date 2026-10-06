@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, Shield, Clock, FileSearch, ArrowRight, Loader2 } from 'lucide-react';
+import { X, CheckCircle, Shield, Clock, Stethoscope, ArrowRight, Loader2 } from 'lucide-react';
 import { trackMetaCapiEvent } from '@/lib/meta-capi';
 
 interface LeadMagnetModalProps {
@@ -13,10 +13,10 @@ interface LeadMagnetModalProps {
 export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
-    website: '',
-    projectScope: 'Existing Software Audit',
+    city: '',
+    specialty: 'Orthopedic & Spine',
+    websiteOrSocial: '',
   });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -29,35 +29,29 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
         eventName: 'Lead',
         user: {
           firstName: formData.name,
-          email: formData.email,
           phone: formData.phone,
         },
         customData: {
-          content_name: 'Free 48-Hour Technical Audit Request',
+          content_name: 'Free Digital Visibility Diagnosis Request',
           lead_type: 'Lead Magnet Modal',
-          website: formData.website,
-          specialty: formData.projectScope,
+          city: formData.city,
+          specialty: formData.specialty,
         },
       });
 
-      const res = await fetch('/api/contact', {
+      await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formData.name,
-          email: formData.email,
           mobile: formData.phone,
-          website: formData.website,
-          specialty: formData.projectScope,
-          leadType: 'Free 48-Hour Technical Audit Request',
+          city: formData.city,
+          specialty: formData.specialty,
+          website: formData.websiteOrSocial,
+          leadType: 'Free Digital Visibility Diagnosis Request (Modal)',
         }),
       });
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        // Fallback smooth submit UX
-        setSubmitted(true);
-      }
+      setSubmitted(true);
     } catch {
       setSubmitted(true);
     } finally {
@@ -87,7 +81,7 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
             className="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden z-10 text-white"
           >
             {/* Header / Banner */}
-            <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 p-6 md:p-8 relative">
+            <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-600 p-6 md:p-8 relative">
               <button
                 onClick={onClose}
                 className="absolute top-4 right-4 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
@@ -97,13 +91,13 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
               </button>
 
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider text-white mb-3">
-                <FileSearch className="w-3.5 h-3.5" /> 100% Free · No Obligation
+                <Stethoscope className="w-3.5 h-3.5" /> 100% Free Practice Diagnosis
               </div>
               <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                Claim Your Free 48-Hour Technical & Architecture Audit
+                Get Your Free Digital Visibility Diagnosis
               </h3>
               <p className="text-blue-100 text-sm mt-2 font-medium">
-                Get a comprehensive engineering report covering code quality, security vulnerabilities, API bottlenecks & UX friction ($1,500 value).
+                Comprehensive 6-point clinical audit covering Google Maps 3-Pack, Generative AI Search (GEO), Website Speed, and WhatsApp conversion leaks.
               </p>
             </div>
 
@@ -114,45 +108,31 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                   <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
                     <CheckCircle className="w-8 h-8" />
                   </div>
-                  <h4 className="text-2xl font-bold text-white mb-2">Audit Request Confirmed!</h4>
+                  <h4 className="text-2xl font-bold text-white mb-2">Diagnosis Request Confirmed!</h4>
                   <p className="text-slate-300 text-sm max-w-md mx-auto mb-6">
-                    Our Lead Technical Architect is reviewing your details. We will email your custom audit report within 48 hours.
+                    Our Healthcare Growth Architect is auditing your practice. You will receive your custom 6-Point Visibility Diagnosis within 24 hours.
                   </p>
                   <button
                     onClick={onClose}
-                    className="px-6 py-3 bg-blue-600 hover:bg-blue-500 font-bold rounded-xl text-white transition-colors"
+                    className="px-6 py-3 bg-blue-600 hover:bg-blue-500 font-bold rounded-xl text-white text-xs uppercase tracking-wider transition-colors"
                   >
-                    Back to Epsilon Technext
+                    Back to Epsilon Technology
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">Doctor / Clinic / Hospital Name *</label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="John Doe"
+                        placeholder="e.g. Dr. D.P. Vora / Rainbow Pedia"
                         className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Work Email *</label>
-                      <input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@company.com"
-                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold text-slate-300 mb-1">Phone / WhatsApp *</label>
                       <input
@@ -160,59 +140,77 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+1 (555) 000-0000"
-                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Website or Product URL</label>
-                      <input
-                        type="text"
-                        value={formData.website}
-                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                        placeholder="https://yourcompany.com"
+                        placeholder="+91 98765 43210"
                         className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
                   </div>
 
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">City / Location *</label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.city}
+                        onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                        placeholder="e.g. Junagadh, Ahmedabad, Surat"
+                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-300 mb-1">Medical Specialty</label>
+                      <select
+                        value={formData.specialty}
+                        onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
+                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                      >
+                        <option value="Orthopedic & Spine">Orthopedic &amp; Spine</option>
+                        <option value="Dermatology & Skin">Dermatology &amp; Skin</option>
+                        <option value="Dental Clinic">Dental Clinic</option>
+                        <option value="Gynecology & IVF">Gynecology &amp; IVF</option>
+                        <option value="Pediatrics & Child Care">Pediatrics &amp; Child Care</option>
+                        <option value="General & Laparoscopic Surgery">General &amp; Laparoscopic Surgery</option>
+                        <option value="Multispecialty Hospital">Multispecialty Hospital</option>
+                        <option value="Other Medical Specialty">Other Medical Specialty</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">Primary Focus Area</label>
-                    <select
-                      value={formData.projectScope}
-                      onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    >
-                      <option value="Existing Software Audit">Existing Software Audit & Code Refactoring</option>
-                      <option value="New Product Engineering">New Custom Product Development ($10k-$100k)</option>
-                      <option value="Performance & Core Web Vitals">Performance, Speed & Conversion Optimization</option>
-                      <option value="Mobile App Development">Mobile App (iOS / Android) Engineering</option>
-                    </select>
+                    <label className="block text-xs font-semibold text-slate-300 mb-1">Website or Instagram Profile (Optional)</label>
+                    <input
+                      type="text"
+                      value={formData.websiteOrSocial}
+                      onChange={(e) => setFormData({ ...formData, websiteOrSocial: e.target.value })}
+                      placeholder="https://yourclinic.com or @yourinstagram"
+                      className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    />
                   </div>
 
                   <div className="pt-2 flex flex-col gap-3">
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 font-extrabold text-white text-base rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 disabled:opacity-50"
+                      className="w-full py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 hover:from-blue-500 hover:to-sky-400 font-black text-white text-base rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 disabled:opacity-50"
                     >
                       {loading ? (
                         <>
-                          <Loader2 className="w-5 h-5 animate-spin" /> Generating Audit Request...
+                          <Loader2 className="w-5 h-5 animate-spin" /> Submitting Request...
                         </>
                       ) : (
                         <>
-                          Claim My Free Audit Blueprint <ArrowRight className="w-5 h-5" />
+                          Get My Free Visibility Diagnosis <ArrowRight className="w-5 h-5" />
                         </>
                       )}
                     </button>
 
                     <div className="flex items-center justify-center gap-4 text-xs text-slate-400 font-medium pt-1">
                       <span className="flex items-center gap-1">
-                        <Shield className="w-3.5 h-3.5 text-blue-400" /> Strict NDA Included
+                        <Shield className="w-3.5 h-3.5 text-blue-400" /> Strict Confidentiality
                       </span>
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-emerald-400" /> 48-Hour Delivery
+                        <Clock className="w-3.5 h-3.5 text-emerald-400" /> 24-Hour Custom Audit
                       </span>
                     </div>
                   </div>

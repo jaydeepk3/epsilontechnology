@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         "epsilon technology junagadh"
     ],
     openGraph: {
-        title: "Best Mobile Application Development Company in Junagadh | Epsilon Technology",
+        title: "Best Mobile Application Development Company in Junagadh",
         description: "Partner with the best mobile application development company in Junagadh. We build premium iOS & Android apps using React Native and Flutter.",
         url: "https://epsilon-technology.com/mobile-app-development-company-in-junagadh/",
         images: ["/logo.webp"]

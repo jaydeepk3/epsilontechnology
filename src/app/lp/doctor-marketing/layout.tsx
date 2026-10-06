@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
 
     metadataBase: new URL('https://epsilon-technology.com'),
-    title: "Get 30–50 New Patient Inquiries/Month | Epsilon Technology",
+    title: "Get 30–50 New Patient Inquiries/Month",
     description: "Done-for-you Instagram & Facebook marketing for doctors — wherever your clinic is. No contracts. Results in 30 days. Book your free strategy call now.",
     robots: { index: false, follow: false }, // No-index landing page (ad traffic only)
 };

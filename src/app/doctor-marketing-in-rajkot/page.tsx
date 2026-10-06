@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Best doctor marketing agency in Rajkot. We help doctors and hospitals increase patient footfall, build brand authority, and rank locally.",
     keywords: ["Doctor Marketing in Rajkot", "Clinic Marketing Rajkot", "Medical Marketing Agency Rajkot", "Hospital Marketing Rajkot", "SEO for Doctors Rajkot"],
     openGraph: {
-        title: "Doctor Marketing in Rajkot | Epsilon Technology",
+        title: "Doctor Marketing in Rajkot",
         description: "Grow your medical practice in Rajkot with specialized marketing strategies.",
         url: "https://epsilon-technology.com/doctor-marketing-in-rajkot/",
         images: ["/logo.webp"]

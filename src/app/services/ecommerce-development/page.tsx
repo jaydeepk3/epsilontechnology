@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Boost your sales with expert eCommerce development services. We build high-converting online stores using Shopify, WooCommerce, and custom Next.js headless solutions.",
     keywords: ["ecommerce developers for hire", "ecommerce website development", "Shopify experts", "custom ecommerce solutions", "online store builders"],
     openGraph: {
-        title: "eCommerce Development Services | Epsilon Technology",
+        title: "eCommerce Development Services",
         description: "Scale your online brand with robust, high-performance ecommerce solutions built for conversion.",
     },
     alternates: {

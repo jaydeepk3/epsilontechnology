@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Why Doctors Get Leads but Not Patients (The 4 Conversion Leaks) | Epsilon Technology",
+    title: "Why Doctors Get Leads but Not Patients (The 4 Conversion Leaks)",
     description: "Diagnose why 80% of clinic marketing inquiries fail to turn into confirmed OPD consultations. Learn how to fix the 5-minute response cliff, front-desk friction, and patient no-shows.",
     keywords: [
         "why doctors get leads but not patients",

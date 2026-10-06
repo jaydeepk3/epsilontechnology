@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Specialized doctor marketing agency in Junagadh. We help doctors and clinics increase OPD footfall, build trust, and rank locally.",
     keywords: ["Doctor Marketing in Junagadh", "Clinic Marketing Junagadh", "Medical Marketing Agency Junagadh", "Hospital Marketing Junagadh", "SEO for Doctors Junagadh"],
     openGraph: {
-        title: "Doctor Marketing in Junagadh | Epsilon Technology",
+        title: "Doctor Marketing in Junagadh",
         description: "Grow your medical practice in Junagadh with specialized marketing strategies.",
         url: "https://epsilon-technology.com/doctor-marketing-in-junagadh/",
         images: ["/logo.webp"]

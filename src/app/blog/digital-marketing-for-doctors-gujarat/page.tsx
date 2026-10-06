@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Digital Marketing for Doctors in Gujarat (2026 Strategy Guide) | Epsilon Technology",
+    title: "Digital Marketing for Doctors in Gujarat (2026 Strategy Guide)",
     description: "The complete growth roadmap for doctors and clinics across Gujarat — Ahmedabad, Surat, Rajkot, Vadodara, Junagadh, and Morbi. Local SEO, Gujarati video reels, and WhatsApp OPD conversion.",
     keywords: [
         "digital marketing for doctors in Gujarat",

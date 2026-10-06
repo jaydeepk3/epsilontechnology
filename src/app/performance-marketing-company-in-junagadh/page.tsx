@@ -41,13 +41,13 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Performance Marketing Company in Junagadh | Epsilon Technology",
+  title: "Performance Marketing Company in Junagadh",
   description: "Looking for a performance marketing company in Junagadh? Learn how Meta Ads, Google Ads, lead generation, landing pages and automation can help businesses generate measurable growth.",
   alternates: {
     canonical: 'https://epsilon-technology.com/performance-marketing-company-in-junagadh/',
   },
   openGraph: {
-    title: "Performance Marketing Company in Junagadh | Epsilon Technology",
+    title: "Performance Marketing Company in Junagadh",
     description: "Looking for a performance marketing company in Junagadh? Learn how Meta Ads, Google Ads, lead generation, landing pages and automation can help businesses generate measurable growth.",
     url: 'https://epsilon-technology.com/performance-marketing-company-in-junagadh/',
     type: 'article',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Performance Marketing Company in Junagadh | Epsilon Technology",
+    title: "Performance Marketing Company in Junagadh",
     description: "Looking for a performance marketing company in Junagadh? Learn how Meta Ads, Google Ads, lead generation, landing pages and automation can help businesses generate measurable growth.",
     images: ['/performance_marketing_company_junagadh_featured.webp'],
   }

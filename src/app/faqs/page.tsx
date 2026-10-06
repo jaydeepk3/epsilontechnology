@@ -4,11 +4,11 @@ import { CTA } from '@/components/sections/it/CTA';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://epsilon-technology.com'),
-    title: "Frequently Asked Questions | Epsilon Technology",
+    title: "Frequently Asked Questions",
     description: "Find answers to common questions about our web development, mobile app development, and digital marketing services.",
     keywords: ["FAQ", "Epsilon Technology FAQ", "web development questions", "mobile app development FAQ", "digital marketing questions"],
     openGraph: {
-        title: "Frequently Asked Questions | Epsilon Technology",
+        title: "Frequently Asked Questions",
         description: "Find answers to common questions about our services.",
         url: "https://epsilon-technology.com/faqs/",
     },

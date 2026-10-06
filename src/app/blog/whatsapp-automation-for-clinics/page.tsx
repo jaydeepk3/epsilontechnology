@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "WhatsApp Automation for Clinics (2026 Complete Blueprint) | Epsilon Technology",
+    title: "WhatsApp Automation for Clinics (2026 Complete Blueprint)",
     description: "The definitive guide to implementing official WhatsApp Business API automation in medical clinics. Automate OPD bookings, slash no-shows by 65%, and collect 5-star reviews.",
     keywords: [
         "WhatsApp automation for clinics",

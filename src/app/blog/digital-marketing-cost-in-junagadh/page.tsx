@@ -20,13 +20,13 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Cost in Junagadh (2026 Guide) | Epsilon Technology",
+  title: "Digital Marketing Cost in Junagadh (2026 Guide)",
   description: "How much does digital marketing cost in Junagadh? Complete 2026 pricing guide — SEO, social media, Google Ads & custom service plans. Free audit included.",
   alternates: {
     canonical: 'https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/',
   },
   openGraph: {
-    title: "Digital Marketing Cost in Junagadh (2026 Guide) | Epsilon Technology",
+    title: "Digital Marketing Cost in Junagadh (2026 Guide)",
     description: "A transparent breakdown of digital marketing fees in Junagadh. From SEO to Google Ads, find out what local businesses should realistically pay in 2026.",
     url: 'https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/',
     type: 'article',

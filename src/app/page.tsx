@@ -2,23 +2,25 @@ import { Metadata } from "next";
 import HomeLandingClient from "./HomeLandingClient";
 
 export const metadata: Metadata = {
-  title: "Epsilon Technology — Web, App & Digital Marketing Agency | UAE · UK · USA · India",
-  description: "Epsilon Technology provides high-performance custom web development, mobile apps, eCommerce solutions, and high-ROI Digital Marketing & Meta Ads performance campaigns. 100+ projects. 4.9★ rated.",
+  title: "Technology & Growth Partner for Doctors & Hospitals | Epsilon Technology",
+  description: "Get Found. Get Trusted. Get More Patient Enquiries. Specialized Doctor SEO, AI Search Visibility (GEO), Google Business Profile Maps 3-Pack, Meta Ads & WhatsApp Automation for doctors & hospitals.",
   keywords: [
-    "digital marketing agency",
-    "web development agency UAE",
-    "mobile app development UK",
-    "performance marketing agency",
-    "social media growth agency",
-    "eCommerce development USA",
-    "WhatsApp Business API agency",
-    "doctor marketing agency",
-    "Next.js development India",
-    "Meta ads certified agency",
+    "technology and growth partner for doctors",
+    "doctor growth partner",
+    "digital marketing for doctors",
+    "AI visibility for doctors",
+    "doctor SEO",
+    "Google Business Profile for doctors",
+    "clinic marketing agency",
+    "hospital digital marketing",
+    "WhatsApp automation for clinics",
+    "patient acquisition engine",
+    "doctor marketing Gujarat",
+    "Epsilon Technology"
   ],
   openGraph: {
-    title: "Epsilon Technology — Web, App & Digital Marketing Agency | UAE · UK · USA · India",
-    description: "Trusted by businesses globally. We build custom websites & apps and drive revenue with high-ROI digital marketing, Meta ads, and social growth. 100+ projects. 4.9★ rated.",
+    title: "Technology & Growth Partner for Doctors & Hospitals | Epsilon Technology",
+    description: "Get Found. Get Trusted. Get More Patient Enquiries. We build predictable patient acquisition engines for doctors, clinics, and hospitals. 100+ projects. 4.9★ rated.",
     url: "https://epsilon-technology.com/",
     type: "website",
     images: ["/logo.webp"],
@@ -29,5 +31,36 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomeLandingClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://epsilon-technology.com/#organization",
+        "name": "Epsilon Technology",
+        "url": "https://epsilon-technology.com/",
+        "logo": "https://epsilon-technology.com/logo.webp",
+        "description": "Technology & Growth Partner for Doctors & Hospitals in the AI Era."
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://epsilon-technology.com/#service",
+        "name": "Doctor Growth System by Epsilon Technology",
+        "provider": { "@id": "https://epsilon-technology.com/#organization" },
+        "serviceType": "Healthcare Digital Marketing & Technology",
+        "areaServed": ["India", "UAE", "UK", "USA"],
+        "description": "Get Found. Get Trusted. Get More Patient Enquiries. Specialized Doctor SEO, AI Visibility (GEO), Google 3-Pack Maps, Meta Ads, and WhatsApp Automation for Doctors and Hospitals."
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HomeLandingClient />
+    </>
+  );
 }

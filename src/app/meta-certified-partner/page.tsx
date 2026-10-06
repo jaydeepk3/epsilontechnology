@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Digital Marketing Agency Gujarat"
   ],
   openGraph: {
-    title: "Meta Ads Partner Excellence Impact Leader | Epsilon Technology",
+    title: "Meta Ads Partner Excellence Impact Leader",
     description: "Epsilon Technology has successfully achieved Ads Partner Excellence Impact Leader status in the Meta ads partner excellence program.",
     url: "https://epsilon-technology.com/meta-certified-partner/",
     type: "website",

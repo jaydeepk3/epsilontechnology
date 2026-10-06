@@ -12,7 +12,7 @@ const services = [
         color: "bg-sky-50 text-sky-600",
         gradient: "from-sky-50 to-blue-50",
         border: "group-hover:border-sky-200",
-        href: "/services/mobile-app-development"
+        href: "/services/mobile-app-development/"
     },
     {
         title: "Ecommerce Stores",
@@ -21,7 +21,7 @@ const services = [
         color: "bg-emerald-50 text-emerald-600",
         gradient: "from-emerald-50 to-green-50",
         border: "group-hover:border-emerald-200",
-        href: "/services/ecommerce-development"
+        href: "/services/ecommerce-development/"
     },
     {
         title: "Web Development",
@@ -30,7 +30,7 @@ const services = [
         color: "bg-indigo-50 text-indigo-600",
         gradient: "from-indigo-50 to-violet-50",
         border: "group-hover:border-indigo-200",
-        href: "/services/web-development"
+        href: "/services/web-development/"
     },
 ];
 

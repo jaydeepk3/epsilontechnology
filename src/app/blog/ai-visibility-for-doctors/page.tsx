@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "AI Visibility for Doctors (GEO Guide for 2026) | Epsilon Technology",
+    title: "AI Visibility for Doctors (GEO Guide for 2026)",
     description: "Learn how ChatGPT, Perplexity, Claude, and Google AI Overviews discover, evaluate, and recommend doctors. Master Generative Engine Optimization (GEO) for healthcare practices.",
     keywords: [
         "AI visibility for doctors",

@@ -1,81 +1,71 @@
 'use client';
 
 import { useState } from 'react';
+import { HeroDoctorGrowth } from '@/components/sections/HeroDoctorGrowth';
+import { ProblemDoctorGrowth } from '@/components/sections/ProblemDoctorGrowth';
+import { DoctorGrowthSystem } from '@/components/sections/DoctorGrowthSystem';
+import { WhatWeDoDoctorGrowth } from '@/components/sections/WhatWeDoDoctorGrowth';
+import { WhyEpsilonDoctorGrowth } from '@/components/sections/WhyEpsilonDoctorGrowth';
+import { WhoWeHelpDoctorGrowth } from '@/components/sections/WhoWeHelpDoctorGrowth';
+import { DoctorProofAndCaseStudies } from '@/components/sections/DoctorProofAndCaseStudies';
+import { FreeDiagnosisSection } from '@/components/sections/FreeDiagnosisSection';
+import { DoctorGrowthInsights } from '@/components/sections/DoctorGrowthInsights';
+import { DoctorFaqSection } from '@/components/sections/DoctorFaqSection';
+import { FinalCtaDoctorGrowth } from '@/components/sections/FinalCtaDoctorGrowth';
 import { StickyConversionBar } from '@/components/ui/StickyConversionBar';
 import { LeadMagnetModal } from '@/components/sections/LeadMagnetModal';
-import { FounderSection } from '@/components/sections/FounderSection';
-import { PainPointsSection } from '@/components/sections/PainPointsSection';
-import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
-import { CaseStudiesSection } from '@/components/sections/CaseStudiesSection';
-import { BeforeAfterSection } from '@/components/sections/BeforeAfterSection';
-import { ProcessTimelineSection } from '@/components/sections/ProcessTimelineSection';
-import { SecurityNDASection } from '@/components/sections/SecurityNDASection';
-import { TechEcosystemSection } from '@/components/sections/TechEcosystemSection';
-import { IndustriesSection } from '@/components/sections/IndustriesSection';
-import { FaqSection } from '@/components/sections/FaqSection';
-import { FinalCtaSection } from '@/components/sections/FinalCtaSection';
-import { Hero } from '@/components/sections/Hero';
-import { Booking } from '@/components/sections/Booking';
-import { Testimonials } from '@/components/sections/Testimonials';
 
 export default function HomeLandingClient() {
-  const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
+  const [isDiagnosisModalOpen, setIsDiagnosisModalOpen] = useState(false);
+
+  const handleOpenDiagnosisModal = () => {
+    setIsDiagnosisModalOpen(true);
+  };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden">
       <main>
-        {/* Outcome-Focused Hero */}
-        <Hero />
+        {/* 1. Hero: Get Found. Get Trusted. Get More Patient Enquiries. */}
+        <HeroDoctorGrowth onOpenDiagnosis={handleOpenDiagnosisModal} />
 
-        {/* Founder Personal Guarantee & Video */}
-        <FounderSection />
+        {/* 2. Problem: Patients search Google, check reviews, Instagram, websites & AI tools */}
+        <ProblemDoctorGrowth />
 
-        {/* Why Businesses Fail Before Hiring Us */}
-        <PainPointsSection />
+        {/* 3. Doctor Growth System: Visibility → Trust → Patient Acquisition → Conversion */}
+        <DoctorGrowthSystem />
 
-        {/* Why Clients Choose Epsilon (Core Pillars) */}
-        <WhyChooseUsSection />
+        {/* 4. What We Do: 8 Healthcare Growth Pillars */}
+        <WhatWeDoDoctorGrowth />
 
-        {/* ROI Case Studies with Measurable Results */}
-        <CaseStudiesSection />
+        {/* 5. Why Epsilon: Technology + Marketing + Automation */}
+        <WhyEpsilonDoctorGrowth />
 
-        {/* Before vs After Interactive Comparison */}
-        <BeforeAfterSection />
+        {/* 6. Who We Help: Doctors, Clinics, Hospitals & New Practices */}
+        <WhoWeHelpDoctorGrowth />
 
-        {/* 6-Step Software Development Process */}
-        <ProcessTimelineSection />
+        {/* 7. Case Studies / Proof: Real Epsilon Results & Clients */}
+        <DoctorProofAndCaseStudies />
 
-        {/* Security, IP Transfer & NDA Guarantee */}
-        <SecurityNDASection />
+        {/* 8. Free Digital Visibility Diagnosis: 6 Checks + Form */}
+        <FreeDiagnosisSection />
 
-        {/* Technology Ecosystem */}
-        <TechEcosystemSection />
+        {/* 9. Doctor Growth Insights: Latest Blog Articles */}
+        <DoctorGrowthInsights />
 
-        {/* Industries Served */}
-        <IndustriesSection />
+        {/* 10. FAQ / Objection Handling */}
+        <DoctorFaqSection />
 
-        {/* Social Proof & Video Testimonials */}
-        <Testimonials />
-
-        {/* FAQ Answering Buying Objections */}
-        <FaqSection />
-
-        {/* Interactive Discovery Booking Form */}
-        <div id="booking">
-          <Booking />
-        </div>
-
-        {/* High-Urgency Final CTA Section */}
-        <FinalCtaSection />
+        {/* 11. Final CTA: See Where Your Practice Is Losing Visibility */}
+        <FinalCtaDoctorGrowth onOpenDiagnosis={handleOpenDiagnosisModal} />
       </main>
 
       {/* Desktop & Mobile Sticky Conversion Bar */}
-      <StickyConversionBar onOpenAuditModal={() => setIsAuditModalOpen(true)} />
+      <StickyConversionBar onOpenAuditModal={handleOpenDiagnosisModal} />
 
-      {/* Free 48-Hour Technical Audit Lead Magnet Modal */}
+      {/* Free Digital Visibility Diagnosis Lead Magnet Modal */}
       <LeadMagnetModal
-        isOpen={isAuditModalOpen}
-        onClose={() => setIsAuditModalOpen(false)}
+        isOpen={isDiagnosisModalOpen}
+        onClose={() => setIsDiagnosisModalOpen(false)}
       />
     </div>
   );

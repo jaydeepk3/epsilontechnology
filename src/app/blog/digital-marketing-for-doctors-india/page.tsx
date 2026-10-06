@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Digital Marketing for Doctors in India (2026 Master Guide) | Epsilon Technology",
+    title: "Digital Marketing for Doctors in India (2026 Master Guide)",
     description: "The complete 2026 ethical roadmap to patient acquisition, Google 3-Pack SEO, AI search visibility, and WhatsApp conversion for medical practitioners and clinics across India.",
     keywords: [
         "digital marketing for doctors in India",

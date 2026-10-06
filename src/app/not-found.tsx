@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "404 – Page Not Found | Epsilon Technology",
+    title: "404 – Page Not Found",
     description: "Oops! The page you're looking for doesn't exist. Let us guide you back to Epsilon Technology.",
     robots: { index: false, follow: true },
 };
@@ -77,9 +77,9 @@ export default function NotFound() {
                 <div className="flex flex-wrap justify-center gap-3 mb-10">
                     {[
                         { label: "Home", href: "/" },
-                        { label: "Services", href: "/services" },
-                        { label: "About Us", href: "/about-us" },
-                        { label: "Contact", href: "/contacts" },
+                        { label: "Services", href: "/it-services/" },
+                        { label: "About Us", href: "/about-us/" },
+                        { label: "Contact", href: "/contacts/" },
                     ].map((link) => (
                         <Link
                             key={link.href}

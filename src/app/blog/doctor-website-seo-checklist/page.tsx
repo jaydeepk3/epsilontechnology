@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Doctor Website SEO Checklist (2026 25-Point Practice Audit) | Epsilon Technology",
+    title: "Doctor Website SEO Checklist (2026 25-Point Practice Audit)",
     description: "The complete 25-point actionable technical SEO, medical schema, Core Web Vitals, and conversion rate audit checklist for healthcare clinic websites.",
     keywords: [
         "doctor website SEO checklist",

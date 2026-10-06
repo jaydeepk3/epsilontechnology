@@ -27,13 +27,13 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Best Digital Marketing Agency in Junagadh (2026) — How to Choose | Epsilon Technology",
+  title: "Best Digital Marketing Agency in Junagadh (2026) — How to Choose",
   description: "Looking for the best digital marketing agency in Junagadh? Use this honest 2026 checklist to compare agencies and find the right fit for your business.",
   alternates: {
     canonical: 'https://epsilon-technology.com/blog/best-digital-marketing-agency-in-junagadh/',
   },
   openGraph: {
-    title: "Best Digital Marketing Agency in Junagadh (2026) — How to Choose | Epsilon Technology",
+    title: "Best Digital Marketing Agency in Junagadh (2026) — How to Choose",
     description: "A comprehensive guide on how to evaluate and choose the right digital marketing partner for your business in Junagadh. 8-point checklist included.",
     url: 'https://epsilon-technology.com/blog/best-digital-marketing-agency-in-junagadh/',
     type: 'article',

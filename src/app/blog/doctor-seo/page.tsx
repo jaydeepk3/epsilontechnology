@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "SEO for Doctors (2026 Technical & Local Guide) | Epsilon Technology",
+    title: "SEO for Doctors (2026 Technical & Local Guide)",
     description: "Master medical search engine optimization. Learn the exact framework to rank your clinic: Medical Schema, E-E-A-T signals, YMYL compliance, and local Google 3-Pack authority.",
     keywords: [
         "SEO for doctors",

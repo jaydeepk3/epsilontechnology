@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Google Business Profile for Doctors (2026 Masterclass) | Epsilon Technology",
+    title: "Google Business Profile for Doctors (2026 Masterclass)",
     description: "The definitive guide to dominating the local Google 3-Pack. Learn category optimization, review velocity protocols, practitioner vs clinic listing architecture, and spam defense.",
     keywords: [
         "Google Business Profile for doctors",
