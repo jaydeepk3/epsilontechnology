@@ -113,7 +113,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               </a>
             )}
             {!isLive && (
-              <Link href="/custom-quote" className="inline-flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors">
+              <Link href="/contacts/" className="inline-flex items-center text-sm font-semibold text-white hover:text-gray-300 transition-colors">
                 Start a Similar Project <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             )}

@@ -46,8 +46,71 @@ const generalSurgeonFaqs = [
 ];
 
 export default function GeneralSurgeonGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-general-surgeons/#service",
+                "name": "Digital Marketing for General Surgeons",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Comprehensive digital marketing, SEO, Google Maps optimization, and patient acquisition services for general surgeons.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-general-surgeons/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "General Surgeons",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-general-surgeons/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-general-surgeons/#faq",
+                "mainEntity": generalSurgeonFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Header */}
             <section className="pt-32 pb-16 bg-slate-50 border-b border-slate-200">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
@@ -58,7 +121,7 @@ export default function GeneralSurgeonGuide() {
                         Education First: <span className="text-blue-600">Digital Marketing for General Surgeons</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Learn how general surgeons can build deep clinical authority, dominate high-intent search, and provide digital reassurance to patients in need of surgery.
+                        Learn how general surgeons can build deep clinical authority, dominate high-intent search, and provide digital reassurance to patients in need of surgery in 2026.
                     </p>
                 </div>
             </section>
@@ -148,8 +211,8 @@ export default function GeneralSurgeonGuide() {
                                 Build a dominant surgical brand. By provides technical clarity and building trust through authentic patient results, you can build a practice that is the 'First Name Choice' for surgery in your region.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-400 hover:underline">Junagadh General Surgery Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-400 hover:underline">Rajkot Surgeon SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh General Surgery Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Surgeon SEO</Link>
                             </div>
                         </div>
                     </div>

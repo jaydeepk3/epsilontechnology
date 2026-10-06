@@ -204,7 +204,7 @@ export default function PortfolioPage() {
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto relative z-10">
             Tell us about your project requirements and we'll provide a comprehensive technical roadmap and fixed-price quote.
           </p>
-          <Link href="/custom-quote" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl shadow-white/10 relative z-10">
+          <Link href="/contacts/" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl shadow-white/10 relative z-10">
             Start Your Project →
           </Link>
         </div>

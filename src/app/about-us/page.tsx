@@ -52,7 +52,7 @@ export default function AboutPage() {
                         </div>
 
                         <Link
-                            href="/#contact"
+                            href="/contacts/"
                             className="inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-primary text-white hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-200 h-16 px-10 text-xl font-bold active:scale-95"
                         >
                             Work With Me
@@ -81,10 +81,10 @@ export default function AboutPage() {
                             It started with a love for code. From building my first application to deploying complex enterprise systems, I realized that <strong>Technology</strong> is the biggest leverage a business can have.
                         </p>
                         <p>
-                            But code without purpose is useless. I saw businesses struggling with slow websites, buggy apps, and disjointed marketing. They didn't need just a "developer"—they needed a <em>Technical Partner</em> who understood their growth goals.
+                            But code without purpose is useless. I saw businesses struggling with slow websites, buggy apps, and disjointed marketing. They didn't need just a &quot;developer&quot;—they needed a <em>Technical Partner</em> who understood their growth goals.
                         </p>
                         <p>
-                            That's why <strong>Epsilon Technology</strong> exists. We combine elite-level engineering (React, Node.js, AWS) with strategic marketing execution. I personally oversee the architecture of every project to ensure it's not just "delivered", but <strong>engineered for success</strong>.
+                            That's why <strong>Epsilon Technology</strong> exists. We combine elite-level engineering (React, Node.js, AWS) with specialized doctor marketing and strategic performance execution. I personally oversee the architecture of every project to ensure it's not just &quot;delivered&quot;, but <strong>engineered for success</strong>.
                         </p>
                     </div>
                 </div>
@@ -96,6 +96,7 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why I'm Different</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {[
+                            "Specialized Doctor & Clinic Marketing",
                             "Full-Stack Architecture Expert",
                             "Data-Driven Growth Strategies",
                             "Performance-First Coding",
@@ -117,27 +118,52 @@ export default function AboutPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Person",
-                        "name": "Jaydeep Kataria",
-                        "jobTitle": "Founder",
-                        "worksFor": {
-                            "@type": "Organization",
-                            "name": "Epsilon Technology",
-                            "url": "https://epsilon-technology.com"
-                        },
-                        "url": "https://epsilon-technology.com/about-us",
-                        "image": "https://epsilon-technology.com/images/jayde.webp",
-                        "description": "Jaydeep Kataria is a specialized doctor marketing expert and founder of Epsilon Technology, helping clinics in Gujarat grow.",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "Junagadh",
-                            "addressRegion": "Gujarat",
-                            "addressCountry": "India"
-                        },
-                        "sameAs": [
-                            "https://www.instagram.com/jaydeepkataria/",
-                            "https://www.linkedin.com/in/jaydeepkataria",
-                            "https://dribbble.com/epsilontech",
+                        "@graph": [
+                            {
+                                "@type": "Person",
+                                "@id": "https://epsilon-technology.com/about-us/#founder",
+                                "name": "Jaydeep Kataria",
+                                "jobTitle": "Founder & Lead Technologist",
+                                "worksFor": {
+                                    "@type": "Organization",
+                                    "@id": "https://epsilon-technology.com/#organization",
+                                    "name": "Epsilon Technology",
+                                    "url": "https://epsilon-technology.com/"
+                                },
+                                "url": "https://epsilon-technology.com/about-us/",
+                                "image": "https://epsilon-technology.com/images/jayde.webp",
+                                "description": "Jaydeep Kataria is a specialized doctor marketing expert and full-stack software engineer, founder of Epsilon Technology.",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Junagadh",
+                                    "addressRegion": "Gujarat",
+                                    "postalCode": "362001",
+                                    "addressCountry": "IN"
+                                },
+                                "sameAs": [
+                                    "https://www.instagram.com/jaydeepkataria/",
+                                    "https://www.linkedin.com/in/jaydeepkataria",
+                                    "https://dribbble.com/epsilontech"
+                                ]
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "@id": "https://epsilon-technology.com/about-us/#breadcrumbs",
+                                "itemListElement": [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://epsilon-technology.com/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "About Us",
+                                        "item": "https://epsilon-technology.com/about-us/"
+                                    }
+                                ]
+                            }
                         ]
                     })
                 }}

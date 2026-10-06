@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://epsilon-technology.com',
+    canonical: 'https://epsilon-technology.com/',
   },
   icons: {
     icon: '/logo.webp',
@@ -155,38 +155,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "@type": "Organization",
                   "@id": "https://epsilon-technology.com/#organization",
                   "name": "Epsilon Technology",
-                  "url": "https://epsilon-technology.com",
+                  "url": "https://epsilon-technology.com/",
                   "logo": "https://epsilon-technology.com/logo.webp",
-                  "description": "Specialized social media growth for doctors and premium IT software services.",
+                  "description": "Specialized digital marketing & patient acquisition for doctors and clinics, custom full-stack software development, and mobile apps.",
+                  "telephone": "+918160881461",
+                  "email": "contact@epsilon-technology.com",
                   "contactPoint": {
                     "@type": "ContactPoint",
+                    "telephone": "+918160881461",
                     "email": "contact@epsilon-technology.com",
-                    "contactType": "customer service"
+                    "contactType": "customer service",
+                    "areaServed": ["IN", "AE", "US", "GB"],
+                    "availableLanguage": ["English", "Gujarati", "Hindi"]
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Zanzarda Road",
+                    "addressLocality": "Junagadh",
+                    "addressRegion": "Gujarat",
+                    "postalCode": "362001",
+                    "addressCountry": "IN"
                   },
                   "sameAs": [
-                    "https://www.instagram.com/epsilon.technology/",
+                    "https://www.instagram.com/epsilontechnology/",
+                    "https://www.linkedin.com/company/epsilon-technology8",
                     "https://dribbble.com/epsilontech"
                   ],
                   "founder": {
                     "@type": "Person",
+                    "@id": "https://epsilon-technology.com/about-us/#founder",
                     "name": "Jaydeep Kataria",
-                    "url": "https://epsilon-technology.com/about-us"
+                    "url": "https://epsilon-technology.com/about-us/"
+                  },
+                  "knowsAbout": [
+                    "Doctor Marketing",
+                    "Healthcare SEO",
+                    "Patient Acquisition",
+                    "Hospital Marketing",
+                    "Next.js Development",
+                    "Mobile App Development",
+                    "WhatsApp Business API Automation"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://epsilon-technology.com/#website",
+                  "url": "https://epsilon-technology.com/",
+                  "name": "Epsilon Technology",
+                  "publisher": {
+                    "@id": "https://epsilon-technology.com/#organization"
                   }
                 },
                 {
                   "@type": "SoftwareHouse",
                   "@id": "https://epsilon-technology.com/#software",
-                  "name": "Epsilon Technology - IT Services",
+                  "name": "Epsilon Technology - IT & Healthcare Digital Agency",
                   "parentOrganization": {
                     "@id": "https://epsilon-technology.com/#organization"
                   },
-                  "description": "Global mobile app development, ecommerce solutions, and custom software company.",
-                  "url": "https://epsilon-technology.com",
+                  "description": "Full-stack software engineering, mobile application development, eCommerce solutions, and healthcare digital growth.",
+                  "url": "https://epsilon-technology.com/",
                   "address": {
                     "@type": "PostalAddress",
+                    "streetAddress": "Zanzarda Road",
+                    "addressLocality": "Junagadh",
+                    "addressRegion": "Gujarat",
+                    "postalCode": "362001",
                     "addressCountry": "IN"
                   },
-                  "priceRange": "$$$"
+                  "priceRange": "$$"
                 }
               ]
             })

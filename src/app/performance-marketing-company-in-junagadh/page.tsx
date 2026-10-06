@@ -262,7 +262,7 @@ export default function PerformanceMarketingJunagadhPage() {
                 Home
               </Link>
               <ChevronRight size={12} />
-              <Link href="/blog" className="hover:text-sky-600 transition-colors">
+              <Link href="/blog/" className="hover:text-sky-600 transition-colors">
                 Blog
               </Link>
               <ChevronRight size={12} />
@@ -1027,7 +1027,7 @@ export default function PerformanceMarketingJunagadhPage() {
                   </div>
 
                   <p className="mb-5">
-                    Learn more about our dedicated healthcare strategies by visiting <Link href="/digital-marketing-for-doctors-in-junagadh/" className="text-sky-600 font-semibold underline hover:text-sky-700">Digital Marketing for Doctors in Junagadh</Link> and our full <Link href="/digital-marketing-for-doctors/" className="text-sky-600 font-semibold underline hover:text-sky-700">Healthcare Marketing Solutions</Link>.
+                    Learn more about our dedicated healthcare strategies by visiting <Link href="/doctor-marketing-in-junagadh/" className="text-sky-600 font-semibold underline hover:text-sky-700">Digital Marketing for Doctors in Junagadh</Link> and our full <Link href="/digital-marketing-for-doctors/" className="text-sky-600 font-semibold underline hover:text-sky-700">Healthcare Marketing Solutions</Link>.
                   </p>
                 </section>
 

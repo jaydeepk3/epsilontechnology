@@ -47,8 +47,71 @@ const pediatricFaqs = [
 ];
 
 export default function PediatricDoctorGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-pediatric-doctors/#service",
+                "name": "Digital Marketing for Pediatric Doctors & Child Clinics",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized pediatric SEO, local Google Maps optimization, and trust-building digital marketing for child healthcare providers and pediatric clinics.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-pediatric-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Pediatric Doctors",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-pediatric-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-pediatric-doctors/#faq",
+                "mainEntity": pediatricFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className="pt-32 pb-16 bg-blue-50/20 border-b border-blue-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-bold mb-6">
@@ -58,7 +121,7 @@ export default function PediatricDoctorGuide() {
                         Pillar Guide: <span className="text-blue-600">Digital Marketing for Pediatric Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Understanding how child healthcare providers can build trust with modern parents, dominate local search, and provide digital value.
+                        Understanding how child healthcare providers can build trust with modern parents, dominate local search, and provide digital value in 2026.
                     </p>
                 </div>
             </section>
@@ -140,8 +203,8 @@ export default function PediatricDoctorGuide() {
                                 Build a practice that stays 'top of mind' for parents. By provides value before the visit through education and ease of access, you build a sustainable, trusted practice.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-400 font-bold hover:underline">Junagadh Pediatric Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-400 font-bold hover:underline">Rajkot Pediatric Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 font-bold hover:underline">Junagadh Pediatric Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 font-bold hover:underline">Rajkot Pediatric Marketing</Link>
                             </div>
                         </div>
                     </div>

@@ -107,6 +107,29 @@ export default function DoctorMarketingIdeasJunagadhPage() {
                 "description": "Learn 7 actionable digital marketing strategies for doctors and hospital owners in Junagadh to double OPD inquiries, build patient trust, and dominate Google Maps."
             },
             {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://epsilon-technology.com/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "7 Marketing Ideas for Doctors in Junagadh",
+                        "item": "https://epsilon-technology.com/blog/doctor-marketing-ideas-junagadh/"
+                    }
+                ]
+            },
+            {
                 "@type": "FAQPage",
                 "mainEntity": junagadhFaqs.map(faq => ({
                     "@type": "Question",
@@ -141,7 +164,7 @@ export default function DoctorMarketingIdeasJunagadhPage() {
                                 <Home size={12} /> Home
                             </Link>
                             <ChevronRight size={10} className="shrink-0" />
-                            <Link href="/blog" className="hover:text-sky-600 transition-colors shrink-0">
+                            <Link href="/blog/" className="hover:text-sky-600 transition-colors shrink-0">
                                 Blog
                             </Link>
                             <ChevronRight size={10} className="shrink-0" />
@@ -483,7 +506,7 @@ export default function DoctorMarketingIdeasJunagadhPage() {
                             <p className="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
                                 Founder at Epsilon Technology. Specializing in healthcare digital transformation, Local SEO, and software solutions for medical professionals across Gujarat.
                             </p>
-                            <Link href="/contacts" className="text-xs font-bold text-sky-600 hover:text-sky-700 flex items-center gap-1">
+                            <Link href="/contacts/" className="text-xs font-bold text-sky-600 hover:text-sky-700 flex items-center gap-1">
                                 Book a 1-on-1 Consultation with Jaydeep <ArrowRight size={14} />
                             </Link>
                         </div>
@@ -505,7 +528,7 @@ export default function DoctorMarketingIdeasJunagadhPage() {
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <Link
-                                    href="/contacts"
+                                    href="/contacts/"
                                     className="w-full sm:w-auto px-8 py-4 bg-white text-sky-700 hover:bg-sky-50 rounded-2xl font-extrabold text-base transition-all duration-300 shadow-xl flex items-center justify-center gap-2 group"
                                 >
                                     <PhoneCall size={18} />
@@ -513,7 +536,7 @@ export default function DoctorMarketingIdeasJunagadhPage() {
                                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                                 <Link
-                                    href="/doctor-marketing-in-junagadh"
+                                    href="/doctor-marketing-in-junagadh/"
                                     className="w-full sm:w-auto px-8 py-4 bg-sky-800/60 hover:bg-sky-800 border border-white/20 text-white rounded-2xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-2"
                                 >
                                     <span>Explore Doctor Marketing Services</span>

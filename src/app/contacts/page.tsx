@@ -19,8 +19,57 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ContactPage",
+                "@id": "https://epsilon-technology.com/contacts/#contactpage",
+                "url": "https://epsilon-technology.com/contacts/",
+                "name": "Contact Us | Epsilon Technology",
+                "description": "Get in touch with Epsilon Technology for web development, mobile apps, and digital marketing services.",
+                "mainEntity": {
+                    "@type": "LocalBusiness",
+                    "name": "Epsilon Technology",
+                    "telephone": "+918160881461",
+                    "email": "contact@epsilon-technology.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Moti Baug Road",
+                        "addressLocality": "Junagadh",
+                        "addressRegion": "Gujarat",
+                        "postalCode": "362001",
+                        "addressCountry": "IN"
+                    }
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Contact Us",
+                        "item": "https://epsilon-technology.com/contacts/"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <main className="pt-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             {/* Hero Section */}
             <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-sky-900/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />

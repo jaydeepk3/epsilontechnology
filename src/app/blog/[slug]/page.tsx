@@ -89,7 +89,7 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                     <nav className="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-widest">
                         <Link href="/" className="hover:text-sky-600 transition-colors flex items-center gap-1"><Home size={12} /> Home</Link>
                         <ChevronRight size={10} />
-                        <Link href="/blog" className="hover:text-sky-600 transition-colors">Blog</Link>
+                        <Link href="/blog/" className="hover:text-sky-600 transition-colors">Blog</Link>
                         <ChevronRight size={10} />
                         <span className="text-slate-600 truncate max-w-[200px]">{blog.title}</span>
                     </nav>
@@ -232,10 +232,10 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                                     Crafting future-ready digital solutions for enterprise and healthcare sectors. Dedicated to bridging the gap between complex technology and business growth.
                                 </p>
                                 <div className="flex gap-6">
-                                    <Link href="/contacts" className="px-8 py-3 bg-sky-600 text-white rounded-2xl font-bold hover:bg-sky-700 transition-all shadow-lg shadow-sky-200 flex items-center gap-2">
+                                    <Link href="/contacts/" className="px-8 py-3 bg-sky-600 text-white rounded-2xl font-bold hover:bg-sky-700 transition-all shadow-lg shadow-sky-200 flex items-center gap-2">
                                         Partner with Us <Send size={16} />
                                     </Link>
-                                    <Link href="/about-us" className="px-8 py-3 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-100 transition-all">
+                                    <Link href="/about-us/" className="px-8 py-3 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-100 transition-all">
                                         View Bio
                                     </Link>
                                 </div>
@@ -270,7 +270,7 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                                 <HelpCircle className="text-sky-400 mb-6" size={40} />
                                 <h4 className="text-xl font-bold mb-4 relative z-10">Growing your practice?</h4>
                                 <p className="text-slate-400 text-sm mb-10 relative z-10 leading-relaxed">We helped local clinics increase patient inquiries by 40% through custom SEO strategies.</p>
-                                <Link href="/contacts" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all relative z-10">
+                                <Link href="/contacts/" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all relative z-10">
                                     Claim Free Audit <ExternalLink className="ml-2 h-4 w-4" />
                                 </Link>
                             </div>
@@ -285,7 +285,7 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                     <div className="w-10 h-10 rounded-lg bg-sky-600 flex items-center justify-center text-white font-black text-xs">E</div>
                     <div className="text-white text-[10px] font-bold uppercase tracking-widest leading-tight">Reading:<br /><span className="text-sky-400 truncate w-32 inline-block">{blog.title}</span></div>
                 </div>
-                <Link href="/contacts" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-sky-500 transition-colors">Contact</Link>
+                <Link href="/contacts/" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-sky-500 transition-colors">Contact</Link>
             </div>
 
             {/* Related Posts: High Contrast Finish */}
@@ -298,7 +298,7 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                                 <Badge variant="outline" className="border-sky-800 text-sky-400 mb-4 px-4 py-1.5 uppercase tracking-widest font-bold">Deep Dive</Badge>
                                 <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">Expand your knowledge</h3>
                             </div>
-                            <Link href="/blog" className="px-8 py-3 border border-slate-800 text-slate-400 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all group flex items-center gap-2">
+                            <Link href="/blog/" className="px-8 py-3 border border-slate-800 text-slate-400 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all group flex items-center gap-2">
                                 Explorer Hub <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
@@ -327,12 +327,83 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                                     </div>
                                 </Link>
                             ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+            {/* Structured Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "BlogPosting",
+                                "@id": `https://epsilon-technology.com/blog/${slug}/#article`,
+                                "headline": blog.title,
+                                "description": blog.metaDescription || blog.title,
+                                "image": blog.imageUrl ? `https://epsilon-technology.com${blog.imageUrl}` : "https://epsilon-technology.com/logo.webp",
+                                "datePublished": blog.createdAt.toISOString(),
+                                "dateModified": blog.updatedAt.toISOString(),
+                                "author": {
+                                    "@type": "Person",
+                                    "name": blog.author || "Jaydeep Kataria",
+                                    "url": "https://epsilon-technology.com/about-us/"
+                                },
+                                "publisher": {
+                                    "@type": "Organization",
+                                    "@id": "https://epsilon-technology.com/#organization",
+                                    "name": "Epsilon Technology",
+                                    "url": "https://epsilon-technology.com/",
+                                    "logo": {
+                                        "@type": "ImageObject",
+                                        "url": "https://epsilon-technology.com/logo.webp"
+                                    }
+                                },
+                                "mainEntityOfPage": {
+                                    "@type": "WebPage",
+                                    "@id": `https://epsilon-technology.com/blog/${slug}/`
+                                }
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "@id": `https://epsilon-technology.com/blog/${slug}/#breadcrumbs`,
+                                "itemListElement": [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://epsilon-technology.com/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Blog",
+                                        "item": "https://epsilon-technology.com/blog/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": blog.title,
+                                        "item": `https://epsilon-technology.com/blog/${slug}/`
+                                    }
+                                ]
+                            }
+                        ]
+                    })
+                }}
+            />
         </main>
     )
+}
+
+export async function generateStaticParams() {
+    try {
+        const blogs = await prisma.blog.findMany({
+            where: { published: true, isExternal: false },
+            select: { slug: true }
+        });
+        return blogs.map((b) => ({ slug: b.slug }));
+    } catch {
+        return [];
+    }
 }
 
 

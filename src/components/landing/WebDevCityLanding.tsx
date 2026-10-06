@@ -76,8 +76,8 @@ export default function WebDevCityLanding({ city, cityDescription }: WebDevCityL
         "@type": "LocalBusiness",
         "name": `Epsilon Technology - Website Development in ${city}`,
         "image": "https://epsilon-technology.com/logo.webp",
-        "@id": `https://epsilon-technology.com/website-development-in-${citySlug}/#localbusiness`,
-        "url": `https://epsilon-technology.com/website-development-in-${citySlug}/`,
+        "@id": `https://epsilon-technology.com/website-development-company-in-${citySlug}/#localbusiness`,
+        "url": `https://epsilon-technology.com/website-development-company-in-${citySlug}/`,
         "telephone": "+918160881461",
         "priceRange": "₹15000-₹80000",
         "address": {

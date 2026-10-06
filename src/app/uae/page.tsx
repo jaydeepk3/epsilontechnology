@@ -48,8 +48,73 @@ const faqs = [
 ];
 
 export default function UAEPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "name": "Web & App Development for UAE Businesses",
+                "description": "Custom web development, mobile apps, eCommerce stores, and WhatsApp Business API solutions for businesses in Dubai, Abu Dhabi, Sharjah, and across the UAE.",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "areaServed": [
+                    { "@type": "Country", "name": "United Arab Emirates" },
+                    { "@type": "City", "name": "Dubai" },
+                    { "@type": "City", "name": "Abu Dhabi" },
+                    { "@type": "City", "name": "Sharjah" }
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "UAE Digital Services",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Development" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "eCommerce Store Development" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WhatsApp Business API Automation" } }
+                    ]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "UAE Development Services",
+                        "item": "https://epsilon-technology.com/uae/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.a
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="bg-white overflow-x-hidden min-h-screen">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
 
             {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 SECTION 1 — HERO

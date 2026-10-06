@@ -10,11 +10,11 @@ const footerLinks = [
         icon: Cpu,
         title: 'IT Services',
         links: [
-            { label: 'Web Development', href: '/services/web-development' },
-            { label: 'Mobile App Development', href: '/services/mobile-app-development' },
-            { label: 'eCommerce Development', href: '/services/ecommerce-development' },
-            { label: 'IT Services Overview', href: '/it-services' },
-            { label: 'WhatsApp Business API', href: '/product/whatsapp-business-api' },
+            { label: 'Web Development', href: '/services/web-development/' },
+            { label: 'Mobile App Development', href: '/services/mobile-app-development/' },
+            { label: 'eCommerce Development', href: '/services/ecommerce-development/' },
+            { label: 'IT Services Overview', href: '/it-services/' },
+            { label: 'WhatsApp Business API', href: '/product/whatsapp-business-api/' },
         ],
     },
     {
@@ -22,35 +22,40 @@ const footerLinks = [
         title: 'Doctor Marketing',
         hideOnUAE: true,
         links: [
-            { label: 'Doctor Marketing Hub', href: '/digital-marketing' },
-            { label: 'Spine Specialists', href: '/digital-marketing-for-spine-specialists' },
-            { label: 'Pediatric Doctors', href: '/digital-marketing-for-pediatric-doctors' },
-            { label: 'Surgeon Doctors', href: '/digital-marketing-for-surgeon-doctors' },
-            { label: 'Orthopedic Doctors', href: '/digital-marketing-for-orthopedic-doctors' },
+            { label: 'Doctor Marketing Hub', href: '/digital-marketing/' },
+            { label: 'General Surgeons', href: '/digital-marketing-for-general-surgeons/' },
+            { label: 'Orthopedic Doctors', href: '/digital-marketing-for-orthopedic-doctors/' },
+            { label: 'Dermatologists', href: '/digital-marketing-for-dermatologists/' },
+            { label: 'Gynecologists & IVF', href: '/digital-marketing-for-gynecologist-doctors/' },
+            { label: 'Spine Specialists', href: '/digital-marketing-for-spine-specialists/' },
+            { label: 'Pediatric Doctors', href: '/digital-marketing-for-pediatric-doctors/' },
+            { label: 'Doctors in Junagadh', href: '/doctor-marketing-in-junagadh/' },
+            { label: 'Doctors in Ahmedabad', href: '/digital-marketing-for-doctors-in-ahmedabad/' },
+            { label: 'Doctors in Rajkot', href: '/digital-marketing-for-doctors-in-rajkot/' },
         ],
     },
     {
         icon: Building2,
         title: 'Company',
         links: [
-            { label: 'About Us', href: '/about-us' },
-            { label: 'UAE', href: '/uae' },
-            { label: 'Portfolio', href: '/#portfolio' },
-            { label: 'Meta Certified Partner', href: '/meta-certified-partner' },
-            { label: 'FAQs', href: '/faqs' },
-            { label: 'Contact Us', href: '/contacts' },
+            { label: 'About Us', href: '/about-us/' },
+            { label: 'UAE Services', href: '/uae/' },
+            { label: 'Portfolio', href: '/portfolio/' },
+            { label: 'Meta Certified Partner', href: '/meta-certified-partner/' },
+            { label: 'FAQs', href: '/faqs/' },
+            { label: 'Contact Us', href: '/contacts/' },
         ],
         extra: {
             icon: BookOpen,
             title: 'Blog & Resources',
             links: [
-                { label: 'All Articles', href: '/blog' },
-                { label: 'Mobile App Guide 2026', href: '/blog/mobile-app-development-guide-2026' },
-                { label: 'Cost of App Development', href: '/blog/the-real-cost-of-custom-application-development-2026' },
-                { label: '5 Signs You Need a Pro Website', href: '/blog/5-signs-you-need-professional-website-development-services' },
-                { label: 'Digital Transformation Guide', href: '/blog/digital-transformation-guide' },
-                { label: 'Doctor Marketing Ideas', href: '/blog/doctor-marketing-ideas-junagadh', hideOnUAE: true },
-                { label: 'Why Next.js for eCommerce', href: '/blog/why-nextjs-is-best-for-ecommerce-website-development' },
+                { label: 'All Articles', href: '/blog/' },
+                { label: 'Mobile App Guide 2026', href: '/blog/mobile-app-development-guide-2026/' },
+                { label: 'Cost of App Development', href: '/blog/the-real-cost-of-custom-application-development-2026/' },
+                { label: '5 Signs You Need a Pro Website', href: '/blog/5-signs-you-need-professional-website-development-services/' },
+                { label: 'Digital Transformation Guide', href: '/blog/digital-transformation-guide/' },
+                { label: 'Doctor Marketing Ideas', href: '/blog/doctor-marketing-ideas-junagadh/', hideOnUAE: true },
+                { label: 'Why Next.js for eCommerce', href: '/blog/why-nextjs-is-best-for-ecommerce-website-development/' },
             ],
         },
     },
@@ -106,7 +111,7 @@ export function Footer() {
                             </p>
                         </div>
                         <Link
-                            href="/contacts"
+                            href="/contacts/"
                             className="relative z-10 flex-shrink-0 inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-sky-500/20 hover:shadow-sky-400/30 hover:scale-105 group"
                         >
                             Get a Free Quote
@@ -282,13 +287,13 @@ export function Footer() {
                         © {new Date().getFullYear()} Epsilon Technology. All rights reserved.
                     </p>
                     <div className="flex flex-wrap gap-5 justify-center items-center">
-                        <Link href="/about-us" className="hover:text-sky-400 transition-colors">The Founder</Link>
+                        <Link href="/about-us/" className="hover:text-sky-400 transition-colors">The Founder</Link>
                         <span className="text-slate-800">|</span>
-                        <Link href="/blog" className="hover:text-sky-400 transition-colors">Resources</Link>
+                        <Link href="/blog/" className="hover:text-sky-400 transition-colors">Resources</Link>
                         <span className="text-slate-800">|</span>
-                        <Link href="/faqs" className="hover:text-sky-400 transition-colors">FAQs</Link>
+                        <Link href="/faqs/" className="hover:text-sky-400 transition-colors">FAQs</Link>
                         <span className="text-slate-800">|</span>
-                        <Link href="/contacts" className="hover:text-sky-400 transition-colors">Contact</Link>
+                        <Link href="/contacts/" className="hover:text-sky-400 transition-colors">Contact</Link>
                         <span className="text-slate-800">|</span>
                         <Link href="/sitemap.xml" className="hover:text-sky-400 transition-colors">Sitemap</Link>
                     </div>

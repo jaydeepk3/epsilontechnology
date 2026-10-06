@@ -66,35 +66,23 @@ export default function DoctorCityLanding({ city, cityDescription }: DoctorCityL
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "LocalBusiness",
-                "name": `Epsilon Technology - Doctor Marketing in ${city}`,
-                "image": "https://epsilon-technology.com/logo.webp",
-                "@id": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/#localbusiness`,
-                "url": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/`,
-                "telephone": "+918160881461",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Junagadh, Gujarat",
-                    "addressLocality": city,
-                    "addressRegion": "Gujarat",
-                    "postalCode": "362001",
-                    "addressCountry": "IN"
-                },
-                "founder": {
-                    "@type": "Person",
-                    "name": "Jaydeep Kataria"
-                }
-            },
-            {
                 "@type": "Service",
-                "serviceType": "Digital Marketing for Doctors",
+                "@id": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/#service`,
+                "name": `Doctor Marketing Services in ${city}`,
+                "serviceType": "Healthcare Digital Marketing",
+                "description": `Specialized patient acquisition, Meta Ads, and Instagram Reels growth strategies for doctors, surgeons, and clinics in ${city}, Gujarat.`,
                 "provider": {
                     "@id": "https://epsilon-technology.com/#organization"
                 },
                 "areaServed": {
                     "@type": "City",
-                    "name": city
+                    "name": city,
+                    "containedInPlace": {
+                        "@type": "AdministrativeArea",
+                        "name": "Gujarat"
+                    }
                 },
+                "url": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/`,
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Healthcare Marketing Plans",
@@ -104,6 +92,42 @@ export default function DoctorCityLanding({ city, cityDescription }: DoctorCityL
                         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead Gen Machine" }, "price": "27999", "priceCurrency": "INR" }
                     ]
                 }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/#faq`,
+                "mainEntity": specializedFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/#breadcrumbs`,
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": `${city}`,
+                        "item": `https://epsilon-technology.com/doctor-marketing-in-${citySlug}/`
+                    }
+                ]
             }
         ]
     };

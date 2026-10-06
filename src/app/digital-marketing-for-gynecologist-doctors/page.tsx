@@ -46,8 +46,71 @@ const gynaeFaqs = [
 ];
 
 export default function GynaeDoctorGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/#service",
+                "name": "Digital Marketing for Gynecologist Doctors & Maternity Clinics",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized digital marketing, women's healthcare SEO, social media education, and patient acquisition for gynecologists and OB/GYN clinics.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Gynecologists",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/#faq",
+                "mainEntity": gynaeFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className="pt-32 pb-16 bg-pink-50/20 border-b border-pink-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-sm font-bold mb-6">
@@ -57,7 +120,7 @@ export default function GynaeDoctorGuide() {
                         Compassionate Growth: <span className="text-pink-600">Digital Marketing for Gynecologist Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Understanding how to build an authoritative and empathetic digital presence for OB/GYN specialists and maternity clinics.
+                        Understanding how to build an authoritative and empathetic digital presence for OB/GYN specialists and maternity clinics in 2026.
                     </p>
                 </div>
             </section>
@@ -140,8 +203,8 @@ export default function GynaeDoctorGuide() {
                                 Digital presence is the extension of your clinical care. By building a trusted, visible, and educational digital home, you ensure that your expertise reaches the women who need it most.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-pink-400 font-bold hover:underline">Junagadh OB/GYN Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-pink-400 font-bold hover:underline">Rajkot OB/GYN Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-pink-400 font-bold hover:underline">Junagadh OB/GYN Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-pink-400 font-bold hover:underline">Rajkot OB/GYN Marketing</Link>
                             </div>
                         </div>
                     </div>

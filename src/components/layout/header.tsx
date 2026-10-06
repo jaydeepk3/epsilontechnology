@@ -5,12 +5,63 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown, Globe, Smartphone, ShoppingCart, MessageSquare, Stethoscope, Layout, Activity } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, Smartphone, ShoppingCart, MessageSquare, Stethoscope, Layout, Activity, MapPin } from 'lucide-react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Pages whose hero sections have a dark/navy background — header needs light text
 const DARK_HERO_PATHS = ['/uae/', '/it-services/'];
+
+const doctorMarketing = [
+    {
+        name: 'Doctor Marketing Hub',
+        href: '/digital-marketing/',
+        icon: Stethoscope,
+        desc: '30-50 patient inquiries/month for clinics',
+    },
+    {
+        name: 'Gujarat Doctor Marketing',
+        href: '/digital-marketing/gujarat/',
+        icon: MapPin,
+        desc: 'Ahmedabad, Surat, Rajkot, Vadodara & Junagadh',
+    },
+    {
+        name: 'Dermatologists & Skin Clinics',
+        href: '/digital-marketing-for-dermatologists/',
+        icon: Activity,
+        desc: 'Aesthetic SEO & cosmetic patient acquisition',
+    },
+    {
+        name: 'Dental Clinics',
+        href: '/digital-marketing-for-dental-doctors/',
+        icon: Activity,
+        desc: 'Local SEO & high-ticket dental implants',
+    },
+    {
+        name: 'Orthopedic & Spine Specialists',
+        href: '/digital-marketing-for-orthopedic-doctors/',
+        icon: Activity,
+        desc: 'Joint replacement & spine surgery cases',
+    },
+    {
+        name: 'Gynecologists & IVF Clinics',
+        href: '/digital-marketing-for-gynecologist-doctors/',
+        icon: Activity,
+        desc: 'Maternity, fertility & high-trust funnels',
+    },
+    {
+        name: 'General & Laparoscopic Surgeons',
+        href: '/digital-marketing-for-general-surgeons/',
+        icon: Activity,
+        desc: 'Surgical authority & patient education',
+    },
+    {
+        name: 'Pediatric Doctors',
+        href: '/digital-marketing-for-pediatric-doctors/',
+        icon: Activity,
+        desc: 'Child care branding & parental trust',
+    },
+];
 
 const services = [
     {
@@ -23,28 +74,26 @@ const services = [
         name: 'Web Development',
         href: '/services/web-development/',
         icon: Layout,
-        desc: 'Custom websites & landing pages',
+        desc: 'Custom Next.js websites & web apps',
     },
-
     {
         name: 'Mobile App Development',
         href: '/services/mobile-app-development/',
         icon: Smartphone,
-        desc: 'iOS & Android apps for your business',
+        desc: 'iOS & Android React Native apps',
     },
     {
         name: 'eCommerce Development',
         href: '/services/ecommerce-development/',
         icon: ShoppingCart,
-        desc: 'Online stores that convert visitors',
+        desc: 'High-converting custom & Shopify stores',
     },
     {
-        name: 'Digital Marketing',
-        href: '/digital-marketing/gujarat',
-        icon: Activity,
-        desc: 'Social media growth for business',
-    }
-
+        name: 'UAE & Dubai Tech Services',
+        href: '/uae/',
+        icon: Globe,
+        desc: 'Dedicated IT solutions for UAE businesses',
+    },
 ];
 
 const products = [
@@ -52,7 +101,7 @@ const products = [
         name: 'WhatsApp Business API',
         href: '/product/whatsapp-business-api/',
         icon: MessageSquare,
-        desc: 'Automate conversations at scale',
+        desc: 'Automate inquiries & appointments at scale',
     },
 ];
 
@@ -123,6 +172,7 @@ function NavDropdown({ label, items, textColor, scrolled }: { label: string; ite
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileDoctorMarketingOpen, setMobileDoctorMarketingOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
     const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
     const [showBanner, setShowBanner] = useState(false);
@@ -227,8 +277,9 @@ export function Header() {
                     ) : (
                         <>
                             {/* Desktop Nav */}
-                            <nav className="hidden lg:flex items-center gap-8">
-                                <NavDropdown label="Services" items={services} textColor={textColor} scrolled={isScrolled} />
+                            <nav className="hidden lg:flex items-center gap-7">
+                                <NavDropdown label="Doctor Marketing" items={doctorMarketing} textColor={textColor} scrolled={isScrolled} />
+                                <NavDropdown label="IT Services" items={services} textColor={textColor} scrolled={isScrolled} />
                                 <NavDropdown label="Products" items={products} textColor={textColor} scrolled={isScrolled} />
 
                                 <Link
@@ -265,7 +316,7 @@ export function Header() {
 
                                 <Button
                                     size="sm"
-                                    className={`ml-2 px-6 py-5 rounded-2xl font-bold text-sm transition-all duration-300 shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0 ${!isScrolled && isDarkHero
+                                    className={`ml-1 px-5 py-4 rounded-2xl font-bold text-xs transition-all duration-300 shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0 ${!isScrolled && isDarkHero
                                         ? 'bg-white text-blue-600 hover:bg-blue-50'
                                         : 'bg-blue-600 text-white hover:bg-blue-700'
                                         }`}
@@ -306,13 +357,50 @@ export function Header() {
                         >
                             <div className="p-6 flex flex-col gap-2">
 
+                                {/* Doctor Marketing accordion */}
+                                <div className="bg-slate-50/50 rounded-3xl overflow-hidden border border-slate-100/50">
+                                    <button
+                                        className="flex items-center justify-between w-full text-left text-[15px] font-bold text-slate-900 py-4 px-5 transition-colors"
+                                        onClick={() => setMobileDoctorMarketingOpen(!mobileDoctorMarketingOpen)}
+                                    >
+                                        Doctor Marketing
+                                        <ChevronDown size={18} className={`transition-transform duration-300 ${mobileDoctorMarketingOpen ? 'rotate-180' : ''}`} />
+                                    </button>
+                                    <AnimatePresence>
+                                        {mobileDoctorMarketingOpen && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                className="overflow-hidden px-3 pb-3"
+                                            >
+                                                <div className="grid grid-cols-1 gap-1">
+                                                    {doctorMarketing.map((item) => (
+                                                        <Link
+                                                            key={item.name}
+                                                            href={item.href}
+                                                            className="flex items-center gap-4 py-3 px-4 rounded-2xl text-slate-700 hover:bg-blue-600 hover:text-white transition-all group"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            <div className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center shrink-0 group-hover:bg-blue-500 transition-colors">
+                                                                <item.icon size={18} className="text-blue-600 group-hover:text-white transition-colors" />
+                                                            </div>
+                                                            <span className="font-semibold text-sm">{item.name}</span>
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+
                                 {/* Services accordion */}
                                 <div className="bg-slate-50/50 rounded-3xl overflow-hidden border border-slate-100/50">
                                     <button
                                         className="flex items-center justify-between w-full text-left text-[15px] font-bold text-slate-900 py-4 px-5 transition-colors"
                                         onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                                     >
-                                        Services
+                                        IT Services
                                         <ChevronDown size={18} className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
                                     </button>
                                     <AnimatePresence>

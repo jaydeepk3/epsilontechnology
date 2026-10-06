@@ -30,8 +30,43 @@ export default async function BlogIndex() {
     const featuredPost = dbBlogs[0];
     const regularPosts = dbBlogs.slice(1);
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Blog",
+                "@id": "https://epsilon-technology.com/blog/#blog",
+                "name": "Epsilon Technology Blog | Tech & Marketing Insights",
+                "url": "https://epsilon-technology.com/blog/",
+                "description": "Expert insights on mobile app development trends, custom software solutions, eCommerce growth, and specific digital marketing strategies for doctors."
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://epsilon-technology.com/blog/"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 bg-slate-50 overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-100/30 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/4" />

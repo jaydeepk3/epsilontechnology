@@ -91,7 +91,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
                 Visit Live Project →
               </a>
             )}
-            <Link href="/custom-quote" className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all backdrop-blur-md border border-white/10">
+            <Link href="/contacts/" className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all backdrop-blur-md border border-white/10">
               Start a Similar Project →
             </Link>
           </div>
@@ -208,7 +208,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Want results like this for your business?</h2>
           <p className="text-xl text-gray-400 mb-10">Tell us about your project — free consultation, no commitment.</p>
           
-          <Link href="/custom-quote" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:scale-105 transition-transform shadow-2xl shadow-white/10 mb-10">
+          <Link href="/contacts/" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:scale-105 transition-transform shadow-2xl shadow-white/10 mb-10">
             Get a Free Custom Quote →
           </Link>
           

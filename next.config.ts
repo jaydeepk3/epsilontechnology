@@ -30,8 +30,38 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/about',
-        destination: '/about-us',
+        destination: '/about-us/',
         permanent: true, // 301 redirect (Good for SEO)
+      },
+      {
+        source: '/custom-quote',
+        destination: '/contacts/',
+        permanent: true,
+      },
+      {
+        source: '/custom-quote/',
+        destination: '/contacts/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-surgeon-doctors',
+        destination: '/digital-marketing-for-general-surgeons/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-surgeon-doctors/',
+        destination: '/digital-marketing-for-general-surgeons/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-doctors-in-junagadh',
+        destination: '/doctor-marketing-in-junagadh/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-doctors-in-junagadh/',
+        destination: '/doctor-marketing-in-junagadh/',
+        permanent: true,
       },
       {
         source: '/online-opd-growth-system',

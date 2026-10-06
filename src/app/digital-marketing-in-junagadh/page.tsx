@@ -175,7 +175,7 @@ export default function DigitalMarketingJunagadhPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-                            <Link href="/contacts" className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-10 py-5 rounded-2xl text-xl transition-all hover:shadow-2xl hover:shadow-blue-500/40 transform hover:-translate-y-1 flex items-center gap-2">
+                            <Link href="/contacts/" className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-10 py-5 rounded-2xl text-xl transition-all hover:shadow-2xl hover:shadow-blue-500/40 transform hover:-translate-y-1 flex items-center gap-2">
                                 Get a Free Marketing Audit <ArrowRight size={20} />
                             </Link>
                             <a href="#results" className="text-white hover:text-blue-400 font-bold text-lg transition-colors border-b-2 border-transparent hover:border-blue-400 pb-1">
@@ -227,7 +227,7 @@ export default function DigitalMarketingJunagadhPage() {
                                 As a local <strong>digital marketing agency in Junagadh</strong>, we see the shift happening every single day. Customers in areas like <strong>Dhal Road</strong> and <strong>Ranavav Chowk</strong> no longer rely solely on word-of-mouth; they check reviews, look at Instagram Reels, and search Google for the &quot;best service provider near me.&quot; If your competitor is visible and you are not, you are losing business every single hour to a business that might have a worse product but a better digital presence.
                             </p>
                             <p>
-                                For Junagadh&apos;s clinics and hospitals, digital marketing isn&apos;t just about &quot;likes&quot;—it&apos;s about building patient trust and providing accessibility. For real estate agents, coaching classes, and retail shops, it&apos;s about being the first name that pops up when a local resident starts their search. We understand that <Link href="/blog/doctor-marketing-ideas-junagadh" className="text-blue-600 font-bold hover:underline">doctor marketing in Junagadh</Link> requires a different approach than marketing a cafe, which is why we offer specialized, local expertise.
+                                For Junagadh&apos;s clinics and hospitals, digital marketing isn&apos;t just about &quot;likes&quot;—it&apos;s about building patient trust and providing accessibility. For real estate agents, coaching classes, and retail shops, it&apos;s about being the first name that pops up when a local resident starts their search. We understand that <Link href="/doctor-marketing-in-junagadh/" className="text-blue-600 font-bold hover:underline">doctor marketing in Junagadh</Link> requires a different approach than marketing a cafe, which is why we offer specialized, local expertise.
                             </p>
                             <p>
                                 The risk is simple: if you are not visible on Google and Instagram, you are handing your market share to someone else. The digital landscape in Junagadh is more competitive than ever, and staying ahead requires a partner who understands the local pulse. We aren&apos;t just an agency; we are Junagadh locals helping Junagadh businesses thrive in a digital-first economy.
@@ -260,7 +260,7 @@ export default function DigitalMarketingJunagadhPage() {
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Local Citation Building</li>
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Technical SEO Audits</li>
                                 </ul>
-                                <Link href="/digital-marketing" className="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
+                                <Link href="/digital-marketing/" className="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
                                     Learn about our SEO process <ArrowRight size={18} />
                                 </Link>
                             </div>
@@ -280,7 +280,7 @@ export default function DigitalMarketingJunagadhPage() {
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Content Calendar Management</li>
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Local Influencer Outreach</li>
                                 </ul>
-                                <Link href="/portfolio" className="inline-flex items-center gap-2 text-purple-600 font-bold hover:gap-3 transition-all">
+                                <Link href="/portfolio/" className="inline-flex items-center gap-2 text-purple-600 font-bold hover:gap-3 transition-all">
                                     See our social media work <ArrowRight size={18} />
                                 </Link>
                             </div>
@@ -300,7 +300,7 @@ export default function DigitalMarketingJunagadhPage() {
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Display & Remarketing</li>
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Lead Tracking & Reporting</li>
                                 </ul>
-                                <Link href="/contacts" className="inline-flex items-center gap-2 text-amber-600 font-bold hover:gap-3 transition-all">
+                                <Link href="/contacts/" className="inline-flex items-center gap-2 text-amber-600 font-bold hover:gap-3 transition-all">
                                     Get a free Google Ads audit <ArrowRight size={18} />
                                 </Link>
                             </div>
@@ -320,7 +320,7 @@ export default function DigitalMarketingJunagadhPage() {
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> SEO-Ready Architecture</li>
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Fast WhatsApp Connectivity</li>
                                 </ul>
-                                <Link href="/services/web-development" className="inline-flex items-center gap-2 text-emerald-600 font-bold hover:gap-3 transition-all">
+                                <Link href="/services/web-development/" className="inline-flex items-center gap-2 text-emerald-600 font-bold hover:gap-3 transition-all">
                                     View website services <ArrowRight size={18} />
                                 </Link>
                             </div>
@@ -340,7 +340,7 @@ export default function DigitalMarketingJunagadhPage() {
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Broadcast Messaging</li>
                                     <li className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 size={18} className="text-green-500" /> Chatbot Integration</li>
                                 </ul>
-                                <Link href="/product/whatsapp-business-api" className="inline-flex items-center gap-2 text-green-600 font-bold hover:gap-3 transition-all">
+                                <Link href="/product/whatsapp-business-api/" className="inline-flex items-center gap-2 text-green-600 font-bold hover:gap-3 transition-all">
                                     Learn about WhatsApp automation <ArrowRight size={18} />
                                 </Link>
                             </div>
@@ -413,7 +413,7 @@ export default function DigitalMarketingJunagadhPage() {
                             <span className="inline-block bg-white/20 px-4 py-1.5 rounded-full text-xs font-bold mb-4 uppercase tracking-widest">📍 Junagadh · Open for applications</span>
                             <h3 className="text-3xl md:text-4xl font-bold mb-4">Your Business Could Be Here</h3>
                             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">We have capacity for only 2 new Junagadh-based clients this quarter. If you want results like the ones above, let&apos;s build your strategy today.</p>
-                            <Link href="/contacts" className="bg-white text-blue-600 font-bold px-8 py-4 rounded-xl text-lg hover:bg-blue-50 transition-colors inline-flex items-center gap-2">
+                            <Link href="/contacts/" className="bg-white text-blue-600 font-bold px-8 py-4 rounded-xl text-lg hover:bg-blue-50 transition-colors inline-flex items-center gap-2">
                                 Apply for a free audit <ArrowRight size={20} />
                             </Link>
                         </div>
@@ -501,7 +501,7 @@ export default function DigitalMarketingJunagadhPage() {
                                     <div className="h-48 bg-slate-900/50 rounded-2xl flex items-center justify-center border border-slate-700 border-dashed mb-8">
                                         <span className="text-slate-500 text-sm font-medium">Map view available on contact page</span>
                                     </div>
-                                    <Link href="/about-us" className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-colors block text-center">
+                                    <Link href="/about-us/" className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-colors block text-center">
                                         Learn More About Our Team
                                     </Link>
                                 </div>
@@ -552,7 +552,7 @@ export default function DigitalMarketingJunagadhPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                            <Link href="/contacts" className="bg-white text-blue-900 font-bold px-10 py-5 rounded-2xl text-xl transition-all hover:shadow-2xl hover:shadow-white/20 transform hover:-translate-y-1">
+                            <Link href="/contacts/" className="bg-white text-blue-900 font-bold px-10 py-5 rounded-2xl text-xl transition-all hover:shadow-2xl hover:shadow-white/20 transform hover:-translate-y-1">
                                 Get My Free Marketing Audit →
                             </Link>
                             <a href="https://wa.me/918160881461" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-400 text-white font-bold px-10 py-5 rounded-2xl text-xl transition-all flex items-center justify-center gap-2">

@@ -165,17 +165,17 @@ export default function DoctorMarketingJunagadh() {
                 <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
                     <h2 className="text-3xl font-bold mb-6">Want specific ideas for your clinic?</h2>
                     <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-                        Read our latest guide: "7 Proven Marketing Ideas for Doctors in Junagadh (2025)" to learn actionable strategies you can start today.
+                        Read our latest guide: &quot;7 Proven Marketing Ideas for Doctors in Junagadh (2026)&quot; to learn actionable strategies you can start today.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link href="/blog/doctor-marketing-ideas-junagadh">
+                        <Link href="/blog/doctor-marketing-ideas-junagadh/">
                             <Button size="xl" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
                                 Read 7 Marketing Ideas
                             </Button>
                         </Link>
-                        <Link href="/digital-marketing-for-doctors-in-junagadh">
+                        <Link href="/digital-marketing/gujarat/">
                             <Button size="xl" variant="outline" className="border-white text-white hover:bg-blue-700 w-full sm:w-auto">
-                                View Local Guide
+                                View Gujarat Hub
                             </Button>
                         </Link>
                     </div>
@@ -189,6 +189,69 @@ export default function DoctorMarketingJunagadh() {
             {/* 6. Custom FAQ & Booking */}
             <FAQ customFaqs={junagadhFaqs} />
             <Booking />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "Service",
+                                "@id": "https://epsilon-technology.com/doctor-marketing-in-junagadh/#service",
+                                "name": "Doctor Marketing in Junagadh",
+                                "provider": {
+                                    "@type": "Organization",
+                                    "@id": "https://epsilon-technology.com/#organization"
+                                },
+                                "serviceType": "Healthcare Digital Marketing",
+                                "description": "Specialized doctor marketing agency in Junagadh. Helping clinics and hospitals increase OPD footfall, optimize Google Maps, and acquire patients with Instagram Reels.",
+                                "areaServed": {
+                                    "@type": "City",
+                                    "name": "Junagadh"
+                                },
+                                "url": "https://epsilon-technology.com/doctor-marketing-in-junagadh/"
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "@id": "https://epsilon-technology.com/doctor-marketing-in-junagadh/#faq",
+                                "mainEntity": junagadhFaqs.map(faq => ({
+                                    "@type": "Question",
+                                    "name": faq.question,
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": faq.answer
+                                    }
+                                }))
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "@id": "https://epsilon-technology.com/doctor-marketing-in-junagadh/#breadcrumbs",
+                                "itemListElement": [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://epsilon-technology.com/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Doctor Marketing",
+                                        "item": "https://epsilon-technology.com/digital-marketing/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Junagadh",
+                                        "item": "https://epsilon-technology.com/doctor-marketing-in-junagadh/"
+                                    }
+                                ]
+                            }
+                        ]
+                    })
+                }}
+            />
         </main>
     );
 }

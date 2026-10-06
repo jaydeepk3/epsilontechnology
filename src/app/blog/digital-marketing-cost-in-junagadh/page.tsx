@@ -54,6 +54,29 @@ export default function BlogPostCostJunagadh() {
         "description": "A complete 2026 pricing guide for digital marketing services in Junagadh. Includes SEO, Social Media, Google Ads, and full-service package costs."
       },
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://epsilon-technology.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://epsilon-technology.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Digital Marketing Cost in Junagadh",
+            "item": "https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/"
+          }
+        ]
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -104,7 +127,7 @@ export default function BlogPostCostJunagadh() {
             <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
               <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
               <ChevronRight size={10} />
-              <Link href="/blog" className="hover:text-sky-600 transition-colors">Blog</Link>
+              <Link href="/blog/" className="hover:text-sky-600 transition-colors">Blog</Link>
               <ChevronRight size={10} />
               <span className="text-slate-600">Digital Marketing Cost Junagadh</span>
             </nav>
@@ -386,7 +409,7 @@ export default function BlogPostCostJunagadh() {
                         Ready to stop<br /><span className="text-sky-600 underline decoration-sky-100 underline-offset-8">guessing budgets?</span>
                       </h2>
                       <p className="text-slate-500 text-lg mb-12 max-w-lg mx-auto relative z-10">Get a free 30-minute audit of your current online presence. No pressure, just data.</p>
-                      <Link href="/contacts" className="inline-flex items-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-sky-600 transition-all shadow-xl hover:shadow-sky-200">
+                      <Link href="/contacts/" className="inline-flex items-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-sky-600 transition-all shadow-xl hover:shadow-sky-200">
                         Claim Your Free Audit <ArrowRight size={20} />
                       </Link>
                     </div>
@@ -397,7 +420,7 @@ export default function BlogPostCostJunagadh() {
                     Finding the right price for digital marketing in Junagadh doesn't have to be a headache. The best first step is always a free audit — understand where you are before deciding how much to spend.
                   </p>
 
-                  <Link href="/contacts" className="text-2xl font-black text-sky-600 hover:underline flex items-center gap-2">
+                  <Link href="/contacts/" className="text-2xl font-black text-sky-600 hover:underline flex items-center gap-2">
                     Book a free consultation →
                   </Link>
                 </div>
@@ -426,7 +449,7 @@ export default function BlogPostCostJunagadh() {
                   <Calculator className="text-sky-400 mb-6" size={40} />
                   <h4 className="text-xl font-bold mb-4">Want a Custom Quote?</h4>
                   <p className="text-slate-400 text-sm mb-10 leading-relaxed">Tell us your goals and we'll calculate a custom ROI-focused budget for your Junagadh business.</p>
-                  <Link href="/contacts" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all">
+                  <Link href="/contacts/" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all">
                     Contact Us <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
@@ -451,7 +474,7 @@ export default function BlogPostCostJunagadh() {
               <Link href="/digital-marketing-in-junagadh/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
                 Digital Marketing Junagadh
               </Link>
-              <Link href="/portfolio" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
+              <Link href="/portfolio/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
                 Our Portfolio
               </Link>
             </div>

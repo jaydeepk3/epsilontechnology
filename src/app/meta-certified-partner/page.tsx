@@ -33,5 +33,44 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <MetaPartnerClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://epsilon-technology.com/meta-certified-partner/#webpage",
+        "url": "https://epsilon-technology.com/meta-certified-partner/",
+        "name": "Meta Ads Partner Excellence Impact Leader | Epsilon Technology",
+        "description": "Epsilon Technology is recognized as an Ads Partner Excellence Impact Leader in the Meta ads partner excellence program."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://epsilon-technology.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Meta Certified Partner",
+            "item": "https://epsilon-technology.com/meta-certified-partner/"
+          }
+        ]
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <MetaPartnerClient />
+    </>
+  );
 }
+

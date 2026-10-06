@@ -46,8 +46,71 @@ const dentalFaqs = [
 ];
 
 export default function DentalDoctorGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-dental-doctors/#service",
+                "name": "Digital Marketing for Dental Doctors",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Comprehensive dental SEO, local Google Maps optimization, and patient acquisition marketing for dental clinics and dentists.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-dental-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Dental Doctors",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-dental-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-dental-doctors/#faq",
+                "mainEntity": dentalFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className="pt-32 pb-16 bg-blue-50/20 border-b border-blue-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-bold mb-6">
@@ -57,7 +120,7 @@ export default function DentalDoctorGuide() {
                         Education Pillar: <span className="text-blue-600">Digital Marketing for Dental Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        A deep dive into how modern dentists can build a trusted brand, dominate local search, and showcase clinical excellence through digital channels.
+                        A deep dive into how modern dentists can build a trusted brand, dominate local search, and showcase clinical excellence through digital channels in 2026.
                     </p>
                 </div>
             </section>
@@ -146,8 +209,8 @@ export default function DentalDoctorGuide() {
                                 Modern dentistry is as much about digital visibility as it is about clinical skill. By building a dominant local presence and showcasing your transformations, you can build a practice that thrives in the digital age.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-400 font-bold hover:underline">Junagadh Dental Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-400 font-bold hover:underline">Rajkot Dental Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 font-bold hover:underline">Junagadh Dental Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 font-bold hover:underline">Rajkot Dental Marketing</Link>
                             </div>
                         </div>
                     </div>

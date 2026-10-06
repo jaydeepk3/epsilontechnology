@@ -46,8 +46,71 @@ const dermaFaqs = [
 ];
 
 export default function DermatologistGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-dermatologists/#service",
+                "name": "Digital Marketing for Dermatologists & Skin Clinics",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized aesthetic SEO, visual marketing, Google Maps optimization, and patient acquisition for dermatologists and skin clinics.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-dermatologists/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Dermatologists",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-dermatologists/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-dermatologists/#faq",
+                "mainEntity": dermaFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Header */}
             <section className="pt-32 pb-16 bg-blue-50/20 border-b border-blue-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
@@ -58,7 +121,7 @@ export default function DermatologistGuide() {
                         Pillar Guide: <span className="text-blue-600">Digital Marketing for Dermatologists</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Learn how skin care specialists and modern skin clinics can build a premium digital brand, dominate local search, and showcase clinical excellence.
+                        Learn how skin care specialists and modern skin clinics can build a premium digital brand, dominate local search, and showcase clinical excellence in 2026.
                     </p>
                 </div>
             </section>
@@ -148,8 +211,8 @@ export default function DermatologistGuide() {
                                 Build a practice that shines online. By combining visual proof with technical SEO and a strong local reputation, you can build a premium brand that attracts patients who value quality care over the cheapest price.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-400 hover:underline">Junagadh Derma Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-400 hover:underline">Rajkot Skin Clinic SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh Derma Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Skin Clinic SEO</Link>
                             </div>
                         </div>
                     </div>

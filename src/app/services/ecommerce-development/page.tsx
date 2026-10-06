@@ -251,13 +251,13 @@ export default function EcommerceDevelopment() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="#contact"
+                            href="/contacts/"
                             className={getButtonClasses({ variant: 'secondary', size: 'lg', className: 'bg-white text-emerald-600 hover:bg-slate-100 hover:shadow-none' })}
                         >
                             Book a Consultation
                         </Link>
                         <Link
-                            href="#contact"
+                            href="/contacts/"
                             className={getButtonClasses({ variant: 'outline', size: 'lg', className: 'border-emerald-400 text-white hover:bg-emerald-700' })}
                         >
                             Request Quote
@@ -265,6 +265,72 @@ export default function EcommerceDevelopment() {
                     </div>
                 </div>
             </section>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "Service",
+                                "@id": "https://epsilon-technology.com/services/ecommerce-development/#service",
+                                "name": "eCommerce Development Services",
+                                "provider": {
+                                    "@type": "Organization",
+                                    "@id": "https://epsilon-technology.com/#organization",
+                                    "name": "Epsilon Technology",
+                                    "url": "https://epsilon-technology.com/"
+                                },
+                                "description": "Custom eCommerce development, Shopify store builds, WooCommerce solutions, and high-performance headless Next.js online stores.",
+                                "areaServed": [
+                                    { "@type": "Country", "name": "India" },
+                                    { "@type": "Country", "name": "United States" },
+                                    { "@type": "Country", "name": "United Kingdom" },
+                                    { "@type": "Country", "name": "United Arab Emirates" }
+                                ],
+                                "serviceType": "eCommerce Website & Application Development"
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "@id": "https://epsilon-technology.com/services/ecommerce-development/#breadcrumb",
+                                "itemListElement": [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://epsilon-technology.com/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "IT Services",
+                                        "item": "https://epsilon-technology.com/it-services/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "eCommerce Development",
+                                        "item": "https://epsilon-technology.com/services/ecommerce-development/"
+                                    }
+                                ]
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "@id": "https://epsilon-technology.com/services/ecommerce-development/#faq",
+                                "mainEntity": faqs.map(faq => ({
+                                    "@type": "Question",
+                                    "name": faq.question,
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": faq.answer
+                                    }
+                                }))
+                            }
+                        ]
+                    })
+                }}
+            />
         </main>
     );
 }

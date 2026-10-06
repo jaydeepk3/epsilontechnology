@@ -47,8 +47,71 @@ const orthoGuideFaqs = [
 ];
 
 export default function OrthopedicDoctorGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-orthopedic-doctors/#service",
+                "name": "Digital Marketing for Orthopedic Doctors",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized digital marketing, orthopedic SEO, local search dominance, and patient acquisition for orthopedic surgeons.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-orthopedic-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Orthopedic Doctors",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-orthopedic-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-orthopedic-doctors/#faq",
+                "mainEntity": orthoGuideFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-blue-50/20 border-b border-blue-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
@@ -59,7 +122,7 @@ export default function OrthopedicDoctorGuide() {
                         Pillar Guide to <span className="text-blue-600 font-extrabold">Digital Marketing for Orthopedic Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        An in-depth look at how musculoskeletal specialists can build digital authority, attract surgical cases, and improve patient throughput in 2025.
+                        An in-depth look at how musculoskeletal specialists can build digital authority, attract surgical cases, and improve patient throughput in 2026.
                     </p>
                 </div>
             </section>
@@ -176,8 +239,8 @@ export default function OrthopedicDoctorGuide() {
                                     A successful digital strategy for an orthopedic clinic is built on trust, transparency, and local visibility. By focusing on educational content and dominating local search results, you can build a sustainable pipeline of high-value surgical cases.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
-                                    <Link href="/doctor-marketing-in-junagadh" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-sm font-bold transition-colors">Junagadh Specialist Marketing</Link>
-                                    <Link href="/doctor-marketing-in-rajkot" className="border border-slate-700 hover:bg-slate-900 px-6 py-2 rounded-full text-sm font-bold transition-colors">Rajkot Growth Strategy</Link>
+                                    <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-sm font-bold transition-colors">Junagadh Specialist Marketing</Link>
+                                    <Link href="/doctor-marketing-in-rajkot/" className="border border-slate-700 hover:bg-slate-900 px-6 py-2 rounded-full text-sm font-bold transition-colors">Rajkot Growth Strategy</Link>
                                 </div>
                             </div>
                         </div>

@@ -47,8 +47,71 @@ const spineFaqs = [
 ];
 
 export default function SpineSpecialistGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-spine-specialists/#service",
+                "name": "Digital Marketing for Spine Specialists & Surgeons",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized spine surgery SEO, local Google Maps optimization, and patient acquisition marketing for spine specialists and neurosurgeons.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-spine-specialists/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Spine Specialists",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-spine-specialists/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-spine-specialists/#faq",
+                "mainEntity": spineFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className="pt-32 pb-16 bg-blue-50/20 border-b border-blue-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-bold mb-6">
@@ -58,7 +121,7 @@ export default function SpineSpecialistGuide() {
                         Pillar Resource: <span className="text-blue-600">Digital Marketing for Spine Specialists</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Learn how spine surgeons and back pain clinics can build deep digital authority, attract surgical cases, and educate the local community.
+                        Learn how spine surgeons and back pain clinics can build deep digital authority, attract surgical cases, and educate the local community in 2026.
                     </p>
                 </div>
             </section>
@@ -147,8 +210,8 @@ export default function SpineSpecialistGuide() {
                                 Control the digital narrative. By providing clarity on complex procedures and building trust through authentic patient outcomes, you can build a practice that is the 'First Choice' for spine care in your region.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-400 hover:underline">Junagadh Spine Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-400 hover:underline">Rajkot Spine Clinic SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh Spine Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Spine Clinic SEO</Link>
                             </div>
                         </div>
                     </div>

@@ -46,8 +46,71 @@ const ayurvedaFaqs = [
 ];
 
 export default function AyurvedaDoctorGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-ayurvedic-doctors/#service",
+                "name": "Digital Marketing for Ayurvedic Doctors & Clinics",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized digital marketing, Ayurveda SEO, local Google Maps optimization, and holistic healthcare patient acquisition for Ayurvedic practitioners.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-ayurvedic-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Ayurvedic Doctors",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-ayurvedic-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-ayurvedic-doctors/#faq",
+                "mainEntity": ayurvedaFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className="pt-32 pb-16 bg-green-50/20 border-b border-green-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold mb-6">
@@ -57,7 +120,7 @@ export default function AyurvedaDoctorGuide() {
                         Bridging Traditions: <span className="text-green-600">Digital Marketing for Ayurvedic Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Learn how Ayurvedic practitioners can translate ancient health wisdom into a dominant, trusted, and modern digital presence.
+                        Learn how Ayurvedic practitioners can translate ancient health wisdom into a dominant, trusted, and modern digital presence in 2026.
                     </p>
                 </div>
             </section>
@@ -146,8 +209,8 @@ export default function AyurvedaDoctorGuide() {
                                 Build a brand that heals. By combining your clinical wisdom with a dominant digital presence, you can reach more patients and help them discover the sustainable path to health.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-green-400 hover:underline">Junagadh Ayurveda Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-green-400 hover:underline">Rajkot Ayurveda Growth</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-green-400 hover:underline">Junagadh Ayurveda Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-green-400 hover:underline">Rajkot Ayurveda Growth</Link>
                             </div>
                         </div>
                     </div>

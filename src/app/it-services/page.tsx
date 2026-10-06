@@ -83,9 +83,55 @@ const portfolio = [
 ];
 
 export default function ITServices() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/it-services/#service",
+                "name": "IT Services - Full-Stack & Mobile App Development",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Expert React Native mobile app development, Next.js web application engineering, and custom eCommerce software solutions for global startups and enterprises.",
+                "areaServed": [
+                    { "@type": "Country", "name": "India" },
+                    { "@type": "Country", "name": "United Arab Emirates" },
+                    { "@type": "Country", "name": "United Kingdom" },
+                    { "@type": "Country", "name": "United States" }
+                ],
+                "serviceType": "Software Development & IT Consulting"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/it-services/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "IT Services",
+                        "item": "https://epsilon-technology.com/it-services/"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen font-sans">
-            {/* 1. Hero Section */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* 1. Hero Section */}
             <section className="bg-[#0B1120] text-white py-32 md:py-40 relative overflow-hidden">
                 {/* Background Patterns */}
@@ -111,12 +157,16 @@ export default function ITServices() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
-                            <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 min-w-[180px] h-14 text-lg font-semibold shadow-lg shadow-white/5">
-                                Discuss Your Project
-                            </Button>
-                            <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 min-w-[180px] h-14 text-lg backdrop-blur-sm">
-                                View Portfolio
-                            </Button>
+                            <Link href="/contacts/">
+                                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 min-w-[180px] h-14 text-lg font-semibold shadow-lg shadow-white/5">
+                                    Discuss Your Project
+                                </Button>
+                            </Link>
+                            <Link href="/portfolio/">
+                                <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 min-w-[180px] h-14 text-lg backdrop-blur-sm">
+                                    View Portfolio
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -297,12 +347,16 @@ export default function ITServices() {
                             Whether you're building an MVP from scratch, scaling an app, or need a technical partner, let's discuss how we can help.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <Button size="lg" className="bg-slate-900 text-white hover:bg-slate-800 min-w-[200px] h-12">
-                                Contact Us
-                            </Button>
-                            <Button size="lg" variant="outline" className="min-w-[200px] h-12">
-                                Schedule a Discussion
-                            </Button>
+                            <Link href="/contacts/">
+                                <Button size="lg" className="bg-slate-900 text-white hover:bg-slate-800 min-w-[200px] h-12">
+                                    Contact Us
+                                </Button>
+                            </Link>
+                            <Link href="/contacts/">
+                                <Button size="lg" variant="outline" className="min-w-[200px] h-12">
+                                    Schedule a Discussion
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -18,5 +18,60 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    return <WhatsAppWebPage />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "Epsilon WhatsApp Business API Platform",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web, Cloud",
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "INR",
+                    "price": "Custom"
+                },
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Official Meta Tech Provider WhatsApp Business API solution for automated customer communication, live chat, bot workflows, and bulk broadcast campaigns."
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Products",
+                        "item": "https://epsilon-technology.com/product/whatsapp-business-api/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "WhatsApp Business API",
+                        "item": "https://epsilon-technology.com/product/whatsapp-business-api/"
+                    }
+                ]
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <WhatsAppWebPage />
+        </>
+    );
 }
+

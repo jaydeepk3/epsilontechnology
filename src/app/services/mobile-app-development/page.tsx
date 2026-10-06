@@ -255,13 +255,13 @@ export default function MobileAppServices() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="#contact"
+                            href="/contacts/"
                             className={getButtonClasses({ variant: 'secondary', size: 'lg', className: 'bg-white text-sky-600 hover:bg-slate-100 hover:shadow-none' })}
                         >
                             Book Free Strategy Call
                         </Link>
                         <Link
-                            href="#contact"
+                            href="/contacts/"
                             className={getButtonClasses({ variant: 'outline', size: 'lg', className: 'border-sky-400 text-white hover:bg-sky-700' })}
                         >
                             Request a Quote
@@ -275,43 +275,64 @@ export default function MobileAppServices() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Service",
-                        "serviceType": "Mobile App Development",
-                        "provider": {
-                            "@type": "Organization",
-                            "name": "Epsilon Technology",
-                            "url": "https://epsilon-technology.com"
-                        },
-                        "areaServed": ["Unites States", "United Kingdom", "Canada", "United Arab Emirates"],
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Mobile App Development Services",
-                            "itemListElement": [
-                                {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "iOS App Development"
-                                    }
+                        "@graph": [
+                            {
+                                "@type": "Service",
+                                "@id": "https://epsilon-technology.com/services/mobile-app-development/#service",
+                                "name": "Mobile App Development Services",
+                                "provider": {
+                                    "@type": "Organization",
+                                    "@id": "https://epsilon-technology.com/#organization",
+                                    "name": "Epsilon Technology",
+                                    "url": "https://epsilon-technology.com/"
                                 },
-                                {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Android App Development"
+                                "description": "Top-rated mobile app development services for startups and enterprises. Specializing in React Native, iOS, and Android apps.",
+                                "areaServed": [
+                                    { "@type": "Country", "name": "United States" },
+                                    { "@type": "Country", "name": "United Kingdom" },
+                                    { "@type": "Country", "name": "Canada" },
+                                    { "@type": "Country", "name": "United Arab Emirates" },
+                                    { "@type": "Country", "name": "India" }
+                                ],
+                                "serviceType": "Mobile Application Development"
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "@id": "https://epsilon-technology.com/services/mobile-app-development/#breadcrumb",
+                                "itemListElement": [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://epsilon-technology.com/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "IT Services",
+                                        "item": "https://epsilon-technology.com/it-services/"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Mobile App Development",
+                                        "item": "https://epsilon-technology.com/services/mobile-app-development/"
                                     }
-                                },
-                                {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "React Native Cross-Platform Development"
+                                ]
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "@id": "https://epsilon-technology.com/services/mobile-app-development/#faq",
+                                "mainEntity": faqs.map(faq => ({
+                                    "@type": "Question",
+                                    "name": faq.question,
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": faq.answer
                                     }
-                                }
-                            ]
-                        },
-                        "description": "Top-rated mobile app development services for startups and enterprises. Specializing in React Native, iOS, and Android apps.",
-                        "url": "https://epsilon-technology.com/services/mobile-app-development"
+                                }))
+                            }
+                        ]
                     })
                 }}
             />

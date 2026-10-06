@@ -42,8 +42,71 @@ const ivfFaqs = [
 ];
 
 export default function IVFDoctorGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-ivf-doctors/#service",
+                "name": "Digital Marketing for IVF Doctors & Fertility Clinics",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Specialized fertility clinic digital marketing, IVF SEO, local search dominance, and empathetic patient acquisition strategies.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-ivf-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "IVF Doctors",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-ivf-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-ivf-doctors/#faq",
+                "mainEntity": ivfFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className="pt-32 pb-16 bg-purple-50/30 border-b border-purple-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-6">
@@ -53,7 +116,7 @@ export default function IVFDoctorGuide() {
                         Educational Guide on <span className="text-purple-600">Digital Marketing for IVF Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        Understanding how fertility specialists can build trust, provide educational clarity, and support patients through the digital infertility journey.
+                        Understanding how fertility specialists can build trust, provide educational clarity, and support patients through the digital infertility journey in 2026.
                     </p>
                 </div>
             </section>
@@ -134,8 +197,8 @@ export default function IVFDoctorGuide() {
                                 The journey to parenthood is deeply personal. Your digital marketing should reflect that. By providing clarity, education, and empathy, you can build a digital presence that truly supports your patients.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-purple-400 font-bold hover:underline">Junagadh IVF Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-purple-400 font-bold hover:underline">Rajkot IVF Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-purple-400 font-bold hover:underline">Junagadh IVF Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-purple-400 font-bold hover:underline">Rajkot IVF Marketing</Link>
                             </div>
                         </div>
                     </div>

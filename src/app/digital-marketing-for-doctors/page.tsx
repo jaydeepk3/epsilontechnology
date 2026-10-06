@@ -4,7 +4,7 @@ import { CheckCircle2, Info, Building2, Search, MapPin, Globe, Share2, MousePoin
 import { FAQ } from '@/components/sections/FAQ';
 
 export const metadata: Metadata = {
-    title: "Digital Marketing for Doctors: The Ultimate Guide (2025)",
+    title: "Digital Marketing for Doctors: The Ultimate Guide (2026)",
     description: "Learn how digital marketing for doctors can help clinics and hospitals grow. A comprehensive guide on SEO, patient acquisition, and digital strategy for healthcare.",
     keywords: ["digital marketing for doctors", "SEO for doctors", "doctor digital marketing services", "medical marketing agency", "clinic digital marketing", "hospital digital marketing"],
     openGraph: {
@@ -46,8 +46,71 @@ const guideFaqs = [
 ];
 
 export default function DigitalMarketingForDoctorsGuide() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-doctors/#service",
+                "name": "Digital Marketing for Doctors & Hospitals",
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://epsilon-technology.com/#organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                },
+                "description": "Comprehensive healthcare digital marketing, medical SEO, local Google Maps dominance, and patient acquisition services for doctors, clinics, and hospitals.",
+                "areaServed": [
+                    { "@type": "AdministrativeArea", "name": "Gujarat" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "serviceType": "Healthcare Digital Marketing"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-doctors/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing Hub",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Doctor Marketing Guide",
+                        "item": "https://epsilon-technology.com/digital-marketing-for-doctors/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/digital-marketing-for-doctors/#faq",
+                "mainEntity": guideFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Header Section */}
             <section className="pt-32 pb-16 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
@@ -55,7 +118,7 @@ export default function DigitalMarketingForDoctorsGuide() {
                         The Comprehensive Guide to <span className="text-blue-600">Digital Marketing for Doctors</span>
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                        An educational resource for healthcare professionals looking to understand the modern digital landscape and grow their medical practice ethically.
+                        An educational resource for healthcare professionals looking to understand the modern digital landscape and grow their medical practice ethically in 2026.
                     </p>
                     <div className="flex items-center justify-center gap-4 text-sm text-slate-500">
                         <span className="flex items-center gap-1"><Info size={16} /> 12 Minute Read</span>
@@ -220,9 +283,9 @@ export default function DigitalMarketingForDoctorsGuide() {
                                 Digital marketing is no longer optional for doctors; it is a fundamental part of patient care and accessibility. By focusing on <strong>SEO for doctors</strong>, maintaining a professional website, and educating the community through social media, you ensure that your expertise reaches the people who need it most.
                             </p>
                             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-600 font-bold hover:underline">Junagadh Doctor Marketing →</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-600 font-bold hover:underline">Rajkot Doctor Marketing →</Link>
-                                <Link href="/doctor-marketing-in-morbi" className="text-blue-600 font-bold hover:underline">Morbi Doctor Marketing →</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-600 font-bold hover:underline">Junagadh Doctor Marketing →</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-600 font-bold hover:underline">Rajkot Doctor Marketing →</Link>
+                                <Link href="/doctor-marketing-in-morbi/" className="text-blue-600 font-bold hover:underline">Morbi Doctor Marketing →</Link>
                             </div>
                         </div>
                     </section>
@@ -243,7 +306,7 @@ export default function DigitalMarketingForDoctorsGuide() {
                         <Link href="/" className="px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors">
                             Explore All Services
                         </Link>
-                        <Link href="/about-us" className="px-8 py-4 border border-slate-700 text-slate-300 rounded-full font-bold hover:bg-slate-900 transition-colors">
+                        <Link href="/about-us/" className="px-8 py-4 border border-slate-700 text-slate-300 rounded-full font-bold hover:bg-slate-900 transition-colors">
                             Meet Our Founder
                         </Link>
                     </div>

@@ -11,14 +11,14 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 export const metadata: Metadata = {
-    title: "How Doctors in Gujarat Are Getting 40+ New Patient Inquiries Every Month from Instagram (2025 Guide)",
+    title: "How Doctors in Gujarat Are Getting 40+ New Patient Inquiries Every Month from Instagram (2026 Guide)",
     description: "Master social media marketing for doctors in Gujarat. Discover how specialized healthcare agencies use Instagram Reels and WhatsApp funnels to drive 40+ patient inquiries monthly.",
     keywords: ["social media marketing for doctors gujarat", "instagram reels for doctors", "digital marketing for clinic india", "how to get more patients from instagram", "healthcare marketing Ahmedabad", "doctor marketing Rajkot"],
     alternates: {
         canonical: 'https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/',
     },
     openGraph: {
-        title: "Instagram Marketing Guide for Doctors in Gujarat (2025)",
+        title: "Instagram Marketing Guide for Doctors in Gujarat (2026)",
         description: "Grow your medical practice with 40+ patient inquiries monthly using Instagram.",
         type: 'article',
         authors: ['Epsilon Technology Team'],
@@ -219,7 +219,7 @@ export default function DoctorMarketingBlog() {
                     <nav className="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-widest">
                         <Link href="/" className="hover:text-sky-600 transition-colors flex items-center gap-1"><Home size={12} /> Home</Link>
                         <ChevronRight size={10} />
-                        <Link href="/blog" className="hover:text-sky-600 transition-colors">Blog</Link>
+                        <Link href="/blog/" className="hover:text-sky-600 transition-colors">Blog</Link>
                         <ChevronRight size={10} />
                         <span className="text-slate-600 truncate max-w-[200px]">Instagram Marketing for Doctors</span>
                     </nav>
@@ -235,7 +235,7 @@ export default function DoctorMarketingBlog() {
                             Healthcare Marketing
                         </Badge>
                         <h1 className="text-4xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-10 leading-[1.05]">
-                            How Doctors in Gujarat Are Getting 40+ New Patient Inquiries Every Month from Instagram (2025 Guide)
+                            How Doctors in Gujarat Are Getting 40+ New Patient Inquiries Every Month from Instagram (2026 Guide)
                         </h1>
                         <div className="flex flex-col md:flex-row items-center justify-between py-10 border-y border-slate-100 gap-8">
                             <div className="flex items-center gap-5">
@@ -269,7 +269,7 @@ export default function DoctorMarketingBlog() {
                                 <HelpCircle className="text-sky-400 mb-6" size={40} />
                                 <h4 className="text-xl font-bold mb-4 relative z-10">Want these results?</h4>
                                 <p className="text-slate-400 text-sm mb-10 relative z-10">We help doctors across Gujarat dominate their local market.</p>
-                                <Link href="https://epsilon-technology.com/digital-marketing/" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all">
+                                <Link href="/digital-marketing/" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all">
                                     Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
                                 </Link>
                             </div>
@@ -308,7 +308,7 @@ export default function DoctorMarketingBlog() {
                                                         <div className="bg-white rounded-[46px] p-12 text-center">
                                                             <h2 className="text-3xl font-black text-slate-900 mb-6">Ready to stop struggling?</h2>
                                                             <p className="text-slate-500 text-lg mb-10">Join 50+ doctors who shared their success with us.</p>
-                                                            <Link href="https://epsilon-technology.com/digital-marketing/" className="inline-flex items-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-sky-600 transition-all">
+                                                            <Link href="/digital-marketing/" className="inline-flex items-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-sky-600 transition-all">
                                                                 Book Free Strategy Call <ArrowRight size={20} />
                                                             </Link>
                                                         </div>
@@ -348,47 +348,101 @@ export default function DoctorMarketingBlog() {
                                 dangerouslySetInnerHTML={{
                                     __html: JSON.stringify({
                                         "@context": "https://schema.org",
-                                        "@type": "FAQPage",
-                                        "mainEntity": [
+                                        "@graph": [
                                             {
-                                                "@type": "Question",
-                                                "name": "How much time does a doctor need to spend on Instagram for results?",
-                                                "acceptedAnswer": {
-                                                    "@type": "Answer",
-                                                    "text": "With Epsilon Technology, a doctor only needs 60-90 minutes a month for recording. we handle content planning, editing, and distribution."
-                                                }
+                                                "@type": "BlogPosting",
+                                                "@id": "https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/#article",
+                                                "headline": "How Doctors in Gujarat Are Getting 40+ New Patient Inquiries Every Month from Instagram (2026 Guide)",
+                                                "description": "Master social media marketing for doctors in Gujarat. Discover how specialized healthcare agencies use Instagram Reels and WhatsApp funnels to drive 40+ patient inquiries monthly.",
+                                                "image": "https://epsilon-technology.com/logo.webp",
+                                                "author": {
+                                                    "@type": "Organization",
+                                                    "@id": "https://epsilon-technology.com/#organization",
+                                                    "name": "Epsilon Technology",
+                                                    "url": "https://epsilon-technology.com/"
+                                                },
+                                                "publisher": {
+                                                    "@type": "Organization",
+                                                    "@id": "https://epsilon-technology.com/#organization",
+                                                    "name": "Epsilon Technology",
+                                                    "logo": {
+                                                        "@type": "ImageObject",
+                                                        "url": "https://epsilon-technology.com/logo.webp"
+                                                    }
+                                                },
+                                                "datePublished": "2025-10-10",
+                                                "dateModified": "2026-01-15",
+                                                "mainEntityOfPage": "https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/"
                                             },
                                             {
-                                                "@type": "Question",
-                                                "name": "Is it ethical for doctors to market on social media?",
-                                                "acceptedAnswer": {
-                                                    "@type": "Answer",
-                                                    "text": "Yes, ethical medical marketing focuses on patient education, busting myths, and providing valid medical information to the public."
-                                                }
+                                                "@type": "BreadcrumbList",
+                                                "@id": "https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/#breadcrumb",
+                                                "itemListElement": [
+                                                    {
+                                                        "@type": "ListItem",
+                                                        "position": 1,
+                                                        "name": "Home",
+                                                        "item": "https://epsilon-technology.com/"
+                                                    },
+                                                    {
+                                                        "@type": "ListItem",
+                                                        "position": 2,
+                                                        "name": "Blog",
+                                                        "item": "https://epsilon-technology.com/blog/"
+                                                    },
+                                                    {
+                                                        "@type": "ListItem",
+                                                        "position": 3,
+                                                        "name": "Instagram Marketing for Doctors",
+                                                        "item": "https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/"
+                                                    }
+                                                ]
                                             },
                                             {
-                                                "@type": "Question",
-                                                "name": "How soon can I expect patient inquiries after starting?",
-                                                "acceptedAnswer": {
-                                                    "@type": "Answer",
-                                                    "text": "Organic growth takes time, but paid Meta Ads (Instagram/Facebook) can start generating inquiries within 14 days of launch."
-                                                }
-                                            },
-                                            {
-                                                "@type": "Question",
-                                                "name": "Do I need professional equipment for my Instagram Reels?",
-                                                "acceptedAnswer": {
-                                                    "@type": "Answer",
-                                                    "text": "No, a high-quality smartphone and good lighting are sufficient for medical content."
-                                                }
-                                            },
-                                            {
-                                                "@type": "Question",
-                                                "name": "How to get more patients from instagram in Gujarat?",
-                                                "acceptedAnswer": {
-                                                    "@type": "Answer",
-                                                    "text": "By following a 5-step system: optimized profile, educational reels, high engagement, WhatsApp inquiry funnels, and precision Meta ads targeted at Gujarat cities like Ahmedabad, Rajkot, and Surat."
-                                                }
+                                                "@type": "FAQPage",
+                                                "@id": "https://epsilon-technology.com/how-doctors-in-gujarat-get-patient-inquiries-from-instagram/#faq",
+                                                "mainEntity": [
+                                                    {
+                                                        "@type": "Question",
+                                                        "name": "How much time does a doctor need to spend on Instagram for results?",
+                                                        "acceptedAnswer": {
+                                                            "@type": "Answer",
+                                                            "text": "With Epsilon Technology, a doctor only needs 60-90 minutes a month for recording. we handle content planning, editing, and distribution."
+                                                        }
+                                                    },
+                                                    {
+                                                        "@type": "Question",
+                                                        "name": "Is it ethical for doctors to market on social media?",
+                                                        "acceptedAnswer": {
+                                                            "@type": "Answer",
+                                                            "text": "Yes, ethical medical marketing focuses on patient education, busting myths, and providing valid medical information to the public."
+                                                        }
+                                                    },
+                                                    {
+                                                        "@type": "Question",
+                                                        "name": "How soon can I expect patient inquiries after starting?",
+                                                        "acceptedAnswer": {
+                                                            "@type": "Answer",
+                                                            "text": "Organic growth takes time, but paid Meta Ads (Instagram/Facebook) can start generating inquiries within 14 days of launch."
+                                                        }
+                                                    },
+                                                    {
+                                                        "@type": "Question",
+                                                        "name": "Do I need professional equipment for my Instagram Reels?",
+                                                        "acceptedAnswer": {
+                                                            "@type": "Answer",
+                                                            "text": "No, a high-quality smartphone and good lighting are sufficient for medical content."
+                                                        }
+                                                    },
+                                                    {
+                                                        "@type": "Question",
+                                                        "name": "How to get more patients from instagram in Gujarat?",
+                                                        "acceptedAnswer": {
+                                                            "@type": "Answer",
+                                                            "text": "By following a 5-step system: optimized profile, educational reels, high engagement, WhatsApp inquiry funnels, and precision Meta ads targeted at Gujarat cities like Ahmedabad, Rajkot, and Surat."
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         ]
                                     })
