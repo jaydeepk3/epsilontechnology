@@ -209,14 +209,14 @@ export function Header() {
             {!isLandingPage && showBanner && (
                 <div className="fixed top-0 left-0 right-0 z-50 h-9 bg-gradient-to-r from-blue-700 via-indigo-800 to-blue-900 text-white text-xs md:text-sm font-semibold flex items-center justify-between px-4 border-b border-blue-500/20">
                     <div className="flex-1 flex items-center justify-center gap-2 truncate">
-                        <span className="bg-blue-500 text-white text-[9px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full border border-blue-400">Recognition</span>
+                        <span className="bg-blue-500 text-white text-[9px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full border border-blue-400">AI OPD Playbook</span>
                         <span className="truncate">
-                            <span className="hidden md:inline">🏆 Epsilon Technology recognized as Meta &quot;Ads Partner Excellence Impact Leader&quot;.</span>
-                            <span className="inline md:hidden">🏆 Epsilon: Meta Ads Excellence Impact Leader.</span>
+                            <span className="hidden md:inline"> Doctor’s AI OPD Visibility Playbook — Free Strategy Guide for Doctors &amp; Hospitals.</span>
+                            <span className="inline md:hidden"> Doctor’s AI OPD Visibility Playbook.</span>
                         </span>
-                        <Link href="/meta-certified-partner/" className="underline hover:text-blue-300 font-extrabold ml-1 transition-colors shrink-0">
-                            Verify Recognition &rarr;
-                        </Link>
+                        <a href="https://doctor.epsilon-technology.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300 font-extrabold ml-1 transition-colors shrink-0">
+                            Explore Playbook &rarr;
+                        </a>
                     </div>
                     <button
                         onClick={() => {

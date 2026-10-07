@@ -1,15 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Stethoscope, Search, CheckCircle2, MessageSquare, Star, TrendingUp, Sparkles, AlertCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ShieldCheck, Stethoscope, Search, CheckCircle2, MessageSquare, Star, TrendingUp, Sparkles, AlertCircle, Award, Maximize2, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HeroDoctorGrowthProps {
   onOpenDiagnosis: () => void;
 }
 
 export function HeroDoctorGrowth({ onOpenDiagnosis }: HeroDoctorGrowthProps) {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
   const scrollToDiagnosis = () => {
     const el = document.getElementById('free-diagnosis');
     if (el) {
@@ -28,23 +31,21 @@ export function HeroDoctorGrowth({ onOpenDiagnosis }: HeroDoctorGrowthProps) {
 
       <div className="container mx-auto px-4 md:px-8 lg:px-12 text-center max-w-5xl relative z-10">
 
-        {/* Core Positioning Pill with Playbook Link */}
+        {/* Core Positioning Pill with Meta Recognition Link */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="inline-flex items-center mb-8"
         >
-          <a
-            href="https://doctor.epsilon-technology.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/meta-certified-partner/"
             className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600/25 via-indigo-600/25 to-sky-600/25 border border-blue-400/40 text-blue-200 font-extrabold text-xs md:text-sm shadow-lg hover:border-blue-300 hover:text-white hover:scale-105 transition-all group"
           >
-            <Sparkles className="w-4 h-4 text-blue-400 group-hover:rotate-12 transition-transform" />
-            <span>Doctor’s AI OPD Visibility Playbook</span>
+            <Award className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
+            <span>Meta &quot;Ads Partner Excellence Impact Leader&quot;</span>
             <ArrowRight className="w-4 h-4 text-blue-300 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </motion.div>
 
         {/* Main Promise Headline */}
@@ -75,7 +76,7 @@ export function HeroDoctorGrowth({ onOpenDiagnosis }: HeroDoctorGrowthProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
         >
           <button
             onClick={scrollToDiagnosis}
@@ -136,6 +137,66 @@ export function HeroDoctorGrowth({ onOpenDiagnosis }: HeroDoctorGrowthProps) {
           </div>
         </motion.div>
 
+        {/* Meta Ads Partner Excellence Certificate Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="mt-10 p-6 md:p-8 rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-blue-500/30 shadow-[0_15px_50px_rgba(37,99,235,0.15)] relative overflow-hidden text-left"
+        >
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full pointer-events-none" />
+          <div className="flex flex-col lg:flex-row items-center gap-8 relative z-10">
+            {/* Certificate Preview Image */}
+            <div 
+              className="relative w-full lg:w-1/2 aspect-[1.8/1] rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl cursor-pointer group bg-slate-900 shrink-0"
+              onClick={() => setIsLightboxOpen(true)}
+            >
+              <Image
+                src="/meta-partner-certificate.png"
+                alt="Meta Ads Partner Excellence Impact Leader Certificate - Epsilon Technology"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                priority
+              />
+              <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 backdrop-blur-[2px]">
+                <span className="px-4 py-2 bg-blue-600 text-white font-bold rounded-xl text-xs md:text-sm flex items-center gap-2 shadow-lg shadow-blue-500/40">
+                  <Maximize2 className="w-4 h-4" /> Click to View Certificate
+                </span>
+              </div>
+            </div>
+
+            {/* Certificate Details */}
+            <div className="space-y-4 lg:w-1/2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 font-extrabold text-xs">
+                <Award className="w-3.5 h-3.5 text-amber-400" />
+                Official Meta Recognition
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black tracking-tight text-white leading-tight">
+                Meta &quot;Ads Partner Excellence Impact Leader&quot;
+              </h3>
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed font-medium">
+                Epsilon Technology has been recognized by Meta leadership for outstanding ad performance, campaign innovation, and delivering verified ROI for clients.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/meta-certified-partner/"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs md:text-sm shadow-md hover:shadow-blue-500/25 transition-all"
+                >
+                  <span>Verify Meta Recognition</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <button
+                  onClick={() => setIsLightboxOpen(true)}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs md:text-sm transition-all border border-slate-700"
+                >
+                  <Sparkles className="w-4 h-4 text-blue-400" />
+                  <span>Enlarge Certificate</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Verification & Proof Bar */}
         <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-medium">
           <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-blue-400" /> Meta Certified Partner</span>
@@ -145,6 +206,39 @@ export function HeroDoctorGrowth({ onOpenDiagnosis }: HeroDoctorGrowthProps) {
         </div>
 
       </div>
+
+      {/* Certificate Lightbox Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-md"
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <div 
+              className="relative max-w-4xl w-full aspect-[1.8/1] rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-900"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src="/meta-partner-certificate.png"
+                alt="Meta Ads Partner Excellence Impact Leader Certificate"
+                fill
+                className="object-contain"
+              />
+              <button
+                onClick={() => setIsLightboxOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-slate-800/80 hover:bg-slate-700 text-white transition-colors"
+                aria-label="Close certificate modal"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
+
