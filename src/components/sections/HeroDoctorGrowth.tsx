@@ -28,15 +28,23 @@ export function HeroDoctorGrowth({ onOpenDiagnosis }: HeroDoctorGrowthProps) {
 
       <div className="container mx-auto px-4 md:px-8 lg:px-12 text-center max-w-5xl relative z-10">
 
-        {/* Core Positioning Pill */}
+        {/* Core Positioning Pill with Playbook Link */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 font-bold text-xs md:text-sm mb-8 shadow-inner"
+          className="inline-flex items-center mb-8"
         >
-          <Sparkles className="w-4 h-4 text-blue-400" />
-          <span>Technology &amp; Growth Partner for Doctors &amp; Hospitals · Doctor Growth in the AI Era</span>
+          <a
+            href="https://doctor.epsilon-technology.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600/25 via-indigo-600/25 to-sky-600/25 border border-blue-400/40 text-blue-200 font-extrabold text-xs md:text-sm shadow-lg hover:border-blue-300 hover:text-white hover:scale-105 transition-all group"
+          >
+            <Sparkles className="w-4 h-4 text-blue-400 group-hover:rotate-12 transition-transform" />
+            <span>Doctor’s AI OPD Visibility Playbook</span>
+            <ArrowRight className="w-4 h-4 text-blue-300 group-hover:translate-x-1 transition-transform" />
+          </a>
         </motion.div>
 
         {/* Main Promise Headline */}

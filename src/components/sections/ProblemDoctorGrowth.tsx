@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, Bot, AlertTriangle, Users, TrendingDown, MessageSquareX, ShieldAlert } from 'lucide-react';
+import { Search, Bot, AlertTriangle, Users, TrendingDown, MessageSquareX, ShieldAlert, ArrowRight, BookOpen } from 'lucide-react';
 
 const problemCards = [
   {
@@ -100,12 +100,24 @@ export function ProblemDoctorGrowth() {
               </p>
             </div>
           </div>
-          <a
-            href="#free-diagnosis"
-            className="shrink-0 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95"
-          >
-            Diagnose My Practice Visibility
-          </a>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
+            <a
+              href="https://doctor.epsilon-technology.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
+            >
+              <BookOpen className="w-4 h-4" />
+              <span>Doctor’s AI OPD Visibility Playbook</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="#free-diagnosis"
+              className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95 text-center"
+            >
+              Diagnose My Practice Visibility
+            </a>
+          </div>
         </motion.div>
 
       </div>

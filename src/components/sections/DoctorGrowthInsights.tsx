@@ -7,6 +7,16 @@ import { ArrowRight, Clock, BookOpen, Sparkles } from 'lucide-react';
 
 const featuredInsights = [
   {
+    slug: 'doctors-ai-opd-visibility-playbook',
+    externalUrl: 'https://doctor.epsilon-technology.com',
+    title: 'Doctor’s AI OPD Visibility Playbook',
+    category: 'Featured Playbook',
+    readTime: 'Complete Playbook',
+    updatedAt: '2026-10-07',
+    metaDescription: 'The comprehensive, step-by-step digital master blueprint for doctors and hospitals to dominate Google AI search, local Maps 3-Pack, and WhatsApp OPD bookings.',
+    imageUrl: '/blog_medical_marketing.webp'
+  },
+  {
     slug: 'digital-marketing-for-doctors-india',
     title: 'Digital Marketing for Doctors in India (2026 Master Guide)',
     category: 'Doctor Growth',
@@ -49,15 +59,6 @@ const featuredInsights = [
     readTime: '14 Min Read',
     updatedAt: '2026-10-05',
     metaDescription: 'How modern doctors and hospitals use official WhatsApp Business API workflows to triage inquiries and automate OPD bookings.',
-    imageUrl: '/blog_medical_marketing.webp'
-  },
-  {
-    slug: 'doctor-personal-branding-ai-era',
-    title: 'Doctor Personal Branding in the AI Era: The 2026 Authority Manual',
-    category: 'Doctor Branding',
-    readTime: '14 Min Read',
-    updatedAt: '2026-10-05',
-    metaDescription: 'How medical specialists and surgeons build an enduring personal brand as AI commoditizes generic health information.',
     imageUrl: '/blog_medical_marketing.webp'
   }
 ];
@@ -106,47 +107,91 @@ export function DoctorGrowthInsights() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
             >
-              <Link href={`/blog/${post.slug}/`} className="group h-full flex flex-col">
-                <article className="bg-white rounded-3xl overflow-hidden border border-slate-200/90 h-full flex flex-col hover:shadow-xl hover:border-blue-300 transition-all duration-300 group-hover:-translate-y-1">
-                  <div className="aspect-[16/10] relative overflow-hidden bg-slate-100">
-                    <Image
-                      src={post.imageUrl}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-3 left-3 z-10">
-                      <span className="bg-slate-950/90 backdrop-blur-sm text-white px-3 py-1 rounded-full font-bold text-[10px] uppercase tracking-wider shadow-md border border-white/10">
-                        {post.category}
-                      </span>
+              {post.externalUrl ? (
+                <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="group h-full flex flex-col">
+                  <article className="bg-white rounded-3xl overflow-hidden border border-blue-200 h-full flex flex-col hover:shadow-xl hover:border-blue-400 transition-all duration-300 group-hover:-translate-y-1">
+                    <div className="aspect-[16/10] relative overflow-hidden bg-slate-100">
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute bottom-3 left-3 z-10">
+                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full font-bold text-[10px] uppercase tracking-wider shadow-md border border-white/20">
+                          {post.category}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="p-6 flex flex-col flex-grow justify-between">
-                    <div>
-                      <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-400 mb-3 uppercase tracking-wider">
-                        <Clock size={12} className="text-blue-500" />
-                        <span>{post.readTime}</span>
-                        <span>•</span>
-                        <span>{post.updatedAt}</span>
+                    <div className="p-6 flex flex-col flex-grow justify-between">
+                      <div>
+                        <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-400 mb-3 uppercase tracking-wider">
+                          <Clock size={12} className="text-blue-500" />
+                          <span>{post.readTime}</span>
+                          <span>•</span>
+                          <span>{post.updatedAt}</span>
+                        </div>
+
+                        <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
+                          {post.title}
+                        </h3>
+
+                        <p className="text-slate-600 text-xs leading-relaxed mb-6 line-clamp-3 font-normal">
+                          {post.metaDescription}
+                        </p>
                       </div>
 
-                      <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
-                        {post.title}
-                      </h3>
-
-                      <p className="text-slate-600 text-xs leading-relaxed mb-6 line-clamp-3 font-normal">
-                        {post.metaDescription}
-                      </p>
+                      <div className="flex items-center gap-1.5 text-blue-600 font-extrabold text-xs group-hover:gap-2.5 transition-all pt-4 border-t border-slate-100">
+                        <span>Open Playbook</span>
+                        <ArrowRight size={14} />
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              ) : (
+                <Link href={`/blog/${post.slug}/`} className="group h-full flex flex-col">
+                  <article className="bg-white rounded-3xl overflow-hidden border border-slate-200/90 h-full flex flex-col hover:shadow-xl hover:border-blue-300 transition-all duration-300 group-hover:-translate-y-1">
+                    <div className="aspect-[16/10] relative overflow-hidden bg-slate-100">
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute bottom-3 left-3 z-10">
+                        <span className="bg-slate-950/90 backdrop-blur-sm text-white px-3 py-1 rounded-full font-bold text-[10px] uppercase tracking-wider shadow-md border border-white/10">
+                          {post.category}
+                        </span>
+                      </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 text-blue-600 font-extrabold text-xs group-hover:gap-2.5 transition-all pt-4 border-t border-slate-100">
-                      <span>Read Guide</span>
-                      <ArrowRight size={14} />
+                    <div className="p-6 flex flex-col flex-grow justify-between">
+                      <div>
+                        <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-400 mb-3 uppercase tracking-wider">
+                          <Clock size={12} className="text-blue-500" />
+                          <span>{post.readTime}</span>
+                          <span>•</span>
+                          <span>{post.updatedAt}</span>
+                        </div>
+
+                        <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
+                          {post.title}
+                        </h3>
+
+                        <p className="text-slate-600 text-xs leading-relaxed mb-6 line-clamp-3 font-normal">
+                          {post.metaDescription}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 text-blue-600 font-extrabold text-xs group-hover:gap-2.5 transition-all pt-4 border-t border-slate-100">
+                        <span>Read Guide</span>
+                        <ArrowRight size={14} />
+                      </div>
                     </div>
-                  </div>
-                </article>
-              </Link>
+                  </article>
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

@@ -135,6 +135,12 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.9,
     },
     {
+        url: 'https://epsilon-technology.com/digital-marketing-for-doctors-in-junagadh/',
+        lastModified: STABLE_DATE,
+        changeFrequency: 'monthly',
+        priority: 0.9,
+    },
+    {
         url: 'https://epsilon-technology.com/doctor-marketing-in-ahmedabad/',
         lastModified: STABLE_DATE,
         changeFrequency: 'monthly',

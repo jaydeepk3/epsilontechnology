@@ -54,16 +54,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/digital-marketing-for-doctors-in-junagadh',
-        destination: '/doctor-marketing-in-junagadh/',
-        permanent: true,
-      },
-      {
-        source: '/digital-marketing-for-doctors-in-junagadh/',
-        destination: '/doctor-marketing-in-junagadh/',
-        permanent: true,
-      },
-      {
         source: '/online-opd-growth-system',
         destination: 'https://doctor.epsilon-technology.com',
         permanent: true,
