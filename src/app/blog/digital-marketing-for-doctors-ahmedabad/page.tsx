@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-03T11:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
+            url: '/blog_digital_marketing_for_doctors_ahmedabad.webp',
             width: 1200,
             height: 630,
             alt: 'Digital Marketing for Doctors in Ahmedabad - Epsilon Technology',
@@ -83,7 +83,7 @@ export default function DigitalMarketingForDoctorsAhmedabadPage() {
                 "@type": "Article",
                 "headline": "Digital Marketing for Doctors in Ahmedabad (2026 Growth Blueprint)",
                 "description": "The definitive local digital marketing and SEO blueprint for doctors, clinics, and hospital directors in Ahmedabad, Gujarat.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_digital_marketing_for_doctors_ahmedabad.webp",
                 "datePublished": "2026-03-25T10:00:00.000Z",
                 "dateModified": "2026-10-03T11:00:00.000Z",
                 "author": {
@@ -209,6 +209,17 @@ export default function DigitalMarketingForDoctorsAhmedabadPage() {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                            <Image
+                                src="/blog_digital_marketing_for_doctors_ahmedabad.webp"
+                                alt="Digital Marketing for Doctors in Ahmedabad - 2026 Growth Blueprint"
+                                width={1600}
+                                height={900}
+                                className="w-full h-auto object-cover"
+                                priority
+                            />
                         </div>
 
                         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
