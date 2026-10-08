@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-04T14:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
+            url: '/blog_how_patients_find_doctors_online.webp',
             width: 1200,
             height: 630,
             alt: 'How Patients Find Doctors Online - Patient Journey Mapping',
@@ -78,7 +78,7 @@ export default function HowPatientsFindDoctorsOnlinePage() {
                 "@type": "Article",
                 "headline": "How Patients Find Doctors Online (2026 Patient Journey Study)",
                 "description": "Comprehensive psychological and behavioral analysis of the modern patient discovery journey.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_how_patients_find_doctors_online.webp",
                 "datePublished": "2026-04-20T09:00:00.000Z",
                 "dateModified": "2026-10-04T14:00:00.000Z",
                 "author": {
@@ -204,6 +204,17 @@ export default function HowPatientsFindDoctorsOnlinePage() {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                            <Image
+                                src="/blog_how_patients_find_doctors_online.webp"
+                                alt="How Patients Find Doctors Online - 6-Stage Patient Journey 2026"
+                                width={1600}
+                                height={900}
+                                className="w-full h-auto object-cover"
+                                priority
+                            />
                         </div>
 
                         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
