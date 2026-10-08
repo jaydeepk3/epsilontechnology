@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-05T12:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
+            url: '/blog_whatsapp_automation_for_clinics.webp',
             width: 1200,
             height: 630,
             alt: 'WhatsApp Automation for Clinics - Patient Communication Architecture',
@@ -78,7 +78,7 @@ export default function WhatsAppAutomationForClinicsPage() {
                 "@type": "Article",
                 "headline": "WhatsApp Automation for Clinics (2026 Complete Blueprint)",
                 "description": "Comprehensive practical guide for healthcare providers to automate patient communication, appointment reminders, and reviews using WhatsApp Business API.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_whatsapp_automation_for_clinics.webp",
                 "datePublished": "2026-05-05T10:00:00.000Z",
                 "dateModified": "2026-10-05T12:00:00.000Z",
                 "author": {
@@ -204,6 +204,17 @@ export default function WhatsAppAutomationForClinicsPage() {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                            <Image
+                                src="/blog_whatsapp_automation_for_clinics.webp"
+                                alt="WhatsApp Automation for Clinics - 4-Stage Blueprint 2026"
+                                width={1600}
+                                height={900}
+                                className="w-full h-auto object-cover"
+                                priority
+                            />
                         </div>
 
                         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
