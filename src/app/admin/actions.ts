@@ -19,6 +19,12 @@ async function checkAuth() {
     if (!payload) throw new Error('Unauthorized')
 }
 
+export async function logout() {
+    const cookieStore = await cookies()
+    cookieStore.delete('adminToken')
+    redirect('/admin/login')
+}
+
 export async function uploadImage(formData: FormData) {
     await checkAuth()
     const file = formData.get('imageFile') as File

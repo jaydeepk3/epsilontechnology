@@ -5,6 +5,8 @@ import { Newspaper, LogOut } from 'lucide-react'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
+import { logout } from './actions'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -22,13 +24,6 @@ export default async function AdminLayout({
     const cookieStore = await cookies()
     const token = cookieStore.get('adminToken')
 
-    const handleLogout = async () => {
-        'use server'
-        const cookieStore = await cookies()
-        cookieStore.delete('adminToken')
-        redirect('/admin/login')
-    }
-
     return (
         <div className={`min-h-screen bg-slate-50 ${inter.className}`}>
             {token && (
@@ -42,7 +37,7 @@ export default async function AdminLayout({
                             <Link href="/admin/blogs" className="text-sm font-medium text-slate-600 hover:text-sky-600">
                                 Blogs
                             </Link>
-                            <form action={handleLogout}>
+                            <form action={logout}>
                                 <button type="submit" className="flex items-center gap-2 text-sm font-medium text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-md transition-colors">
                                     <LogOut className="h-4 w-4" />
                                     Logout

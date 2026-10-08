@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Plus, Edit3, Trash2, ImageIcon } from 'lucide-react'
 import Image from 'next/image'
 import prisma from '@/lib/prisma'
-import { deleteBlog } from '../actions'
+import DeleteBlogButton from '../components/DeleteBlogButton'
 
 export default async function AdminBlogsPage() {
     const blogs = await prisma.blog.findMany({
@@ -71,12 +71,7 @@ export default async function AdminBlogsPage() {
                                             >
                                                 <Edit3 className="h-4 w-4" /> Edit
                                             </Link>
-                                            <form action={deleteBlog.bind(null, blog.id)}>
-
-                                                <button type="submit" className="text-red-500 hover:text-red-700 flex items-center gap-1 text-sm font-medium transition">
-                                                    <Trash2 className="h-4 w-4" /> Delete
-                                                </button>
-                                            </form>
+                                            <DeleteBlogButton id={blog.id} title={blog.title} />
                                         </div>
                                     </td>
                                 </tr>
