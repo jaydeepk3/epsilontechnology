@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-05T09:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
+            url: '/blog_why_doctors_get_leads_not_patients.webp',
             width: 1200,
             height: 630,
             alt: 'Why Doctors Get Leads but Not Patients - Conversion Funnel Breakdown',
@@ -77,7 +77,7 @@ export default function WhyDoctorsGetLeadsNotPatientsPage() {
                 "@type": "Article",
                 "headline": "Why Doctors Get Leads but Not Patients (The 4 Conversion Leaks)",
                 "description": "Comprehensive diagnostic analysis of clinic lead leakage and operational solutions to maximize OPD patient show-ups.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_why_doctors_get_leads_not_patients.webp",
                 "datePublished": "2026-05-01T10:00:00.000Z",
                 "dateModified": "2026-10-05T09:00:00.000Z",
                 "author": {
@@ -203,6 +203,17 @@ export default function WhyDoctorsGetLeadsNotPatientsPage() {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                            <Image
+                                src="/blog_why_doctors_get_leads_not_patients.webp"
+                                alt="Why Doctors Get Leads but Not Patients - Conversion Funnel Breakdown"
+                                width={1600}
+                                height={900}
+                                className="w-full h-auto object-cover"
+                                priority
+                            />
                         </div>
 
                         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
