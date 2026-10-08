@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-04T16:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
+            url: '/blog_doctor_website_seo_checklist.webp',
             width: 1200,
             height: 630,
             alt: 'Doctor Website SEO Checklist - 25-Point Clinical Health Index',
@@ -131,7 +131,7 @@ export default function DoctorWebsiteSEOChecklistPage() {
                 "@type": "Article",
                 "headline": "Doctor Website SEO Checklist (2026 25-Point Practice Audit)",
                 "description": "Comprehensive 25-point technical SEO and conversion audit checklist for medical clinic websites.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_doctor_website_seo_checklist.webp",
                 "datePublished": "2026-04-25T10:00:00.000Z",
                 "dateModified": "2026-10-04T16:00:00.000Z",
                 "author": {
@@ -257,6 +257,17 @@ export default function DoctorWebsiteSEOChecklistPage() {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                            <Image
+                                src="/blog_doctor_website_seo_checklist.webp"
+                                alt="Doctor Website SEO Checklist - 25-Point Clinical Health Index"
+                                width={1600}
+                                height={900}
+                                className="w-full h-auto object-cover"
+                                priority
+                            />
                         </div>
 
                         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
