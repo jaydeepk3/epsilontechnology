@@ -30,66 +30,38 @@ export async function uploadImage(formData: FormData) {
     const file = formData.get('imageFile') as File
     if (!file || file.size === 0) return ''
 
-    const client = new ftp.Client()
-    client.ftp.verbose = true
-    
+    const filename = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`
+    const buffer = Buffer.from(await file.arrayBuffer())
+
+    // Save locally into public/blog_images so Next.js serves it reliably
+    const blogImagesDir = path.join(process.cwd(), 'public', 'blog_images')
+    if (!fs.existsSync(blogImagesDir)) {
+        fs.mkdirSync(blogImagesDir, { recursive: true })
+    }
+    fs.writeFileSync(path.join(blogImagesDir, filename), buffer)
+    console.log(`Saved image locally to public/blog_images/${filename}`)
+
+    // Also upload to FTP server if configured as remote backup
     const host = process.env.FTP_HOST
     const user = process.env.FTP_USER
     const password = process.env.FTP_PASS
-    
-    if (!host || !user || !password) {
-        throw new Error("FTP configuration is missing in environment variables")
-    }
 
-    try {
-        console.log(`Connecting to FTP host: ${host} as ${user}`)
-        await client.access({
-            host,
-            user,
-            password,
-            secure: false
-        })
-
-        const filename = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`
-        const buffer = Buffer.from(await file.arrayBuffer())
-        const source = Readable.from(buffer)
-
-        // The web domain https://blog.epsilon-technology.com/ serves files
-        // from the 'blog_images' subfolder on the FTP server, NOT from root.
-        // Navigate into blog_images before uploading so the URL resolves correctly.
-        await client.ensureDir('/blog_images')
-        await client.uploadFrom(source, `/blog_images/${filename}`)
-        
-        const baseUrl = process.env.FTP_BASE_URL || ''
-        const sanitizedBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl
-        
-        // URL maps directly — blog.epsilon-technology.com/ == /blog_images/ on FTP
-        const finalUrl = `${sanitizedBaseUrl}/${filename}`
-        console.log("Image uploaded successfully to /blog_images/. URL:", finalUrl)
-        return finalUrl
-    } catch (err: any) {
-        console.error("FTP Upload Error:", err)
-        // Fallback to local only if FTP fails AND it's a local development environment
-        if (process.env.NODE_ENV === 'development') {
-            console.log('Falling back to local upload...')
-            try {
-                const buffer = Buffer.from(await file.arrayBuffer())
-                const filename = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`
-                const publicPath = path.join(process.cwd(), 'public', 'uploads')
-                
-                if (!fs.existsSync(publicPath)) {
-                    fs.mkdirSync(publicPath, { recursive: true })
-                }
-                fs.writeFileSync(path.join(publicPath, filename), buffer)
-                return `/uploads/${filename}`
-            } catch (localErr) {
-                console.error("Local fallback also failed:", localErr)
-            }
+    if (host && user && password) {
+        try {
+            const client = new ftp.Client()
+            client.ftp.verbose = false
+            await client.access({ host, user, password, secure: false })
+            await client.ensureDir('/blog_images')
+            const source = Readable.from(buffer)
+            await client.uploadFrom(source, `/blog_images/${filename}`)
+            client.close()
+            console.log(`FTP backup upload complete for ${filename}`)
+        } catch (ftpErr: any) {
+            console.warn("FTP backup upload warning:", ftpErr?.message || ftpErr)
         }
-        throw new Error("Failed to upload image to server: " + (err.message || 'Unknown error'))
-    } finally {
-        client.close()
     }
+
+    return `/blog_images/${filename}`
 }
 
 export async function createBlog(formData: FormData) {
