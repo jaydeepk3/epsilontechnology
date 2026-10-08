@@ -124,7 +124,7 @@ const CORNERSTONE_BLOGS: StaticBlogPost[] = [
         author: 'Jaydeep Kataria',
         readTime: '14 Min Read',
         updatedAt: '2026-10-02',
-        imageUrl: '/blog_medical_marketing.webp'
+        imageUrl: '/blog_digital_marketing_for_doctors_gujarat.webp'
     },
     {
         id: 'c-3',
