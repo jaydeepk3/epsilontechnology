@@ -9,7 +9,6 @@ import { WhyEpsilonDoctorGrowth } from '@/components/sections/WhyEpsilonDoctorGr
 import { WhoWeHelpDoctorGrowth } from '@/components/sections/WhoWeHelpDoctorGrowth';
 import { DoctorProofAndCaseStudies } from '@/components/sections/DoctorProofAndCaseStudies';
 import { FreeDiagnosisSection } from '@/components/sections/FreeDiagnosisSection';
-import { DoctorGrowthInsights } from '@/components/sections/DoctorGrowthInsights';
 import { DoctorFaqSection } from '@/components/sections/DoctorFaqSection';
 import { FinalCtaDoctorGrowth } from '@/components/sections/FinalCtaDoctorGrowth';
 import { StickyConversionBar } from '@/components/ui/StickyConversionBar';
@@ -49,10 +48,7 @@ export default function HomeLandingClient() {
         {/* 8. Free Digital Visibility Diagnosis: 6 Checks + Form */}
         <FreeDiagnosisSection />
 
-        {/* 9. Doctor Growth Insights: Latest Blog Articles */}
-        <DoctorGrowthInsights />
-
-        {/* 10. FAQ / Objection Handling */}
+        {/* 9. FAQ / Objection Handling */}
         <DoctorFaqSection />
 
         {/* 11. Final CTA: See Where Your Practice Is Losing Visibility */}

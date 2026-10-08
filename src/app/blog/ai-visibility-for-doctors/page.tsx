@@ -49,10 +49,10 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-04T12:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
-            width: 1200,
-            height: 630,
-            alt: 'AI Visibility for Doctors - Generative Engine Optimization',
+            url: '/blog_ai_visibility_for_doctors.webp',
+            width: 1600,
+            height: 900,
+            alt: 'AI Visibility for Doctors - Generative Engine Optimization Framework',
         }],
     }
 };
@@ -84,7 +84,7 @@ export default function AIVisibilityForDoctorsPage() {
                 "@type": "Article",
                 "headline": "AI Visibility for Doctors (GEO Guide for 2026)",
                 "description": "The definitive guide on Generative Engine Optimization (GEO) for medical practitioners, clinics, and hospital networks.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_ai_visibility_for_doctors.webp",
                 "datePublished": "2026-04-15T09:00:00.000Z",
                 "dateModified": "2026-10-04T12:00:00.000Z",
                 "author": {
@@ -208,6 +208,29 @@ export default function AIVisibilityForDoctorsPage() {
                                     >
                                         <Search size={14} /> Doctor SEO Guide
                                     </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Hero Image */}
+                        <div className="max-w-5xl mx-auto mb-20">
+                            <div className="relative aspect-[21/9] rounded-[36px] overflow-hidden shadow-2xl border border-slate-100">
+                                <Image
+                                    src="/blog_ai_visibility_for_doctors.webp"
+                                    alt="AI Visibility for Doctors - Generative Engine Optimization Framework"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/20 to-transparent" />
+                                <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <div className="text-white">
+                                        <p className="text-xs uppercase tracking-widest text-sky-300 font-bold mb-1">Epsilon Generative Engine Optimization (GEO)</p>
+                                        <p className="text-lg md:text-xl font-extrabold">ChatGPT • Perplexity • Google AI Overviews • Knowledge Graphs</p>
+                                    </div>
+                                    <span className="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-xl border border-white/30 self-start sm:self-auto">
+                                        2026 AI Search Standard
+                                    </span>
                                 </div>
                             </div>
                         </div>

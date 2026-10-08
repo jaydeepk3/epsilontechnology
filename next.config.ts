@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'epsilon-technology.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'blog.epsilon-technology.com',
+      },
     ],
   },
   async headers() {

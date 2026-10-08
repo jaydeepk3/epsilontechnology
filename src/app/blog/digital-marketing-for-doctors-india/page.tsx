@@ -52,10 +52,10 @@ export const metadata: Metadata = {
         modifiedTime: '2026-10-01T12:00:00.000Z',
         authors: ['Jaydeep Kataria'],
         images: [{
-            url: '/blog_medical_marketing.webp',
-            width: 1200,
-            height: 630,
-            alt: 'Digital Marketing for Doctors in India - Epsilon Technology',
+            url: '/blog_digital_marketing_doctors_india.webp',
+            width: 1600,
+            height: 900,
+            alt: 'Digital Marketing for Doctors in India - Patient Acquisition Architecture',
         }],
     }
 };
@@ -91,7 +91,7 @@ export default function DigitalMarketingForDoctorsIndiaPage() {
                 "@type": "Article",
                 "headline": "Digital Marketing for Doctors in India (2026 Master Guide)",
                 "description": "The definitive strategic guide for Indian medical practitioners to master patient acquisition, local SEO, reputation management, and ethical digital growth.",
-                "image": "https://epsilon-technology.com/blog_medical_marketing.webp",
+                "image": "https://epsilon-technology.com/blog_digital_marketing_doctors_india.webp",
                 "datePublished": "2026-03-15T09:00:00.000Z",
                 "dateModified": "2026-10-01T12:00:00.000Z",
                 "author": {
@@ -234,7 +234,7 @@ export default function DigitalMarketingForDoctorsIndiaPage() {
                         <div className="max-w-5xl mx-auto mb-20">
                             <div className="relative aspect-[21/9] rounded-[36px] overflow-hidden shadow-2xl border border-slate-100">
                                 <Image
-                                    src="/blog_medical_marketing.webp"
+                                    src="/blog_digital_marketing_doctors_india.webp"
                                     alt="Digital Marketing for Doctors in India - Patient Acquisition Architecture"
                                     fill
                                     className="object-cover"
