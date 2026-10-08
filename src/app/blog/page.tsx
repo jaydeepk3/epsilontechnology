@@ -212,7 +212,7 @@ const CORNERSTONE_BLOGS: StaticBlogPost[] = [
         author: 'Jaydeep Kataria',
         readTime: '10 Min Read',
         updatedAt: '2026-04-30',
-        imageUrl: '/best_digital_marketing_agency_junagadh_featured.webp'
+        imageUrl: '/digital_marketing_cost_junagadh_featured.webp'
     },
     {
         id: 'c-15',
