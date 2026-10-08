@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Baby, Search, MapPin, Share2, ClipboardCheck, Info, ShieldCheck, HeartPulse } from 'lucide-react';
 import { FAQ } from '@/components/sections/FAQ';
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
         title: "Digital Marketing for Gynecologist Doctors | Educational Guide",
         description: "Helping gynecologists provide a safe, trusted, and educational space for women's healthcare online.",
         url: "https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/",
-        images: ["/logo.webp"]
+        images: ["/blog_digital_marketing_for_gynecologist_doctors.webp"]
     },
     alternates: {
         canonical: 'https://epsilon-technology.com/digital-marketing-for-gynecologist-doctors/',
@@ -122,6 +123,15 @@ export default function GynaeDoctorGuide() {
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
                         Understanding how to build an authoritative and empathetic digital presence for OB/GYN specialists and maternity clinics in 2026.
                     </p>
+                    <div className="relative aspect-video w-full max-w-4xl mx-auto mt-8 rounded-2xl overflow-hidden shadow-2xl border border-pink-100">
+                        <Image
+                            src="/blog_digital_marketing_for_gynecologist_doctors.webp"
+                            alt="Digital Marketing for Gynecologist Doctors & Maternity Clinics"
+                            fill
+                            priority
+                            className="object-cover"
+                        />
+                    </div>
                 </div>
             </section>
 
