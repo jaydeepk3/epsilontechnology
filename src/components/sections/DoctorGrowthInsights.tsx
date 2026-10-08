@@ -14,7 +14,7 @@ const featuredInsights = [
     readTime: 'Complete Playbook',
     updatedAt: '2026-10-07',
     metaDescription: 'The comprehensive, step-by-step digital master blueprint for doctors and hospitals to dominate Google AI search, local Maps 3-Pack, and WhatsApp OPD bookings.',
-    imageUrl: '/blog_medical_marketing.webp'
+    imageUrl: '/blog_ai_visibility_for_doctors.webp'
   },
   {
     slug: 'digital-marketing-for-doctors-india',
@@ -23,7 +23,7 @@ const featuredInsights = [
     readTime: '16 Min Read',
     updatedAt: '2026-10-01',
     metaDescription: 'The complete 2026 ethical roadmap to patient acquisition, Google 3-Pack SEO, AI search visibility, and WhatsApp conversion.',
-    imageUrl: '/blog_medical_marketing.webp'
+    imageUrl: '/blog_digital_marketing_doctors_india.webp'
   },
   {
     slug: 'ai-visibility-for-doctors',
@@ -32,7 +32,7 @@ const featuredInsights = [
     readTime: '16 Min Read',
     updatedAt: '2026-10-04',
     metaDescription: 'How ChatGPT, Perplexity, Claude, and Google AI Overviews discover, evaluate, and recommend healthcare providers.',
-    imageUrl: '/blog_medical_marketing.webp'
+    imageUrl: '/blog_ai_visibility_for_doctors.webp'
   },
   {
     slug: 'google-business-profile-for-doctors',
@@ -41,7 +41,7 @@ const featuredInsights = [
     readTime: '15 Min Read',
     updatedAt: '2026-10-03',
     metaDescription: 'How clinics and medical specialists capture high-intent local searches by dominating the Google Maps 3-Pack.',
-    imageUrl: '/blog_medical_marketing.webp'
+    imageUrl: '/blog_google_business_profile_doctors.webp'
   },
   {
     slug: 'patient-acquisition-for-doctors',
@@ -50,7 +50,7 @@ const featuredInsights = [
     readTime: '15 Min Read',
     updatedAt: '2026-10-04',
     metaDescription: 'Build a predictable, ethical patient acquisition engine for your private practice or hospital.',
-    imageUrl: '/blog_medical_marketing.webp'
+    imageUrl: '/blog_patient_acquisition_doctors.webp'
   },
   {
     slug: 'whatsapp-automation-for-clinics',
@@ -59,7 +59,7 @@ const featuredInsights = [
     readTime: '14 Min Read',
     updatedAt: '2026-10-05',
     metaDescription: 'How modern doctors and hospitals use official WhatsApp Business API workflows to triage inquiries and automate OPD bookings.',
-    imageUrl: '/blog_medical_marketing.webp'
+    imageUrl: '/blog_whatsapp_automation_for_clinics.webp'
   }
 ];
 

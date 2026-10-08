@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Smile, Search, MapPin, Camera, ClipboardCheck, Info, MousePointer2, Star } from 'lucide-react';
 import { FAQ } from '@/components/sections/FAQ';
@@ -11,7 +12,12 @@ export const metadata: Metadata = {
         title: "Digital Marketing for Dental Doctors | Healthcare Growth Guide",
         description: "Helping dentists dominate local search and showcase their clinical excellence online.",
         url: "https://epsilon-technology.com/digital-marketing-for-dental-doctors/",
-        images: ["/logo.webp"]
+        images: [{
+            url: "/blog_digital_marketing_for_dental_doctors.webp",
+            width: 1200,
+            height: 630,
+            alt: "Digital Marketing for Dental Doctors - Building a Bright Practice",
+        }]
     },
     alternates: {
         canonical: 'https://epsilon-technology.com/digital-marketing-for-dental-doctors/',
@@ -122,6 +128,16 @@ export default function DentalDoctorGuide() {
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
                         A deep dive into how modern dentists can build a trusted brand, dominate local search, and showcase clinical excellence through digital channels in 2026.
                     </p>
+                    <div className="mt-10 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-blue-100">
+                        <Image
+                            src="/blog_digital_marketing_for_dental_doctors.webp"
+                            alt="Digital Marketing for Dental Doctors - Building a Bright Practice"
+                            width={1600}
+                            height={900}
+                            className="w-full h-auto object-cover"
+                            priority
+                        />
+                    </div>
                 </div>
             </section>
 
