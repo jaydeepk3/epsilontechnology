@@ -58,6 +58,41 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/digital-marketing-for-doctors-in-ahmedabad',
+        destination: '/doctor-marketing-in-ahmedabad/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-doctors-in-ahmedabad/',
+        destination: '/doctor-marketing-in-ahmedabad/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-doctors-in-rajkot',
+        destination: '/doctor-marketing-in-rajkot/',
+        permanent: true,
+      },
+      {
+        source: '/digital-marketing-for-doctors-in-rajkot/',
+        destination: '/doctor-marketing-in-rajkot/',
+        permanent: true,
+      },
+      {
+        source: '/portfolio-grid',
+        destination: '/portfolio/',
+        permanent: true,
+      },
+      {
+        source: '/portfolio-grid/',
+        destination: '/portfolio/',
+        permanent: true,
+      },
+      {
+        source: '/services',
+        destination: '/it-services/',
+        permanent: true,
+      },
+      {
         source: '/online-opd-growth-system',
         destination: 'https://doctor.epsilon-technology.com',
         permanent: true,

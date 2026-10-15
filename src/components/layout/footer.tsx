@@ -30,8 +30,8 @@ const footerLinks = [
             { label: 'Spine Specialists', href: '/digital-marketing-for-spine-specialists/' },
             { label: 'Pediatric Doctors', href: '/digital-marketing-for-pediatric-doctors/' },
             { label: 'Doctors in Junagadh', href: '/doctor-marketing-in-junagadh/' },
-            { label: 'Doctors in Ahmedabad', href: '/digital-marketing-for-doctors-in-ahmedabad/' },
-            { label: 'Doctors in Rajkot', href: '/digital-marketing-for-doctors-in-rajkot/' },
+            { label: 'Doctors in Ahmedabad', href: '/doctor-marketing-in-ahmedabad/' },
+            { label: 'Doctors in Rajkot', href: '/doctor-marketing-in-rajkot/' },
         ],
     },
     {

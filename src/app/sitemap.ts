@@ -4,7 +4,7 @@ import prisma from '@/lib/prisma';
 export const dynamic = 'force-dynamic';
 export const revalidate = 3600; // Revalidate every hour
 
-const STABLE_DATE = new Date('2026-03-01');
+const STABLE_DATE = new Date('2026-10-15');
 
 const STATIC_ROUTES: MetadataRoute.Sitemap = [
     // Core Pages
@@ -409,7 +409,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         }));
 
-        return [...STATIC_ROUTES, ...dynamicRoutes];
+        const routeMap = new Map<string, MetadataRoute.Sitemap[number]>();
+        for (const route of [...STATIC_ROUTES, ...dynamicRoutes]) {
+            routeMap.set(route.url, route);
+        }
+
+        return Array.from(routeMap.values());
     } catch (error) {
         console.error('Sitemap generation error:', error);
         return STATIC_ROUTES;
