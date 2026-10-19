@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, getButtonClasses } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -113,9 +113,12 @@ export function Portfolio() {
                                 A glimpse into our diverse portfolio of mobile apps, web platforms, and digital solutions.
                             </p>
                         </div>
-                        <Button variant="outline" className="hidden md:flex bg-white/50 backdrop-blur-sm border-slate-200 hover:bg-white hover:text-sky-600 transition-all">
+                        <Link
+                            href="/portfolio/"
+                            className={getButtonClasses({ variant: 'outline', className: 'hidden md:flex bg-white/50 backdrop-blur-sm border-slate-200 hover:bg-white hover:text-sky-600 transition-all' })}
+                        >
                             View All Projects
-                        </Button>
+                        </Link>
                     </div>
                 </FadeIn>
 
@@ -157,9 +160,12 @@ export function Portfolio() {
                 </div>
 
                 <div className="mt-12 text-center md:hidden">
-                    <Button variant="outline" className="w-full">
+                    <Link
+                        href="/portfolio/"
+                        className={getButtonClasses({ variant: 'outline', className: 'w-full inline-flex items-center justify-center' })}
+                    >
                         View All Projects
-                    </Button>
+                    </Link>
                 </div>
             </div>
         </section>

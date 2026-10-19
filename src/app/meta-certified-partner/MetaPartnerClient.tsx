@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, CheckCircle, Shield, Award, Sparkles, TrendingUp, 
+import {
+  ArrowRight, CheckCircle, Shield, Award, Sparkles, TrendingUp,
   Target, BarChart2, Star, Check, Users, MessageSquare, Phone, Globe, HelpCircle, ChevronDown, Eye
 } from 'lucide-react';
 import { trackMetaCapiEvent } from '@/lib/meta-capi';
@@ -103,10 +103,10 @@ export default function MetaPartnerClient() {
       <div className="absolute bottom-10 left-1/3 -z-10 w-80 h-80 bg-blue-500/10 blur-3xl rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10">
-        
+
         {/* ─── Hero Section ─── */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -115,8 +115,8 @@ export default function MetaPartnerClient() {
             <Award size={16} className="text-blue-400 animate-pulse" />
             Official Meta Recognition
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -125,8 +125,8 @@ export default function MetaPartnerClient() {
             Ads Partner Excellence <br />
             <span className="text-blue-500">Impact Leader</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -138,18 +138,18 @@ export default function MetaPartnerClient() {
 
         {/* ─── Certificate Showcase ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-7 flex flex-col items-center"
           >
-            <div 
+            <div
               className="relative w-full max-w-2xl aspect-[1.8/1] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer group bg-slate-900"
               onClick={() => setIsLightboxOpen(true)}
             >
-              <Image 
+              <Image
                 src="/meta-partner-certificate.png"
                 alt="Meta Ads Partner Excellence Impact Leader Certificate"
                 fill
@@ -167,7 +167,7 @@ export default function MetaPartnerClient() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -180,7 +180,7 @@ export default function MetaPartnerClient() {
             <p className="text-slate-400 text-base leading-relaxed">
               When launching Facebook and Instagram ad campaigns, working with a certified and recognized partner is the difference between wasting ad spend and generating profitable patient/client inquiries.
             </p>
-            
+
             <div className="space-y-4">
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center shrink-0">
@@ -243,13 +243,13 @@ export default function MetaPartnerClient() {
               <h2 className="text-3xl font-bold text-white mb-2">Frequently Asked Questions</h2>
               <p className="text-slate-400 text-sm">Everything you need to know about our partnership and ads service.</p>
             </div>
-            
+
             <div className="space-y-4">
               {faqs.map((faq, index) => {
                 const isOpen = activeFaq === index;
                 return (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="border border-slate-800/80 rounded-2xl bg-slate-900/40 overflow-hidden transition-all duration-300"
                   >
                     <button
@@ -285,10 +285,10 @@ export default function MetaPartnerClient() {
               <div className="absolute top-0 right-10 -translate-y-1/2 px-4 py-1.5 bg-blue-600 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg shadow-blue-500/20">
                 Book consultation
               </div>
-              
+
               <h3 className="text-2xl font-bold text-white mb-2">Ready to Scale Your Ads?</h3>
               <p className="text-slate-400 text-sm mb-6">Fill out the form below to book a free 1-on-1 strategy call with our Meta certified experts.</p>
-              
+
               {status === 'success' ? (
                 <div className="text-center py-10">
                   <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mx-auto mb-4">
@@ -301,26 +301,26 @@ export default function MetaPartnerClient() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Full Name *</label>
-                    <input 
-                      type="text" 
-                      name="name" 
-                      required 
-                      value={formData.name} 
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      value={formData.name}
                       onChange={handleChange}
-                      placeholder="e.g. Rahul Sharma" 
+                      placeholder="e.g. Rahul Sharma"
                       className="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-sm focus:border-blue-500 outline-none transition-colors"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">WhatsApp / Phone *</label>
-                    <input 
-                      type="tel" 
-                      name="phone" 
-                      required 
-                      value={formData.phone} 
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. +91 98765 43210" 
+                      placeholder="e.g. +91 98765 43210"
                       className="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-sm focus:border-blue-500 outline-none transition-colors"
                     />
                   </div>
@@ -328,25 +328,25 @@ export default function MetaPartnerClient() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Company / Industry *</label>
-                      <input 
-                        type="text" 
-                        name="company" 
-                        required 
-                        value={formData.company} 
+                      <input
+                        type="text"
+                        name="company"
+                        required
+                        value={formData.company}
                         onChange={handleChange}
-                        placeholder="e.g. Dental Clinic, eCommerce Store" 
+                        placeholder="e.g. Dental Clinic, eCommerce Store"
                         className="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-sm focus:border-blue-500 outline-none transition-colors"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Your City *</label>
-                      <input 
-                        type="text" 
-                        name="city" 
-                        required 
-                        value={formData.city} 
+                      <input
+                        type="text"
+                        name="city"
+                        required
+                        value={formData.city}
                         onChange={handleChange}
-                        placeholder="e.g. Rajkot, Mumbai" 
+                        placeholder="e.g. Rajkot, Mumbai"
                         className="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-sm focus:border-blue-500 outline-none transition-colors"
                       />
                     </div>
@@ -354,12 +354,12 @@ export default function MetaPartnerClient() {
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Ad Budget or Growth Goal (Optional)</label>
-                    <textarea 
-                      name="note" 
-                      value={formData.note} 
+                    <textarea
+                      name="note"
+                      value={formData.note}
                       onChange={handleChange}
                       rows={3}
-                      placeholder="Tell us briefly about your marketing budget or business goals..." 
+                      placeholder="Tell us briefly about your marketing budget or business goals..."
                       className="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-sm focus:border-blue-500 outline-none transition-colors resize-none"
                     />
                   </div>
@@ -377,7 +377,7 @@ export default function MetaPartnerClient() {
                   </button>
 
                   <p className="text-center text-slate-500 text-xs">
-                    🔒 No spam. We reply on WhatsApp within 4 hours. Free, no obligation.
+                    No spam. We reply on WhatsApp within 4 hours. Free, no obligation.
                   </p>
                   {status === 'error' && (
                     <p className="text-center text-sm text-rose-500">Something went wrong. Please try again or contact us directly.</p>
@@ -392,14 +392,14 @@ export default function MetaPartnerClient() {
       {/* Lightbox Modal for Certificate */}
       <AnimatePresence>
         {isLightboxOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4"
             onClick={() => setIsLightboxOpen(false)}
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
@@ -407,14 +407,14 @@ export default function MetaPartnerClient() {
               className="relative max-w-4xl w-full aspect-[1.8/1] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image 
+              <Image
                 src="/meta-partner-certificate.png"
                 alt="Meta Ads Partner Certificate"
                 fill
                 className="object-contain"
                 priority
               />
-              <button 
+              <button
                 onClick={() => setIsLightboxOpen(false)}
                 className="absolute top-4 right-4 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white rounded-full p-2.5 transition-colors cursor-pointer shadow-lg"
               >

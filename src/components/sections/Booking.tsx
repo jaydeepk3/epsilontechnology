@@ -89,15 +89,20 @@ export function Booking() {
                                         <p className="text-sm">30-minute consultation session via Zoom/Meet</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 text-slate-300">
-                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                                        <MessageCircle size={20} />
+                                <a
+                                    href="https://wa.me/918160881461?text=Hi%20Epsilon%2C%20I%20want%20to%20book%20a%20free%20strategy%20call%20for%20my%20clinic"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group cursor-pointer"
+                                >
+                                    <div className="w-10 h-10 rounded-full bg-emerald-500/20 group-hover:bg-emerald-500/30 flex items-center justify-center shrink-0 transition-colors">
+                                        <MessageCircle size={20} className="text-emerald-400" />
                                     </div>
                                     <div>
-                                        <p className="font-bold text-white">Direct WhatsApp Support</p>
-                                        <p className="text-sm">Get instant answers to your project questions</p>
+                                        <p className="font-bold text-white group-hover:underline">Direct WhatsApp Support</p>
+                                        <p className="text-sm text-slate-400">Get instant answers on WhatsApp (+91 81608 81461)</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -138,7 +143,7 @@ export function Booking() {
                                     size="lg"
                                     disabled={status === 'loading' || status === 'success'}
                                 >
-                                    {status === 'loading' ? 'Sending...' : status === 'success' ? '✅ Request Sent!' : 'Book My Free Strategy Call →'}
+                                    {status === 'loading' ? 'Sending...' : status === 'success' ? 'Request Sent!' : 'Book My Free Strategy Call →'}
                                 </Button>
 
                                 {status === 'error' && (
@@ -148,7 +153,7 @@ export function Booking() {
                                 )}
 
                                 <p className="text-center text-xs text-slate-400 mt-3">
-                                    🔒 No spam. We reply on WhatsApp within 4 hours. Available for clients worldwide.
+                                    No spam. We reply on WhatsApp within 4 hours. Available for clients worldwide.
                                 </p>
                             </form>
                         </div>

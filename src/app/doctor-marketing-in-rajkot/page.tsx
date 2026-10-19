@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
-import { Button } from '@/components/ui/button';
-import { CheckCircle2, MapPin, TrendingUp, Users } from 'lucide-react';
+import { Button, getButtonClasses } from '@/components/ui/button';
+import { CheckCircle2, MapPin, TrendingUp, Users, MessageCircle } from 'lucide-react';
 import { FAQ } from '@/components/sections/FAQ';
 import { Booking } from '@/components/sections/Booking';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { DoctorsWeWorkWith } from '@/components/sections/DoctorsWeWorkWith';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://epsilon-technology.com'),
@@ -63,9 +64,28 @@ export default function DoctorMarketingRajkot() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Button size="xl" className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-200">
+                        <Link
+                            href="#booking"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                className: 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-200 w-full sm:w-auto inline-flex items-center justify-center gap-2'
+                            })}
+                        >
                             Book Free Strategy Call
-                        </Button>
+                        </Link>
+                        <a
+                            href="https://wa.me/918160881461?text=Hi%20Epsilon%2C%20I%20am%20a%20doctor%20in%20Rajkot%20and%20want%20to%20grow%20my%20clinic"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                variant: 'outline',
+                                className: 'border-indigo-200 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 w-full sm:w-auto inline-flex items-center justify-center gap-2'
+                            })}
+                        >
+                            <MessageCircle size={20} className="text-emerald-500" />
+                            <span>WhatsApp Us</span>
+                        </a>
                     </div>
                 </div>
             </section>

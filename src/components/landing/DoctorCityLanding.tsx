@@ -20,7 +20,7 @@ import {
     MapPin,
     ArrowUpRight
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, getButtonClasses } from '@/components/ui/button';
 import { FAQ } from '@/components/sections/FAQ';
 import { Results } from '@/components/sections/Results';
 import { DoctorsWeWorkWith } from '@/components/sections/DoctorsWeWorkWith';
@@ -185,10 +185,15 @@ export default function DoctorCityLanding({ city, cityDescription }: DoctorCityL
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="flex flex-col sm:flex-row items-center gap-4"
                         >
-                            <Link href={whatsappLink} target="_blank">
-                                <Button size="xl" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 rounded-2xl text-lg font-bold shadow-2xl shadow-blue-200 group">
-                                    Book Free Strategy Call <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Button>
+                            <Link
+                                href={whatsappLink}
+                                target="_blank"
+                                className={getButtonClasses({
+                                    size: 'xl',
+                                    className: 'bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 rounded-2xl text-lg font-bold shadow-2xl shadow-blue-200 group inline-flex items-center justify-center'
+                                })}
+                            >
+                                Book Free Strategy Call <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <p className="text-sm text-slate-500 font-medium hidden sm:block">
                                 Trusted by 50+ doctors <br />across Gujarat
@@ -325,10 +330,15 @@ export default function DoctorCityLanding({ city, cityDescription }: DoctorCityL
                         <p className="text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
                             No two specialties are same. We build custom patient-acquisition roadmaps based on your specific practice type and competition level.
                         </p>
-                        <Link href={whatsappLink} target="_blank">
-                            <Button size="xl" className="bg-white text-blue-600 hover:bg-slate-50 px-8 py-4 font-bold rounded-2xl">
-                                Talk to Jaydeep Directly <PhoneCall className="ml-2 rotate-12" size={18} />
-                            </Button>
+                        <Link
+                            href={whatsappLink}
+                            target="_blank"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                className: 'bg-white text-blue-600 hover:bg-slate-50 px-8 py-4 font-bold rounded-2xl inline-flex items-center justify-center'
+                            })}
+                        >
+                            Talk to Jaydeep Directly <PhoneCall className="ml-2 rotate-12" size={18} />
                         </Link>
                     </div>
                 </div>
@@ -355,10 +365,15 @@ export default function DoctorCityLanding({ city, cityDescription }: DoctorCityL
                             Stop leaving your growth to chance. Partner with Epsilon Technology and transform your digital presence into a patient-generating machine.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Link href={whatsappLink} target="_blank">
-                                <Button size="xl" className="bg-blue-600 hover:bg-blue-700 text-white px-10 rounded-2xl text-lg font-bold shadow-2xl shadow-blue-300 transform transition hover:scale-105 active:scale-95">
-                                    Apply for Strategy Session <ArrowRight className="ml-2" />
-                                </Button>
+                            <Link
+                                href={whatsappLink}
+                                target="_blank"
+                                className={getButtonClasses({
+                                    size: 'xl',
+                                    className: 'bg-blue-600 hover:bg-blue-700 text-white px-10 rounded-2xl text-lg font-bold shadow-2xl shadow-blue-300 transform transition hover:scale-105 active:scale-95 inline-flex items-center justify-center'
+                                })}
+                            >
+                                Apply for Strategy Session <ArrowRight className="ml-2" />
                             </Link>
                         </div>
                         <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-400">

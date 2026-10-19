@@ -219,9 +219,14 @@ export default function DoctorMarketingIdeasJunagadhPage() {
 
                             <div className="flex items-center gap-2">
                                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mr-2 hidden sm:inline">Share:</span>
-                                <button className="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 hover:text-sky-600 text-slate-600 text-xs font-bold transition-all flex items-center gap-1.5">
+                                <a
+                                    href="https://api.whatsapp.com/send?text=7%20Proven%20Marketing%20Ideas%20for%20Doctors%20in%20Junagadh%20(2026)%20-%20https%3A%2F%2Fepsilon-technology.com%2Fblog%2Fdoctor-marketing-ideas-junagadh%2F"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 hover:text-sky-600 text-slate-600 text-xs font-bold transition-all flex items-center gap-1.5"
+                                >
                                     <Share2 size={14} /> Share Article
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

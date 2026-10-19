@@ -6,7 +6,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import { Button, getButtonClasses } from "@/components/ui/button";
 
 const faqs = [
     {
@@ -60,9 +60,14 @@ export function FAQ() {
                 <div className="mt-12 text-center p-8 bg-sky-50 rounded-2xl border border-sky-100">
                     <h3 className="font-bold text-slate-900 mb-2">Still have questions?</h3>
                     <p className="text-slate-600 mb-6">Directly chat with our technical lead.</p>
-                    <Button className="bg-sky-600 hover:bg-sky-500 text-white rounded-full px-8 h-12">
+                    <a
+                        href="https://wa.me/918160881461?text=Hi%20Epsilon%20Team%2C%20I%20have%20a%20question%20about%20your%20IT%20and%20marketing%20services."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={getButtonClasses({ className: 'bg-sky-600 hover:bg-sky-500 text-white rounded-full px-8 h-12 inline-flex items-center justify-center' })}
+                    >
                         Chat on WhatsApp
-                    </Button>
+                    </a>
                 </div>
             </div>
         </section>

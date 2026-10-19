@@ -135,14 +135,14 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                             <div className="flex flex-wrap items-center gap-3 justify-center">
                                 <span className="text-xs font-black text-slate-400 uppercase tracking-widest mr-2">Spread the Word:</span>
                                 {[
-                                    { Icon: Twitter, color: 'hover:text-sky-400 hover:bg-sky-50' },
-                                    { Icon: Linkedin, color: 'hover:text-blue-700 hover:bg-blue-50' },
-                                    { Icon: Facebook, color: 'hover:text-blue-600 hover:bg-blue-50' },
-                                    { Icon: Send, color: 'hover:text-sky-500 hover:bg-sky-50' }
+                                    { Icon: Twitter, label: 'Twitter', href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(blog.title)}&url=${encodeURIComponent(`https://epsilon-technology.com/blog/${slug}/`)}`, color: 'hover:text-sky-400 hover:bg-sky-50' },
+                                    { Icon: Linkedin, label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://epsilon-technology.com/blog/${slug}/`)}`, color: 'hover:text-blue-700 hover:bg-blue-50' },
+                                    { Icon: Facebook, label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://epsilon-technology.com/blog/${slug}/`)}`, color: 'hover:text-blue-600 hover:bg-blue-50' },
+                                    { Icon: Send, label: 'WhatsApp', href: `https://api.whatsapp.com/send?text=${encodeURIComponent(`${blog.title} - https://epsilon-technology.com/blog/${slug}/`)}`, color: 'hover:text-sky-500 hover:bg-sky-50' }
                                 ].map((item, i) => (
-                                    <button key={i} className={`w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 shadow-sm transition-all duration-300 ${item.color} hover:scale-110 hover:-translate-y-1`}>
+                                    <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`Share on ${item.label}`} className={`w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 shadow-sm transition-all duration-300 ${item.color} hover:scale-110 hover:-translate-y-1`}>
                                         <item.Icon className="h-5 w-5" />
-                                    </button>
+                                    </a>
                                 ))}
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { Button } from '@/components/ui/button';
-import { CheckCircle2, MapPin, TrendingUp, Users } from 'lucide-react';
+import { Button, getButtonClasses } from '@/components/ui/button';
+import { CheckCircle2, MapPin, TrendingUp, Users, MessageCircle } from 'lucide-react';
 import { FAQ } from '@/components/sections/FAQ';
 import { Booking } from '@/components/sections/Booking';
 import { Testimonials } from '@/components/sections/Testimonials';
@@ -64,9 +64,28 @@ export default function DoctorMarketingJunagadh() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Button size="xl" className="bg-orange-600 hover:bg-orange-700 text-white shadow-lg shadow-orange-200">
+                        <Link
+                            href="#booking"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                className: 'bg-orange-600 hover:bg-orange-700 text-white shadow-lg shadow-orange-200 w-full sm:w-auto inline-flex items-center justify-center gap-2'
+                            })}
+                        >
                             Book Free Strategy Call
-                        </Button>
+                        </Link>
+                        <a
+                            href="https://wa.me/918160881461?text=Hi%20Epsilon%2C%20I%20am%20a%20doctor%20in%20Junagadh%20and%20want%20to%20grow%20my%20clinic"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                variant: 'outline',
+                                className: 'border-orange-200 text-orange-700 hover:bg-orange-50 hover:border-orange-300 w-full sm:w-auto inline-flex items-center justify-center gap-2'
+                            })}
+                        >
+                            <MessageCircle size={20} className="text-emerald-500" />
+                            <span>WhatsApp Us</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -168,15 +187,25 @@ export default function DoctorMarketingJunagadh() {
                         Read our latest guide: &quot;7 Proven Marketing Ideas for Doctors in Junagadh (2026)&quot; to learn actionable strategies you can start today.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link href="/blog/doctor-marketing-ideas-junagadh/">
-                            <Button size="xl" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
-                                Read 7 Marketing Ideas
-                            </Button>
+                        <Link
+                            href="/blog/doctor-marketing-ideas-junagadh/"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                variant: 'secondary',
+                                className: 'bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto inline-flex items-center justify-center'
+                            })}
+                        >
+                            Read 7 Marketing Ideas
                         </Link>
-                        <Link href="/digital-marketing/gujarat/">
-                            <Button size="xl" variant="outline" className="border-white text-white hover:bg-blue-700 w-full sm:w-auto">
-                                View Gujarat Hub
-                            </Button>
+                        <Link
+                            href="/digital-marketing/gujarat/"
+                            className={getButtonClasses({
+                                size: 'xl',
+                                variant: 'outline',
+                                className: 'border-white text-white hover:bg-blue-700 w-full sm:w-auto inline-flex items-center justify-center'
+                            })}
+                        >
+                            View Gujarat Hub
                         </Link>
                     </div>
                 </div>

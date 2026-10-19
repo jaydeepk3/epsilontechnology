@@ -204,7 +204,7 @@ function LeadForm({ dark = false }: { dark?: boolean }) {
             </button>
             {status === 'error' && <p className="text-center text-sm text-red-400">Something went wrong. Please WhatsApp us directly.</p>}
             <p className={`text-center text-xs pt-1 ${dark ? 'text-slate-500' : 'text-slate-400'}`}>
-                🔒 No spam. We reply on WhatsApp within 4 hours. Free, no obligation.
+                No spam. We reply on WhatsApp within 4 hours. Free, no obligation.
             </p>
         </form>
     );
