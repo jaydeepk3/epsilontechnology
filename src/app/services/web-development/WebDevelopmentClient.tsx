@@ -195,7 +195,7 @@ function ApplyModal({ pkg, onClose }: { pkg: typeof packages[0]; onClose: () => 
         setErrorMsg("");
 
         try {
-            const res = await fetch("/api/web-dev-lead", {
+            const res = await fetch("/api/web-dev-lead/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),

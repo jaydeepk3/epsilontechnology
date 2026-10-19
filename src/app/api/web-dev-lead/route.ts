@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 
 const WORTAL_WEBHOOK_URL = process.env.WORTAL_WEBHOOK_URL || 'https://api.wortal.co/webhook/api/incoming_webhook/qqmo3LH9_732';
-const WHATSAPP_CRM_URL = 'https://whatsapp.epsilon-technology.com/api/public/leads';
-const WHATSAPP_API_KEY = 'epsilon_27e088fcf7f74e041691653c8f4a1005';
+const WHATSAPP_CRM_URL = process.env.WHATSAPP_CRM_URL || 'https://autoreplyhub.in/api/public/leads';
+const WHATSAPP_API_KEY = process.env.WHATSAPP_API_KEY || 'epsilon_27e088fcf7f74e041691653c8f4a1005';
+const WHATSAPP_SEND_URL = process.env.WHATSAPP_SEND_URL || 'https://autoreplyhub.in/api/external/send-message';
 
 function formatPhone(phone: string): string {
     const digits = (phone || '').replace(/\D/g, '');

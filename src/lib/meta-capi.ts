@@ -151,7 +151,7 @@ export function trackMetaCapiEvent(options: TrackEventOptions = {}) {
     }
 
     // 3. Server-Side Meta Conversions API (CAPI) Event
-    fetch('/api/meta-capi', {
+    fetch('/api/meta-capi/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

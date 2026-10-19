@@ -25,28 +25,53 @@ export function GeneralContactForm() {
         setStatus('loading');
 
         try {
-            const response = await fetch('/api/contact-general', {
+            let utmSource = '';
+            let utmMedium = '';
+            let utmCampaign = '';
+            let utmContent = '';
+            let fbclid = '';
+            if (typeof window !== 'undefined') {
+                const params = new URLSearchParams(window.location.search);
+                utmSource = params.get('utm_source') || '';
+                utmMedium = params.get('utm_medium') || '';
+                utmCampaign = params.get('utm_campaign') || '';
+                utmContent = params.get('utm_content') || '';
+                fbclid = params.get('fbclid') || '';
+            }
+
+            const response = await fetch('/api/contact-general/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    utm_source: utmSource,
+                    utm_medium: utmMedium,
+                    utm_campaign: utmCampaign,
+                    utm_content: utmContent,
+                    fbclid,
+                }),
             });
 
             if (response.ok) {
                 setStatus('success');
 
-                // Trigger Meta CAPI & Pixel 'Contact' / 'Lead' event for Contact Us page
+                // Trigger Meta CAPI & Pixel 'Lead' event for Contact Us page
                 trackMetaCapiEvent({
-                    eventName: 'Contact',
+                    eventName: 'Lead',
                     user: {
-                        firstName: formData.firstName,
-                        lastName: formData.lastName,
-                        email: formData.email,
-                        phone: formData.mobile,
+                        firstName: formData.firstName.trim(),
+                        lastName: formData.lastName.trim(),
+                        email: formData.email.trim(),
+                        phone: formData.mobile.trim(),
                     },
                     customData: {
-                        content_name: 'Contact Us Form Submission',
-                        lead_type: 'General Contact Lead',
+                        content_name: 'Contact Us Form Lead Submission',
+                        lead_type: 'Contact Us Lead',
                         page_path: '/contacts',
+                        utm_source: utmSource,
+                        utm_medium: utmMedium,
+                        utm_campaign: utmCampaign,
+                        utm_content: utmContent,
                     },
                 });
 

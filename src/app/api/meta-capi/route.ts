@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 
-const FB_PIXEL_ID = '1575709850775284';
+const FB_PIXEL_ID = process.env.META_PIXEL_ID || '2199840834244597';
 const DEFAULT_ACCESS_TOKEN =
-  'EAANYuHIfFwUBSCyLZC724SLg9ANXcwsDbv5PCTTjpmiZC7l7MYUQCIEIcfqNAHHyPdcSyEEsS9RpBrnR09myLyK5Ja4ZCtkMIvAbxyX0ffyRjMTCFOJozdhan6mf92aLa1P6795ddvjH6F2BGTs2j0hR7URhmgFaEmxvnKi1LpSIQGoBpxv7JsFPaET5OMS0QZDZD';
+  process.env.META_CAPI_ACCESS_TOKEN ||
+  'EAANYuHIfFwUBS3xQMS3JnZBuHpS9a4h6uzKZABSkTJgtLjuBdCfD9nS0tO3gZCl9fMesopsqxZBd42ZBNoveBBWtRl3ItrspPhy4FaRo79ZADNYkMWrTHkNqAmuuUZBY8d61PvDFOYZAO6IAmSsFiWfVF2K5xINPq1Cwz8WCPELKJ9n090PtnBjbxXITeDyZBJFfzAgZDZD';
 
 function hashData(value?: string | null): string | null {
   if (!value || typeof value !== 'string') return null;
@@ -115,7 +116,7 @@ export async function POST(request: Request) {
           message: messageDetails,
         };
 
-        fetch('https://whatsapp.epsilon-technology.com/api/public/leads', {
+        fetch('https://autoreplyhub.in/api/public/leads', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -125,12 +126,12 @@ export async function POST(request: Request) {
         })
           .then((res) => {
             if (!res.ok) {
-              console.error('[WhatsApp CRM] Lead push failed status:', res.status);
+              console.error('[AutoReplyHub CRM] Lead push failed status:', res.status);
             } else {
-              console.log('[WhatsApp CRM] Lead pushed successfully for:', formattedPhone);
+              console.log('[AutoReplyHub CRM] Lead pushed successfully for:', formattedPhone);
             }
           })
-          .catch((err) => console.error('[WhatsApp CRM] Error:', err));
+          .catch((err) => console.error('[AutoReplyHub CRM] Error:', err));
       } catch (crmErr) {
         console.error('[WhatsApp CRM Exception]', crmErr);
       }

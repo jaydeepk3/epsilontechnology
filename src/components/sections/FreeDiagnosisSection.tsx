@@ -53,30 +53,57 @@ export function FreeDiagnosisSection() {
     e.preventDefault();
     setLoading(true);
     try {
+      let utmSource = '';
+      let utmMedium = '';
+      let utmCampaign = '';
+      let utmContent = '';
+      let fbclid = '';
+      if (typeof window !== 'undefined') {
+        const params = new URLSearchParams(window.location.search);
+        utmSource = params.get('utm_source') || '';
+        utmMedium = params.get('utm_medium') || '';
+        utmCampaign = params.get('utm_campaign') || '';
+        utmContent = params.get('utm_content') || '';
+        fbclid = params.get('fbclid') || '';
+      }
+
       trackMetaCapiEvent({
         eventName: 'Lead',
         user: {
-          firstName: formData.name,
-          phone: formData.phone,
+          firstName: formData.name.trim(),
+          phone: formData.phone.trim(),
+          city: formData.city.trim(),
         },
         customData: {
-          content_name: 'Free Digital Visibility Diagnosis Request',
+          content_name: 'Request Free Practice Audit',
           lead_type: 'Doctor Diagnosis Section',
-          city: formData.city,
+          city: formData.city.trim(),
           specialty: formData.specialty,
+          website: formData.websiteOrSocial.trim(),
+          utm_source: utmSource,
+          utm_medium: utmMedium,
+          utm_campaign: utmCampaign,
+          utm_content: utmContent,
         },
       });
 
-      const res = await fetch('/api/contact', {
+      await fetch('/api/contact/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: formData.name,
-          mobile: formData.phone,
+          name: formData.name.trim(),
+          mobile: formData.phone.trim(),
+          phone: formData.phone.trim(),
           specialty: formData.specialty,
-          city: formData.city,
-          website: formData.websiteOrSocial,
-          leadType: 'Free Digital Visibility Diagnosis Request',
+          city: formData.city.trim(),
+          website: formData.websiteOrSocial.trim(),
+          websiteOrSocial: formData.websiteOrSocial.trim(),
+          leadType: 'Request Free Practice Audit',
+          utm_source: utmSource,
+          utm_medium: utmMedium,
+          utm_campaign: utmCampaign,
+          utm_content: utmContent,
+          fbclid,
         }),
       });
       setSubmitted(true);
@@ -174,7 +201,16 @@ export function FreeDiagnosisSection() {
                   Our Healthcare Growth Architect is auditing your practice details. We will send your custom 6-Point Visibility Diagnosis within 24 hours.
                 </p>
                 <button
-                  onClick={() => setSubmitted(false)}
+                  onClick={() => {
+                    setFormData({
+                      name: '',
+                      phone: '',
+                      specialty: 'Orthopedic & Spine',
+                      city: '',
+                      websiteOrSocial: ''
+                    });
+                    setSubmitted(false);
+                  }}
                   className="px-6 py-3 bg-blue-600 hover:bg-blue-500 font-bold rounded-xl text-white text-xs uppercase tracking-wider transition-colors"
                 >
                   Submit Another Practice Audit

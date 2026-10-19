@@ -99,9 +99,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://c.clarity.ms" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://c.clarity.ms" />
+        {/* Meta Pixel Code */}
         <Script
           id="meta-pixel"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -112,6 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '2199840834244597');
               fbq('init', '1575709850775284');
               fbq('track', 'PageView');
             `,
@@ -122,10 +124,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             height="1"
             width="1"
             style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=2199840834244597&ev=PageView&noscript=1"
+            alt=""
+          />
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=1575709850775284&ev=PageView&noscript=1"
             alt=""
           />
         </noscript>
+        {/* End Meta Pixel Code */}
       </head>
       <body
         className={`${outfit.variable} ${inter.variable} antialiased font-sans bg-white text-slate-900`}
