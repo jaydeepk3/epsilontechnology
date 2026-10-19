@@ -49,7 +49,7 @@ export default async function DynamicBlogPage({ params }: PageProps) {
     }
 
     if (blog.isExternal) {
-        permanentRedirect(`/${blog.slug}`)
+        permanentRedirect(`/${blog.slug}/`)
     }
 
     // Fetch related blogs
