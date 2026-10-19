@@ -10,6 +10,7 @@ import { WhoWeHelpDoctorGrowth } from '@/components/sections/WhoWeHelpDoctorGrow
 import { DoctorProofAndCaseStudies } from '@/components/sections/DoctorProofAndCaseStudies';
 import { FreeDiagnosisSection } from '@/components/sections/FreeDiagnosisSection';
 import { DoctorFaqSection } from '@/components/sections/DoctorFaqSection';
+import { DoctorGrowthBlogSection } from '@/components/sections/DoctorGrowthBlogSection';
 import { FinalCtaDoctorGrowth } from '@/components/sections/FinalCtaDoctorGrowth';
 import { StickyConversionBar } from '@/components/ui/StickyConversionBar';
 import { LeadMagnetModal } from '@/components/sections/LeadMagnetModal';
@@ -50,6 +51,9 @@ export default function HomeLandingClient() {
 
         {/* 9. FAQ / Objection Handling */}
         <DoctorFaqSection />
+
+        {/* 10. Healthcare Insights & Authority Guides */}
+        <DoctorGrowthBlogSection />
 
         {/* 11. Final CTA: See Where Your Practice Is Losing Visibility */}
         <FinalCtaDoctorGrowth onOpenDiagnosis={handleOpenDiagnosisModal} />

@@ -670,6 +670,38 @@ export default function DoctorDigitalMarketingPage() {
               </Link>
             ))}
           </div>
+
+          {/* Doctor Growth Intelligence Strip */}
+          <div className="mt-12 p-6 rounded-2xl bg-slate-900 border border-slate-800">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                Core Doctor Marketing Blueprints & Guides:
+              </span>
+              <Link href="/blog/" className="text-xs text-blue-400 font-bold hover:underline inline-flex items-center gap-1">
+                All 15+ Guides <ArrowRight size={12} />
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-2.5">
+              {[
+                { title: 'Doctor Marketing India 2026', href: '/blog/digital-marketing-for-doctors-india/' },
+                { title: 'Doctor SEO Master Guide', href: '/blog/doctor-seo/' },
+                { title: 'AI Visibility (GEO) for Clinics', href: '/blog/ai-visibility-for-doctors/' },
+                { title: 'Google Maps 3-Pack', href: '/blog/google-business-profile-for-doctors/' },
+                { title: 'Doctor Website SEO Checklist', href: '/blog/doctor-website-seo-checklist/' },
+                { title: 'How Patients Find Doctors Online', href: '/blog/how-patients-find-doctors-online/' },
+                { title: 'Doctor Personal Branding in AI Era', href: '/blog/doctor-personal-branding-ai-era/' },
+                { title: 'WhatsApp Automation for Clinics', href: '/blog/whatsapp-automation-for-clinics/' },
+              ].map((g, i) => (
+                <Link
+                  key={i}
+                  href={g.href}
+                  className="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-xs text-slate-300 hover:text-white border border-slate-700/60 transition-colors"
+                >
+                  {g.title}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
