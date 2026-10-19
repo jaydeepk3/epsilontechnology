@@ -148,7 +148,7 @@ export default function JunagadhDoctorGuide() {
                             <p className="text-orange-100 leading-relaxed mb-8">
                                 The transition to digital is an opportunity to serve the Junagadh community more effectively. By embracing <strong>digital marketing for doctors in Junagadh</strong>, you ensure that your clinical expertise is accessible to those who need it most, right here in our home city.
                             </p>
-                            <Link href="/doctor-marketing-in-junagadh" className="inline-block bg-white text-orange-600 px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition-colors">
+                            <Link href="/doctor-marketing-in-junagadh/" className="inline-block bg-white text-orange-600 px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition-colors">
                                 Learn More About Junagadh Growth
                             </Link>
                         </div>

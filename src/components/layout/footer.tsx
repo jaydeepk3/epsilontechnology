@@ -32,6 +32,9 @@ const footerLinks = [
             { label: 'Doctors in Junagadh', href: '/doctor-marketing-in-junagadh/' },
             { label: 'Doctors in Ahmedabad', href: '/doctor-marketing-in-ahmedabad/' },
             { label: 'Doctors in Rajkot', href: '/doctor-marketing-in-rajkot/' },
+            { label: 'Doctors in Surat', href: '/doctor-marketing-in-surat/' },
+            { label: 'Doctors in Vadodara', href: '/doctor-marketing-in-vadodara/' },
+            { label: 'Doctors in Morbi', href: '/doctor-marketing-in-morbi/' },
         ],
     },
     {

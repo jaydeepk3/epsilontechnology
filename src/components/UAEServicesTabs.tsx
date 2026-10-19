@@ -184,7 +184,7 @@ export function UAEServicesTabs() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <Link href="/contacts"
+                                    <Link href="/contacts/"
                                         className={`w-full py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all
                                             ${pkg.highlight
                                                 ? `bg-gradient-to-r ${activeSvc.color} text-white hover:opacity-90 shadow-lg`

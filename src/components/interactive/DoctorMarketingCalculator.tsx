@@ -200,7 +200,7 @@ export function DoctorMarketingCalculator() {
                         {/* CTA button inside calculator */}
                         <div className="mt-8 pt-6 border-t border-slate-800">
                             <Link
-                                href="/contacts"
+                                href="/contacts/"
                                 className="w-full py-4 px-6 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white rounded-2xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-sky-600/30 group"
                             >
                                 <PhoneCall size={18} />

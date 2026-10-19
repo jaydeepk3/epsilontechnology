@@ -56,7 +56,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
         </div>
         
         <div className="max-w-5xl mx-auto relative z-10">
-          <Link href="/portfolio" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors">
+          <Link href="/portfolio/" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors">
             ← Back to Portfolio
           </Link>
           

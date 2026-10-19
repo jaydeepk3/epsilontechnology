@@ -359,7 +359,7 @@ export function Packages() {
                                             ))}
                                         </div>
 
-                                        <Link href="/contacts" className="mt-auto block">
+                                        <Link href="/contacts/" className="mt-auto block">
                                             <button className={`w-full py-3.5 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${pkg.isPopular
                                                     ? "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg"
                                                     : "bg-slate-50 text-slate-900 hover:bg-blue-50 hover:text-blue-600 border border-slate-200 hover:border-blue-200"

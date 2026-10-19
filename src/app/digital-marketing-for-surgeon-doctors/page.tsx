@@ -140,8 +140,8 @@ export default function SurgeonDoctorGuide() {
                                 Establish your clinical authority online. By providing clarity on complex procedures and building trust through authentic patient feedback, you can grow a surgical practice that is respected and highly visible.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh" className="text-blue-400 hover:underline">Junagadh General Surgery Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot" className="text-blue-400 hover:underline">Rajkot Surgeon SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh General Surgery Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Surgeon SEO</Link>
                             </div>
                         </div>
                     </div>

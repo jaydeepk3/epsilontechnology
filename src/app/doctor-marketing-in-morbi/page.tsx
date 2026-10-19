@@ -43,8 +43,72 @@ const morbiFaqs = [
 ];
 
 export default function DoctorMarketingMorbi() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "MedicalBusiness",
+                "@id": "https://epsilon-technology.com/doctor-marketing-in-morbi/#service",
+                "name": "Epsilon Technology - Doctor Marketing in Morbi",
+                "url": "https://epsilon-technology.com/doctor-marketing-in-morbi/",
+                "logo": "https://epsilon-technology.com/logo.webp",
+                "description": "Specialized doctor marketing agency in Morbi helping clinics and hospitals on Sanala Road and Ravapar Road attract more patients.",
+                "areaServed": [
+                    { "@type": "City", "name": "Morbi" },
+                    { "@type": "AdministrativeArea", "name": "Gujarat" }
+                ],
+                "serviceType": "Healthcare Digital Marketing",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/doctor-marketing-in-morbi/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing Hub",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Doctor Marketing in Morbi",
+                        "item": "https://epsilon-technology.com/doctor-marketing-in-morbi/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/doctor-marketing-in-morbi/#faq",
+                "mainEntity": morbiFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-slate-50">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* 1. Localized Hero */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
                 <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-teal-50/50 blur-3xl rounded-full translate-x-1/3 -translate-y-1/4" />

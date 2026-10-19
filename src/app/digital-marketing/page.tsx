@@ -5,7 +5,7 @@ import {
   ArrowRight, MessageCircle, CheckCircle, Star, Quote,
   Check, Zap, TrendingUp, Rocket, Building2,
   ChevronDown, ChevronUp, Shield, Clock, Users,
-  BarChart3, Eye, Heart, BadgeCheck, Phone, X, Award
+  BarChart3, Eye, Heart, BadgeCheck, Phone, X, Award, MapPin
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScarcityReplacement } from '@/components/ui/ScarcityReplacement';
@@ -588,6 +588,88 @@ export default function DoctorDigitalMarketingPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Regional City Centers ──────────────────────────────── */}
+      <section className="py-20 px-4 bg-slate-950 border-t border-slate-800 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-semibold text-xs uppercase tracking-widest mb-4">
+              <MapPin size={13} /> Local Practice Hubs
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              Specialized Doctor Marketing Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Gujarat Cities</span>
+            </h2>
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto">
+              Each city has distinct medical competition and patient research behavior. Discover our tailored healthcare growth strategies:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                city: "Ahmedabad",
+                title: "Doctor Marketing in Ahmedabad",
+                desc: "High-authority SEO & reels for super-specialists across S.G. Highway, C.G. Road & Prahlad Nagar.",
+                href: "/doctor-marketing-in-ahmedabad/",
+                tag: "Medical Capital"
+              },
+              {
+                city: "Surat",
+                title: "Doctor Marketing in Surat",
+                desc: "Attracting business families & South Gujarat referrals for Cosmetic, IVF, Dental & Surgical centers.",
+                href: "/doctor-marketing-in-surat/",
+                tag: "High-Ticket Care"
+              },
+              {
+                city: "Vadodara",
+                title: "Doctor Marketing in Vadodara",
+                desc: "Clinical authority for Alkapuri, Gotri & Vasna specialists targeting educated & NRI-connected families.",
+                href: "/doctor-marketing-in-vadodara/",
+                tag: "Discerning Patients"
+              },
+              {
+                city: "Rajkot",
+                title: "Doctor Marketing in Rajkot",
+                desc: "Capturing patient referrals across Saurashtra for hospitals on Kalavad Road & 150ft Ring Road.",
+                href: "/doctor-marketing-in-rajkot/",
+                tag: "Saurashtra Hub"
+              },
+              {
+                city: "Junagadh",
+                title: "Doctor Marketing in Junagadh",
+                desc: "Dominating local Google Maps & Gujarati video content for clinics near Moti Baug & Zanzarda Road.",
+                href: "/doctor-marketing-in-junagadh/",
+                tag: "Practice Dominance"
+              },
+              {
+                city: "Morbi",
+                title: "Doctor Marketing in Morbi",
+                desc: "Helping local clinics on Sanala & Ravapar Road scale modern healthcare for the ceramic capital.",
+                href: "/doctor-marketing-in-morbi/",
+                tag: "Rapid Expansion"
+              }
+            ].map((c, i) => (
+              <Link
+                key={i}
+                href={c.href}
+                className="group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20">{c.tag}</span>
+                    <ArrowRight size={16} className="text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">{c.title}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed">{c.desc}</p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center text-xs text-blue-400 font-semibold group-hover:underline">
+                  Explore {c.city} Strategy →
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

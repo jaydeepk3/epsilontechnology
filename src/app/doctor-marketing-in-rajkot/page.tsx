@@ -43,8 +43,72 @@ const rajkotFaqs = [
 ];
 
 export default function DoctorMarketingRajkot() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "MedicalBusiness",
+                "@id": "https://epsilon-technology.com/doctor-marketing-in-rajkot/#service",
+                "name": "Epsilon Technology - Doctor Marketing in Rajkot",
+                "url": "https://epsilon-technology.com/doctor-marketing-in-rajkot/",
+                "logo": "https://epsilon-technology.com/logo.webp",
+                "description": "Specialized doctor marketing agency in Rajkot helping specialists and hospitals on Kalavad Road and Ring Road attract patients across Saurashtra.",
+                "areaServed": [
+                    { "@type": "City", "name": "Rajkot" },
+                    { "@type": "AdministrativeArea", "name": "Saurashtra" }
+                ],
+                "serviceType": "Healthcare Digital Marketing",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Epsilon Technology",
+                    "url": "https://epsilon-technology.com/"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://epsilon-technology.com/doctor-marketing-in-rajkot/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://epsilon-technology.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Doctor Marketing Hub",
+                        "item": "https://epsilon-technology.com/digital-marketing/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Doctor Marketing in Rajkot",
+                        "item": "https://epsilon-technology.com/doctor-marketing-in-rajkot/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://epsilon-technology.com/doctor-marketing-in-rajkot/#faq",
+                "mainEntity": rajkotFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-slate-50">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* 1. Localized Hero */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
                 <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-indigo-50/50 blur-3xl rounded-full translate-x-1/3 -translate-y-1/4" />
