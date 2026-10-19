@@ -11,6 +11,7 @@ COPY package.json package-lock.json* ./
 COPY prisma ./prisma/
 
 RUN npm install --legacy-peer-deps
+RUN npm install lightningcss-linux-x64-gnu@1.32.0 @tailwindcss/oxide-linux-x64-gnu@4.3.3 --legacy-peer-deps
 
 # 2. Rebuild the source code
 FROM base AS builder
