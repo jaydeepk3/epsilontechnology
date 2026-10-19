@@ -1,17 +1,16 @@
 # Multi-stage Dockerfile for Next.js app with Prisma
 
-FROM node:20-alpine AS base
+FROM node:20-slim AS base
+RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # 1. Install dependencies
 FROM base AS deps
-RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
 COPY prisma ./prisma/
 
 RUN npm install --legacy-peer-deps
-RUN npm install lightningcss-linux-x64-musl@1.32.0 --legacy-peer-deps
 
 # 2. Rebuild the source code
 FROM base AS builder
@@ -36,10 +35,8 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN apk add --no-cache openssl
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN groupadd --system --gid 1001 nodejs && \
+    useradd --system --uid 1001 -g nodejs nextjs
 
 COPY --from=builder /app/public ./public
 
