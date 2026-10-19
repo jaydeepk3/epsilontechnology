@@ -11,6 +11,7 @@ COPY package.json package-lock.json* ./
 COPY prisma ./prisma/
 
 RUN npm install --legacy-peer-deps
+RUN npm install lightningcss-linux-x64-musl@1.32.0 --legacy-peer-deps
 
 # 2. Rebuild the source code
 FROM base AS builder
