@@ -231,7 +231,7 @@ export default async function BlogIndex() {
     let dbBlogs: any[] = [];
     try {
         dbBlogs = await prisma.blog.findMany({
-            where: { published: true },
+            where: { published: true, isExternal: false },
             orderBy: { updatedAt: 'desc' }
         });
     } catch {
