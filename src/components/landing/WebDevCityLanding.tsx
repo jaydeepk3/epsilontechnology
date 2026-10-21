@@ -489,6 +489,32 @@ export default function WebDevCityLanding({ city, cityDescription }: WebDevCityL
                 </div>
             </section>
 
+            {/* Local Services Link Strip */}
+            <div className="py-8 bg-slate-50 border-t border-slate-200">
+                <div className="container mx-auto px-4 text-center">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+                        More Local Services in Junagadh:
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4 text-xs font-medium text-slate-600">
+                        <Link href="/digital-marketing-in-junagadh/" className="hover:text-indigo-600 font-semibold transition-colors">
+                            Digital Marketing in Junagadh &rarr;
+                        </Link>
+                        <span>•</span>
+                        <Link href="/performance-marketing-company-in-junagadh/" className="hover:text-indigo-600 transition-colors">
+                            Performance Marketing Junagadh &rarr;
+                        </Link>
+                        <span>•</span>
+                        <Link href="/doctor-marketing-in-junagadh/" className="hover:text-indigo-600 transition-colors">
+                            Doctor Marketing in Junagadh &rarr;
+                        </Link>
+                        <span>•</span>
+                        <Link href="/mobile-app-development-company-in-junagadh/" className="hover:text-indigo-600 transition-colors">
+                            Mobile App Dev Junagadh &rarr;
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
             <footer className="py-12 bg-white border-t border-slate-100 italic text-center text-slate-400 text-sm">
                 Epsilon Technology, Junagadh. Making Gujarat Digital, one business at a time.
             </footer>

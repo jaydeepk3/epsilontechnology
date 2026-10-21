@@ -89,6 +89,12 @@ const services = [
         desc: 'High-converting custom & Shopify stores',
     },
     {
+        name: 'Digital Marketing in Junagadh',
+        href: '/digital-marketing-in-junagadh/',
+        icon: MapPin,
+        desc: 'SEO, Google Ads & Local Growth in Junagadh',
+    },
+    {
         name: 'UAE & Dubai Tech Services',
         href: '/uae/',
         icon: Globe,

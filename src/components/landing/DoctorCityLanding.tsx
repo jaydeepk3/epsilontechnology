@@ -377,8 +377,9 @@ export default function DoctorCityLanding({ city, cityDescription }: DoctorCityL
                             </Link>
                         </div>
                         <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-400">
-                           <Link href="/digital-marketing/" className="hover:text-blue-600 transition-colors">/digital-marketing/</Link>
-                           <Link href="/digital-marketing-in-junagadh/" className="hover:text-blue-600 transition-colors">/digital-marketing-in-junagadh/</Link>
+                           <Link href="/digital-marketing/" className="hover:text-blue-600 transition-colors">Doctor Marketing Hub</Link>
+                           <Link href="/digital-marketing-in-junagadh/" className="hover:text-blue-600 transition-colors">Digital Marketing in Junagadh</Link>
+                           <Link href="/website-development-company-in-junagadh/" className="hover:text-blue-600 transition-colors">Web Development Junagadh</Link>
                            <span className="text-slate-300">Founded by Jaydeep Kataria</span>
                         </div>
                     </div>

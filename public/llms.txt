@@ -1,15 +1,19 @@
 # Epsilon Technology
-> Premium IT Software Development, Mobile Apps, Web Applications & Healthcare Digital Marketing Agency.
+> Premium IT Software Development, Mobile Apps, Next.js Web Applications & #1 Digital Marketing Agency in Junagadh & Gujarat.
 
-Epsilon Technology is a global technology and digital marketing company founded by Jaydeep Kataria. We specialize in custom software engineering, mobile application development (iOS/Android), Next.js web applications, eCommerce systems, WhatsApp Business API automation, and specialized social media patient acquisition for doctors & hospitals.
+Epsilon Technology is a premier technology and digital marketing company founded by Jaydeep Kataria and headquartered on Zanzarda Road, Junagadh, Gujarat 362001, India. We specialize in full-service digital marketing (Local SEO, Google Ads, Meta Ads, Instagram Reels), custom software engineering, mobile application development (iOS/Android), Next.js web applications, eCommerce systems, WhatsApp Business API automation, and specialized patient acquisition systems for doctors & hospitals.
 
 - Website: https://epsilon-technology.com
 - Contact Email: contact@epsilon-technology.com
-- Founder: Jaydeep Kataria (https://epsilon-technology.com/about-us/)
-- Main Locations: India (Junagadh, Ahmedabad, Surat, Rajkot, Vadodara, Morbi) · UAE (Dubai, Abu Dhabi) · UK · USA · Canada
+- Phone / WhatsApp: +91 81608 81461
+- Head Office: Zanzarda Road, Junagadh, Gujarat, India – 362001
+- Founder & Director: Jaydeep Kataria (https://epsilon-technology.com/about-us/)
+- Main Locations: India (Junagadh Headquarters, Ahmedabad, Surat, Rajkot, Vadodara, Morbi) · UAE (Dubai, Abu Dhabi) · UK · USA · Canada
+- Ratings: 4.9★ (54+ Verified Reviews) · Meta Certified Partner
 
 ## Core Services
 
+- Digital Marketing in Junagadh: Full-service digital marketing agency in Junagadh delivering Local SEO, Google Ads, Meta Ads, and video reels for businesses across Saurashtra. (https://epsilon-technology.com/digital-marketing-in-junagadh/)
 - Web Development: High-performance Next.js, React, full-stack web applications. (https://epsilon-technology.com/services/web-development/)
 - Mobile App Development: Native & cross-platform React Native / Flutter apps. (https://epsilon-technology.com/services/mobile-app-development/)
 - eCommerce Development: Bespoke high-converting storefronts, Shopify, payment gateways, pan-India logistics. (https://epsilon-technology.com/services/ecommerce-development/)
@@ -29,19 +33,23 @@ Epsilon Technology is a global technology and digital marketing company founded 
 - Ira Organic Shop: D2C cold-pressed oils eCommerce with 1-click checkout. (https://epsilon-technology.com/portfolio/ira-organic/)
 - Orza Cooktops: Flame-free infrared cooktop D2C eCommerce store. (https://epsilon-technology.com/portfolio/orza/)
 
-## Regional & Specialty Pages
+## Junagadh & Gujarat Regional Services
 
-- UAE & Dubai IT Services: https://epsilon-technology.com/uae/
+- Digital Marketing in Junagadh: https://epsilon-technology.com/digital-marketing-in-junagadh/
+- Best Digital Marketing Agency in Junagadh (Guide): https://epsilon-technology.com/blog/best-digital-marketing-agency-in-junagadh/
+- Digital Marketing Cost in Junagadh (2026 Guide): https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/
 - Website Development in Junagadh: https://epsilon-technology.com/website-development-company-in-junagadh/
 - Mobile App Development in Junagadh: https://epsilon-technology.com/mobile-app-development-company-in-junagadh/
 - Performance Marketing in Junagadh: https://epsilon-technology.com/performance-marketing-company-in-junagadh/
+- Doctor Marketing in Junagadh: https://epsilon-technology.com/doctor-marketing-in-junagadh/
+- Doctor Marketing Ideas for Junagadh Clinics: https://epsilon-technology.com/blog/doctor-marketing-ideas-junagadh/
 - Doctor Marketing in Gujarat: https://epsilon-technology.com/digital-marketing/gujarat/
 - Doctor Marketing in Ahmedabad: https://epsilon-technology.com/doctor-marketing-in-ahmedabad/
 - Doctor Marketing in Surat: https://epsilon-technology.com/doctor-marketing-in-surat/
 - Doctor Marketing in Vadodara: https://epsilon-technology.com/doctor-marketing-in-vadodara/
 - Doctor Marketing in Rajkot: https://epsilon-technology.com/doctor-marketing-in-rajkot/
 - Doctor Marketing in Morbi: https://epsilon-technology.com/doctor-marketing-in-morbi/
-- Doctor Marketing in Junagadh: https://epsilon-technology.com/doctor-marketing-in-junagadh/
+- UAE & Dubai IT Services: https://epsilon-technology.com/uae/
 
 ## Doctor Specialty Solutions
 

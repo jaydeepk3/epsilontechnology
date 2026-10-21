@@ -615,13 +615,19 @@ export default function BlogPostBestAgencyJunagadh() {
             <h4 className="text-[10px] font-black text-slate-400 mb-12 uppercase tracking-[0.3em]">More Resources for Junagadh Businesses</h4>
             <div className="flex flex-wrap justify-center gap-6">
               <Link href="/digital-marketing-in-junagadh/" className="px-10 py-5 rounded-3xl bg-white border border-slate-200 text-sm font-black text-slate-600 hover:text-sky-600 hover:border-sky-200 hover:shadow-xl transition-all">
-                Digital Marketing services in Junagadh
+                Digital Marketing in Junagadh
+              </Link>
+              <Link href="/website-development-company-in-junagadh/" className="px-10 py-5 rounded-3xl bg-white border border-slate-200 text-sm font-black text-slate-600 hover:text-sky-600 hover:border-sky-200 hover:shadow-xl transition-all">
+                Website Development in Junagadh
+              </Link>
+              <Link href="/performance-marketing-company-in-junagadh/" className="px-10 py-5 rounded-3xl bg-white border border-slate-200 text-sm font-black text-slate-600 hover:text-sky-600 hover:border-sky-200 hover:shadow-xl transition-all">
+                Performance Marketing in Junagadh
               </Link>
               <Link href="/blog/digital-marketing-cost-in-junagadh/" className="px-10 py-5 rounded-3xl bg-white border border-slate-200 text-sm font-black text-slate-600 hover:text-sky-600 hover:border-sky-200 hover:shadow-xl transition-all">
-                How much digital marketing costs in Junagadh
+                Digital Marketing Cost in Junagadh
               </Link>
               <Link href="/portfolio/" className="px-10 py-5 rounded-3xl bg-white border border-slate-200 text-sm font-black text-slate-600 hover:text-sky-600 hover:border-sky-200 hover:shadow-xl transition-all">
-                See our work for Junagadh businesses
+                See Our Local Work
               </Link>
             </div>
           </div>

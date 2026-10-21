@@ -636,12 +636,15 @@ export default function GujaratDoctorMarketingPage() {
                         </div>
                         <div className="flex flex-wrap gap-2.5">
                             {[
+                                { title: 'Digital Marketing in Junagadh', href: '/digital-marketing-in-junagadh/' },
                                 { title: 'Doctor Marketing Gujarat Guide', href: '/blog/digital-marketing-for-doctors-gujarat/' },
                                 { title: 'Doctor Marketing Ahmedabad Guide', href: '/blog/digital-marketing-for-doctors-ahmedabad/' },
                                 { title: 'Doctor Marketing India 2026', href: '/blog/digital-marketing-for-doctors-india/' },
                                 { title: 'Doctor SEO Master Guide', href: '/blog/doctor-seo/' },
                                 { title: 'AI Visibility (GEO) for Clinics', href: '/blog/ai-visibility-for-doctors/' },
                                 { title: 'Google Maps 3-Pack for Doctors', href: '/blog/google-business-profile-for-doctors/' },
+                                { title: 'Best Digital Marketing Agency Junagadh', href: '/blog/best-digital-marketing-agency-in-junagadh/' },
+                                { title: 'Digital Marketing Cost in Junagadh', href: '/blog/digital-marketing-cost-in-junagadh/' },
                                 { title: 'Doctor Website SEO Checklist', href: '/blog/doctor-website-seo-checklist/' },
                                 { title: 'WhatsApp Automation for Clinics', href: '/blog/whatsapp-automation-for-clinics/' },
                             ].map((g, i) => (

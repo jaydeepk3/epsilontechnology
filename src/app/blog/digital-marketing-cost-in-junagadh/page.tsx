@@ -472,7 +472,16 @@ export default function BlogPostCostJunagadh() {
             <h4 className="text-lg font-black text-slate-900 mb-8 uppercase tracking-[0.2em]">Explore More Local Services</h4>
             <div className="flex flex-wrap justify-center gap-6">
               <Link href="/digital-marketing-in-junagadh/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
-                Digital Marketing Junagadh
+                Digital Marketing in Junagadh
+              </Link>
+              <Link href="/website-development-company-in-junagadh/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
+                Website Development in Junagadh
+              </Link>
+              <Link href="/performance-marketing-company-in-junagadh/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
+                Performance Marketing in Junagadh
+              </Link>
+              <Link href="/doctor-marketing-in-junagadh/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
+                Doctor Marketing in Junagadh
               </Link>
               <Link href="/portfolio/" className="px-6 py-3 rounded-2xl bg-white border border-slate-200 text-sm font-bold text-slate-600 hover:text-sky-600 hover:border-sky-200 transition-all">
                 Our Portfolio

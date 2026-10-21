@@ -14,6 +14,7 @@ const footerLinks = [
             { label: 'Mobile App Development', href: '/services/mobile-app-development/' },
             { label: 'eCommerce Development', href: '/services/ecommerce-development/' },
             { label: 'IT Services Overview', href: '/it-services/' },
+            { label: 'Digital Marketing in Junagadh', href: '/digital-marketing-in-junagadh/' },
             { label: 'WhatsApp Business API', href: '/product/whatsapp-business-api/' },
         ],
     },
@@ -278,6 +279,40 @@ export function Footer() {
                             )}
                         </div>
                     ))}
+                </div>
+
+                {/* Local & Regional Services in Junagadh & Gujarat */}
+                <div className="border-t border-slate-900/80 pt-8 pb-4 mb-4">
+                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                            📍 Local Services in Junagadh &amp; Gujarat:
+                        </span>
+                        <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-400">
+                            <Link href="/digital-marketing-in-junagadh/" className="hover:text-sky-400 font-semibold text-slate-300 transition-colors">
+                                Digital Marketing in Junagadh
+                            </Link>
+                            <span className="text-slate-800">•</span>
+                            <Link href="/website-development-company-in-junagadh/" className="hover:text-sky-400 transition-colors">
+                                Web Development Junagadh
+                            </Link>
+                            <span className="text-slate-800">•</span>
+                            <Link href="/performance-marketing-company-in-junagadh/" className="hover:text-sky-400 transition-colors">
+                                Performance Marketing Junagadh
+                            </Link>
+                            <span className="text-slate-800">•</span>
+                            <Link href="/mobile-app-development-company-in-junagadh/" className="hover:text-sky-400 transition-colors">
+                                Mobile App Development Junagadh
+                            </Link>
+                            <span className="text-slate-800">•</span>
+                            <Link href="/doctor-marketing-in-junagadh/" className="hover:text-sky-400 transition-colors">
+                                Doctor Marketing in Junagadh
+                            </Link>
+                            <span className="text-slate-800">•</span>
+                            <Link href="/digital-marketing/gujarat/" className="hover:text-sky-400 transition-colors">
+                                Digital Marketing Gujarat
+                            </Link>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Divider */}

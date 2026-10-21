@@ -1097,6 +1097,30 @@ export default function PerformanceMarketingJunagadhPage() {
                   </div>
                 </section>
 
+                {/* Related Local Services */}
+                <div className="pt-8 border-t border-slate-200 text-center">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+                    Explore Other Digital Services in Junagadh:
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4 text-xs font-medium text-slate-600">
+                    <Link href="/digital-marketing-in-junagadh/" className="text-sky-600 font-bold hover:underline">
+                      Digital Marketing in Junagadh &rarr;
+                    </Link>
+                    <span>•</span>
+                    <Link href="/website-development-company-in-junagadh/" className="hover:text-sky-600 transition-colors">
+                      Web Development Junagadh &rarr;
+                    </Link>
+                    <span>•</span>
+                    <Link href="/doctor-marketing-in-junagadh/" className="hover:text-sky-600 transition-colors">
+                      Doctor Marketing in Junagadh &rarr;
+                    </Link>
+                    <span>•</span>
+                    <Link href="/blog/best-digital-marketing-agency-in-junagadh/" className="hover:text-sky-600 transition-colors">
+                      Best Marketing Agency Checklist &rarr;
+                    </Link>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
