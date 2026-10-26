@@ -48,7 +48,7 @@ export default function BlogPostCostJunagadh() {
           "url": "https://epsilon-technology.com"
         },
         "datePublished": "2026-04-30",
-        "dateModified": "2026-04-30",
+        "dateModified": "2026-10-24",
         "mainEntityOfPage": "https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/",
         "image": "https://epsilon-technology.com/digital_marketing_cost_junagadh_featured.webp",
         "description": "A complete 2026 pricing guide for digital marketing services in Junagadh. Includes SEO, Social Media, Google Ads, and full-service package costs."

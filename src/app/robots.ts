@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/admin/', '/api/', '/private/', '/lp/'],
+                disallow: ['/admin/', '/api/', '/private/'],
             },
             {
                 userAgent: [
@@ -24,7 +24,7 @@ export default function robots(): MetadataRoute.Robots {
                     'Applebot',
                 ],
                 allow: '/',
-                disallow: ['/admin/', '/api/', '/private/', '/lp/'],
+                disallow: ['/admin/', '/api/', '/private/'],
             },
         ],
         sitemap: 'https://epsilon-technology.com/sitemap.xml',

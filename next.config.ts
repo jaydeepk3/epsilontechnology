@@ -93,6 +93,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/services/',
+        destination: '/it-services/',
+        permanent: true,
+      },
+      {
+        source: '/lp/:path*',
+        destination: '/digital-marketing/',
+        permanent: true,
+      },
+      {
         source: '/online-opd-growth-system',
         destination: 'https://doctor.epsilon-technology.com',
         permanent: true,
