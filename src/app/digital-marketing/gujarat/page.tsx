@@ -166,7 +166,14 @@ function LeadForm({ dark = false }: { dark?: boolean }) {
             const res = await fetch('/api/contact/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: formData.name, mobile: formData.whatsapp, specialty: formData.specialty, city: formData.city, clinic: '' }),
+                body: JSON.stringify({
+                    name: formData.name,
+                    mobile: formData.whatsapp,
+                    specialty: formData.specialty,
+                    city: formData.city || 'Gujarat',
+                    clinic: '',
+                    leadType: 'Gujarat Doctor Growth Plan',
+                }),
             });
             if (res.ok) { setStatus('success'); setFormData({ name: '', whatsapp: '', specialty: '', city: 'Gujarat' }); window.location.href = 'https://calendly.com/jaydeepkataria/30min'; }
             else setStatus('error');
@@ -190,10 +197,10 @@ function LeadForm({ dark = false }: { dark?: boolean }) {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-3">
-            <input type="text" name="name" placeholder="👨‍⚕️ Your Name (Dr. ___) *" required value={formData.name} onChange={handleChange} className={inputClass} />
-            <input type="tel" name="whatsapp" placeholder="📱 WhatsApp Number *" required value={formData.whatsapp} onChange={handleChange} className={inputClass} />
-            <input type="text" name="specialty" placeholder="🩺 Specialty (e.g. Orthopedics, Dermatology) *" required value={formData.specialty} onChange={handleChange} className={inputClass} />
-            <input type="text" name="city" placeholder="📍 Your City / Area in Gujarat *" required value={formData.city} onChange={handleChange} className={inputClass} />
+            <input type="text" name="name" placeholder="Your Name (Dr. ___) *" required value={formData.name} onChange={handleChange} className={inputClass} />
+            <input type="tel" name="whatsapp" placeholder="WhatsApp Number *" required value={formData.whatsapp} onChange={handleChange} className={inputClass} />
+            <input type="text" name="specialty" placeholder="Specialty (e.g. Orthopedics, Dermatology) *" required value={formData.specialty} onChange={handleChange} className={inputClass} />
+            <input type="text" name="city" placeholder="Your City / Area in Gujarat *" required value={formData.city} onChange={handleChange} className={inputClass} />
             <button
                 type="submit"
                 disabled={status === 'loading'}

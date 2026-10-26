@@ -1,12 +1,10 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
-
-/**
- * Update this manually each month to reflect the next available slot.
- */
-const NEXT_INTAKE = "June 2026";
+import { getNextIntakeDate } from '@/lib/utils';
 
 interface AvailabilityBannerProps {
   variant?: "full" | "compact" | "inline";
@@ -17,6 +15,12 @@ export const AvailabilityBanner: React.FC<AvailabilityBannerProps> = ({
   variant = "full",
   ctaHref = "/#services" 
 }) => {
+  const [nextIntake, setNextIntake] = useState<string>(getNextIntakeDate);
+
+  useEffect(() => {
+    setNextIntake(getNextIntakeDate());
+  }, []);
+
   // Option C: Recommended for credibility and direct logic
   const subheadline = "Our team works on a small number of projects at once. If your timeline is fixed, applying early guarantees your start date.";
 
@@ -24,7 +28,7 @@ export const AvailabilityBanner: React.FC<AvailabilityBannerProps> = ({
     return (
       <div className="flex flex-col items-center justify-center text-center py-4 px-6">
         <p className="text-slate-500 text-sm font-medium flex flex-wrap items-center justify-center gap-2">
-          <span>Next project intake: <span className="text-slate-900 font-bold">{NEXT_INTAKE}</span></span>
+          <span>Next project intake: <span className="text-slate-900 font-bold" suppressHydrationWarning>{nextIntake}</span></span>
           <span className="hidden sm:inline text-slate-300">·</span>
           <Link 
             href={ctaHref}
@@ -98,7 +102,7 @@ export const AvailabilityBanner: React.FC<AvailabilityBannerProps> = ({
             Availability Update
           </div>
           <h3 className={`font-bold text-slate-900 leading-tight mb-4 ${isCompact ? 'text-xl md:text-2xl' : 'text-2xl md:text-4xl'}`}>
-            Our next project start is <span className="text-blue-600">{NEXT_INTAKE}</span>
+            Our next project start is <span className="text-blue-600" suppressHydrationWarning>{nextIntake}</span>
           </h3>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
             {subheadline}

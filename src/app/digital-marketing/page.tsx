@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScarcityReplacement } from '@/components/ui/ScarcityReplacement';
-import { AvailabilityBanner } from '@/components/ui/AvailabilityBanner';
 import Link from 'next/link';
 import Image from 'next/image';
 import { trackMetaCapiEvent } from '@/lib/meta-capi';
@@ -771,13 +770,6 @@ export default function DoctorDigitalMarketingPage() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* ── Bottom Availability ────────────────────────────────── */}
-      <section className="py-12 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <AvailabilityBanner variant="full" ctaHref="#contact" />
         </div>
       </section>
 

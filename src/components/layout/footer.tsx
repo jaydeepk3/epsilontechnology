@@ -23,6 +23,7 @@ const footerLinks = [
         title: 'Doctor Marketing',
         hideOnUAE: true,
         links: [
+            { label: 'Doctor Marketing Agency', href: '/doctor-marketing/' },
             { label: 'Doctor Marketing Hub', href: '/digital-marketing/' },
             { label: 'General Surgeons', href: '/digital-marketing-for-general-surgeons/' },
             { label: 'Orthopedic Doctors', href: '/digital-marketing-for-orthopedic-doctors/' },

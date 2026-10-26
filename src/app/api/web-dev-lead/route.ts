@@ -2,8 +2,14 @@ import { NextResponse } from 'next/server';
 
 const WORTAL_WEBHOOK_URL = process.env.WORTAL_WEBHOOK_URL || 'https://api.wortal.co/webhook/api/incoming_webhook/qqmo3LH9_732';
 const WHATSAPP_CRM_URL = process.env.WHATSAPP_CRM_URL || 'https://autoreplyhub.in/api/public/leads';
-const WHATSAPP_API_KEY = process.env.WHATSAPP_API_KEY || 'epsilon_27e088fcf7f74e041691653c8f4a1005';
+const WHATSAPP_API_KEY = process.env.WHATSAPP_API_KEY || 'epsilon_e9f521c77ce6264955981baff758e9ca';
 const WHATSAPP_SEND_URL = process.env.WHATSAPP_SEND_URL || 'https://autoreplyhub.in/api/external/send-message';
+
+const WHATSAPP_API_KEYS = Array.from(new Set([
+    process.env.WHATSAPP_API_KEY,
+    'epsilon_e9f521c77ce6264955981baff758e9ca', // Admin (9106698776)
+    'epsilon_27e088fcf7f74e041691653c8f4a1005', // digital_marketing (7359315576)
+])).filter(Boolean) as string[];
 
 function formatPhone(phone: string): string {
     const digits = (phone || '').replace(/\D/g, '');
@@ -80,24 +86,28 @@ export async function POST(request: Request) {
         })();
 
         const whatsappPromise = (async () => {
-            try {
-                const res = await fetch(WHATSAPP_CRM_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'x-api-key': WHATSAPP_API_KEY,
-                    },
-                    body: JSON.stringify(whatsappPayload),
-                });
-                if (!res.ok) {
-                    const errText = await res.text();
-                    console.error('[WhatsApp CRM] Error status:', res.status, errText);
-                } else {
-                    console.log('[WhatsApp CRM] Lead pushed successfully:', name);
-                }
-            } catch (e) {
-                console.error('[WhatsApp CRM] Failed:', (e as Error).message);
-            }
+            await Promise.allSettled(
+                WHATSAPP_API_KEYS.map(async (apiKey) => {
+                    try {
+                        const res = await fetch(WHATSAPP_CRM_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'x-api-key': apiKey,
+                            },
+                            body: JSON.stringify(whatsappPayload),
+                        });
+                        if (!res.ok) {
+                            const errText = await res.text();
+                            console.error('[WhatsApp CRM] Error status:', res.status, errText);
+                        } else {
+                            console.log('[WhatsApp CRM] Lead pushed successfully:', name);
+                        }
+                    } catch (e) {
+                        console.error('[WhatsApp CRM] Failed:', (e as Error).message);
+                    }
+                })
+            );
         })();
 
         await Promise.allSettled([wortalPromise, whatsappPromise]);

@@ -1,11 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-
-/**
- * Update this manually each month to reflect the next available slot.
- */
-const NEXT_INTAKE = "June 2026"; // Update this manually each month
+import { getNextIntakeDate } from '@/lib/utils';
 
 interface ScarcityReplacementProps {
   ctaHref?: string;
@@ -18,10 +16,16 @@ export const ScarcityReplacement: React.FC<ScarcityReplacementProps> = ({
   className = "py-6",
   centered = true
 }) => {
+  const [intakeDate, setIntakeDate] = useState<string>(getNextIntakeDate);
+
+  useEffect(() => {
+    setIntakeDate(getNextIntakeDate());
+  }, []);
+
   return (
     <div className={`flex flex-col ${centered ? 'items-center justify-center text-center' : 'items-start text-left'} ${className}`}>
       <p className="text-slate-500 text-xs md:text-sm font-medium flex flex-wrap items-center gap-2">
-        <span>Next project intake: <span className="text-slate-900 font-bold">{NEXT_INTAKE}</span></span>
+        <span>Next project intake: <span className="text-slate-900 font-bold" suppressHydrationWarning>{intakeDate}</span></span>
         <span className="text-slate-300">·</span>
         <Link 
           href={ctaHref}
@@ -34,3 +38,4 @@ export const ScarcityReplacement: React.FC<ScarcityReplacementProps> = ({
     </div>
   );
 };
+
