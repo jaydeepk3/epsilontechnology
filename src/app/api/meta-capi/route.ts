@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server';
 import crypto from 'crypto';
+import { pushLeadToWhatsAppCrm } from '@/lib/whatsapp';
 
 const FB_PIXEL_ID = process.env.META_PIXEL_ID || '2199840834244597';
-const DEFAULT_ACCESS_TOKEN =
-  process.env.META_CAPI_ACCESS_TOKEN ||
-  'EAANYuHIfFwUBS3xQMS3JnZBuHpS9a4h6uzKZABSkTJgtLjuBdCfD9nS0tO3gZCl9fMesopsqxZBd42ZBNoveBBWtRl3ItrspPhy4FaRo79ZADNYkMWrTHkNqAmuuUZBY8d61PvDFOYZAO6IAmSsFiWfVF2K5xINPq1Cwz8WCPELKJ9n090PtnBjbxXITeDyZBJFfzAgZDZD';
+const DEFAULT_ACCESS_TOKEN = process.env.META_CAPI_ACCESS_TOKEN || '';
 
 function hashData(value?: string | null): string | null {
   if (!value || typeof value !== 'string') return null;
@@ -109,39 +108,12 @@ export async function POST(request: Request) {
           'Source: Online OPD Growth System Form',
         ].filter(Boolean).join(' | ');
 
-        const crmPayload = {
+        await pushLeadToWhatsAppCrm({
           name: user.firstName || 'Doctor Lead',
           number: formattedPhone,
           email: user.email || '',
           message: messageDetails,
-        };
-
-        const WHATSAPP_API_KEYS = Array.from(new Set([
-          process.env.WHATSAPP_API_KEY,
-          'epsilon_e9f521c77ce6264955981baff758e9ca', // Admin (number: 9106698776)
-          'epsilon_27e088fcf7f74e041691653c8f4a1005', // digital_marketing (number: 7359315576)
-        ])).filter(Boolean) as string[];
-
-        await Promise.allSettled(
-          WHATSAPP_API_KEYS.map((apiKey) =>
-            fetch('https://autoreplyhub.in/api/public/leads', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': apiKey,
-              },
-              body: JSON.stringify(crmPayload),
-            })
-              .then((res) => {
-                if (!res.ok) {
-                  console.error('[AutoReplyHub CRM] Lead push failed status:', res.status);
-                } else {
-                  console.log('[AutoReplyHub CRM] Lead pushed successfully for:', formattedPhone);
-                }
-              })
-              .catch((err) => console.error('[AutoReplyHub CRM] Error:', err))
-          )
-        );
+        });
       } catch (crmErr) {
         console.error('[WhatsApp CRM Exception]', crmErr);
       }

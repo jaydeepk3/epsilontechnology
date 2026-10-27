@@ -1,19 +1,8 @@
 import { NextResponse } from 'next/server';
 import crypto from 'crypto';
+import { pushLeadToWhatsAppCrm } from '@/lib/whatsapp';
 
-const WORTAL_WEBHOOK_URL =
-    process.env.WORTAL_WEBHOOK_URL ||
-    'https://api.wortal.co/webhook/api/incoming_webhook/qqmo3LH9_732';
-const WHATSAPP_CRM_URL = process.env.WHATSAPP_CRM_URL || 'https://autoreplyhub.in/api/public/leads';
-const WHATSAPP_API_KEY = process.env.WHATSAPP_API_KEY || 'epsilon_e9f521c77ce6264955981baff758e9ca';
-const WHATSAPP_SEND_URL = process.env.WHATSAPP_SEND_URL || 'https://autoreplyhub.in/api/external/send-message';
-
-// AutoReplyHub CRM API Keys — targets number 9106698776 (Admin) & digital_marketing
-const WHATSAPP_API_KEYS = Array.from(new Set([
-    process.env.WHATSAPP_API_KEY,
-    'epsilon_e9f521c77ce6264955981baff758e9ca', // Admin account (number: 9106698776)
-    'epsilon_27e088fcf7f74e041691653c8f4a1005', // digital_marketing (number: 7359315576)
-])).filter(Boolean) as string[];
+const WORTAL_WEBHOOK_URL = process.env.WORTAL_WEBHOOK_URL || '';
 
 function formatPhone(phone: string): string {
     const digits = (phone || '').replace(/\D/g, '');
@@ -96,6 +85,7 @@ export async function POST(request: Request) {
 
         // 1. Push Lead to Wortal CRM Webhook
         const wortalPromise = (async () => {
+            if (!WORTAL_WEBHOOK_URL) return;
             try {
                 const res = await fetch(WORTAL_WEBHOOK_URL, {
                     method: 'POST',
@@ -133,44 +123,19 @@ export async function POST(request: Request) {
             }
         })();
 
-        // 2. Push Lead to AutoReplyHub WhatsApp CRM (for number 9106698776 Admin & digital_marketing)
-        const whatsappCrmPromise = (async () => {
-            await Promise.allSettled(
-                WHATSAPP_API_KEYS.map(async (apiKey) => {
-                    try {
-                        const res = await fetch(WHATSAPP_CRM_URL, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'x-api-key': apiKey,
-                            },
-                            body: JSON.stringify({
-                                name: leadName,
-                                number: formattedPhone,
-                                email: email || '',
-                                message: remarksText,
-                            }),
-                        });
-                        const resData = await res.json().catch(() => ({}));
-                        if (!res.ok) {
-                            console.error('[AutoReplyHub CRM] Lead push failed status:', res.status, resData);
-                        } else {
-                            console.log('[AutoReplyHub CRM] Lead posted for:', formattedPhone, 'Status:', res.status, resData);
-                        }
-                    } catch (e) {
-                        console.error('[AutoReplyHub CRM] Failed to post lead:', (e as Error).message);
-                    }
-                })
-            );
-        })();
+        // 2. Push Lead to AutoReplyHub WhatsApp CRM
+        const whatsappCrmPromise = pushLeadToWhatsAppCrm({
+            name: leadName,
+            number: formattedPhone,
+            email: email || '',
+            message: remarksText,
+        });
 
         // 3. Send Server-Side Meta CAPI Lead Event
         const metaCapiPromise = (async () => {
             try {
                 const FB_PIXEL_ID = process.env.META_PIXEL_ID || '2199840834244597';
-                const ACCESS_TOKEN =
-                    process.env.META_CAPI_ACCESS_TOKEN ||
-                    'EAANYuHIfFwUBS3xQMS3JnZBuHpS9a4h6uzKZABSkTJgtLjuBdCfD9nS0tO3gZCl9fMesopsqxZBd42ZBNoveBBWtRl3ItrspPhy4FaRo79ZADNYkMWrTHkNqAmuuUZBY8d61PvDFOYZAO6IAmSsFiWfVF2K5xINPq1Cwz8WCPELKJ9n090PtnBjbxXITeDyZBJFfzAgZDZD';
+                const ACCESS_TOKEN = process.env.META_CAPI_ACCESS_TOKEN || '';
                 const capiUrl = `https://graph.facebook.com/v19.0/${FB_PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`;
 
                 let cleanPhone = (formattedPhone || '').replace(/\D/g, '');

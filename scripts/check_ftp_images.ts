@@ -5,11 +5,19 @@ async function checkFtp() {
     client.ftp.verbose = true;
 
     try {
-        console.log("Connecting to FTP 217.21.90.117...");
+        const host = process.env.FTP_HOST;
+        const user = process.env.FTP_USER;
+        const password = process.env.FTP_PASS;
+
+        if (!host || !user || !password) {
+            throw new Error('FTP credentials (FTP_HOST, FTP_USER, FTP_PASS) must be configured in environment variables.');
+        }
+
+        console.log(`Connecting to FTP ${host}...`);
         await client.access({
-            host: process.env.FTP_HOST || '217.21.90.117',
-            user: process.env.FTP_USER || 'u819285591.jaydeep',
-            password: process.env.FTP_PASS || '9428425380$Jayd',
+            host,
+            user,
+            password,
             secure: false
         });
 
