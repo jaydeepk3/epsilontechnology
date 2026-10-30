@@ -321,7 +321,7 @@ export default function DigitalMarketingForDoctorsIndiaPage() {
 
                                     <h2 id="nmc-guidelines">2. NMC Regulations & Ethical Healthcare Marketing in India</h2>
                                     <p>
-                                        The <strong>National Medical Commission (Registered Medical Practitioner Conduct) Regulations</strong> set clear boundaries for medical advertising. Failing to adhere to these standards puts a doctor's medical registration at risk.
+                                        The <strong>National Medical Commission (Registered Medical Practitioner Conduct) Regulations</strong> set clear boundaries for medical advertising. Failing to adhere to these standards puts a doctor's medical registration at risk. For a deep-dive analysis into social media rules, Instagram reels, Google reviews, and before-and-after photo rules, consult our dedicated <Link href="/blog/nmc-marketing-guidelines-for-doctors/" className="text-emerald-700 font-bold hover:underline">NMC Marketing Guidelines for Doctors Masterclass</Link>.
                                     </p>
                                     
                                     <div className="grid md:grid-cols-2 gap-6 my-10 not-prose">

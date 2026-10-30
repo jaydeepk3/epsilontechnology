@@ -74,6 +74,7 @@ const FEATURED_GUIDES: GuideItem[] = [
 ];
 
 const REGIONAL_AND_TOPICAL_GUIDES = [
+    { title: 'NMC Doctor Marketing Guidelines', href: '/blog/nmc-marketing-guidelines-for-doctors/' },
     { title: 'Doctor Marketing Gujarat Guide', href: '/blog/digital-marketing-for-doctors-gujarat/' },
     { title: 'Doctor Marketing Ahmedabad Guide', href: '/blog/digital-marketing-for-doctors-ahmedabad/' },
     { title: 'Doctor Personal Branding in AI Era', href: '/blog/doctor-personal-branding-ai-era/' },

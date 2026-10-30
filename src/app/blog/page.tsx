@@ -60,6 +60,18 @@ interface StaticBlogPost {
 
 const CORNERSTONE_BLOGS: StaticBlogPost[] = [
     {
+        id: 'c-16',
+        slug: 'nmc-marketing-guidelines-for-doctors',
+        title: 'NMC Marketing Guidelines for Doctors in India (2026 Ethical Guide)',
+        metaDescription: 'The complete 2026 ethical guide to NMC marketing guidelines for doctors. Master rules for Instagram reels, Google reviews, paid ads, before-after photos, and OPD patient growth.',
+        category: 'NMC Ethics & Growth',
+        author: 'Jaydeep Kataria',
+        readTime: '16 Min Read',
+        updatedAt: '2026-10-30',
+        imageUrl: '/blog_nmc_marketing_guidelines_doctors.webp',
+        featured: true
+    },
+    {
         id: 'c-1',
         slug: 'digital-marketing-for-doctors-india',
         title: 'Digital Marketing for Doctors in India (2026 Master Guide)',

@@ -381,6 +381,12 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
         priority: 0.8,
     },
     {
+        url: 'https://epsilon-technology.com/blog/nmc-marketing-guidelines-for-doctors/',
+        lastModified: new Date('2026-10-30'),
+        changeFrequency: 'weekly',
+        priority: 0.85,
+    },
+    {
         url: 'https://epsilon-technology.com/blog/digital-marketing-cost-in-junagadh/',
         lastModified: STABLE_DATE,
         changeFrequency: 'weekly',
