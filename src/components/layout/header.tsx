@@ -14,6 +14,12 @@ const DARK_HERO_PATHS = ['/uae/', '/it-services/'];
 
 const doctorMarketing = [
     {
+        name: 'Doctor Marketing Agency',
+        href: '/doctor-marketing/',
+        icon: Stethoscope,
+        desc: 'Specialized patient acquisition & clinic growth',
+    },
+    {
         name: 'Doctor Marketing Hub',
         href: '/digital-marketing/',
         icon: Stethoscope,
@@ -125,49 +131,48 @@ function NavDropdown({ label, items, textColor, scrolled }: { label: string; ite
 
     return (
         <div
-            className="relative"
+            className="relative group/dropdown"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
-            <button className={`flex items-center gap-1.5 font-semibold text-[13px] tracking-wide transition-all duration-300 ${textColor} ${isOpen ? 'opacity-100' : 'opacity-80 hover:opacity-100'}`}>
+            <button
+                type="button"
+                className={`flex items-center gap-1.5 font-semibold text-[13px] tracking-wide transition-all duration-300 ${textColor} ${isOpen ? 'opacity-100' : 'opacity-80 hover:opacity-100'}`}
+                aria-expanded={isOpen}
+            >
                 {label}
-                <ChevronDown size={14} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown size={14} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'group-hover/dropdown:rotate-180'}`} />
             </button>
 
-            <AnimatePresence>
-                {isOpen && (
-                    <>
-                        {/* Invisible bridge to prevent gap between button and panel */}
-                        <div className="absolute top-full left-0 h-4 w-full" />
+            {/* Invisible bridge to prevent gap between button and panel */}
+            <div className="absolute top-full left-0 h-4 w-full" />
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 8, scale: 0.95 }}
-                            transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                            className="absolute top-[calc(100%+0.8rem)] -left-4 w-80 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden z-50 p-2"
+            {/* Always in DOM for SEO crawlability; animated via CSS & state */}
+            <div
+                className={`absolute top-[calc(100%+0.8rem)] -left-4 w-80 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden z-50 p-2 transition-all duration-200 ${
+                    isOpen
+                        ? 'opacity-100 visible translate-y-0 pointer-events-auto'
+                        : 'opacity-0 invisible -translate-y-2 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto'
+                }`}
+            >
+                <div className="flex flex-col">
+                    {items.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-center gap-4 p-3 rounded-2xl hover:bg-slate-50 transition-all group/item"
                         >
-                            <div className="flex flex-col">
-                                {items.map((item) => (
-                                    <Link
-                                        key={item.name}
-                                        href={item.href}
-                                        className="flex items-center gap-4 p-3 rounded-2xl hover:bg-slate-50 transition-all group/item"
-                                    >
-                                        <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all duration-300">
-                                            <item.icon size={20} className="text-blue-600 group-hover/item:text-white transition-colors" />
-                                        </div>
-                                        <div className="flex flex-col">
-                                            <span className="font-bold text-slate-900 text-[14px] leading-tight group-hover/item:text-blue-600 transition-colors">{item.name}</span>
-                                            <span className="text-slate-500 text-[11px] mt-0.5 leading-tight">{item.desc}</span>
-                                        </div>
-                                    </Link>
-                                ))}
+                            <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all duration-300">
+                                <item.icon size={20} className="text-blue-600 group-hover/item:text-white transition-colors" />
                             </div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
+                            <div className="flex flex-col">
+                                <span className="font-bold text-slate-900 text-[14px] leading-tight group-hover/item:text-blue-600 transition-colors">{item.name}</span>
+                                <span className="text-slate-500 text-[11px] mt-0.5 leading-tight">{item.desc}</span>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

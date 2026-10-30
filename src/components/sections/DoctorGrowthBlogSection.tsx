@@ -75,8 +75,11 @@ const FEATURED_GUIDES: GuideItem[] = [
 
 const REGIONAL_AND_TOPICAL_GUIDES = [
     { title: 'NMC Doctor Marketing Guidelines', href: '/blog/nmc-marketing-guidelines-for-doctors/' },
+    { title: 'Doctor Marketing Agency', href: '/doctor-marketing/' },
     { title: 'Doctor Marketing Gujarat Guide', href: '/blog/digital-marketing-for-doctors-gujarat/' },
     { title: 'Doctor Marketing Ahmedabad Guide', href: '/blog/digital-marketing-for-doctors-ahmedabad/' },
+    { title: 'Morbi Doctor Marketing', href: '/doctor-marketing-in-morbi/' },
+    { title: 'Gynecologists & IVF Marketing', href: '/digital-marketing-for-gynecologist-doctors/' },
     { title: 'Doctor Personal Branding in AI Era', href: '/blog/doctor-personal-branding-ai-era/' },
     { title: 'Why Doctors Get Leads, Not Patients', href: '/blog/why-doctors-get-leads-not-patients/' },
     { title: 'WhatsApp Automation for Clinics', href: '/blog/whatsapp-automation-for-clinics/' },

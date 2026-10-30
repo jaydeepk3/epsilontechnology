@@ -23,7 +23,7 @@ export const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   imageUrl = '/placeholder-case-study.jpg',
 }) => {
   return (
-    <Link href={`/portfolio/${slug}`} className="group block h-full">
+    <Link href={`/portfolio/${slug}/`} className="group block h-full">
       <div className="flex flex-col bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:border-slate-700 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 h-full">
         
         {/* Top Image Banner / Preview */}

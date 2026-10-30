@@ -22,34 +22,46 @@ export const metadata = {
 
 const services = [
     {
-        icon: Smartphone,
-        title: "React Native App Development",
-        description: "Cross-platform mobile apps with clean architecture and smooth performance. We build strictly typed, maintainable codebases that scale.",
-        tech: ["React Native", "Expo", "TypeScript", "Reanimated"]
-    },
-    {
-        icon: Layout,
-        title: "Mobile Application Development",
-        description: "End-to-end development from idea to App Store / Play Store deployment. Native modules, deep linking, and push notifications.",
-        tech: ["iOS", "Android", "Firebase", "CI/CD"]
-    },
-    {
         icon: Globe,
-        title: "Web Application Development",
-        description: "Scalable, secure, and SEO-friendly web platforms using modern frameworks. SSR, ISR, and edge computing for maximum speed.",
-        tech: ["Next.js", "React", "Tailwind CSS", "Vercel"]
+        title: "Website Development",
+        description: "Custom high-performance websites and web applications built with Next.js, React, and Tailwind CSS. Built-in SEO, speed, and conversion optimization.",
+        tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+        href: "/services/web-development/"
+    },
+    {
+        icon: Smartphone,
+        title: "Mobile App Development",
+        description: "Cross-platform iOS and Android mobile apps with native performance, offline support, push notifications, and scalable backend architecture.",
+        tech: ["React Native", "Expo", "TypeScript", "iOS & Android"],
+        href: "/services/mobile-app-development/"
     },
     {
         icon: Cloud,
-        title: "E-commerce Development",
-        description: "Custom online stores with complex logic, payment integration, and performance optimisation. Conversion-focused UX/UI.",
-        tech: ["Shopify Headless", "Stripe", "PostgreSQL", "Redis"]
+        title: "eCommerce Development",
+        description: "High-converting bespoke eCommerce platforms and headless Shopify stores with automated payment, inventory, and order fulfillment.",
+        tech: ["Shopify Headless", "Next.js", "Stripe / Razorpay", "PostgreSQL"],
+        href: "/services/ecommerce-development/"
+    },
+    {
+        icon: Globe,
+        title: "UAE & Global IT Services",
+        description: "Dedicated software engineering, web apps, and digital solutions for international businesses in Dubai, UAE, UK, and the USA.",
+        tech: ["Cloud Architecture", "Next.js", "SaaS", "API Integrations"],
+        href: "/uae/"
+    },
+    {
+        icon: MessageSquare,
+        title: "WhatsApp Business API",
+        description: "Enterprise WhatsApp chatbots and automated appointment booking pipelines to capture and qualify leads 24/7 at scale.",
+        tech: ["Meta Cloud API", "Automations", "Webhooks", "CRM Sync"],
+        href: "/product/whatsapp-business-api/"
     },
     {
         icon: Database,
-        title: "Custom Software Solutions",
-        description: "Tailored internal tools and SaaS systems built around your specific business workflows and data requirements.",
-        tech: ["Node.js", "Supabase", "Prisma", "Docker"]
+        title: "Digital Marketing in Junagadh",
+        description: "Hyperlocal SEO, Google Business Profile Maps 3-Pack rankings, and targeted performance marketing for Gujarat businesses.",
+        tech: ["Local SEO", "Google Ads", "Meta Ads", "Analytics"],
+        href: "/digital-marketing-in-junagadh/"
     }
 ];
 
@@ -63,22 +75,25 @@ const processSteps = [
 
 const portfolio = [
     {
-        title: "FinTech Dashboard",
+        title: "DearPet.in Grooming Platform",
         category: "Web Application",
-        description: "A real-time financial analytics dashboard for a US-based startup. Handles millions of data points with sub-second latency.",
-        tags: ["Next.js", "D3.js", "Supabase"]
+        description: "India's premier pet grooming booking platform connecting pet parents with professional groomers with automated scheduling.",
+        tags: ["Next.js", "React", "PostgreSQL"],
+        href: "/portfolio/dearpet/"
     },
     {
-        title: "Health & Fitness App",
-        category: "Mobile App",
-        description: "Social fitness tracking app with live video streaming and wearable device integration. 50k+ active users.",
-        tags: ["React Native", "WebRTC", "HealthKit"]
+        title: "Junagadh Police Bandobast App",
+        category: "Government Mobile App",
+        description: "Secure government Android app for real-time deployment and management of 1,000+ police personnel during major regional events.",
+        tags: ["React Native", "Android", "Node.js"],
+        href: "/portfolio/junagadh-police/"
     },
     {
-        title: "B2B Marketplace",
-        category: "E-commerce",
-        description: "Multi-vendor marketplace for industrial equipment with automated invoicing and logistics tracking.",
-        tags: ["Node.js", "PostgreSQL", "Stripe Connect"]
+        title: "Ontapp.ca Delivery Platform",
+        category: "eCommerce Platform",
+        description: "On-demand beverage delivery eCommerce platform serving multiple Canadian provinces with real-time age verification.",
+        tags: ["Next.js", "eCommerce", "Stripe"],
+        href: "/portfolio/ontapp/"
     }
 ];
 
@@ -184,20 +199,29 @@ export default function ITServices() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                    <service.icon size={28} />
+                            <Link
+                                key={i}
+                                href={service.href}
+                                className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
+                            >
+                                <div>
+                                    <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                        <service.icon size={28} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors flex items-center justify-between">
+                                        <span>{service.title}</span>
+                                        <ArrowRight size={18} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-blue-600" />
+                                    </h3>
+                                    <p className="text-slate-600 mb-6 leading-relaxed text-sm">{service.description}</p>
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-50">
                                     {service.tech.map((t, j) => (
                                         <span key={j} className="px-3 py-1 bg-slate-50 text-slate-600 text-xs font-semibold rounded-md border border-slate-100">
                                             {t}
                                         </span>
                                     ))}
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -285,7 +309,7 @@ export default function ITServices() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {portfolio.map((project, i) => (
-                            <div key={i} className="group cursor-pointer">
+                            <Link key={i} href={project.href} className="group block">
                                 <div className="h-48 bg-slate-100 rounded-2xl mb-6 relative overflow-hidden">
                                     {/* Placeholder for project image - gradients for now */}
                                     <div className={`absolute inset-0 bg-gradient-to-br ${i === 0 ? 'from-blue-100 to-indigo-50' :
@@ -297,7 +321,7 @@ export default function ITServices() {
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors flex items-center gap-2">
-                                    {project.title} <ArrowRight size={16} className="-ml-1 opacity-0 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    {project.title} <ArrowRight size={16} className="-ml-1 opacity-0 group-hover:opacity-100 group-hover:ml-0 transition-all text-blue-600" />
                                 </h3>
                                 <p className="text-slate-600 text-sm mb-4 leading-relaxed line-clamp-2">
                                     {project.description}
@@ -307,7 +331,7 @@ export default function ITServices() {
                                         <span key={j} className="text-xs font-medium text-slate-400">#{tag}</span>
                                     ))}
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

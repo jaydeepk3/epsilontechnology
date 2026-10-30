@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { Button, getButtonClasses } from '@/components/ui/button';
-import { CheckCircle2, MapPin, TrendingUp, Users, MessageCircle } from 'lucide-react';
+import { CheckCircle2, MapPin, TrendingUp, Users, MessageCircle, ArrowRight } from 'lucide-react';
 import { FAQ } from '@/components/sections/FAQ';
 import { Booking } from '@/components/sections/Booking';
 import { Testimonials } from '@/components/sections/Testimonials';
@@ -26,19 +26,27 @@ export const metadata: Metadata = {
 const morbiFaqs = [
     {
         question: "Is digital marketing relevant for Morbi doctors?",
-        answer: "Yes. Morbi has a highly digital-savvy population. People in Morbi use Instagram and Google extensively to find services. Being present there is crucial to capture the local market."
+        answer: "Yes. Morbi has a highly digital-savvy population with strong purchasing power. Patients and business owners in Morbi use Instagram and Google Maps extensively to evaluate doctors before visiting. Having an authoritative digital presence ensures local patients choose your hospital over travelling to Rajkot or Ahmedabad."
     },
     {
-        question: "Can you help promote my clinic on Sanala Road?",
-        answer: "Detailed local targeting allows us to show your ads specifically to people living in and around Sanala Road, Ravapar Road, and other key areas of Morbi."
+        question: "Can you help promote my clinic on Sanala Road and Ravapar Road?",
+        answer: "Detailed local targeting allows us to show your educational content and Google Maps listings specifically to people living in and around Sanala Road, Ravapar Road, Trajpar, Lilapar Road, and Morbi industrial zones."
+    },
+    {
+        question: "How do you help orthopedic and trauma surgeons in Morbi?",
+        answer: "As India's ceramic and industrial capital, Morbi has continuous demand for immediate orthopedic, fracture, and trauma care. We position orthopedic and trauma centers at the top of Google 'near me' emergency searches and local Google Maps 3-Pack so families find you immediately."
+    },
+    {
+        question: "Are your doctor marketing campaigns compliant with NMC guidelines?",
+        answer: "100%. We adhere strictly to National Medical Commission (NMC) ethical marketing guidelines. Our campaigns focus on patient education, symptom awareness, procedure transparency, and clinical excellence rather than commercial discounts or exaggerated claims."
     },
     {
         question: "I want to attract patients for premium treatments. Can you help?",
-        answer: "Morbi has high purchasing power. We create premium brand positioning for your clinic that appeals to patients looking for high-quality, advanced treatments locally."
+        answer: "Morbi has one of the highest per-capita purchasing powers in Gujarat. We build premium, trustworthy positioning for your clinic that appeals to families seeking advanced laparoscopic surgery, cosmetic dentistry, and advanced joint replacements locally."
     },
     {
         question: "Do you offer Gujarati content?",
-        answer: "Yes, we specialize in creating content in Kathiyawadi Gujarati that resonates deeply with the local Morbi audience, building instant trust and connection."
+        answer: "Yes, we specialize in creating medically accurate content in Kathiyawadi Gujarati that resonates deeply with the local Morbi audience, building instant trust and connection."
     }
 ];
 
@@ -47,12 +55,12 @@ export default function DoctorMarketingMorbi() {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "MedicalBusiness",
+                "@type": "ProfessionalService",
                 "@id": "https://epsilon-technology.com/doctor-marketing-in-morbi/#service",
                 "name": "Epsilon Technology - Doctor Marketing in Morbi",
                 "url": "https://epsilon-technology.com/doctor-marketing-in-morbi/",
                 "logo": "https://epsilon-technology.com/logo.webp",
-                "description": "Specialized doctor marketing agency in Morbi helping clinics and hospitals on Sanala Road and Ravapar Road attract more patients.",
+                "description": "Specialized healthcare digital marketing agency in Morbi helping clinics and hospitals on Sanala Road and Ravapar Road attract 30-50+ patient inquiries monthly via medical SEO, Gujarati reels, and WhatsApp automation.",
                 "areaServed": [
                     { "@type": "City", "name": "Morbi" },
                     { "@type": "AdministrativeArea", "name": "Gujarat" }
@@ -182,17 +190,23 @@ export default function DoctorMarketingMorbi() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {[
-                            { title: "General Physicians", desc: "Become the first point of contact for families in Morbi's residential areas." },
-                            { title: "Orthopdeic Surgeons", desc: "Morbi has many industrial accident cases. Ensure you are the first name people think of for trauma care." },
-                            { title: "Dentists", desc: "Attract patients for cosmetic dentistry and implants from Morbi's affluent business community." },
-                            { title: "Gynecologists", desc: "Build a safe, trusted environment for women's health through educational and sensitive content." },
-                            { title: "Upcoming Hospitals", desc: "Launch your new hospital in Morbi with a bang and fill beds immediately." },
-                            { title: "Skin Specialists", desc: "Promote aesthetic treatments to the younger, trend-conscious generation in Morbi." }
+                            { title: "General Physicians", desc: "Become the first point of contact for families in Morbi's residential areas.", href: "/digital-marketing-for-doctors/" },
+                            { title: "Orthopedic Surgeons", desc: "Morbi has many industrial accident cases. Ensure you are the first name people think of for trauma care.", href: "/digital-marketing-for-orthopedic-doctors/" },
+                            { title: "Dentists & Implantologists", desc: "Attract patients for cosmetic dentistry and implants from Morbi's affluent business community.", href: "/digital-marketing-for-dental-doctors/" },
+                            { title: "Gynecologists & IVF", desc: "Build a safe, trusted environment for women's health through educational and sensitive content.", href: "/digital-marketing-for-gynecologist-doctors/" },
+                            { title: "Laparoscopic Surgeons", desc: "Showcase advanced minimally invasive surgery capabilities to patients seeking high-tech local care.", href: "/digital-marketing-for-general-surgeons/" },
+                            { title: "Dermatologists & Skin Clinics", desc: "Promote aesthetic treatments to the younger, trend-conscious generation in Morbi.", href: "/digital-marketing-for-dermatologists/" }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-                            </div>
+                            <Link key={i} href={item.href} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-teal-200 transition-all group flex flex-col justify-between">
+                                <div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors flex items-center justify-between">
+                                        <span>{item.title}</span>
+                                        <ArrowRight size={16} className="text-teal-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </h3>
+                                    <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                                </div>
+                                <span className="text-xs font-semibold text-teal-600 mt-4 inline-flex items-center gap-1">View Strategy →</span>
+                            </Link>
                         ))}
                     </div>
                 </div>
