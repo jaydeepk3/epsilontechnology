@@ -88,20 +88,20 @@ const REGIONAL_AND_TOPICAL_GUIDES = [
 
 export function DoctorGrowthBlogSection() {
     return (
-        <section className="py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
+        <section className="py-24 bg-white text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
             {/* Ambient Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 max-w-6xl relative z-10">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-xs uppercase tracking-widest mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 font-extrabold text-xs uppercase tracking-wider mb-4">
                         <BookOpen size={14} /> Clinical Growth Intelligence
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5 tracking-tight leading-tight">
-                        Authority Research & Playbooks for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400">Healthcare Leaders</span>
+                    <h2 className="text-3xl md:text-5xl font-black text-slate-950 mb-5 tracking-tight leading-tight">
+                        Authority Research &amp; Playbooks for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600">Healthcare Leaders</span>
                     </h2>
-                    <p className="text-slate-400 text-base md:text-lg leading-relaxed">
+                    <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
                         In-depth frameworks on medical SEO, generative AI visibility (GEO), Google Maps 3-pack dominance, and ethical patient acquisition.
                     </p>
                 </div>
@@ -114,25 +114,25 @@ export function DoctorGrowthBlogSection() {
                             <Link
                                 key={idx}
                                 href={`/blog/${guide.slug}/`}
-                                className="group p-7 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-blue-500/50 hover:bg-slate-950 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1"
+                                className="group p-7 rounded-3xl bg-slate-50/70 border border-slate-200 hover:border-blue-400 hover:bg-white transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1"
                             >
                                 <div>
                                     <div className="flex items-center justify-between mb-4">
-                                        <span className="text-[11px] font-extrabold px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider">
+                                        <span className="text-[11px] font-extrabold px-3 py-1 rounded-full bg-blue-100/70 text-blue-700 border border-blue-200 uppercase tracking-wider">
                                             {guide.tag}
                                         </span>
                                         <span className="text-xs text-slate-500 flex items-center gap-1 font-medium">
                                             <Clock size={12} /> {guide.readTime}
                                         </span>
                                     </div>
-                                    <h3 className="text-lg font-bold text-white mb-2.5 group-hover:text-blue-400 transition-colors leading-snug">
+                                    <h3 className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-blue-600 transition-colors leading-snug">
                                         {guide.title}
                                     </h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed line-clamp-3">
+                                    <p className="text-slate-600 text-xs leading-relaxed line-clamp-3 font-normal">
                                         {guide.desc}
                                     </p>
                                 </div>
-                                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-semibold text-blue-400 group-hover:text-blue-300">
+                                <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-blue-600 group-hover:text-blue-800">
                                     <span>Read Full Blueprint</span>
                                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                                 </div>
@@ -142,8 +142,8 @@ export function DoctorGrowthBlogSection() {
                 </div>
 
                 {/* Quick Link Pill Strip for Secondary Guides */}
-                <div className="p-6 rounded-2xl bg-slate-950/50 border border-slate-800/60 mb-12">
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 text-center sm:text-left">
+                <div className="p-6 rounded-3xl bg-slate-50/70 border border-slate-200 mb-12">
+                    <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-4 text-center sm:text-left">
                         Additional Specialized Healthcare Guides:
                     </p>
                     <div className="flex flex-wrap gap-2.5">
@@ -151,10 +151,10 @@ export function DoctorGrowthBlogSection() {
                             <Link
                                 key={i}
                                 href={item.href}
-                                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/40 text-xs text-slate-300 hover:text-white transition-all group"
+                                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 text-xs text-slate-700 transition-all group shadow-2xs font-medium"
                             >
                                 <span>{item.title}</span>
-                                <ArrowUpRight size={12} className="text-slate-500 group-hover:text-blue-400" />
+                                <ArrowUpRight size={12} className="text-slate-400 group-hover:text-blue-600" />
                             </Link>
                         ))}
                     </div>
@@ -164,9 +164,9 @@ export function DoctorGrowthBlogSection() {
                 <div className="text-center">
                     <Link
                         href="/blog/"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-600/25 transition-all duration-300 hover:scale-105"
+                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm shadow-lg shadow-blue-600/20 transition-all duration-300 hover:scale-105"
                     >
-                        <span>Explore All Healthcare & Technology Articles</span>
+                        <span>Explore All Healthcare &amp; Technology Articles</span>
                         <ArrowRight size={16} />
                     </Link>
                 </div>

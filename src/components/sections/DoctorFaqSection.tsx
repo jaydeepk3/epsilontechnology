@@ -112,6 +112,22 @@ export function DoctorFaqSection() {
           })}
         </div>
 
+        {/* FAQ Support & WhatsApp CTA */}
+        <div className="mt-12 text-center p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-left">
+            <h4 className="text-base font-bold text-slate-900">Have a specific question about your practice or clinic?</h4>
+            <p className="text-xs text-slate-500 mt-0.5">Chat directly with our Lead Healthcare Growth Architect for honest advice.</p>
+          </div>
+          <a
+            href="https://wa.me/918160881461?text=Hi%20Epsilon%20Team%2C%20I%20have%20a%20question%20about%20Doctor%20Marketing%20and%20Clinic%20Growth."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md shrink-0 active:scale-95 flex items-center gap-2"
+          >
+            <span>WhatsApp Quick Chat</span>
+          </a>
+        </div>
+
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ const segments = [
 
 export function WhoWeHelpDoctorGrowth() {
   return (
-    <section className="py-24 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <section className="py-24 bg-white text-slate-900 border-b border-slate-200/80">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-6xl">
 
         {/* Section Header */}
@@ -74,11 +74,11 @@ export function WhoWeHelpDoctorGrowth() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white border border-slate-200/90 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all flex flex-col justify-between group"
+              className="bg-slate-50/70 border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:bg-white hover:border-blue-300 transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-sm">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-100/70 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-sm">
                     <item.icon className="w-7 h-7" />
                   </div>
                   <div>
@@ -92,10 +92,10 @@ export function WhoWeHelpDoctorGrowth() {
                 </p>
 
                 <div className="mb-6">
-                  <span className="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider block mb-2">Specialties &amp; Focus Areas:</span>
+                  <span className="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider block mb-2">Specialties &amp; Focus Areas:</span>
                   <div className="flex flex-wrap gap-2">
                     {item.popularSpecialties.map((spec, sIdx) => (
-                      <span key={sIdx} className="text-xs font-medium bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200/70">
+                      <span key={sIdx} className="text-xs font-medium bg-white text-slate-700 px-3 py-1 rounded-full border border-slate-200 shadow-2xs">
                         {spec}
                       </span>
                     ))}
@@ -105,7 +105,7 @@ export function WhoWeHelpDoctorGrowth() {
 
               <Link
                 href={item.href}
-                className="inline-flex items-center gap-2 text-xs font-extrabold text-blue-600 hover:text-blue-800 transition-colors pt-4 border-t border-slate-100"
+                className="inline-flex items-center gap-2 text-xs font-extrabold text-blue-600 hover:text-blue-800 transition-colors pt-4 border-t border-slate-200/60"
               >
                 <span>View Specialized Growth Plan</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

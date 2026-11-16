@@ -38,7 +38,7 @@ const comparisonRows = [
 
 export function WhyEpsilonDoctorGrowth() {
   return (
-    <section className="py-24 bg-white text-slate-900 border-b border-slate-100">
+    <section className="py-24 bg-slate-50 text-slate-900 border-b border-slate-200/80">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-6xl">
 
         {/* Header */}
@@ -49,7 +49,7 @@ export function WhyEpsilonDoctorGrowth() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-extrabold text-xs uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 font-extrabold text-xs uppercase tracking-wider mb-4">
             Technology + Marketing + Automation
           </div>
 
@@ -69,7 +69,7 @@ export function WhyEpsilonDoctorGrowth() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-blue-300 transition-all text-left"
+            className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-xl transition-all text-left shadow-sm"
           >
             <div className="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-blue-600/20">
               <Cpu className="w-7 h-7" />
@@ -85,7 +85,7 @@ export function WhyEpsilonDoctorGrowth() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-blue-300 transition-all text-left"
+            className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-xl transition-all text-left shadow-sm"
           >
             <div className="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-emerald-600/20">
               <Target className="w-7 h-7" />
@@ -101,7 +101,7 @@ export function WhyEpsilonDoctorGrowth() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-blue-300 transition-all text-left"
+            className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-xl transition-all text-left shadow-sm"
           >
             <div className="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-indigo-600/20">
               <MessageSquareCode className="w-7 h-7" />
@@ -113,35 +113,35 @@ export function WhyEpsilonDoctorGrowth() {
           </motion.div>
         </div>
 
-        {/* Comparison Table */}
+        {/* Comparison Table (Light Theme CRO Matrix) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl overflow-x-auto"
+          className="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl overflow-x-auto"
         >
-          <div className="min-w-[600px]">
-            <div className="grid grid-cols-12 gap-4 pb-6 border-b border-slate-800 font-extrabold text-sm uppercase tracking-wider">
-              <div className="col-span-4 text-slate-400">Feature / Standard</div>
-              <div className="col-span-4 text-rose-400 flex items-center gap-1.5">
-                <XCircle className="w-4 h-4 shrink-0" /> Generic Agencies
+          <div className="min-w-[620px]">
+            <div className="grid grid-cols-12 gap-4 pb-6 border-b border-slate-200 font-extrabold text-sm uppercase tracking-wider items-center">
+              <div className="col-span-4 text-slate-500">Feature / Standard</div>
+              <div className="col-span-4 text-rose-700 bg-rose-50/80 p-3 rounded-2xl border border-rose-200 flex items-center gap-1.5">
+                <XCircle className="w-4 h-4 shrink-0 text-rose-600" /> Generic Agencies
               </div>
-              <div className="col-span-4 text-emerald-400 flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 shrink-0" /> Epsilon Technology
+              <div className="col-span-4 text-emerald-800 bg-emerald-50 p-3 rounded-2xl border border-emerald-200 flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" /> Epsilon Technology
               </div>
             </div>
 
-            <div className="divide-y divide-slate-800/80">
+            <div className="divide-y divide-slate-100">
               {comparisonRows.map((row, idx) => (
                 <div key={idx} className="grid grid-cols-12 gap-4 py-4 text-xs sm:text-sm items-center">
-                  <div className="col-span-4 font-bold text-white">{row.feature}</div>
-                  <div className="col-span-4 text-slate-400 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                  <div className="col-span-4 font-bold text-slate-900">{row.feature}</div>
+                  <div className="col-span-4 text-slate-500 flex items-center gap-2 pl-3">
+                    <span className="w-2 h-2 rounded-full bg-rose-400 shrink-0" />
                     <span>{row.generic}</span>
                   </div>
-                  <div className="col-span-4 text-emerald-300 font-semibold flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div className="col-span-4 text-emerald-900 font-bold bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100 flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>{row.epsilon}</span>
                   </div>
                 </div>

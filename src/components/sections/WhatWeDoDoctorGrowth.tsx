@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, MapPin, Bot, Share2, Layout, MessageSquare, Award, Globe, ArrowUpRight } from 'lucide-react';
+import { Search, MapPin, Bot, Share2, Layout, MessageSquare, Award, Globe, ArrowUpRight, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
@@ -65,7 +65,7 @@ const services = [
 
 export function WhatWeDoDoctorGrowth() {
   return (
-    <section className="py-24 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <section className="py-24 bg-white text-slate-900 border-b border-slate-200/80">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-6xl">
 
         {/* Section Header */}
@@ -98,14 +98,14 @@ export function WhatWeDoDoctorGrowth() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-slate-50/70 border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-blue-300 hover:bg-white transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-100/70 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
                     <service.icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
                     {service.highlight}
                   </span>
                 </div>
@@ -121,13 +121,27 @@ export function WhatWeDoDoctorGrowth() {
 
               <Link
                 href={service.href}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors pt-4 border-t border-slate-100"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors pt-4 border-t border-slate-200/60"
               >
                 <span>Learn Strategy</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </motion.div>
           ))}
+        </div>
+
+        {/* Bottom Banner */}
+        <div className="mt-12 text-center">
+          <p className="text-xs font-semibold text-slate-500 mb-3">
+            Want to see how these 8 pillars stack for your specific medical specialty?
+          </p>
+          <a
+            href="#free-diagnosis"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 font-extrabold text-xs transition-colors"
+          >
+            <span>Request a Custom 8-Pillar Practice Audit</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
         </div>
 
       </div>

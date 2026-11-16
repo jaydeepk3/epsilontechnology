@@ -93,7 +93,7 @@ const realReelResults = [
 
 export function DoctorProofAndCaseStudies() {
   return (
-    <section className="py-24 bg-white text-slate-900 border-b border-slate-100">
+    <section className="py-24 bg-slate-50 text-slate-900 border-b border-slate-200/80">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-6xl">
 
         {/* Header */}
@@ -104,7 +104,7 @@ export function DoctorProofAndCaseStudies() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-extrabold text-xs uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-extrabold text-xs uppercase tracking-wider mb-4">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
             Verified Epsilon Client Proof · Zero Fabricated Claims
           </div>
@@ -127,7 +127,7 @@ export function DoctorProofAndCaseStudies() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between group"
+              className="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between group shadow-sm"
             >
               <div>
                 <div className="flex items-center gap-4 mb-4">
@@ -155,7 +155,7 @@ export function DoctorProofAndCaseStudies() {
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-emerald-50 border border-emerald-100/80 mb-4 flex items-center justify-between">
+                <div className="p-3 rounded-2xl bg-emerald-50 border border-emerald-100 mb-4 flex items-center justify-between">
                   <div>
                     <span className="text-[10px] uppercase font-bold text-emerald-800 tracking-wider block">Outcome</span>
                     <span className="text-xs font-extrabold text-emerald-700">{doc.metric}</span>
@@ -168,7 +168,7 @@ export function DoctorProofAndCaseStudies() {
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-bold text-slate-500">
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500">
                 <span className="flex items-center gap-1 text-emerald-600">
                   <CheckCircle2 size={12} /> Verified Client
                 </span>
@@ -178,7 +178,7 @@ export function DoctorProofAndCaseStudies() {
           ))}
         </div>
 
-        {/* Reel Results Showcase */}
+        {/* Reel Results Showcase (Light Theme) */}
         <div className="mt-16">
           <div className="text-center mb-10">
             <h3 className="text-2xl font-black text-slate-900 mb-2">High-Engagement Clinical Content &amp; Reels</h3>
@@ -193,9 +193,9 @@ export function DoctorProofAndCaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-slate-900 text-white rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col"
+                className="bg-white text-slate-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-200 transition-all flex flex-col"
               >
-                <div className="relative h-[480px] bg-slate-950">
+                <div className="relative h-[480px] bg-slate-100">
                   <iframe
                     src={reel.embedUrl}
                     className="w-full h-full object-cover"
@@ -205,16 +205,16 @@ export function DoctorProofAndCaseStudies() {
                     allow="encrypted-media"
                   />
                 </div>
-                <div className="p-5 bg-slate-900 border-t border-slate-800 flex flex-col justify-between flex-1">
+                <div className="p-5 bg-white border-t border-slate-100 flex flex-col justify-between flex-1">
                   <div>
-                    <h4 className="font-bold text-white text-sm mb-1">{reel.title}</h4>
-                    <p className="text-slate-400 text-xs mb-3">{reel.note}</p>
+                    <h4 className="font-bold text-slate-900 text-sm mb-1">{reel.title}</h4>
+                    <p className="text-slate-500 text-xs mb-3">{reel.note}</p>
                   </div>
-                  <div className="flex items-center justify-between text-xs font-bold pt-2 border-t border-slate-800">
-                    <span className="flex items-center gap-1 text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">
+                  <div className="flex items-center justify-between text-xs font-bold pt-3 border-t border-slate-100">
+                    <span className="flex items-center gap-1 text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
                       <Eye size={12} /> {reel.views} Views
                     </span>
-                    <span className="flex items-center gap-1 text-pink-400 bg-pink-500/10 px-2.5 py-1 rounded-full border border-pink-500/20">
+                    <span className="flex items-center gap-1 text-pink-700 bg-pink-50 px-2.5 py-1 rounded-full border border-pink-200">
                       <Heart size={12} /> {reel.likes}
                     </span>
                   </div>

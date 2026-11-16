@@ -28,7 +28,7 @@ const problemCards = [
 
 export function ProblemDoctorGrowth() {
   return (
-    <section className="py-24 bg-white text-slate-900 border-b border-slate-100">
+    <section className="py-24 bg-white text-slate-900 border-b border-slate-200/80">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-6xl">
 
         {/* Section Header */}
@@ -62,10 +62,10 @@ export function ProblemDoctorGrowth() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 hover:shadow-lg hover:border-rose-200 transition-all group flex flex-col justify-between"
+              className="bg-slate-50/80 border border-slate-200 rounded-3xl p-6 hover:shadow-lg hover:border-rose-300 hover:bg-white transition-all group flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors shadow-sm">
                   <card.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">{card.title}</h3>
@@ -73,7 +73,7 @@ export function ProblemDoctorGrowth() {
                   {card.description}
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-bold text-rose-600">
+              <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-[11px] font-bold text-rose-600">
                 <span>REVENUE LEAKAGE</span>
                 <span>LOST PATIENTS →</span>
               </div>
@@ -81,21 +81,21 @@ export function ProblemDoctorGrowth() {
           ))}
         </div>
 
-        {/* Storytelling Highlight Box */}
+        {/* Storytelling Highlight Box (Light Theme Optimized) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-14 p-8 rounded-3xl bg-slate-950 text-white border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6"
+          className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-blue-50 via-indigo-50/70 to-emerald-50/70 text-slate-900 border border-blue-200/90 shadow-md flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white shadow-md shadow-blue-500/20 flex items-center justify-center shrink-0">
               <Users className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-white mb-1">Clinical Expertise Means Nothing If Patients Can&apos;t Find You</h4>
-              <p className="text-slate-400 text-xs sm:text-sm">
+              <h4 className="text-lg font-bold text-slate-900 mb-1">Clinical Expertise Means Nothing If Patients Can&apos;t Find You</h4>
+              <p className="text-slate-600 text-xs sm:text-sm">
                 You dedicated years to mastering medicine. We ensure your practice gets the digital trust and visibility it deserves.
               </p>
             </div>
@@ -105,7 +105,7 @@ export function ProblemDoctorGrowth() {
               href="https://doctor.epsilon-technology.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
+              className="px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
             >
               <BookOpen className="w-4 h-4" />
               <span>Doctor’s AI OPD Visibility Playbook</span>
@@ -113,7 +113,7 @@ export function ProblemDoctorGrowth() {
             </a>
             <a
               href="#free-diagnosis"
-              className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95 text-center"
+              className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-95 text-center"
             >
               Diagnose My Practice Visibility
             </a>

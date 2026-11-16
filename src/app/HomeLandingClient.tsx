@@ -23,7 +23,7 @@ export default function HomeLandingClient() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden">
       <main>
         {/* 1. Hero: Get Found. Get Trusted. Get More Patient Enquiries. */}
         <HeroDoctorGrowth onOpenDiagnosis={handleOpenDiagnosisModal} />
