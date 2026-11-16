@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, Shield, Clock, Stethoscope, ArrowRight, Loader2 } from 'lucide-react';
+import { X, CheckCircle, Shield, Clock, Stethoscope, ArrowRight, Loader2, Lock } from 'lucide-react';
 import { trackMetaCapiEvent } from '@/lib/meta-capi';
 
 interface LeadMagnetModalProps {
@@ -96,7 +96,7 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
+            className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"
           />
 
           {/* Modal Card */}
@@ -105,10 +105,10 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', duration: 0.4 }}
-            className="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden z-10 text-white"
+            className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden z-10 text-slate-900"
           >
             {/* Header / Banner */}
-            <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-600 p-6 md:p-8 relative">
+            <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-600 p-6 md:p-8 text-white relative">
               <button
                 onClick={onClose}
                 className="absolute top-4 right-4 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
@@ -129,19 +129,19 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
             </div>
 
             {/* Content */}
-            <div className="p-6 md:p-8">
+            <div className="p-6 md:p-8 bg-white">
               {submitted ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
+                <div className="text-center py-8 bg-emerald-50 rounded-2xl border border-emerald-200 p-6">
+                  <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-200">
                     <CheckCircle className="w-8 h-8" />
                   </div>
-                  <h4 className="text-2xl font-bold text-white mb-2">Diagnosis Request Confirmed!</h4>
-                  <p className="text-slate-300 text-sm max-w-md mx-auto mb-6">
+                  <h4 className="text-2xl font-black text-slate-900 mb-2">Diagnosis Request Confirmed!</h4>
+                  <p className="text-slate-600 text-sm max-w-md mx-auto mb-6">
                     Our Healthcare Growth Architect is auditing your practice. You will receive your custom 6-Point Visibility Diagnosis within 24 hours.
                   </p>
                   <button
                     onClick={onClose}
-                    className="px-6 py-3 bg-blue-600 hover:bg-blue-500 font-bold rounded-xl text-white text-xs uppercase tracking-wider transition-colors"
+                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 font-bold rounded-xl text-white text-xs uppercase tracking-wider transition-colors shadow-md"
                   >
                     Back to Epsilon Technology
                   </button>
@@ -150,47 +150,47 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Doctor / Clinic / Hospital Name *</label>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Doctor / Clinic / Hospital Name *</label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Dr. D.P. Vora / Rainbow Pedia"
-                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Phone / WhatsApp *</label>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Phone / WhatsApp *</label>
                       <input
                         type="tel"
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 98765 43210"
-                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">City / Location *</label>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">City / Location *</label>
                       <input
                         type="text"
                         required
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="e.g. Junagadh, Ahmedabad, Surat"
-                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Medical Specialty</label>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Medical Specialty</label>
                       <select
                         value={formData.specialty}
                         onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all"
                       >
                         <option value="Orthopedic & Spine">Orthopedic &amp; Spine</option>
                         <option value="Dermatology & Skin">Dermatology &amp; Skin</option>
@@ -205,13 +205,13 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">Website or Instagram Profile (Optional)</label>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Website or Instagram Profile (Optional)</label>
                     <input
                       type="text"
                       value={formData.websiteOrSocial}
                       onChange={(e) => setFormData({ ...formData, websiteOrSocial: e.target.value })}
                       placeholder="https://yourclinic.com or @yourinstagram"
-                      className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all"
                     />
                   </div>
 
@@ -219,7 +219,7 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 hover:from-blue-500 hover:to-sky-400 font-black text-white text-base rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 disabled:opacity-50"
+                      className="w-full py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-black text-white text-base rounded-xl transition-all shadow-xl shadow-blue-600/25 flex items-center justify-center gap-2 disabled:opacity-50 hover:scale-[1.01] active:scale-95"
                     >
                       {loading ? (
                         <>
@@ -227,17 +227,18 @@ export function LeadMagnetModal({ isOpen, onClose }: LeadMagnetModalProps) {
                         </>
                       ) : (
                         <>
-                          Get My Free Visibility Diagnosis <ArrowRight className="w-5 h-5" />
+                          <span>Get My Free Visibility Diagnosis</span>
+                          <ArrowRight className="w-5 h-5" />
                         </>
                       )}
                     </button>
 
-                    <div className="flex items-center justify-center gap-4 text-xs text-slate-400 font-medium pt-1">
+                    <div className="flex items-center justify-center gap-4 text-xs text-slate-500 font-semibold pt-1">
                       <span className="flex items-center gap-1">
-                        <Shield className="w-3.5 h-3.5 text-blue-400" /> Strict Confidentiality
+                        <Lock className="w-3.5 h-3.5 text-blue-600" /> Strict Confidentiality
                       </span>
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-emerald-400" /> 24-Hour Custom Audit
+                        <Clock className="w-3.5 h-3.5 text-emerald-600" /> 24-Hour Custom Audit
                       </span>
                     </div>
                   </div>
