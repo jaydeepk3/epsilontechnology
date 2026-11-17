@@ -43,11 +43,14 @@ const faqItems = [
 export default function FAQPage() {
     return (
         <main className="pt-20">
-            <section className="bg-slate-900 py-20 text-white">
+            <section className="bg-gradient-to-b from-blue-50/70 via-slate-50/40 to-white py-24 border-b border-slate-200/80 text-slate-900">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
-                    <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                        Everything you need to know about working with Epsilon Technology.
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider mb-6">
+                        Help &amp; Knowledge Base
+                    </div>
+                    <h1 className="text-4xl md:text-5xl font-black mb-6 text-slate-900 tracking-tight">Frequently Asked Questions</h1>
+                    <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                        Clear, transparent answers about our doctor marketing systems, ROI metrics, and partnership process.
                     </p>
                 </div>
             </section>

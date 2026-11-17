@@ -98,23 +98,23 @@ function FaqItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: index * 0.04 }}
             className={`rounded-2xl overflow-hidden transition-all duration-300 ${open
-                ? 'bg-slate-800 border border-blue-500/40 shadow-lg shadow-blue-500/10'
-                : 'bg-slate-800/60 border border-slate-700/60 hover:border-slate-600'
+                ? 'bg-blue-50/50 border border-blue-300 shadow-md shadow-blue-100'
+                : 'bg-white border border-slate-200 hover:border-blue-200'
                 }`}
         >
             <button
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center gap-4 px-5 py-4 text-left"
             >
-                <span className={`shrink-0 w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors ${open ? 'bg-blue-500 text-white' : 'bg-slate-700 text-slate-400'
+                <span className={`shrink-0 w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors ${open ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
                     }`}>
                     {String(index + 1).padStart(2, '0')}
                 </span>
-                <h3 className={`flex-1 text-sm md:text-base font-semibold leading-snug transition-colors ${open ? 'text-white' : 'text-slate-200'
+                <h3 className={`flex-1 text-sm md:text-base font-semibold leading-snug transition-colors ${open ? 'text-blue-950 font-bold' : 'text-slate-900'
                     }`}>
                     {faq.q}
                 </h3>
-                <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${open ? 'bg-blue-500/20 text-blue-400 rotate-180' : 'bg-slate-700 text-slate-400'
+                <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${open ? 'bg-blue-100 text-blue-600 rotate-180' : 'bg-slate-100 text-slate-500'
                     }`}>
                     <ChevronDown size={16} />
                 </div>
@@ -127,8 +127,8 @@ function FaqItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.22 }}
                     >
-                        <div className="px-5 pb-5 pt-1 border-t border-slate-700/60 ml-11">
-                            <p className="text-slate-300 text-sm leading-relaxed">{faq.a}</p>
+                        <div className="px-5 pb-5 pt-1 border-t border-blue-100/60 ml-11">
+                            <p className="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
                         </div>
                     </motion.div>
                 )}
@@ -331,18 +331,18 @@ export default function GujaratDoctorMarketingPage() {
             </section>
 
             {/* ── 2. Stats Bar ──────────────────────────────────────── */}
-            <section className="py-10 bg-slate-900">
+            <section className="py-10 bg-white border-y border-slate-200 shadow-sm">
                 <div className="max-w-4xl mx-auto px-4">
-                    <div className="grid grid-cols-2 md:grid-cols-4 divide-slate-700 md:divide-x">
+                    <div className="grid grid-cols-2 md:grid-cols-4 divide-slate-200 md:divide-x">
                         {stats.map((item, i) => {
                             const Icon = item.icon;
                             return (
                                 <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
                                     className="text-center py-5 px-4"
                                 >
-                                    <Icon size={18} className="text-blue-400 mx-auto mb-2" />
-                                    <div className="text-2xl md:text-3xl font-extrabold text-white">{item.value}</div>
-                                    <div className="text-slate-400 text-xs mt-1">{item.label}</div>
+                                    <Icon size={18} className="text-blue-600 mx-auto mb-2" />
+                                    <div className="text-2xl md:text-3xl font-extrabold text-slate-900">{item.value}</div>
+                                    <div className="text-slate-600 text-xs mt-1 font-medium">{item.label}</div>
                                 </motion.div>
                             );
                         })}
@@ -508,19 +508,19 @@ export default function GujaratDoctorMarketingPage() {
 
 
             {/* ── 8. FAQ ────────────────────────────────────────────── */}
-            <section className="py-20 px-4 bg-slate-900 relative overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/8 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-600/8 rounded-full blur-3xl pointer-events-none" />
+            <section className="py-20 px-4 bg-slate-50 relative overflow-hidden border-t border-slate-200/80">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="max-w-3xl mx-auto relative z-10">
                     <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-semibold text-xs uppercase tracking-widest mb-5">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-blue-700 font-semibold text-xs uppercase tracking-widest mb-5">
                             <Shield size={13} /> Common Questions from Gujarat Doctors
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
-                            Everything You Want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Know Before Starting</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3 leading-tight">
+                            Everything You Want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Know Before Starting</span>
                         </h2>
-                        <p className="text-slate-400 text-sm max-w-xl mx-auto">
+                        <p className="text-slate-600 text-sm max-w-xl mx-auto">
                             Honest answers — no fluff. We&apos;ve answered these same questions from 50+ doctors across Gujarat.
                         </p>
                     </motion.div>
@@ -531,18 +531,18 @@ export default function GujaratDoctorMarketingPage() {
 
                     <motion.div
                         initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                        className="mt-10 p-6 bg-slate-800/60 border border-slate-700/60 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-5"
+                        className="mt-10 p-6 bg-white border border-slate-200 shadow-sm rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-5"
                     >
                         <div>
-                            <p className="text-white font-semibold text-sm">Still have a question?</p>
-                            <p className="text-slate-400 text-xs mt-0.5">We reply on WhatsApp within 4 hours — guaranteed.</p>
+                            <p className="text-slate-900 font-semibold text-sm">Still have a question?</p>
+                            <p className="text-slate-500 text-xs mt-0.5">We reply on WhatsApp within 4 hours — guaranteed.</p>
                         </div>
                         <div className="flex gap-3 shrink-0">
                             <a href="#contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm px-5 py-3 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg">
                                 Book Free Call <ArrowRight size={15} />
                             </a>
                             <a href="https://wa.me/918160881461?text=Hi%20Epsilon%2C%20I%20am%20a%20Gujarat%20doctor%20and%20have%20a%20question" target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all"
+                                className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all shadow-md"
                             >
                                 <MessageCircle size={15} /> WhatsApp
                             </a>
@@ -552,16 +552,16 @@ export default function GujaratDoctorMarketingPage() {
             </section>
 
             {/* ── Regional City Centers ──────────────────────────────── */}
-            <section className="py-20 px-4 bg-slate-950 border-t border-slate-800 relative overflow-hidden">
+            <section className="py-20 px-4 bg-white border-t border-slate-200 relative overflow-hidden">
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-semibold text-xs uppercase tracking-widest mb-4">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-semibold text-xs uppercase tracking-widest mb-4">
                             <MapPin size={13} /> Local Practice Hubs
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-                            Specialized Doctor Marketing Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Gujarat Cities</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+                            Specialized Doctor Marketing Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Gujarat Cities</span>
                         </h2>
-                        <p className="text-slate-400 text-sm max-w-2xl mx-auto">
+                        <p className="text-slate-600 text-sm max-w-2xl mx-auto">
                             Every city in Gujarat has its own healthcare dynamics, competition levels, and patient expectations. Explore our localized marketing frameworks below:
                         </p>
                     </div>
@@ -614,17 +614,17 @@ export default function GujaratDoctorMarketingPage() {
                             <Link
                                 key={i}
                                 href={c.href}
-                                className="group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 flex flex-col justify-between"
+                                className="group p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
                             >
                                 <div>
                                     <div className="flex items-center justify-between mb-3">
-                                        <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20">{c.tag}</span>
-                                        <ArrowRight size={16} className="text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all" />
+                                        <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 border border-blue-200">{c.tag}</span>
+                                        <ArrowRight size={16} className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
                                     </div>
-                                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">{c.title}</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed">{c.desc}</p>
+                                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{c.title}</h3>
+                                    <p className="text-slate-600 text-xs leading-relaxed">{c.desc}</p>
                                 </div>
-                                <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center text-xs text-blue-400 font-semibold group-hover:underline">
+                                <div className="mt-4 pt-3 border-t border-slate-200 flex items-center text-xs text-blue-600 font-semibold group-hover:underline">
                                     Explore {c.city} Strategy →
                                 </div>
                             </Link>
@@ -632,12 +632,12 @@ export default function GujaratDoctorMarketingPage() {
                     </div>
 
                     {/* Regional Doctor Guides Strip */}
-                    <div className="mt-12 p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                    <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200">
                         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
-                            <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                            <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
                                 Doctor Marketing Blueprints & Local Practice Guides:
                             </span>
-                            <Link href="/blog/" className="text-xs text-blue-400 font-bold hover:underline inline-flex items-center gap-1">
+                            <Link href="/blog/" className="text-xs text-blue-600 font-bold hover:underline inline-flex items-center gap-1">
                                 All 15+ Guides <ArrowRight size={12} />
                             </Link>
                         </div>
@@ -658,7 +658,7 @@ export default function GujaratDoctorMarketingPage() {
                                 <Link
                                     key={i}
                                     href={g.href}
-                                    className="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-xs text-slate-300 hover:text-white border border-slate-700/60 transition-colors"
+                                    className="px-3 py-1.5 rounded-lg bg-white hover:bg-blue-50 text-xs text-slate-700 hover:text-blue-700 border border-slate-200 transition-colors shadow-sm"
                                 >
                                     {g.title}
                                 </Link>
@@ -669,46 +669,46 @@ export default function GujaratDoctorMarketingPage() {
             </section>
 
             {/* ── 9. Lead Form (Main CTA) ───────────────────────────── */}
-            <section id="contact" className="py-20 px-4 bg-slate-900 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+            <section id="contact" className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden border-t border-slate-200">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="max-w-5xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Left: Value Proposition */}
                         <div>
                             <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                                className="text-3xl md:text-4xl font-bold text-white mb-5 leading-snug"
+                                className="text-3xl md:text-4xl font-bold text-slate-900 mb-5 leading-snug"
                             >
                                 Ready to Fill Your Gujarat OPD with{' '}
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Real Patient Inquiries?</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Real Patient Inquiries?</span>
                             </motion.h2>
                             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                                className="text-slate-400 text-base mb-8"
+                                className="text-slate-600 text-base mb-8"
                             >
                                 Book a free 20-minute strategy call. We&apos;ll analyze your specialty, your local Gujarat competition, and show you exactly how we&apos;d grow your clinic — starting this month.
                             </motion.p>
                             <div className="space-y-4">
                                 {[
-                                    { icon: CheckCircle, color: "text-emerald-400", text: "Free analysis of your Instagram & Google presence" },
-                                    { icon: CheckCircle, color: "text-emerald-400", text: "Gujarat competitor map for your specialty" },
-                                    { icon: CheckCircle, color: "text-emerald-400", text: "Patient acquisition plan tailored to your Gujarat clinic" },
-                                    { icon: CheckCircle, color: "text-emerald-400", text: "No obligation — just real, actionable insights" },
+                                    { icon: CheckCircle, color: "text-emerald-500", text: "Free analysis of your Instagram & Google presence" },
+                                    { icon: CheckCircle, color: "text-emerald-500", text: "Gujarat competitor map for your specialty" },
+                                    { icon: CheckCircle, color: "text-emerald-500", text: "Patient acquisition plan tailored to your Gujarat clinic" },
+                                    { icon: CheckCircle, color: "text-emerald-500", text: "No obligation — just real, actionable insights" },
                                 ].map((b, i) => (
                                     <motion.div key={i} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                                         className="flex items-start gap-3"
                                     >
                                         <b.icon size={18} className={`${b.color} mt-0.5 shrink-0`} />
-                                        <span className="text-slate-300 text-sm">{b.text}</span>
+                                        <span className="text-slate-700 text-sm font-medium">{b.text}</span>
                                     </motion.div>
                                 ))}
                             </div>
 
                             {/* Alternative CTA */}
-                            <div className="mt-8 pt-8 border-t border-slate-800">
+                            <div className="mt-8 pt-8 border-t border-slate-200">
                                 <p className="text-slate-500 text-xs mb-3">Prefer to talk directly?</p>
                                 <a href="https://wa.me/918160881461?text=Hi%20Epsilon%2C%20I%20am%20a%20Gujarat%20doctor%20and%20want%20to%20grow%20my%20clinic" target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all"
+                                    className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all shadow-md"
                                 >
                                     <MessageCircle size={16} /> WhatsApp Us Now
                                 </a>
@@ -717,7 +717,7 @@ export default function GujaratDoctorMarketingPage() {
 
                         {/* Right: Form */}
                         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                            className="bg-white rounded-3xl p-8 shadow-2xl"
+                            className="bg-white rounded-3xl p-8 shadow-xl border border-slate-200/80"
                         >
                             <div className="mb-6">
                                 <h3 className="text-xl font-bold text-slate-900 mb-1">Claim My Free Gujarat Growth Plan</h3>

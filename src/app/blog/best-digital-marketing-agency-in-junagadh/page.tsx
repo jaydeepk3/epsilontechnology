@@ -420,10 +420,10 @@ export default function BlogPostBestAgencyJunagadh() {
                           </div>
                         </div>
 
-                        <div className="bg-slate-900 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-6 group/follow">
-                          <div className="text-sky-400 font-black text-xs uppercase tracking-widest shrink-0">Ask them this:</div>
-                          <div className="text-white font-bold text-lg italic">"{item.follow}"</div>
-                          <div className="ml-auto w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white transition-transform group-hover/follow:translate-x-2">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50/70 border border-blue-200/90 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-6 group/follow shadow-sm">
+                          <div className="text-blue-700 font-black text-xs uppercase tracking-widest shrink-0">Ask them this:</div>
+                          <div className="text-slate-900 font-bold text-lg italic">"{item.follow}"</div>
+                          <div className="ml-auto w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-transform group-hover/follow:translate-x-2 shadow-sm">
                             <ArrowRight size={18} />
                           </div>
                         </div>
@@ -437,13 +437,13 @@ export default function BlogPostBestAgencyJunagadh() {
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-8 my-16">
-                    <div className="p-10 rounded-[40px] bg-slate-900 text-white">
-                      <h4 className="text-sky-400 font-black uppercase tracking-widest text-sm mb-6">Local Junagadh Agency</h4>
-                      <ul className="space-y-4 text-slate-300 font-medium">
-                        <li className="flex gap-3"><CheckCircle2 className="text-sky-400 shrink-0" size={20} /> Deep understanding of the local Junagadh market</li>
-                        <li className="flex gap-3"><CheckCircle2 className="text-sky-400 shrink-0" size={20} /> Can meet in person at your office or theirs</li>
-                        <li className="flex gap-3"><CheckCircle2 className="text-sky-400 shrink-0" size={20} /> Familiar with local seasonal patterns (Navratri etc.)</li>
-                        <li className="flex gap-3"><CheckCircle2 className="text-sky-400 shrink-0" size={20} /> Pricing aligned with Saurashtra business budgets</li>
+                    <div className="p-10 rounded-[40px] bg-gradient-to-br from-blue-50 to-emerald-50/50 border-2 border-blue-200 text-slate-900 shadow-sm">
+                      <h4 className="text-blue-700 font-black uppercase tracking-widest text-sm mb-6">Local Junagadh Agency</h4>
+                      <ul className="space-y-4 text-slate-700 font-medium">
+                        <li className="flex gap-3"><CheckCircle2 className="text-emerald-600 shrink-0" size={20} /> Deep understanding of the local Junagadh market</li>
+                        <li className="flex gap-3"><CheckCircle2 className="text-emerald-600 shrink-0" size={20} /> Can meet in person at your office or theirs</li>
+                        <li className="flex gap-3"><CheckCircle2 className="text-emerald-600 shrink-0" size={20} /> Familiar with local seasonal patterns (Navratri etc.)</li>
+                        <li className="flex gap-3"><CheckCircle2 className="text-emerald-600 shrink-0" size={20} /> Pricing aligned with Saurashtra business budgets</li>
                       </ul>
                     </div>
                     <div className="p-10 rounded-[40px] bg-slate-50 border border-slate-200">
@@ -520,7 +520,7 @@ export default function BlogPostBestAgencyJunagadh() {
                         Apply the 8-point checklist to us. Book a free 30-minute audit and see why we are considered a <strong>top digital marketing company Junagadh</strong> businesses trust.
                       </p>
                       <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link href="/contacts/" className="inline-flex items-center gap-3 px-12 py-6 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-sky-600 transition-all shadow-xl hover:shadow-sky-200 group">
+                        <Link href="/contacts/" className="inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black uppercase tracking-widest text-sm hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xl hover:shadow-blue-200 group">
                           Book a Free Consultation <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                       </div>
@@ -584,12 +584,12 @@ export default function BlogPostBestAgencyJunagadh() {
                 </div>
 
                 {/* Sticky CTA Card */}
-                <div className="p-10 rounded-[48px] bg-slate-900 text-white relative overflow-hidden group shadow-2xl shadow-indigo-200">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                  <TrendingUp className="text-sky-400 mb-8" size={48} />
-                  <h4 className="text-2xl font-black mb-6 leading-tight">Ready for Real<br />Results?</h4>
-                  <p className="text-slate-400 text-base mb-10 leading-relaxed font-medium">Get a free digital audit of your Junagadh business. No fluff, just a clear plan for growth.</p>
-                  <Link href="/contacts/" className="inline-flex items-center justify-center w-full py-5 bg-sky-600 text-white rounded-3xl font-black text-sm uppercase tracking-widest hover:bg-sky-500 transition-all shadow-xl shadow-sky-900/40">
+                <div className="p-10 rounded-[48px] bg-gradient-to-b from-blue-50 to-indigo-50/60 border border-blue-200/90 text-slate-900 relative overflow-hidden group shadow-sm">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                  <TrendingUp className="text-blue-600 mb-8" size={48} />
+                  <h4 className="text-2xl font-black mb-6 leading-tight text-slate-900">Ready for Real<br />Results?</h4>
+                  <p className="text-slate-600 text-base mb-10 leading-relaxed font-medium">Get a free digital audit of your Junagadh business. No fluff, just a clear plan for growth.</p>
+                  <Link href="/contacts/" className="inline-flex items-center justify-center w-full py-5 bg-blue-600 text-white rounded-3xl font-black text-sm uppercase tracking-widest hover:bg-blue-700 transition-all shadow-md">
                     Get Free Audit <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </div>

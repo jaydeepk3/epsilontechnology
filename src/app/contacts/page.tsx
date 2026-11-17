@@ -71,31 +71,31 @@ export default function ContactPage() {
             />
 
             {/* Hero Section */}
-            <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-sky-900/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+            <section className="bg-gradient-to-b from-blue-50/70 via-slate-50/40 to-white pt-32 pb-24 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-blue-400/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-3xl">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">Let&apos;s Build Something <span className="text-sky-400">Great Together</span></h1>
-                        <p className="text-xl text-slate-400 mb-8 leading-relaxed">
-                            Have a project in mind? Looking to scale your existing digital product? Our global team is ready to help you navigate the technical landscape.
+                        <h1 className="text-4xl md:text-6xl font-black mb-6 text-slate-950 tracking-tight">Let&apos;s Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600">Great Together</span></h1>
+                        <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
+                            Have a project in mind? Looking to scale your existing digital product or medical practice? Our global team is ready to help you navigate the technical and growth landscape.
                         </p>
                         <div className="flex flex-wrap gap-6">
                             <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sky-400">
+                                <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 shadow-sm">
                                     <Clock size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-slate-400">Response Time</p>
-                                    <p className="font-semibold text-white">Under 24 Hours</p>
+                                    <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Response Time</p>
+                                    <p className="font-extrabold text-slate-900 text-sm">Under 24 Hours</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400">
+                                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shadow-sm">
                                     <MessageSquare size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-slate-400">Direct Chat</p>
-                                    <p className="font-semibold text-white">Available on WhatsApp</p>
+                                    <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Direct Chat</p>
+                                    <p className="font-extrabold text-slate-900 text-sm">Available on WhatsApp</p>
                                 </div>
                             </div>
                         </div>

@@ -231,16 +231,16 @@ export default function OrthopedicDoctorGuide() {
                             This "authority bias" is a cornerstone of successful <strong>digital marketing for orthopedic doctors</strong>. It transforms you from just another option into the definitive expert for their specific problem.
                         </p>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 blur-3xl -translate-y-1/2 translate-x-1/2" />
+                        <div className="my-16 p-8 bg-gradient-to-r from-blue-50 via-indigo-50/70 to-emerald-50/70 rounded-3xl text-slate-900 border border-blue-200/90 shadow-md relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-48 h-48 bg-blue-400/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                             <div className="relative z-10">
-                                <h3 className="text-2xl font-bold mb-4">Summary for Orthopedic Professionals</h3>
-                                <p className="text-slate-400 mb-8 leading-relaxed">
+                                <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Orthopedic Professionals</h3>
+                                <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                     A successful digital strategy for an orthopedic clinic is built on trust, transparency, and local visibility. By focusing on educational content and dominating local search results, you can build a sustainable pipeline of high-value surgical cases.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
-                                    <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-sm font-bold transition-colors">Junagadh Specialist Marketing</Link>
-                                    <Link href="/doctor-marketing-in-rajkot/" className="border border-slate-700 hover:bg-slate-900 px-6 py-2 rounded-full text-sm font-bold transition-colors">Rajkot Growth Strategy</Link>
+                                    <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm">Junagadh Specialist Marketing</Link>
+                                    <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-600 px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-2xs">Rajkot Growth Strategy</Link>
                                 </div>
                             </div>
                         </div>

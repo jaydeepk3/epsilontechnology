@@ -134,14 +134,14 @@ export default function SurgeonDoctorGuide() {
                             <li><strong>Ignoring the 'Why':</strong> Only talking about what you do, rather than why it helps the patient return to their normal life quickly.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white">
-                            <h3 className="text-2xl font-bold mb-4">Summary for Professional Surgeons</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
+                        <div className="my-16 p-8 bg-gradient-to-r from-blue-50 via-indigo-50/70 to-emerald-50/70 rounded-3xl text-slate-900 border border-blue-200/90 shadow-md">
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Professional Surgeons</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                 Establish your clinical authority online. By providing clarity on complex procedures and building trust through authentic patient feedback, you can grow a surgical practice that is respected and highly visible.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh General Surgery Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Surgeon SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition-colors shadow-sm">Junagadh General Surgery Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-600 px-6 py-2.5 rounded-full transition-colors shadow-2xs">Rajkot Surgeon SEO</Link>
                             </div>
                         </div>
                     </div>

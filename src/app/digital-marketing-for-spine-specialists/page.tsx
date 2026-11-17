@@ -204,14 +204,14 @@ export default function SpineSpecialistGuide() {
                             <li><strong>Generic Websites:</strong> A spine clinic website must look professional, medical, and authoritative. A cheap-looking site is a major trust-killer.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white">
-                            <h3 className="text-2xl font-bold mb-4">Summary for Leading Spine Specialists</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
-                                Control the digital narrative. By providing clarity on complex procedures and building trust through authentic patient outcomes, you can build a practice that is the 'First Choice' for spine care in your region.
+                        <div className="my-16 p-8 bg-gradient-to-r from-blue-50 via-indigo-50/70 to-emerald-50/70 rounded-3xl text-slate-900 border border-blue-200/90 shadow-md">
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Leading Spine Specialists</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
+                                Control the digital narrative. By providing clarity on complex procedures and building trust through authentic patient outcomes, you can build a practice that is the &apos;First Choice&apos; for spine care in your region.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh Spine Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Spine Clinic SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition-colors shadow-sm">Junagadh Spine Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-600 px-6 py-2.5 rounded-full transition-colors shadow-2xs">Rajkot Spine Clinic SEO</Link>
                             </div>
                         </div>
                     </div>

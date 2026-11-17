@@ -205,14 +205,14 @@ export default function DermatologistGuide() {
                             <li><strong>Slow Website Speeds:</strong> High-intent patients will not wait for a heavy, unoptimized site to load.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white">
-                            <h3 className="text-2xl font-bold mb-4">Summary for Leading Dermatologists</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
+                        <div className="my-16 p-8 bg-gradient-to-r from-blue-50 via-indigo-50/70 to-emerald-50/70 rounded-3xl text-slate-900 border border-blue-200/90 shadow-md">
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Leading Dermatologists</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                 Build a practice that shines online. By combining visual proof with technical SEO and a strong local reputation, you can build a premium brand that attracts patients who value quality care over the cheapest price.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 hover:underline">Junagadh Derma Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 hover:underline">Rajkot Skin Clinic SEO</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition-colors shadow-sm">Junagadh Derma Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-600 px-6 py-2.5 rounded-full transition-colors shadow-2xs">Rajkot Skin Clinic SEO</Link>
                             </div>
                         </div>
                     </div>

@@ -106,23 +106,23 @@ function FaqItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
       viewport={{ once: true }}
       transition={{ duration: 0.35, delay: index * 0.04 }}
       className={`rounded-2xl overflow-hidden transition-all duration-300 ${open
-        ? 'bg-slate-800 border border-blue-500/40 shadow-lg shadow-blue-500/10'
-        : 'bg-slate-800/60 border border-slate-700/60 hover:border-slate-600'
+        ? 'bg-blue-50/50 border border-blue-300 shadow-md shadow-blue-100'
+        : 'bg-white border border-slate-200 hover:border-blue-200'
         }`}
     >
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center gap-4 px-5 py-4 text-left"
       >
-        <span className={`shrink-0 w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors ${open ? 'bg-blue-500 text-white' : 'bg-slate-700 text-slate-400'
+        <span className={`shrink-0 w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors ${open ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
           }`}>
           {String(index + 1).padStart(2, '0')}
         </span>
-        <h3 className={`flex-1 text-sm md:text-base font-semibold leading-snug transition-colors ${open ? 'text-white' : 'text-slate-200'
+        <h3 className={`flex-1 text-sm md:text-base font-semibold leading-snug transition-colors ${open ? 'text-blue-950 font-bold' : 'text-slate-900'
           }`}>
           {faq.q}
         </h3>
-        <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${open ? 'bg-blue-500/20 text-blue-400 rotate-180' : 'bg-slate-700 text-slate-400'
+        <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${open ? 'bg-blue-100 text-blue-600 rotate-180' : 'bg-slate-100 text-slate-500'
           }`}>
           <ChevronDown size={16} />
         </div>
@@ -135,8 +135,8 @@ function FaqItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.22 }}
           >
-            <div className="px-5 pb-5 pt-1 border-t border-slate-700/60 ml-11">
-              <p className="text-slate-300 text-sm leading-relaxed">{faq.a}</p>
+            <div className="px-5 pb-5 pt-1 border-t border-blue-100/60 ml-11">
+              <p className="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
             </div>
           </motion.div>
         )}
@@ -337,18 +337,18 @@ export default function LeadGenerationPage() {
       </section>
 
       {/* ── 2. Stats Bar ──────────────────────────────────────── */}
-      <section className="py-10 bg-slate-900">
+      <section className="py-10 bg-white border-y border-slate-200 shadow-sm">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-slate-700 md:divide-x">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-slate-200 md:divide-x">
             {stats.map((item, i) => {
               const Icon = item.icon;
               return (
                 <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="text-center py-5 px-4"
                 >
-                  <Icon size={18} className="text-blue-400 mx-auto mb-2" />
-                  <div className="text-2xl md:text-3xl font-extrabold text-white">{item.value}</div>
-                  <div className="text-slate-400 text-xs mt-1">{item.label}</div>
+                  <Icon size={18} className="text-blue-600 mx-auto mb-2" />
+                  <div className="text-2xl md:text-3xl font-extrabold text-slate-900">{item.value}</div>
+                  <div className="text-slate-600 text-xs mt-1 font-medium">{item.label}</div>
                 </motion.div>
               );
             })}
@@ -543,17 +543,17 @@ export default function LeadGenerationPage() {
 
 
       {/* ── 8. FAQ ────────────────────────────────────────────── */}
-      <section className="py-20 px-4 bg-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/8 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-600/8 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-20 px-4 bg-slate-50 relative overflow-hidden border-t border-slate-200/80">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-3xl mx-auto relative z-10">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-semibold text-xs uppercase tracking-widest mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-blue-700 font-semibold text-xs uppercase tracking-widest mb-5">
               <Shield size={13} /> Common Questions
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
-              Everything You Want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Know Before Starting</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3 leading-tight">
+              Everything You Want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Know Before Starting</span>
             </h2>
           </motion.div>
 
@@ -563,18 +563,18 @@ export default function LeadGenerationPage() {
 
           <motion.div
             initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="mt-10 p-6 bg-slate-800/60 border border-slate-700/60 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-5"
+            className="mt-10 p-6 bg-white border border-slate-200 shadow-sm rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-5"
           >
             <div>
-              <p className="text-white font-semibold text-sm">Still have a question not listed here?</p>
-              <p className="text-slate-400 text-xs mt-0.5">We reply on WhatsApp within 4 hours — guaranteed.</p>
+              <p className="text-slate-900 font-semibold text-sm">Still have a question not listed here?</p>
+              <p className="text-slate-500 text-xs mt-0.5">We reply on WhatsApp within 4 hours — guaranteed.</p>
             </div>
             <div className="flex gap-3 shrink-0">
               <a href="#contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm px-5 py-3 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg">
                 Book Free Call <ArrowRight size={15} />
               </a>
               <a href="https://wa.me/918160881461" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all"
+                className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all shadow-md"
               >
                 <MessageCircle size={15} /> WhatsApp
               </a>
@@ -584,46 +584,46 @@ export default function LeadGenerationPage() {
       </section>
 
       {/* ── 9. Lead Form (Main CTA) ───────────────────────────── */}
-      <section id="contact" className="py-20 px-4 bg-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      <section id="contact" className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden border-t border-slate-200">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Value Proposition */}
             <div>
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                className="text-3xl md:text-4xl font-bold text-white mb-5 leading-snug"
+                className="text-3xl md:text-4xl font-bold text-slate-900 mb-5 leading-snug"
               >
                 Ready to Drive Actual Sales &<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Qualified leads?</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Qualified leads?</span>
               </motion.h2>
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="text-slate-400 text-base mb-8"
+                className="text-slate-600 text-base mb-8"
               >
                 Book a free strategy call. We&apos;ll analyze your industry, audience, and competition — then show you exactly how we&apos;d grow your revenue.
               </motion.p>
               <div className="space-y-4">
                 {[
-                  { icon: CheckCircle, color: "text-emerald-400", text: "Free analysis of your Digital Presence" },
-                  { icon: CheckCircle, color: "text-emerald-400", text: "Competitor map for your market" },
-                  { icon: CheckCircle, color: "text-emerald-400", text: "Lead acquisition plan customized for your brand" },
-                  { icon: CheckCircle, color: "text-emerald-400", text: "No obligation — just actionable insights" },
+                  { icon: CheckCircle, color: "text-emerald-500", text: "Free analysis of your Digital Presence" },
+                  { icon: CheckCircle, color: "text-emerald-500", text: "Competitor map for your market" },
+                  { icon: CheckCircle, color: "text-emerald-500", text: "Lead acquisition plan customized for your brand" },
+                  { icon: CheckCircle, color: "text-emerald-500", text: "No obligation — just actionable insights" },
                 ].map((b, i) => (
                   <motion.div key={i} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                     className="flex items-start gap-3"
                   >
                     <b.icon size={18} className={`${b.color} mt-0.5 shrink-0`} />
-                    <span className="text-slate-300 text-sm">{b.text}</span>
+                    <span className="text-slate-700 text-sm font-medium">{b.text}</span>
                   </motion.div>
                 ))}
               </div>
 
               {/* Alternative CTA */}
-              <div className="mt-8 pt-8 border-t border-slate-800">
+              <div className="mt-8 pt-8 border-t border-slate-200">
                 <p className="text-slate-500 text-xs mb-3">Prefer to talk directly?</p>
                 <a href="https://wa.me/918160881461" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all"
+                  className="inline-flex items-center gap-2 bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-600 transition-all shadow-md"
                 >
                   <MessageCircle size={16} /> WhatsApp Us Now
                 </a>
@@ -632,7 +632,7 @@ export default function LeadGenerationPage() {
 
             {/* Right: Form */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-2xl"
+              className="bg-white rounded-3xl p-8 shadow-xl border border-slate-200/80"
             >
               <div className="mb-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-1">Claim My Free Growth Strategy</h3>

@@ -257,10 +257,10 @@ export default function BlogPostCostJunagadh() {
                   <p>SEO is your long-term engine for organic growth on Google.</p>
                   <div className="overflow-x-auto my-10 rounded-[32px] border border-slate-100">
                     <table className="w-full text-left border-collapse m-0">
-                      <thead className="bg-slate-900 text-white">
+                      <thead className="bg-slate-100 text-slate-800 border-b border-slate-200">
                         <tr>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Tier</th>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Monthly Cost</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Tier</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Monthly Cost</th>
                           <th className="p-6 font-black uppercase tracking-widest text-xs">What's Included</th>
                         </tr>
                       </thead>
@@ -290,10 +290,10 @@ export default function BlogPostCostJunagadh() {
                   <h3 id="social">Social Media Marketing Cost in Junagadh</h3>
                   <div className="overflow-x-auto my-10 rounded-[32px] border border-slate-100">
                     <table className="w-full text-left border-collapse m-0">
-                      <thead className="bg-slate-900 text-white">
+                      <thead className="bg-slate-100 text-slate-800 border-b border-slate-200">
                         <tr>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Tier</th>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Monthly Cost</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Tier</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Monthly Cost</th>
                           <th className="p-6 font-black uppercase tracking-widest text-xs">What's Included</th>
                         </tr>
                       </thead>
@@ -322,10 +322,10 @@ export default function BlogPostCostJunagadh() {
                   <p>Management fee (agency) vs. Ad spend (Google) are separate.</p>
                   <div className="overflow-x-auto my-10 rounded-[32px] border border-slate-100">
                     <table className="w-full text-left border-collapse m-0">
-                      <thead className="bg-slate-900 text-white">
+                      <thead className="bg-slate-100 text-slate-800 border-b border-slate-200">
                         <tr>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Tier</th>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Mgmt Fee</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Tier</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Mgmt Fee</th>
                           <th className="p-6 font-black uppercase tracking-widest text-xs">Min. Ad Spend</th>
                         </tr>
                       </thead>
@@ -352,10 +352,10 @@ export default function BlogPostCostJunagadh() {
                   <h3 id="website">Website Development Cost in Junagadh</h3>
                   <div className="overflow-x-auto my-10 rounded-[32px] border border-slate-100">
                     <table className="w-full text-left border-collapse m-0">
-                      <thead className="bg-slate-900 text-white">
+                      <thead className="bg-slate-100 text-slate-800 border-b border-slate-200">
                         <tr>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Type</th>
-                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-800">Cost Range</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Type</th>
+                          <th className="p-6 font-black uppercase tracking-widest text-xs border-r border-slate-200">Cost Range</th>
                           <th className="p-6 font-black uppercase tracking-widest text-xs">Timeline</th>
                         </tr>
                       </thead>
@@ -409,7 +409,7 @@ export default function BlogPostCostJunagadh() {
                         Ready to stop<br /><span className="text-sky-600 underline decoration-sky-100 underline-offset-8">guessing budgets?</span>
                       </h2>
                       <p className="text-slate-500 text-lg mb-12 max-w-lg mx-auto relative z-10">Get a free 30-minute audit of your current online presence. No pressure, just data.</p>
-                      <Link href="/contacts/" className="inline-flex items-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest text-sm hover:bg-sky-600 transition-all shadow-xl hover:shadow-sky-200">
+                      <Link href="/contacts/" className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-black uppercase tracking-widest text-sm hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xl hover:shadow-blue-200">
                         Claim Your Free Audit <ArrowRight size={20} />
                       </Link>
                     </div>
@@ -445,11 +445,11 @@ export default function BlogPostCostJunagadh() {
                   </nav>
                 </div>
 
-                <div className="p-8 rounded-[32px] bg-slate-900 text-white relative overflow-hidden group shadow-2xl">
-                  <Calculator className="text-sky-400 mb-6" size={40} />
-                  <h4 className="text-xl font-bold mb-4">Want a Custom Quote?</h4>
-                  <p className="text-slate-400 text-sm mb-10 leading-relaxed">Tell us your goals and we'll calculate a custom ROI-focused budget for your Junagadh business.</p>
-                  <Link href="/contacts/" className="inline-flex items-center justify-center w-full py-4 bg-sky-600 text-white rounded-2xl font-bold text-sm hover:bg-sky-500 transition-all">
+                <div className="p-8 rounded-[32px] bg-gradient-to-b from-blue-50 to-indigo-50/60 border border-blue-200/90 text-slate-900 relative overflow-hidden group shadow-sm">
+                  <Calculator className="text-blue-600 mb-6" size={40} />
+                  <h4 className="text-xl font-bold mb-4 text-slate-900">Want a Custom Quote?</h4>
+                  <p className="text-slate-600 text-sm mb-10 leading-relaxed">Tell us your goals and we'll calculate a custom ROI-focused budget for your Junagadh business.</p>
+                  <Link href="/contacts/" className="inline-flex items-center justify-center w-full py-4 bg-blue-600 text-white rounded-2xl font-bold text-sm hover:bg-blue-700 transition-all shadow-md">
                     Contact Us <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </div>

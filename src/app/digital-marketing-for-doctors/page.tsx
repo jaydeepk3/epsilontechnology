@@ -296,17 +296,17 @@ export default function DigitalMarketingForDoctorsGuide() {
             <FAQ customFaqs={guideFaqs} />
 
             {/* Closing Section */}
-            <section className="py-24 bg-slate-950 text-white">
+            <section className="py-24 bg-gradient-to-b from-slate-50 to-white text-slate-900 border-t border-slate-200">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">Continuing Your Digital Journey</h2>
-                    <p className="text-xl text-slate-400 leading-relaxed mb-12">
+                    <h2 className="text-3xl md:text-4xl font-black text-slate-950 mb-8 tracking-tight">Continuing Your Digital Journey</h2>
+                    <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-12 font-medium">
                         At Epsilon Technology, we believe that every doctor should have a digital presence they can be proud of. Based in Junagadh, Gujarat, we specialize in helping healthcare professionals across Saurashtra navigate the complexities of <strong>digital marketing for doctors</strong>. Our goal is to handle the technical landscape so you can focus on what matters most: your patients.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link href="/" className="px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link href="/" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-2xl font-bold shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.02] active:scale-95">
                             Explore All Services
                         </Link>
-                        <Link href="/about-us/" className="px-8 py-4 border border-slate-700 text-slate-300 rounded-full font-bold hover:bg-slate-900 transition-colors">
+                        <Link href="/about-us/" className="px-8 py-4 bg-white border border-slate-200 text-slate-800 rounded-2xl font-bold hover:bg-slate-50 transition-colors shadow-sm">
                             Meet Our Founder
                         </Link>
                     </div>

@@ -203,14 +203,14 @@ export default function AyurvedaDoctorGuide() {
                             <li><strong>Ignoring Modern Jargon:</strong> While using Sanskrit terms is important for authenticity, you must translate them into modern health terms that patients understand.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white">
-                            <h3 className="text-2xl font-bold mb-4">Summary for Professional Ayurvedic Doctors</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
+                        <div className="my-16 p-8 bg-gradient-to-r from-emerald-50 via-teal-50/70 to-blue-50/70 rounded-3xl text-slate-900 border border-emerald-200/90 shadow-md">
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Professional Ayurvedic Doctors</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                 Build a brand that heals. By combining your clinical wisdom with a dominant digital presence, you can reach more patients and help them discover the sustainable path to health.
                             </p>
                             <div className="flex gap-4 text-sm font-bold">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-green-400 hover:underline">Junagadh Ayurveda Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-green-400 hover:underline">Rajkot Ayurveda Growth</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full transition-colors shadow-sm">Junagadh Ayurveda Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-emerald-400 hover:text-emerald-700 px-6 py-2.5 rounded-full transition-colors shadow-2xs">Rajkot Ayurveda Growth</Link>
                             </div>
                         </div>
                     </div>

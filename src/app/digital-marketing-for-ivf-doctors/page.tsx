@@ -191,14 +191,14 @@ export default function IVFDoctorGuide() {
                             <li><strong>Ignoring the Male Partner:</strong> Infertility is a couple's journey, but many websites only address women.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white">
-                            <h3 className="text-2xl font-bold mb-4">Summary for Fertility Specialists</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
+                        <div className="my-16 p-8 bg-gradient-to-r from-purple-50 via-indigo-50/70 to-blue-50/70 rounded-3xl text-slate-900 border border-purple-200/90 shadow-md">
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Fertility Specialists</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                 The journey to parenthood is deeply personal. Your digital marketing should reflect that. By providing clarity, education, and empathy, you can build a digital presence that truly supports your patients.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-purple-400 font-bold hover:underline">Junagadh IVF Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-purple-400 font-bold hover:underline">Rajkot IVF Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm">Junagadh IVF Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-purple-400 hover:text-purple-600 px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-2xs">Rajkot IVF Marketing</Link>
                             </div>
                         </div>
                     </div>

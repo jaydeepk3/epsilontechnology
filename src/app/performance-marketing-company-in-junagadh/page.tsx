@@ -321,7 +321,7 @@ export default function PerformanceMarketingJunagadhPage() {
             </div>
 
             {/* Featured Image */}
-            <div className="max-w-4xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-900 group">
+            <div className="max-w-4xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-white group">
               <div className="relative aspect-[16/9] w-full">
                 <Image
                   src="/performance_marketing_company_junagadh_featured.webp"
@@ -331,9 +331,9 @@ export default function PerformanceMarketingJunagadhPage() {
                   priority
                 />
               </div>
-              <div className="p-4 bg-slate-900/90 border-t border-slate-800 text-slate-300 text-xs flex items-center justify-between">
+              <div className="p-4 bg-slate-50 border-t border-slate-200 text-slate-700 text-xs flex items-center justify-between">
                 <span>Figure 1.0: Real-time Performance Marketing Analytics Dashboard by Epsilon Technology Junagadh</span>
-                <span className="text-sky-400 font-semibold flex items-center gap-1"><Activity size={12} /> Lead & Revenue Tracking</span>
+                <span className="text-sky-700 font-semibold flex items-center gap-1"><Activity size={12} /> Lead & Revenue Tracking</span>
               </div>
             </div>
 
@@ -623,37 +623,37 @@ export default function PerformanceMarketingJunagadhPage() {
                   </div>
 
                   {/* Visual Funnel Diagram */}
-                  <div className="bg-slate-900 text-white p-8 rounded-3xl my-10 shadow-2xl">
-                    <h3 className="text-xl font-bold mb-2 text-center text-sky-400">The Performance Acquisition Funnel</h3>
-                    <p className="text-xs text-slate-400 text-center mb-8">How random social media users become revenue in your bank account</p>
+                  <div className="bg-gradient-to-b from-slate-50 to-blue-50/40 text-slate-900 p-8 rounded-3xl my-10 border border-slate-200/90 shadow-sm">
+                    <h3 className="text-xl font-bold mb-2 text-center text-slate-900">The Performance Acquisition Funnel</h3>
+                    <p className="text-xs text-slate-600 text-center mb-8">How targeted social media users become verified revenue in your bank account</p>
 
                     <div className="max-w-xl mx-auto space-y-3 font-mono text-xs">
-                      <div className="bg-sky-600/90 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between">
+                      <div className="bg-sky-600 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between shadow-sm">
                         <span>1. PAID AD (Meta / Google)</span>
-                        <span className="text-sky-200 text-[10px]">Targeted Impression</span>
+                        <span className="text-sky-100 text-[10px]">Targeted Impression</span>
                       </div>
-                      <div className="text-center text-sky-400 font-bold">↓</div>
-                      <div className="bg-sky-700/90 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between">
+                      <div className="text-center text-sky-600 font-bold">↓</div>
+                      <div className="bg-sky-700 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between shadow-sm">
                         <span>2. HIGH-CONVERTING LANDING PAGE</span>
-                        <span className="text-sky-200 text-[10px]">Offer & Trust Proof</span>
+                        <span className="text-sky-100 text-[10px]">Offer & Trust Proof</span>
                       </div>
-                      <div className="text-center text-sky-400 font-bold">↓</div>
-                      <div className="bg-indigo-600/90 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between">
+                      <div className="text-center text-sky-600 font-bold">↓</div>
+                      <div className="bg-indigo-600 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between shadow-sm">
                         <span>3. VERIFIED LEAD CAPTURE</span>
-                        <span className="text-indigo-200 text-[10px]">Phone & Inquiry</span>
+                        <span className="text-indigo-100 text-[10px]">Phone & Inquiry</span>
                       </div>
-                      <div className="text-center text-indigo-400 font-bold">↓</div>
-                      <div className="bg-indigo-700/90 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between">
+                      <div className="text-center text-indigo-600 font-bold">↓</div>
+                      <div className="bg-indigo-700 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between shadow-sm">
                         <span>4. INSTANT WHATSAPP / CALL FOLLOW-UP</span>
-                        <span className="text-indigo-200 text-[10px]">Instant Contact (&lt;5 min)</span>
+                        <span className="text-indigo-100 text-[10px]">Instant Contact (&lt;5 min)</span>
                       </div>
-                      <div className="text-center text-indigo-400 font-bold">↓</div>
-                      <div className="bg-emerald-600/90 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between">
+                      <div className="text-center text-indigo-600 font-bold">↓</div>
+                      <div className="bg-emerald-600 text-white p-3.5 rounded-xl text-center font-bold tracking-wider flex items-center justify-between shadow-sm">
                         <span>5. CLOSED SALE / APPOINTMENT</span>
-                        <span className="text-emerald-200 text-[10px]">Customer Acquisition</span>
+                        <span className="text-emerald-100 text-[10px]">Customer Acquisition</span>
                       </div>
-                      <div className="text-center text-emerald-400 font-bold">↓</div>
-                      <div className="bg-emerald-500 text-slate-950 p-4 rounded-xl text-center font-black tracking-widest text-sm shadow-lg shadow-emerald-900/50">
+                      <div className="text-center text-emerald-600 font-bold">↓</div>
+                      <div className="bg-emerald-600 text-white p-4 rounded-xl text-center font-black tracking-widest text-sm shadow-md">
                         6. MEASURABLE REVENUE & PROFIT
                       </div>
                     </div>
@@ -676,9 +676,9 @@ export default function PerformanceMarketingJunagadhPage() {
                   <div className="overflow-x-auto my-8 border border-slate-200 rounded-2xl shadow-sm">
                     <table className="w-full text-left border-collapse text-xs md:text-sm">
                       <thead>
-                        <tr className="bg-slate-900 text-white">
+                        <tr className="bg-slate-100 text-slate-800 border-b border-slate-200">
                           <th className="p-4 font-bold uppercase tracking-wider">Feature / Metric</th>
-                          <th className="p-4 font-bold uppercase tracking-wider bg-slate-800 text-slate-300">Social Media Management (SMM)</th>
+                          <th className="p-4 font-bold uppercase tracking-wider bg-slate-50 text-slate-600 border-x border-slate-200">Social Media Management (SMM)</th>
                           <th className="p-4 font-bold uppercase tracking-wider bg-sky-600 text-white">Performance Marketing</th>
                         </tr>
                       </thead>
@@ -870,14 +870,14 @@ export default function PerformanceMarketingJunagadhPage() {
                     Generating a lead is only 50% of the battle. If a prospect fills out an inquiry form in Junagadh and your team takes 24 hours to call them back, that lead is already cold or has already booked with a competitor.
                   </p>
 
-                  <div className="my-6 p-6 bg-slate-900 text-white rounded-2xl shadow-xl">
-                    <h3 className="text-lg font-bold text-sky-400 mb-3 flex items-center gap-2">
-                      <Zap size={20} /> The Speed-to-Lead Factor
+                  <div className="my-6 p-6 bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-900 rounded-2xl shadow-xs">
+                    <h3 className="text-lg font-bold text-blue-950 mb-3 flex items-center gap-2">
+                      <Zap size={20} className="text-blue-600" /> The Speed-to-Lead Factor
                     </h3>
-                    <p className="text-xs md:text-sm text-slate-300 mb-4">
+                    <p className="text-xs md:text-sm text-slate-700 mb-4">
                       Studies show that contacting an online lead within <strong>5 minutes</strong> increases conversion odds by over <strong>800%</strong> compared to waiting 30 minutes.
                     </p>
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-slate-600">
                       In Saurashtra, WhatsApp is the dominant communication tool. That's why we integrate instant automated WhatsApp responses into our clients' acquisition campaigns.
                     </p>
                   </div>

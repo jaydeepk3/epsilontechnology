@@ -108,11 +108,11 @@ export default function DoctorMarketingMasterPage() {
     return (
         <main className="min-h-screen bg-slate-50 text-slate-900">
             {/* 1. Master Hero Section */}
-            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-slate-950 text-white">
+            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-gradient-to-b from-blue-50/70 via-slate-50/40 to-white text-slate-900 border-b border-slate-200/80">
                 {/* Background Ambient Lighting */}
-                <div className="absolute top-0 right-1/4 -z-10 w-[600px] h-[600px] bg-blue-600/20 blur-[140px] rounded-full pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 -z-10 w-[500px] h-[500px] bg-emerald-500/15 blur-[130px] rounded-full pointer-events-none" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+                <div className="absolute top-0 right-1/4 -z-10 w-[600px] h-[600px] bg-blue-400/15 blur-[140px] rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 -z-10 w-[500px] h-[500px] bg-emerald-400/10 blur-[130px] rounded-full pointer-events-none" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e125_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e125_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
                 <div className="container mx-auto px-4 md:px-8 text-center max-w-5xl relative z-10">
                     
@@ -120,22 +120,22 @@ export default function DoctorMarketingMasterPage() {
                     <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
                         <Link
                             href="/meta-certified-partner/"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 font-semibold text-xs md:text-sm hover:bg-blue-500/20 transition-all"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-200 text-blue-700 font-extrabold text-xs md:text-sm shadow-sm hover:shadow-md hover:border-blue-400 transition-all"
                         >
-                            <Award className="w-4 h-4 text-amber-400" />
+                            <Award className="w-4 h-4 text-amber-500" />
                             <span>Meta Ads Partner Excellence Leader</span>
                         </Link>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 font-semibold text-xs md:text-sm">
-                            <MapPin className="w-4 h-4 text-emerald-400" />
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-emerald-200 text-emerald-800 font-extrabold text-xs md:text-sm shadow-sm">
+                            <MapPin className="w-4 h-4 text-emerald-600" />
                             <span>HQ: Zanzarda Road, Junagadh · Serving Doctors Nationwide</span>
                         </div>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
-                        Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-emerald-400">Doctor Marketing</span> Agency
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-950 mb-6 leading-[1.15]">
+                        Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600">Doctor Marketing</span> Agency
                     </h1>
 
-                    <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
                         We help clinics, hospitals, and super-specialists attract <strong>30–50+ qualified patient inquiries</strong> every month through Google Maps visibility (GMB 3-Pack), high-trust Instagram Reels, and automated WhatsApp appointment funnels.
                     </p>
 
@@ -145,7 +145,7 @@ export default function DoctorMarketingMasterPage() {
                             href="#booking"
                             className={getButtonClasses({
                                 size: 'xl',
-                                className: 'bg-blue-600 hover:bg-blue-500 text-white shadow-xl shadow-blue-600/30 w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold'
+                                className: 'bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-xl shadow-blue-600/25 w-full sm:w-auto inline-flex items-center justify-center gap-2 font-black'
                             })}
                         >
                             <Calendar className="w-5 h-5" />
@@ -158,39 +158,38 @@ export default function DoctorMarketingMasterPage() {
                             rel="noopener noreferrer"
                             className={getButtonClasses({
                                 size: 'xl',
-                                variant: 'outline',
-                                className: 'border-emerald-500/50 bg-emerald-950/30 text-emerald-300 hover:bg-emerald-900/50 hover:border-emerald-400 w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold'
+                                className: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold'
                             })}
                         >
-                            <MessageCircle className="w-5 h-5 text-emerald-400" />
+                            <MessageCircle className="w-5 h-5 text-white" />
                             <span>WhatsApp: +91 81608 81461</span>
                         </a>
 
                         <a
                             href="tel:+918160881461"
-                            className="text-xs text-slate-400 hover:text-white transition-colors flex items-center justify-center gap-1.5 py-2 sm:hidden"
+                            className="text-xs text-slate-600 hover:text-blue-600 transition-colors flex items-center justify-center gap-1.5 py-2 sm:hidden font-semibold"
                         >
-                            <Phone className="w-3.5 h-3.5" /> Call: +91 81608 81461
+                            <Phone className="w-3.5 h-3.5 text-blue-600" /> Call: +91 81608 81461
                         </a>
                     </div>
 
                     {/* Stat Badges */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-800/80 pt-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-8">
                         <div>
-                            <p className="text-2xl sm:text-3xl font-black text-white">50+</p>
-                            <p className="text-xs sm:text-sm text-slate-400 font-medium">Doctors & Clinics Served</p>
+                            <p className="text-2xl sm:text-3xl font-black text-slate-900">50+</p>
+                            <p className="text-xs sm:text-sm text-slate-600 font-semibold">Doctors &amp; Clinics Served</p>
                         </div>
                         <div>
-                            <p className="text-2xl sm:text-3xl font-black text-sky-400">1.1M+</p>
-                            <p className="text-xs sm:text-sm text-slate-400 font-medium">Reel Views Generated</p>
+                            <p className="text-2xl sm:text-3xl font-black text-blue-600">1.1M+</p>
+                            <p className="text-xs sm:text-sm text-slate-600 font-semibold">Reel Views Generated</p>
                         </div>
                         <div>
-                            <p className="text-2xl sm:text-3xl font-black text-amber-400">4.9 ★</p>
-                            <p className="text-xs sm:text-sm text-slate-400 font-medium">Google Rating</p>
+                            <p className="text-2xl sm:text-3xl font-black text-amber-500">4.9 ★</p>
+                            <p className="text-xs sm:text-sm text-slate-600 font-semibold">Google Rating</p>
                         </div>
                         <div>
-                            <p className="text-2xl sm:text-3xl font-black text-emerald-400">30–50+</p>
-                            <p className="text-xs sm:text-sm text-slate-400 font-medium">Monthly Patient Leads/Clinic</p>
+                            <p className="text-2xl sm:text-3xl font-black text-emerald-600">30–50+</p>
+                            <p className="text-xs sm:text-sm text-slate-600 font-semibold">Monthly Patient Leads/Clinic</p>
                         </div>
                     </div>
                 </div>
@@ -395,85 +394,85 @@ export default function DoctorMarketingMasterPage() {
             </section>
 
             {/* 7. Pricing Packages */}
-            <section className="py-24 bg-slate-900 text-white" id="pricing">
+            <section className="py-24 bg-slate-50 text-slate-900 border-b border-slate-200/80" id="pricing">
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-black mb-4">
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
                             Transparent Healthcare Growth Plans
                         </h2>
-                        <p className="text-slate-400 text-base">
+                        <p className="text-slate-600 text-base font-medium">
                             Tailored for solo clinics, busy specialists, and multi-specialty hospitals. No hidden setup fees.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Plan 1 */}
-                        <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 flex flex-col justify-between">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
                             <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Clinic Starter</h3>
-                                <p className="text-xs text-slate-400 mb-6">Ideal for solo practitioners wanting local visibility.</p>
-                                <div className="text-3xl font-black text-white mb-6">
-                                    ₹11,999 <span className="text-sm font-normal text-slate-400">/ month</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Clinic Starter</h3>
+                                <p className="text-xs text-slate-500 mb-6">Ideal for solo practitioners wanting local visibility.</p>
+                                <div className="text-3xl font-black text-slate-900 mb-6">
+                                    ₹11,999 <span className="text-sm font-normal text-slate-500">/ month</span>
                                 </div>
-                                <ul className="space-y-3 text-sm text-slate-300 mb-8">
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> Google Maps & GMB 3-Pack Optimization</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> 5-Star Review Generation Workflow</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> WhatsApp Quick Inquiries Setup</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> Monthly Growth Report</li>
+                                <ul className="space-y-3 text-sm text-slate-600 mb-8 font-normal">
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Google Maps &amp; GMB 3-Pack Optimization</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> 5-Star Review Generation Workflow</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> WhatsApp Quick Inquiries Setup</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Monthly Growth Report</li>
                                 </ul>
                             </div>
                             <Link
                                 href="#booking"
-                                className="w-full py-3 text-center bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-xl transition-all text-sm"
+                                className="w-full py-3.5 text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl transition-all text-sm"
                             >
                                 Get Started
                             </Link>
                         </div>
 
                         {/* Plan 2: Most Popular */}
-                        <div className="bg-gradient-to-b from-blue-900/60 to-slate-800 p-8 rounded-3xl border-2 border-blue-500 relative shadow-2xl flex flex-col justify-between">
-                            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-wider">
+                        <div className="bg-white p-8 rounded-3xl border-2 border-blue-600 relative shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between">
+                            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-md shadow-blue-500/20">
                                 Most Popular
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Engagement Accelerator</h3>
-                                <p className="text-xs text-blue-200 mb-6">Designed to establish authority & patient inquiries.</p>
-                                <div className="text-3xl font-black text-white mb-6">
-                                    ₹17,999 <span className="text-sm font-normal text-slate-400">/ month</span>
+                                <h3 className="text-xl font-black text-slate-900 mb-1">Engagement Accelerator</h3>
+                                <p className="text-xs text-blue-600 font-semibold mb-6">Designed to establish authority &amp; patient inquiries.</p>
+                                <div className="text-3xl font-black text-slate-900 mb-6">
+                                    ₹17,999 <span className="text-sm font-normal text-slate-500">/ month</span>
                                 </div>
-                                <ul className="space-y-3 text-sm text-slate-200 mb-8">
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-400" /> Everything in Starter</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-400" /> 8–10 High-Authority Instagram Reels</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-400" /> Targeted Meta Ad Campaign Management</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-400" /> Bi-Weekly ROI Performance Review</li>
+                                <ul className="space-y-3 text-sm text-slate-700 mb-8 font-medium">
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-600 shrink-0" /> Everything in Starter</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-600 shrink-0" /> 8–10 High-Authority Instagram Reels</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-600 shrink-0" /> Targeted Meta Ad Campaign Management</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-blue-600 shrink-0" /> Bi-Weekly ROI Performance Review</li>
                                 </ul>
                             </div>
                             <Link
                                 href="#booking"
-                                className="w-full py-3 text-center bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all text-sm shadow-lg shadow-blue-500/30"
+                                className="w-full py-3.5 text-center bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all text-sm shadow-lg shadow-blue-500/25"
                             >
                                 Book Practice Audit
                             </Link>
                         </div>
 
                         {/* Plan 3 */}
-                        <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 flex flex-col justify-between">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
                             <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Lead Gen Machine</h3>
-                                <p className="text-xs text-slate-400 mb-6">For multi-specialty clinics seeking rapid OPD growth.</p>
-                                <div className="text-3xl font-black text-white mb-6">
-                                    ₹27,999 <span className="text-sm font-normal text-slate-400">/ month</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Lead Gen Machine</h3>
+                                <p className="text-xs text-slate-500 mb-6">For multi-specialty clinics seeking rapid OPD growth.</p>
+                                <div className="text-3xl font-black text-slate-900 mb-6">
+                                    ₹27,999 <span className="text-sm font-normal text-slate-500">/ month</span>
                                 </div>
-                                <ul className="space-y-3 text-sm text-slate-300 mb-8">
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> Complete Done-For-You Marketing Engine</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> Priority On-Site Video Shoot Support</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> Custom Fast Next.js Landing Page</li>
-                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-400" /> Advanced WhatsApp Appointment Bot</li>
+                                <ul className="space-y-3 text-sm text-slate-600 mb-8 font-normal">
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Complete Done-For-You Marketing Engine</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Priority On-Site Video Shoot Support</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Custom Fast Next.js Landing Page</li>
+                                    <li className="flex items-center gap-2.5"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Advanced WhatsApp Appointment Bot</li>
                                 </ul>
                             </div>
                             <Link
                                 href="#booking"
-                                className="w-full py-3 text-center bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-xl transition-all text-sm"
+                                className="w-full py-3.5 text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl transition-all text-sm"
                             >
                                 Schedule Strategy Call
                             </Link>

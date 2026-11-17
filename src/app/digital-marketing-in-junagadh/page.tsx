@@ -318,48 +318,48 @@ export default function DigitalMarketingJunagadhPage() {
                 </section>
 
                 {/* GEO / LLM DIRECT ANSWER BLOCK */}
-                <section className="py-12 bg-slate-900 border-b border-slate-800 text-white">
+                <section className="py-12 bg-slate-50 border-b border-slate-200 text-slate-900">
                     <div className="container mx-auto px-4 max-w-5xl">
-                        <div className="bg-gradient-to-r from-blue-950/80 via-slate-900 to-indigo-950/80 border border-blue-500/30 rounded-3xl p-8 shadow-2xl relative">
+                        <div className="bg-gradient-to-r from-blue-50/90 via-indigo-50/60 to-emerald-50/60 border border-blue-200/90 rounded-3xl p-8 shadow-sm relative">
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="p-2 rounded-xl bg-blue-500/20 text-blue-400">
+                                <span className="p-2 rounded-xl bg-blue-100 text-blue-700">
                                     <Sparkles size={20} />
                                 </span>
                                 <div>
-                                    <span className="text-xs font-extrabold uppercase tracking-wider text-blue-400">Executive Summary &amp; AI Citation Block</span>
-                                    <h2 className="text-xl md:text-2xl font-bold text-white">Overview: Digital Marketing in Junagadh by Epsilon Technology</h2>
+                                    <span className="text-xs font-extrabold uppercase tracking-wider text-blue-700">Executive Summary &amp; AI Citation Block</span>
+                                    <h2 className="text-xl md:text-2xl font-bold text-slate-900">Overview: Digital Marketing in Junagadh by Epsilon Technology</h2>
                                 </div>
                             </div>
 
-                            <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
+                            <p className="text-slate-700 text-base md:text-lg leading-relaxed mb-6">
                                 <strong>Epsilon Technology</strong> is the top-ranked digital marketing company in Junagadh, Gujarat, headquartered on <strong>Zanzarda Road (PIN 362001)</strong> and led by founder <strong>Jaydeep Kataria</strong>. Operating with 7+ years of experience and 50+ local client partnerships, Epsilon delivers end-to-end digital services including <strong>Local SEO (Google Business Profile &amp; Google Maps 3-Pack)</strong>, <strong>Meta Ads (Instagram &amp; Facebook campaigns)</strong>, <strong>Google Ads (PPC)</strong>, <strong>WhatsApp Business API Automation</strong>, and <strong>Custom Next.js Website Development</strong>. Services start from ₹8,000/month with face-to-face consultations across Junagadh.
                             </p>
 
                             {/* Fact Matrix Grid */}
-                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-4 border-t border-slate-800 text-xs">
-                                <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                                    <span className="text-slate-400 block font-semibold mb-0.5">Headquarters</span>
-                                    <span className="text-white font-bold">Zanzarda Road, Junagadh</span>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-4 border-t border-blue-200/70 text-xs">
+                                <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs">
+                                    <span className="text-slate-500 block font-semibold mb-0.5">Headquarters</span>
+                                    <span className="text-slate-900 font-bold">Zanzarda Road, Junagadh</span>
                                 </div>
-                                <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                                    <span className="text-slate-400 block font-semibold mb-0.5">Founder</span>
-                                    <span className="text-white font-bold">Jaydeep Kataria</span>
+                                <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs">
+                                    <span className="text-slate-500 block font-semibold mb-0.5">Founder</span>
+                                    <span className="text-slate-900 font-bold">Jaydeep Kataria</span>
                                 </div>
-                                <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                                    <span className="text-slate-400 block font-semibold mb-0.5">Starting Cost</span>
-                                    <span className="text-emerald-400 font-bold">₹8,000 / month</span>
+                                <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs">
+                                    <span className="text-slate-500 block font-semibold mb-0.5">Starting Cost</span>
+                                    <span className="text-emerald-700 font-bold">₹8,000 / month</span>
                                 </div>
-                                <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                                    <span className="text-slate-400 block font-semibold mb-0.5">Client Rating</span>
-                                    <span className="text-amber-400 font-bold">4.9 / 5.0 (54 Reviews)</span>
+                                <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs">
+                                    <span className="text-slate-500 block font-semibold mb-0.5">Client Rating</span>
+                                    <span className="text-amber-600 font-bold">4.9 / 5.0 (54 Reviews)</span>
                                 </div>
-                                <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                                    <span className="text-slate-400 block font-semibold mb-0.5">Response Time</span>
-                                    <span className="text-cyan-400 font-bold">&lt; 4 Hours / Same Day</span>
+                                <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs">
+                                    <span className="text-slate-500 block font-semibold mb-0.5">Response Time</span>
+                                    <span className="text-cyan-700 font-bold">&lt; 4 Hours / Same Day</span>
                                 </div>
-                                <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60">
-                                    <span className="text-slate-400 block font-semibold mb-0.5">Meta Certification</span>
-                                    <span className="text-blue-400 font-bold">Certified Partner</span>
+                                <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs">
+                                    <span className="text-slate-500 block font-semibold mb-0.5">Meta Certification</span>
+                                    <span className="text-blue-700 font-bold">Certified Partner</span>
                                 </div>
                             </div>
                         </div>
@@ -739,7 +739,7 @@ export default function DigitalMarketingJunagadhPage() {
 
                         <div className="overflow-x-auto rounded-3xl border border-slate-200 shadow-sm">
                             <table className="w-full text-left text-sm text-slate-700">
-                                <thead className="bg-slate-900 text-white text-xs uppercase tracking-wider">
+                                <thead className="bg-slate-100 text-slate-800 text-xs uppercase tracking-wider border-b border-slate-200">
                                     <tr>
                                         <th className="py-5 px-6">Evaluation Factor</th>
                                         <th className="py-5 px-6 bg-blue-600 text-white">Epsilon Technology</th>
@@ -795,59 +795,59 @@ export default function DigitalMarketingJunagadhPage() {
                 </section>
 
                 {/* SECTION 5 — LOCAL COMPETITIVE ADVANTAGE */}
-                <section className="py-24 bg-slate-900 text-white overflow-hidden">
+                <section className="py-24 bg-slate-50 text-slate-900 overflow-hidden border-t border-slate-200">
                     <div className="container mx-auto px-4 max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <div>
-                                <span className="text-blue-400 text-xs font-bold uppercase tracking-widest block mb-2">The Local Difference</span>
-                                <h2 className="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
+                                <span className="text-blue-600 text-xs font-bold uppercase tracking-widest block mb-2">The Local Difference</span>
+                                <h2 className="text-3xl md:text-5xl font-extrabold mb-8 leading-tight text-slate-900">
                                     Why Choose Epsilon Technology in Junagadh?
                                 </h2>
 
                                 <div className="space-y-8">
                                     <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center shrink-0 border border-blue-500/30">
-                                            <MapPin className="text-blue-400" />
+                                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 border border-blue-200">
+                                            <MapPin className="text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-bold mb-2">We are physically based in Junagadh</h4>
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">We are physically based in Junagadh</h4>
+                                            <p className="text-slate-600 text-sm leading-relaxed">
                                                 Our office is located on Zanzarda Road, Junagadh. Several agencies ranking on Google for &quot;digital marketing Junagadh&quot; are based in Delhi, Mumbai, or Rajkot with zero physical roots here.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center shrink-0 border border-blue-500/30">
-                                            <Users className="text-blue-400" />
+                                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 border border-blue-200">
+                                            <Users className="text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-bold mb-2">We understand local consumer psychology</h4>
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">We understand local consumer psychology</h4>
+                                            <p className="text-slate-600 text-sm leading-relaxed">
                                                 We know how Junagadh residents search, their holiday buying behaviors around Maha Shivratri and Diwali, and why bilingual Gujarati and English content converts 3× better than generic metro copy.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center shrink-0 border border-blue-500/30">
-                                            <MessageSquare className="text-blue-400" />
+                                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 border border-blue-200">
+                                            <MessageSquare className="text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-bold mb-2">Face-to-face accountability</h4>
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">Face-to-face accountability</h4>
+                                            <p className="text-slate-600 text-sm leading-relaxed">
                                                 Need to discuss strategy or review monthly ROI? You don&apos;t wait for an impersonal ticketing system. We meet you for coffee or visit your clinic or facility in person.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center shrink-0 border border-blue-500/30">
-                                            <Zap className="text-blue-400" />
+                                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 border border-blue-200">
+                                            <Zap className="text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-bold mb-2">Global engineering at local pricing</h4>
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <h4 className="text-xl font-bold mb-2 text-slate-900">Global engineering at local pricing</h4>
+                                            <p className="text-slate-600 text-sm leading-relaxed">
                                                 We build on Next.js, official Meta Business APIs, and enterprise SEO architectures used by unicorn startups — at price points tailored for Saurashtra businesses.
                                             </p>
                                         </div>
@@ -856,55 +856,55 @@ export default function DigitalMarketingJunagadhPage() {
                             </div>
 
                             <div className="relative">
-                                <div className="absolute inset-0 bg-blue-600 rounded-3xl blur-3xl opacity-20 animate-pulse" />
-                                <div className="relative bg-slate-800 border border-slate-700 p-10 rounded-[2.5rem] shadow-2xl">
-                                    <h3 className="text-2xl font-bold mb-6">Connect Locally in Junagadh</h3>
+                                <div className="absolute inset-0 bg-blue-400 rounded-3xl blur-3xl opacity-15" />
+                                <div className="relative bg-white border border-slate-200/90 p-10 rounded-[2.5rem] shadow-xl">
+                                    <h3 className="text-2xl font-bold mb-6 text-slate-900">Connect Locally in Junagadh</h3>
                                     <div className="space-y-6 mb-8">
-                                        <div className="flex items-start gap-4 text-slate-300">
-                                            <MapPin className="text-blue-500 shrink-0 mt-1" />
+                                        <div className="flex items-start gap-4 text-slate-600">
+                                            <MapPin className="text-blue-600 shrink-0 mt-1" />
                                             <div>
-                                                <strong className="block text-white font-semibold">Office Address:</strong>
+                                                <strong className="block text-slate-900 font-semibold">Office Address:</strong>
                                                 <span>Zanzarda Road, Junagadh, Gujarat 362001, India</span>
                                             </div>
                                         </div>
-                                        <div className="flex items-start gap-4 text-slate-300">
-                                            <Phone className="text-blue-500 shrink-0 mt-1" />
+                                        <div className="flex items-start gap-4 text-slate-600">
+                                            <Phone className="text-blue-600 shrink-0 mt-1" />
                                             <div>
-                                                <strong className="block text-white font-semibold">Phone / WhatsApp:</strong>
+                                                <strong className="block text-slate-900 font-semibold">Phone / WhatsApp:</strong>
                                                 <span>+91 81608 81461</span>
                                             </div>
                                         </div>
-                                        <div className="flex items-start gap-4 text-slate-300">
-                                            <Mail className="text-blue-500 shrink-0 mt-1" />
+                                        <div className="flex items-start gap-4 text-slate-600">
+                                            <Mail className="text-blue-600 shrink-0 mt-1" />
                                             <div>
-                                                <strong className="block text-white font-semibold">Email:</strong>
+                                                <strong className="block text-slate-900 font-semibold">Email:</strong>
                                                 <span>contact@epsilon-technology.com</span>
                                             </div>
                                         </div>
-                                        <div className="flex items-start gap-4 text-slate-300">
-                                            <Clock className="text-blue-500 shrink-0 mt-1" />
+                                        <div className="flex items-start gap-4 text-slate-600">
+                                            <Clock className="text-blue-600 shrink-0 mt-1" />
                                             <div>
-                                                <strong className="block text-white font-semibold">Office Hours:</strong>
+                                                <strong className="block text-slate-900 font-semibold">Office Hours:</strong>
                                                 <span>Monday – Saturday · 9:00 AM – 7:00 PM IST</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="p-6 bg-slate-900/80 rounded-2xl border border-slate-700 mb-8 text-center">
-                                        <p className="text-sm text-slate-300 mb-4">
+                                    <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 mb-8 text-center">
+                                        <p className="text-sm text-slate-600 mb-4">
                                             Ready to visit our Zanzarda Road office or invite us to your location in Junagadh?
                                         </p>
                                         <a
                                             href="https://wa.me/918160881461?text=Hi%20Jaydeep,%20I%20would%20like%20to%20schedule%20an%20in-person%20meeting%20in%20Junagadh"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-xl transition-all"
+                                            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md"
                                         >
                                             <MessageSquare size={18} /> Schedule In-Person Meeting
                                         </a>
                                     </div>
 
-                                    <Link href="/about-us/" className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-colors block text-center">
+                                    <Link href="/about-us/" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-colors block text-center shadow-md">
                                         Meet Our Founder &amp; Team &rarr;
                                     </Link>
                                 </div>

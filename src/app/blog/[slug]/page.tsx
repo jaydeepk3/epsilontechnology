@@ -280,25 +280,24 @@ export default async function DynamicBlogPage({ params }: PageProps) {
             </div>
 
             {/* Sticky Mobile Share Bar */}
-            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-slate-900/90 backdrop-blur-xl rounded-2xl p-4 flex items-center justify-between z-50 shadow-2xl border border-white/10 lg:hidden">
+            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex items-center justify-between z-50 shadow-2xl border border-slate-200 lg:hidden">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-sky-600 flex items-center justify-center text-white font-black text-xs">E</div>
-                    <div className="text-white text-[10px] font-bold uppercase tracking-widest leading-tight">Reading:<br /><span className="text-sky-400 truncate w-32 inline-block">{blog.title}</span></div>
+                    <div className="w-10 h-10 rounded-lg bg-sky-600 flex items-center justify-center text-white font-black text-xs shadow-sm">E</div>
+                    <div className="text-slate-900 text-[10px] font-bold uppercase tracking-widest leading-tight">Reading:<br /><span className="text-sky-600 truncate w-32 inline-block">{blog.title}</span></div>
                 </div>
-                <Link href="/contacts/" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-sky-500 transition-colors">Contact</Link>
+                <Link href="/contacts/" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-sky-500 transition-colors shadow-sm">Contact</Link>
             </div>
 
-            {/* Related Posts: High Contrast Finish */}
+            {/* Related Posts: Light Theme Finish */}
             {relatedBlogs.length > 0 && (
-                <section className="py-32 bg-slate-950 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+                <section className="py-24 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8 max-w-6xl mx-auto">
                             <div className="text-center md:text-left">
-                                <Badge variant="outline" className="border-sky-800 text-sky-400 mb-4 px-4 py-1.5 uppercase tracking-widest font-bold">Deep Dive</Badge>
-                                <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">Expand your knowledge</h3>
+                                <Badge variant="outline" className="border-sky-200 bg-sky-50 text-sky-700 mb-4 px-4 py-1.5 uppercase tracking-widest font-bold">Deep Dive</Badge>
+                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Expand your knowledge</h3>
                             </div>
-                            <Link href="/blog/" className="px-8 py-3 border border-slate-800 text-slate-400 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all group flex items-center gap-2">
+                            <Link href="/blog/" className="px-8 py-3 border border-slate-200 bg-white text-slate-700 rounded-2xl font-bold hover:bg-sky-50 hover:text-sky-700 hover:border-sky-200 transition-all shadow-sm group flex items-center gap-2">
                                 Explorer Hub <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
@@ -306,21 +305,20 @@ export default async function DynamicBlogPage({ params }: PageProps) {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
                             {relatedBlogs.map((post) => (
                                 <Link key={post.id} href={post.isExternal ? `/${post.slug}` : `/blog/${post.slug}`} className="group h-full">
-                                    <div className="bg-slate-900/50 rounded-[40px] p-2 border border-slate-900 h-full flex flex-col group-hover:bg-slate-800/50 group-hover:border-slate-700 transition-all duration-500 group-hover:-translate-y-2">
-                                        <div className="relative aspect-[16/10] rounded-[32px] overflow-hidden mb-8">
+                                    <div className="bg-white rounded-[32px] p-2 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-sky-300 h-full flex flex-col transition-all duration-500 group-hover:-translate-y-2">
+                                        <div className="relative aspect-[16/10] rounded-[24px] overflow-hidden mb-6">
                                             <Image
                                                 src={post.imageUrl || "/blog_medical_marketing.webp"}
                                                 alt={post.title}
                                                 fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-100"
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
                                         </div>
-                                        <div className="flex flex-col flex-grow px-6 pb-8">
-                                            <Badge className="w-fit mb-6 bg-slate-800 text-sky-400 border-none">{post.category}</Badge>
-                                            <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-sky-400 transition-colors line-clamp-2 leading-tight tracking-tight">{post.title}</h4>
-                                            <p className="text-slate-500 text-sm line-clamp-2 mb-8 font-medium">{post.metaDescription}</p>
-                                            <div className="mt-auto flex items-center gap-2 text-sky-500 font-bold text-sm tracking-widest uppercase">
+                                        <div className="flex flex-col flex-grow px-6 pb-6">
+                                            <Badge className="w-fit mb-4 bg-sky-50 text-sky-700 border border-sky-100 font-semibold">{post.category}</Badge>
+                                            <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sky-600 transition-colors line-clamp-2 leading-snug tracking-tight">{post.title}</h4>
+                                            <p className="text-slate-600 text-sm line-clamp-2 mb-6 font-normal leading-relaxed">{post.metaDescription}</p>
+                                            <div className="mt-auto flex items-center gap-2 text-sky-600 font-bold text-xs tracking-widest uppercase">
                                                 Read Entry <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                                             </div>
                                         </div>

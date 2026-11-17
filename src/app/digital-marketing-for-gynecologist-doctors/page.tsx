@@ -206,15 +206,15 @@ export default function GynaeDoctorGuide() {
                             <li><strong>Neglecting Visual Branding:</strong> A consistent, warm visual aesthetic (colors, fonts, photos) is vital for clinics targeting women.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white relative overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent pointer-events-none" />
-                            <h3 className="text-2xl font-bold mb-4">Summary for Leading Gynecologists</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
+                        <div className="my-16 p-8 bg-gradient-to-r from-pink-50 via-rose-50/70 to-blue-50/70 rounded-3xl text-slate-900 border border-pink-200/90 shadow-md relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-transparent pointer-events-none" />
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Leading Gynecologists</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                 Digital presence is the extension of your clinical care. By building a trusted, visible, and educational digital home, you ensure that your expertise reaches the women who need it most.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-pink-400 font-bold hover:underline">Junagadh OB/GYN Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-pink-400 font-bold hover:underline">Rajkot OB/GYN Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm">Junagadh OB/GYN Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-pink-400 hover:text-pink-600 px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-2xs">Rajkot OB/GYN Marketing</Link>
                             </div>
                         </div>
                     </div>

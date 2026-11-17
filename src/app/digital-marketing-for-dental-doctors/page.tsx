@@ -219,14 +219,14 @@ export default function DentalDoctorGuide() {
                             <li><strong>No Clear OPD Timings:</strong> Making it hard for patients to know when you are available.</li>
                         </ul>
 
-                        <div className="my-16 p-8 bg-slate-950 rounded-3xl text-white">
-                            <h3 className="text-2xl font-bold mb-4">Summary for Professional Dentists</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
+                        <div className="my-16 p-8 bg-gradient-to-r from-blue-50 via-indigo-50/70 to-emerald-50/70 rounded-3xl text-slate-900 border border-blue-200/90 shadow-md">
+                            <h3 className="text-2xl font-black mb-4 text-slate-950">Summary for Professional Dentists</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed font-medium">
                                 Modern dentistry is as much about digital visibility as it is about clinical skill. By building a dominant local presence and showcasing your transformations, you can build a practice that thrives in the digital age.
                             </p>
                             <div className="flex gap-4">
-                                <Link href="/doctor-marketing-in-junagadh/" className="text-blue-400 font-bold hover:underline">Junagadh Dental Marketing</Link>
-                                <Link href="/doctor-marketing-in-rajkot/" className="text-blue-400 font-bold hover:underline">Rajkot Dental Marketing</Link>
+                                <Link href="/doctor-marketing-in-junagadh/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm">Junagadh Dental Marketing</Link>
+                                <Link href="/doctor-marketing-in-rajkot/" className="bg-white border border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-600 px-6 py-2.5 rounded-full text-sm font-bold transition-colors shadow-2xs">Rajkot Dental Marketing</Link>
                             </div>
                         </div>
                     </div>
